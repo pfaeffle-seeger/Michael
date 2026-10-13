@@ -39,6 +39,17 @@ const BASIS = {
   verrechnung: { saldo: 245000, rate: 8000 },
 };
 
+// Konditionen aifinyo Finetrading (zzgl. USt, als Vorsteuer abziehbar)
+const AIFINYO = {
+  marge: { 3: 0.0299, 6: 0.0399, 9: 0.0499, 12: 0.0599 }, // Handelsmarge auf den Wareneinkauf
+  transaktion: 39, // € je Einkaufstransaktion
+  einrichtung: 0.0195, // einmalig auf die Einkaufslinie
+  bereitstellung: (linie) => (linie >= 500000 ? 269 : linie >= 100000 ? 149 : linie > 30000 ? 89 : 49), // € pro Monat
+  vertragMonate: 24,
+};
+// effektiver Jahressatz: Marge bezogen auf die durchschnittliche Kapitalbindung von (n+1)/2 Monaten
+const aifinyoEffektiv = (n) => (AIFINYO.marge[n] / ((n + 1) / 2)) * 12;
+
 const SZENARIEN = {
   vorsichtig: { label: "Vorsichtig", wachstum: 0.01, rohertrag: 0.373, kostenSteigerung: 0.025 },
   realistisch: { label: "Realistisch", wachstum: 0.02, rohertrag: 0.378, kostenSteigerung: 0.025 },
@@ -62,14 +73,15 @@ const STANDARD = {
   forderungenZiel: BASIS.wc.forderungen.eb,
   vorraeteZiel: BASIS.wc.vorraete.eb,
   sondertilgungKfw: true,
-  // Einkaufsfinanzierung aifinyo: Lieferantenrechnungen werden finanziert und nach der Laufzeit zurückgezahlt
+  // Warenfinanzierung aifinyo (Finetrading, Fact Sheet 04/2024): aifinyo bezahlt den Lieferanten,
+  // Rückführung in gleichen Monatsraten über die Laufzeit, frei werdende Linie revolvierend nutzbar
   aifinyoAktiv: true,
   aifinyoRahmen: 800000,
-  aifinyoLaufzeit: 6, // Monate (180 Tage)
-  aifinyoGebuehr: 0.01, // pro 30 Tage auf den offenen Betrag – Annahme, Angebot abwarten
-  aifinyoAuslastung: 1.0, // Anteil des Rahmens, der revolvierend genutzt wird
+  aifinyoLaufzeit: 6, // Monate bzw. Monatsraten (180 Tage)
+  aifinyoAuslastung: 1.0, // Anteil der Einkaufslinie, der laufend genutzt wird
   aifinyoStart: "2026-11",
-  aifinyoBis: 2028, // letztes Jahr mit neuen Finanzierungen
+  aifinyoDauer: 24, // Monate mit neuen Finanzierungen (Vertragslaufzeit 24 Monate)
+  aifinyoRechnungen: 20, // finanzierte Lieferantenrechnungen pro Monat
   q4Anteil: 0.28,
   bisJahr: 2036,
 };
@@ -94,7 +106,10 @@ function simuliere(p) {
 
   let lagerAbgebaut = 0;
   const [aifStartJ, aifStartM] = String(p.aifinyoStart || "2026-11").split("-").map(Number);
-  const aifNeu = []; // neu finanzierte Beträge je Monat
+  const aifStartIdx = (aifStartJ - 2026) * 12 + aifStartM - 10;
+  const aifN = p.aifinyoLaufzeit;
+  const aifMarge = AIFINYO.marge[aifN];
+  const aifNeu = []; // neu finanzierte Einkäufe je Monat
   let aifSaldo = 0;
   let aifKosten = 0;
   for (let jahr = 2026, m = 10; jahr <= p.bisJahr; m === 12 ? (jahr++, (m = 1)) : m++) {
@@ -109,7 +124,24 @@ function simuliere(p) {
     const varK = umsatz * p.varKostenQuote;
     let zinsen = 0;
     for (const x of d) zinsen += (x.saldo * x.zins) / 12;
-    const aifGebuehr = aifSaldo * (p.aifinyoGebuehr || 0);
+
+    // aifinyo: fällige Raten früherer Einkäufe, neuer finanzierter Einkauf, Kosten
+    const idx = aifNeu.length;
+    const aktivMonat = p.aifinyoAktiv && idx >= aifStartIdx && idx < aifStartIdx + p.aifinyoDauer;
+    let aifRueck = 0, aifGebuehr = 0;
+    for (let k = Math.max(0, idx - aifN); k < idx; k++) {
+      aifRueck += aifNeu[k] / aifN;
+      aifGebuehr += (aifNeu[k] * aifMarge) / aifN;
+    }
+    const aifZiel = (p.aifinyoRahmen * p.aifinyoAuslastung) / ((aifN + 1) / 2);
+    const aifZugang = aktivMonat ? Math.max(0, Math.min(aifZiel, p.aifinyoRahmen - (aifSaldo - aifRueck))) : 0;
+    aifNeu.push(aifZugang);
+    aifSaldo += aifZugang - aifRueck;
+    if (p.aifinyoAktiv && idx >= aifStartIdx) {
+      if (idx === aifStartIdx) aifGebuehr += p.aifinyoRahmen * AIFINYO.einrichtung;
+      if (idx < aifStartIdx + Math.max(AIFINYO.vertragMonate, p.aifinyoDauer)) aifGebuehr += AIFINYO.bereitstellung(p.aifinyoRahmen);
+      if (aifZugang > 0) aifGebuehr += AIFINYO.transaktion * p.aifinyoRechnungen;
+    }
     aifKosten += aifGebuehr;
     zinsen += aifGebuehr;
     const ebt = rohertrag + p.sonstErtragMonat - fix - varK - p.afaMonat - zinsen;
@@ -137,13 +169,6 @@ function simuliere(p) {
     verrechnung -= rueckVerr;
     const invest = p.investJahr / 12;
 
-    // aifinyo: neue Finanzierung entlastet das Konto, Rückzahlung nach Ablauf der Laufzeit
-    const idx = aifNeu.length;
-    const aktivMonat = p.aifinyoAktiv && (jahr > aifStartJ || (jahr === aifStartJ && m >= aifStartM)) && jahr <= p.aifinyoBis;
-    const aifRueck = idx >= p.aifinyoLaufzeit ? aifNeu[idx - p.aifinyoLaufzeit] : 0;
-    const aifZugang = aktivMonat ? Math.max(0, Math.min((p.aifinyoRahmen * p.aifinyoAuslastung) / p.aifinyoLaufzeit, p.aifinyoRahmen - (aifSaldo - aifRueck))) : 0;
-    aifNeu.push(aifZugang);
-    aifSaldo += aifZugang - aifRueck;
     const ausschuettung = p.ausschuettungJahr / 12;
 
     // Planmäßige Tilgungen
@@ -234,4 +259,4 @@ function simuliere(p) {
   };
 }
 
-if (typeof module !== "undefined") module.exports = { BASIS, SZENARIEN, STANDARD, simuliere };
+if (typeof module !== "undefined") module.exports = { BASIS, SZENARIEN, STANDARD, AIFINYO, aifinyoEffektiv, simuliere };
