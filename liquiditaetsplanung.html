@@ -1,0 +1,462 @@
+<title>Entschuldungsplan Pfäffle GmbH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<style>
+/* Layout: Kopf mit Szenariowahl, darunter Kennzahlen, Diagramm, Annahmen-Seitenleiste neben Jahrestabelle */
+:root {
+  --bg: #f6f7f8;
+  --surface: #ffffff;
+  --ink: #14181d;
+  --ink-2: #4a525c;
+  --ink-3: #78818c;
+  --line: #dde1e6;
+  --grid: #eceff2;
+  --accent: #1f5e8c;
+  --accent-soft: #e3edf5;
+  --good: #0a7d36;
+  --warn: #a86400;
+  --crit: #c0352f;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300;
+  --sc-v: #c0352f; --sc-r: #1f5e8c; --sc-o: #0a7d36;
+  --f-head: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-num: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111418; --surface: #1a1e23; --ink: #eef1f4; --ink-2: #b4bcc6; --ink-3: #87909b;
+    --line: #2e343c; --grid: #252a31; --accent: #7fb3de; --accent-soft: #1d2a36;
+    --good: #4cc27a; --warn: #e3a33a; --crit: #ec6a63;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #2f9e3a;
+    --sc-v: #ec6a63; --sc-r: #7fb3de; --sc-o: #4cc27a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111418; --surface: #1a1e23; --ink: #eef1f4; --ink-2: #b4bcc6; --ink-3: #87909b;
+  --line: #2e343c; --grid: #252a31; --accent: #7fb3de; --accent-soft: #1d2a36;
+  --good: #4cc27a; --warn: #e3a33a; --crit: #ec6a63;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #2f9e3a;
+  --sc-v: #ec6a63; --sc-r: #7fb3de; --sc-o: #4cc27a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 14px; line-height: 1.5; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 56px; display: grid; gap: 22px; }
+h1, h2, h3 { font-family: var(--f-head); font-weight: 600; text-wrap: balance; margin: 0; letter-spacing: 0.005em; }
+h1 { font-size: 1.9rem; line-height: 1.15; }
+h2 { font-size: 1.2rem; }
+h3 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); font-family: var(--f-body); font-weight: 600; }
+p { margin: 0; }
+.num { font-family: var(--f-num); font-variant-numeric: tabular-nums; }
+.muted { color: var(--ink-2); }
+.small { font-size: 12.5px; }
+
+header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; }
+header .sub { color: var(--ink-2); margin-top: 6px; max-width: 62ch; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 3px; gap: 3px; flex-wrap: wrap; }
+.seg button { font: inherit; font-weight: 500; border: 0; background: transparent; color: var(--ink-2); padding: 7px 14px; border-radius: 6px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+.seg button:focus-visible, input:focus-visible, .toggle:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.custom-note { font-size: 12px; color: var(--warn); margin-top: 6px; text-align: right; min-height: 1em; }
+
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 4px; align-content: start; }
+.kpi .v { font-family: var(--f-head); font-size: 1.75rem; font-weight: 600; line-height: 1.1; }
+.kpi .d { font-size: 12.5px; color: var(--ink-2); }
+.pill { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 99px; width: fit-content; border: 1px solid currentColor; }
+.pill.good { color: var(--good); } .pill.warn { color: var(--warn); } .pill.crit { color: var(--crit); }
+
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; gap: 14px; min-width: 0; }
+.panel-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 16px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.legend i.ln { height: 3px; border-radius: 2px; }
+.chart { position: relative; width: 100%; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { fill: var(--ink-3); font-family: var(--f-num); font-size: 11px; }
+.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font-size: 12px; box-shadow: 0 6px 22px rgba(0,0,0,.12); min-width: 210px; z-index: 2; }
+.tip .t { font-weight: 600; margin-bottom: 6px; }
+.tip .r { display: flex; justify-content: space-between; gap: 14px; }
+.tip .r b { font-weight: 500; font-family: var(--f-num); font-variant-numeric: tabular-nums; }
+.tip .r .k { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); }
+.tip .r .k i { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+.tip .sum { border-top: 1px solid var(--line); margin-top: 6px; padding-top: 6px; font-weight: 600; }
+
+.main { display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 22px; align-items: start; }
+.controls { display: grid; gap: 16px; }
+.ctl { display: grid; gap: 4px; }
+.ctl .row { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.ctl label { font-weight: 500; }
+.ctl output { font-family: var(--f-num); font-variant-numeric: tabular-nums; color: var(--accent); font-weight: 500; white-space: nowrap; }
+.ctl .hint { font-size: 12px; color: var(--ink-3); }
+.ctl input[type=range] { width: 100%; accent-color: var(--accent); }
+.group { display: grid; gap: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+.toggle { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; }
+.toggle input { margin-top: 3px; accent-color: var(--accent); }
+.reset { font: inherit; font-size: 13px; border: 1px solid var(--line); background: transparent; color: var(--ink-2); border-radius: 6px; padding: 6px 10px; cursor: pointer; justify-self: start; }
+
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { padding: 7px 8px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--grid); }
+th:first-child, td:first-child { text-align: left; }
+thead th { font-weight: 600; color: var(--ink-3); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--line); }
+td { font-family: var(--f-num); font-variant-numeric: tabular-nums; }
+td.neg { color: var(--crit); }
+tr.zero td { color: var(--good); }
+
+.notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: start; }
+.notes > div { align-content: start; }
+.notes ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; color: var(--ink-2); }
+.notes li b { color: var(--ink); font-weight: 600; }
+.tag { font-size: 11px; font-weight: 600; color: var(--warn); border: 1px solid currentColor; border-radius: 4px; padding: 0 5px; margin-left: 4px; }
+
+.debt-table td:nth-child(2), .debt-table td:nth-child(3) { font-family: var(--f-num); }
+
+@media (max-width: 980px) {
+  .main { grid-template-columns: minmax(0, 1fr); }
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .notes { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 460px) {
+  .wrap { padding-inline: 16px; }
+  .kpis { grid-template-columns: minmax(0, 1fr); }
+  h1 { font-size: 1.55rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .seg button { transition: background .15s, color .15s; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h3>Albert Pfäffle GmbH · Stand 30.09.2026</h3>
+      <h1>Entschuldungsplan 2026–2036</h1>
+      <p class="sub">Monatliche Simulation ab Oktober 2026 auf Basis der BWA Januar–September 2026, der Summen- und Saldenliste und des Bankenspiegels. Freie Liquidität fließt zuerst in die teuerste Kontokorrentlinie.</p>
+    </div>
+    <div>
+      <div class="seg" role="group" aria-label="Szenario">
+        <button type="button" data-sz="vorsichtig" id="sz-vorsichtig">Vorsichtig</button>
+        <button type="button" data-sz="realistisch" id="sz-realistisch">Realistisch</button>
+        <button type="button" data-sz="optimistisch" id="sz-optimistisch">Optimistisch</button>
+      </div>
+      <div class="custom-note" id="customNote"></div>
+    </div>
+  </header>
+
+  <section class="kpis" aria-label="Kennzahlen">
+    <div class="kpi"><h3>Kontokorrent auf null</h3><div class="v num" id="kKK">–</div><div class="d" id="kKKd"></div></div>
+    <div class="kpi"><h3>Netto schuldenfrei</h3><div class="v num" id="kNet">–</div><div class="d" id="kNetd"></div></div>
+    <div class="kpi"><h3>Fremdkapital 31.12.2027</h3><div class="v num" id="kFk27">–</div><div class="d" id="kFk27d"></div></div>
+    <div class="kpi"><h3>Zinsen bis schuldenfrei</h3><div class="v num" id="kZins">–</div><div class="d" id="kZinsd"></div></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-chart">
+    <div class="panel-head">
+      <h2 id="h-chart">Verzinsliches Fremdkapital nach Kreditgeber</h2>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="chart" id="chart"></div>
+    <p class="small muted">Monatsendstände in T€. Unter der Nulllinie: Bankguthaben, das sich nach Rückführung aller Linien aufbaut (Darstellung bei 500 T€ abgeschnitten). Fahren Sie über das Diagramm für die Einzelwerte.</p>
+  </section>
+
+  <div class="main">
+    <aside class="panel controls" aria-labelledby="h-ann">
+      <h2 id="h-ann">Annahmen</h2>
+      <div class="ctl"><div class="row"><label for="plus2026">Umsatzplus 2026</label><output id="o-plus2026"></output></div>
+        <input type="range" id="plus2026" min="0.10" max="0.25" step="0.005"><div class="hint">Ihre Erwartung: 15–20 % (Jan–Sep: +20,4 %)</div></div>
+      <div class="ctl"><div class="row"><label for="wachstum">Umsatzwachstum ab 2027</label><output id="o-wachstum"></output></div>
+        <input type="range" id="wachstum" min="-0.05" max="0.10" step="0.005"><div class="hint">pro Jahr</div></div>
+      <div class="ctl"><div class="row"><label for="rohertrag">Rohertragsquote</label><output id="o-rohertrag"></output></div>
+        <input type="range" id="rohertrag" min="0.34" max="0.42" step="0.001"><div class="hint">Jan–Sep 2026: 37,8 % · 1 Prozentpunkt ≈ 78 T€ Ergebnis p. a.</div></div>
+      <div class="ctl"><div class="row"><label for="kostenSteigerung">Kostensteigerung p. a.</label><output id="o-kostenSteigerung"></output></div>
+        <input type="range" id="kostenSteigerung" min="0" max="0.06" step="0.005"><div class="hint">auf Fixkosten von 185 T€ pro Monat</div></div>
+
+      <div class="group">
+        <div class="ctl"><div class="row"><label for="lieferantenZiel">Lieferantenverbindl. 31.12.2026</label><output id="o-lieferantenZiel"></output></div>
+          <input type="range" id="lieferantenZiel" min="150000" max="560000" step="5000"><div class="hint">heute 553 T€, Vorjahresende 167 T€</div></div>
+        <div class="ctl"><div class="row"><label for="lagerAbbauMax">Weiterer Lagerabbau ab 2027</label><output id="o-lagerAbbauMax"></output></div>
+          <input type="range" id="lagerAbbauMax" min="0" max="800000" step="25000"><div class="hint">verteilt auf 24 Monate · Lager nach Abbau auf EB: 2,21 Mio. € ≈ 6 Monate Wareneinsatz</div></div>
+        <div class="ctl"><div class="row"><label for="umsatz2025">Umsatz 2025 gesamt</label><output id="o-umsatz2025"></output></div>
+          <input type="range" id="umsatz2025" min="5800000" max="7200000" step="20000"><div class="hint">geschätzt, Jahreswert 2025 bitte nachliefern</div></div>
+        <div class="ctl"><div class="row"><label for="q4Anteil">Anteil Q4 am Jahresumsatz</label><output id="o-q4Anteil"></output></div>
+          <input type="range" id="q4Anteil" min="0.22" max="0.36" step="0.005"><div class="hint">steuert die Saisonverteilung ab 2027</div></div>
+      </div>
+
+      <div class="group">
+        <div class="ctl"><div class="row"><label for="investJahr">Investitionen p. a.</label><output id="o-investJahr"></output></div>
+          <input type="range" id="investJahr" min="0" max="250000" step="10000"></div>
+        <div class="ctl"><div class="row"><label for="ausschuettungJahr">Ausschüttungen p. a.</label><output id="o-ausschuettungJahr"></output></div>
+          <input type="range" id="ausschuettungJahr" min="0" max="300000" step="10000"></div>
+        <div class="ctl"><div class="row"><label for="steuersatz">Ertragsteuersatz</label><output id="o-steuersatz"></output></div>
+          <input type="range" id="steuersatz" min="0.15" max="0.33" step="0.005"><div class="hint">KSt, Soli und GewSt</div></div>
+        <label class="toggle"><input type="checkbox" id="sondertilgungKfw"><span>Sondertilgung KfW-Darlehen (3 %) aus Überschüssen, sobald beide Kontokorrente auf null sind</span></label>
+        <button type="button" class="reset" id="reset">Szenario-Werte wiederherstellen</button>
+      </div>
+    </aside>
+
+    <div style="display:grid; gap:22px; min-width:0">
+      <section class="panel" aria-labelledby="h-cmp">
+        <div class="panel-head">
+          <h2 id="h-cmp">Szenarien im Vergleich</h2>
+          <div class="legend" id="legend2"></div>
+        </div>
+        <div class="chart" id="chart2"></div>
+        <p class="small muted">Netto-Fremdkapital (Fremdkapital minus Guthaben) in T€. Die Szenarien unterscheiden sich in Umsatzplus 2026, Wachstum, Rohertragsquote und Kostensteigerung. Alle anderen Annahmen gelten wie links eingestellt.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="h-tab">
+        <h2 id="h-tab">Jahresübersicht</h2>
+        <div class="tablewrap"><table id="tab"></table></div>
+        <p class="small muted">2026: Umsatz, Rohertrag, Ergebnis, Zinsen und Steuern enthalten Januar–September als Ist (BWA); Cashflow und Plantilgung nur Oktober–Dezember. Cashflow = Ergebnis + Abschreibungen − Steuerzahlungen ± Working Capital − Investitionen − Ausschüttungen + Rückführung Verrechnungskonto. Werte in T€.</p>
+      </section>
+    </div>
+  </div>
+
+  <section class="panel notes" aria-label="Grundlagen">
+    <div style="display:grid; gap:10px; min-width:0">
+      <h2>Ausgangslage 30.09.2026</h2>
+      <div class="tablewrap"><table class="debt-table" id="debtTab"></table></div>
+    </div>
+    <div style="display:grid; gap:10px; min-width:0">
+      <h2>Annahmen und Vereinfachungen</h2>
+      <ul>
+        <li><b>Ertrag:</b> Fixkosten 185 T€ pro Monat (Kosten Jan–Sep ohne Abschreibungen und Warenabgabe), Kosten der Warenabgabe 3,7 % vom Umsatz, sonstige und neutrale Erträge 9,6 T€ pro Monat. Abschreibungen 7 T€ pro Monat, nicht zahlungswirksam.</li>
+        <li><b>Q4 2026:</b> Lager sinkt auf den EB-Wert (−141 T€), Forderungen auf den EB-Wert (+132 T€), Lieferantenverbindlichkeiten auf den eingestellten Wert. Ab 2027 bleibt das Working Capital konstant, außer beim eingestellten Lagerabbau.</li>
+        <li><b>Verrechnungskonto:</b> 245 T€, Rückführung 8 T€ pro Monat bis Ende 2029.</li>
+        <li><b>Steuern:</b> Vorauszahlungen auf Basis des Vorjahres, Abschlusszahlung jeweils im September des Folgejahres. Verlustvorträge sind nicht berücksichtigt.</li>
+        <li><b>Leasing</b> (Kärcher, Grenke, BMW, Hyundai) läuft weiter und steckt bereits in den Fixkosten.</li>
+        <li><b>Zinssätze Mercedes-Benz Bank (4,9 %) und Mietkauf (5,9 %)</b><span class="tag">geschätzt</span>. Tilgung 1.500 € bzw. 700 € pro Monat, aus der Saldenliste abgeleitet.</li>
+        <li><b>Umsatz 2025</b><span class="tag">geschätzt</span>: 6,46 Mio. €, also 72 % in Januar–September. Die Saisonschwankung innerhalb Januar–September ist nicht abgebildet. Die Kontokorrente können unterjährig höher liegen als hier gezeigt.</li>
+        <li><b>Nicht enthalten:</b> Lieferantenverbindlichkeiten, Steuern und andere nicht verzinsliche Verbindlichkeiten zählen nicht als Fremdkapital im Sinne dieses Plans.</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<script src="src/model.js"></script>
+<script>
+(function () {
+  const SERIES = [
+    { key: "ksk", label: "KSK Kontokorrent (8,9 %)", color: "--s1" },
+    { key: "cbkk", label: "Commerzbank KK (8,29 %)", color: "--s2" },
+    { key: "cb", label: "Commerzbank-Darlehen (5,52 %)", color: "--s3" },
+    { key: "kfw", label: "KfW 2020 (3 %)", color: "--s4" },
+    { key: "fz", label: "Mercedes + Mietkauf", color: "--s5" },
+  ];
+  const SZ_KEYS = ["plus2026", "wachstum", "rohertrag", "kostenSteigerung"];
+  const MONATE = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
+  const fmtPct = (v, d = 1) => (v * 100).toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d }) + " %";
+  const fmtT = (v) => Math.round(v / 1000).toLocaleString("de-DE");
+  const fmtTE = (v) => fmtT(v) + " T€";
+  const fmtMio = (v) => (v / 1e6).toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " Mio. €";
+  const md = (x) => (x ? `${MONATE[x.m - 1]} ${x.jahr}` : "nach 2036");
+  const css = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+  const FORMAT = {
+    plus2026: (v) => "+" + fmtPct(v), wachstum: (v) => (v >= 0 ? "+" : "") + fmtPct(v), rohertrag: (v) => fmtPct(v),
+    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, lagerAbbauMax: fmtTE, umsatz2025: fmtMio,
+    q4Anteil: (v) => fmtPct(v, 1), investJahr: fmtTE, ausschuettungJahr: fmtTE, steuersatz: (v) => fmtPct(v),
+  };
+
+  let szenario = "realistisch";
+  let params = { ...STANDARD, ...SZENARIEN.realistisch };
+  try { const s = localStorage.getItem("ep-szenario"); if (s && SZENARIEN[s]) { szenario = s; params = { ...STANDARD, ...SZENARIEN[s] }; } } catch (e) {}
+
+  function syncControls() {
+    for (const k of Object.keys(FORMAT)) {
+      const el = document.getElementById(k);
+      el.value = params[k];
+      document.getElementById("o-" + k).textContent = FORMAT[k](params[k]);
+    }
+    document.getElementById("sondertilgungKfw").checked = params.sondertilgungKfw;
+    for (const b of document.querySelectorAll(".seg button")) b.setAttribute("aria-pressed", b.dataset.sz === szenario);
+    const sz = SZENARIEN[szenario];
+    const abw = SZ_KEYS.some((k) => Math.abs(params[k] - sz[k]) > 1e-9);
+    document.getElementById("customNote").textContent = abw ? "Szenario mit eigenen Anpassungen" : "";
+  }
+
+  function simParams(p) {
+    return { ...p, lagerAbbauJahr: p.lagerAbbauMax / 2 };
+  }
+
+  // ---- Diagramm 1: gestapelte Flächen ----
+  function stackChart(r) {
+    const el = document.getElementById("chart");
+    const W = Math.max(320, el.clientWidth), H = W < 560 ? 280 : 360;
+    const m = { l: 52, r: 12, t: 12, b: 28 };
+    const pts = [{ jahr: 2026, m: 9, salden: Object.fromEntries(BASIS.darlehen.map((d) => [d.id, d.saldo])), guthaben: 0 }].concat(r.monate);
+    const rows = pts.map((p) => ({ p, v: [p.salden.ksk, p.salden.cbkk, p.salden.cb, p.salden.kfw, p.salden.mb + p.salden.ml], g: p.guthaben }));
+    const maxV = Math.max(...rows.map((x) => x.v.reduce((a, b) => a + b, 0)));
+    const minV = -Math.min(500000, Math.max(...rows.map((x) => x.g)));
+    const step = 250000;
+    const yMax = Math.ceil(maxV / step) * step, yMin = Math.floor(minV / step) * step;
+    const x = (i) => m.l + (i / (rows.length - 1)) * (W - m.l - m.r);
+    const y = (v) => m.t + ((yMax - v) / (yMax - yMin)) * (H - m.t - m.b);
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Fremdkapital nach Kreditgeber, Monatsendstände">`;
+    for (let v = yMin; v <= yMax + 1; v += step) {
+      s += `<line x1="${m.l}" x2="${W - m.r}" y1="${y(v)}" y2="${y(v)}" stroke="${v === 0 ? css("--ink-3") : css("--grid")}" stroke-width="1"/>`;
+      s += `<text x="${m.l - 8}" y="${y(v) + 4}" text-anchor="end">${fmtT(v)}</text>`;
+    }
+    rows.forEach((rw, i) => {
+      if (rw.p.m === 12 && (W > 560 || rw.p.jahr % 2 === 0)) s += `<text x="${x(i)}" y="${H - 8}" text-anchor="middle">${rw.p.jahr + 1}</text>`;
+    });
+    // Flächen
+    const cum = rows.map(() => 0);
+    SERIES.forEach((se, k) => {
+      const top = rows.map((rw, i) => cum[i] + rw.v[k]);
+      if (Math.max(...rows.map((rw) => rw.v[k])) > 0) {
+        let d = "M" + rows.map((rw, i) => `${x(i).toFixed(1)},${y(top[i]).toFixed(1)}`).join("L");
+        d += "L" + rows.map((rw, i) => `${x(i).toFixed(1)},${y(cum[i]).toFixed(1)}`).reverse().join("L") + "Z";
+        s += `<path d="${d}" fill="${css(se.color)}" fill-opacity="0.88" stroke="${css("--surface")}" stroke-width="1.5" stroke-linejoin="round"/>`;
+      }
+      top.forEach((t, i) => (cum[i] = t));
+    });
+    if (minV < 0) {
+      let d = "M" + rows.map((rw, i) => `${x(i).toFixed(1)},${y(Math.max(yMin, -rw.g)).toFixed(1)}`).join("L");
+      d += `L${x(rows.length - 1)},${y(0)}L${x(0)},${y(0)}Z`;
+      s += `<path d="${d}" fill="${css("--s6")}" fill-opacity="0.35" stroke="${css("--s6")}" stroke-width="2"/>`;
+    }
+    // Meilenstein
+    if (r.kkFrei) {
+      const i = rows.findIndex((rw) => rw.p === r.kkFrei);
+      s += `<line x1="${x(i)}" x2="${x(i)}" y1="${m.t}" y2="${y(0)}" stroke="${css("--ink-2")}" stroke-dasharray="3 3"/>`;
+      const anchor = x(i) > W - 150 ? "end" : "start";
+      s += `<text x="${x(i) + (anchor === "start" ? 6 : -6)}" y="${m.t + 12}" text-anchor="${anchor}" style="fill:${css("--ink")}">KK auf null: ${md(r.kkFrei)}</text>`;
+    }
+    s += `<line id="cx" x1="0" x2="0" y1="${m.t}" y2="${H - m.b}" stroke="${css("--ink-2")}" stroke-width="1" visibility="hidden"/>`;
+    s += `<rect x="${m.l}" y="${m.t}" width="${W - m.l - m.r}" height="${H - m.t - m.b}" fill="transparent" id="hit"/></svg><div class="tip" hidden id="tip"></div>`;
+    el.innerHTML = s;
+
+    const hit = el.querySelector("#hit"), cx = el.querySelector("#cx"), tip = el.querySelector("#tip");
+    const move = (ev) => {
+      const svg = el.querySelector("svg"), b = svg.getBoundingClientRect();
+      const px = ((ev.clientX - b.left) / b.width) * W;
+      const i = Math.max(0, Math.min(rows.length - 1, Math.round(((px - m.l) / (W - m.l - m.r)) * (rows.length - 1))));
+      const rw = rows[i];
+      cx.setAttribute("x1", x(i)); cx.setAttribute("x2", x(i)); cx.setAttribute("visibility", "visible");
+      const sum = rw.v.reduce((a, b) => a + b, 0);
+      tip.innerHTML = `<div class="t">${MONATE[rw.p.m - 1]} ${rw.p.jahr}${i === 0 ? " (Ist)" : ""}</div>` +
+        SERIES.map((se, k) => rw.v[k] > 0.5 ? `<div class="r"><span class="k"><i style="background:var(${se.color})"></i>${se.label.replace(/ \(.*\)/, "")}</span><b>${fmtTE(rw.v[k])}</b></div>` : "").join("") +
+        `<div class="r sum"><span>Fremdkapital</span><b>${fmtTE(sum)}</b></div>` +
+        (rw.g > 0.5 ? `<div class="r"><span class="k"><i style="background:var(--s6)"></i>Guthaben</span><b>${fmtTE(rw.g)}</b></div>` : "");
+      tip.hidden = false;
+      const left = (x(i) / W) * b.width;
+      tip.style.left = Math.min(Math.max(0, left + 14), b.width - tip.offsetWidth) + "px";
+      if (left + 14 + tip.offsetWidth > b.width) tip.style.left = Math.max(0, left - tip.offsetWidth - 14) + "px";
+      tip.style.top = "10px";
+    };
+    hit.addEventListener("pointermove", move);
+    hit.addEventListener("pointerdown", move);
+    hit.addEventListener("pointerleave", () => { tip.hidden = true; cx.setAttribute("visibility", "hidden"); });
+  }
+
+  // ---- Diagramm 2: Szenarien ----
+  function cmpChart() {
+    const el = document.getElementById("chart2");
+    const W = Math.max(300, el.clientWidth), H = W < 560 ? 220 : 260;
+    const m = { l: 52, r: 12, t: 12, b: 28 };
+    const sc = [["vorsichtig", "--sc-v"], ["realistisch", "--sc-r"], ["optimistisch", "--sc-o"]];
+    const runs = sc.map(([k, c]) => {
+      const p = { ...params };
+      SZ_KEYS.forEach((kk) => (p[kk] = SZENARIEN[k][kk]));
+      const r = simuliere(simParams(p));
+      return { k, c, r, vals: [BASIS.darlehen.reduce((a, d) => a + d.saldo, 0)].concat(r.monate.map((x) => x.netto)) };
+    });
+    const all = runs.flatMap((x) => x.vals);
+    const lo = Math.max(-1500000, Math.min(...all));
+    const step = [250000, 500000, 1000000].find((st) => (Math.max(...all) - lo) / st <= 7) || 1000000;
+    const yMax = Math.ceil(Math.max(...all) / step) * step, yMin = Math.min(0, Math.floor(lo / step) * step);
+    const n = runs[0].vals.length;
+    const x = (i) => m.l + (i / (n - 1)) * (W - m.l - m.r);
+    const y = (v) => m.t + ((yMax - v) / (yMax - yMin)) * (H - m.t - m.b);
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Netto-Fremdkapital je Szenario">`;
+    for (let v = yMin; v <= yMax + 1; v += step) {
+      s += `<line x1="${m.l}" x2="${W - m.r}" y1="${y(v)}" y2="${y(v)}" stroke="${v === 0 ? css("--ink-3") : css("--grid")}"/>`;
+      s += `<text x="${m.l - 8}" y="${y(v) + 4}" text-anchor="end">${fmtT(v)}</text>`;
+    }
+    runs[0].r.monate.forEach((p, i) => { if (p.m === 12 && (W > 560 || p.jahr % 2 === 0)) s += `<text x="${x(i + 1)}" y="${H - 8}" text-anchor="middle">${p.jahr + 1}</text>`; });
+    runs.forEach((ru) => {
+      const w = ru.k === szenario ? 3 : 2;
+      s += `<path d="M${ru.vals.map((v, i) => `${x(i).toFixed(1)},${y(Math.max(yMin, v)).toFixed(1)}`).join("L")}" fill="none" stroke="${css(ru.c)}" stroke-width="${w}" stroke-linejoin="round" ${ru.k === szenario ? "" : 'stroke-opacity="0.75"'}/>`;
+      if (ru.r.nettoFrei) {
+        const i = ru.r.monate.indexOf(ru.r.nettoFrei) + 1;
+        s += `<circle cx="${x(i)}" cy="${y(0)}" r="5" fill="${css(ru.c)}" stroke="${css("--surface")}" stroke-width="2"/>`;
+      }
+    });
+    s += `</svg>`;
+    el.innerHTML = s;
+    document.getElementById("legend2").innerHTML = runs.map((ru) =>
+      `<span><i class="ln" style="background:var(${ru.c})"></i>${SZENARIEN[ru.k].label}: ${ru.r.nettoFrei ? "netto frei " + md(ru.r.nettoFrei) : "nicht bis 2036"}</span>`).join("");
+  }
+
+  function table(r) {
+    const jahre = [];
+    for (let j = 2026; j <= STANDARD.bisJahr; j++) jahre.push(j);
+    const yt = BASIS.ytd;
+    let h = `<thead><tr><th>Jahr</th><th>Umsatz</th><th>Rohertrag</th><th>Ergebnis v. St.</th><th>Zinsen</th><th>Steuern</th><th>Cashflow</th><th>Plantilgung</th><th>KK 31.12.</th><th>Fremdkapital 31.12.</th><th>Guthaben</th></tr></thead><tbody>`;
+    for (const j of jahre) {
+      const ms = r.monate.filter((x) => x.jahr === j);
+      if (!ms.length) continue;
+      const sum = (f) => ms.reduce((a, x) => a + f(x), 0);
+      const ist = j === 2026;
+      const umsatz = sum((x) => x.umsatz) + (ist ? yt.umsatz : 0);
+      const roh = sum((x) => x.rohertrag) + (ist ? yt.rohertrag : 0);
+      const zins = sum((x) => x.zinsen) + (ist ? yt.zinsaufwand : 0);
+      const st = sum((x) => x.steuer) + (ist ? yt.steuern : 0);
+      const cf = sum((x) => x.freierCf + x.tilgung);
+      const last = ms[ms.length - 1];
+      const ebt = r.ebtJahr[j];
+      h += `<tr class="${last.fk < 1 ? "zero" : ""}"><td>${j}${ist ? "*" : ""}</td><td>${fmtT(umsatz)}</td><td>${fmtT(roh)}</td><td class="${ebt < 0 ? "neg" : ""}">${fmtT(ebt)}</td><td>${fmtT(zins)}</td><td>${fmtT(st)}</td><td class="${cf < 0 ? "neg" : ""}">${fmtT(cf)}</td><td>${fmtT(sum((x) => x.tilgung))}</td><td>${fmtT(last.kk)}</td><td>${fmtT(last.fk)}</td><td>${fmtT(last.guthaben)}</td></tr>`;
+    }
+    document.getElementById("tab").innerHTML = h + `</tbody>`;
+  }
+
+  function debtTable() {
+    const rows = BASIS.darlehen.map((d) => {
+      const tilg = d.art === "kk" ? `Linie ${fmtTE(d.linie)}` : d.art === "quartal" ? `${d.rate.toLocaleString("de-DE")} € / Quartal` : `≈ ${d.rate.toLocaleString("de-DE")} € / Monat`;
+      return `<tr><td>${d.name}</td><td>${fmtTE(d.saldo)}</td><td>${fmtPct(d.zins, 2)}</td><td>${tilg}</td></tr>`;
+    }).join("");
+    const sum = BASIS.darlehen.reduce((a, d) => a + d.saldo, 0);
+    document.getElementById("debtTab").innerHTML = `<thead><tr><th>Kredit</th><th>Saldo</th><th>Zins</th><th>Tilgung</th></tr></thead><tbody>${rows}<tr><td><b>Summe</b></td><td><b>${fmtTE(sum)}</b></td><td></td><td></td></tr></tbody>`;
+  }
+
+  function kpis(r) {
+    const set = (id, v, d) => { document.getElementById(id).textContent = v; document.getElementById(id + "d").innerHTML = d; };
+    const fk0 = BASIS.darlehen.reduce((a, d) => a + d.saldo, 0);
+    const kkPill = r.kkFrei ? (r.kkFrei.jahr <= 2029 ? "good" : r.kkFrei.jahr <= 2032 ? "warn" : "crit") : "crit";
+    set("kKK", md(r.kkFrei), `<span class="pill ${kkPill}">${r.kkFrei ? "in " + ((r.monate.indexOf(r.kkFrei) + 1) / 12).toLocaleString("de-DE", { maximumFractionDigits: 1 }) + " Jahren" : "nicht im Planungszeitraum"}</span> Höchststand ${fmtTE(r.kkSpitze.kk)} (${md(r.kkSpitze)})`);
+    set("kNet", md(r.nettoFrei), r.schuldenfrei ? `Letzte Rate (Mietkauf/Fahrzeug): ${md(r.schuldenfrei)}` : "Restschuld Ende 2036: " + fmtTE(r.monate[r.monate.length - 1].fk));
+    const e27 = r.monate.find((x) => x.jahr === 2027 && x.m === 12);
+    set("kFk27", fmtTE(e27.fk), `${fmtTE(fk0 - e27.fk)} weniger als am 30.09.2026 (${fmtTE(fk0)})`);
+    const bis = r.nettoFrei ? r.monate.indexOf(r.nettoFrei) : r.monate.length - 1;
+    const z = r.monate.slice(0, bis + 1).reduce((a, x) => a + x.zinsen, 0);
+    set("kZins", fmtTE(z), `ab Oktober 2026${r.nettoFrei ? "" : " bis Ende 2036"}`);
+    if (r.linieUeberschritten) document.getElementById("kKKd").innerHTML += `<br><span class="pill crit">Kreditlinien ab ${r.linieUeberschritten} überschritten</span>`;
+  }
+
+  function render() {
+    syncControls();
+    const r = simuliere(simParams(params));
+    kpis(r); stackChart(r); cmpChart(); table(r);
+  }
+
+  document.getElementById("legend").innerHTML = SERIES.map((se) => `<span><i style="background:var(${se.color})"></i>${se.label}</span>`).join("") + `<span><i style="background:var(--s6);opacity:.6"></i>Guthaben</span>`;
+  for (const k of Object.keys(FORMAT)) document.getElementById(k).addEventListener("input", (e) => { params[k] = parseFloat(e.target.value); render(); });
+  document.getElementById("sondertilgungKfw").addEventListener("change", (e) => { params.sondertilgungKfw = e.target.checked; render(); });
+  for (const b of document.querySelectorAll(".seg button")) b.addEventListener("click", () => {
+    szenario = b.dataset.sz;
+    SZ_KEYS.forEach((k) => (params[k] = SZENARIEN[szenario][k]));
+    try { localStorage.setItem("ep-szenario", szenario); } catch (e) {}
+    render();
+  });
+  document.getElementById("reset").addEventListener("click", () => { params = { ...STANDARD, ...SZENARIEN[szenario] }; render(); });
+  let t; window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(render, 120); });
+  if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", render);
+  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  debtTable();
+  render();
+})();
+</script>
