@@ -65,6 +65,10 @@ header .sub { color: var(--ink-2); margin-top: 6px; max-width: 62ch; }
 .kpi .v { font-family: var(--f-head); font-size: 1.75rem; font-weight: 600; line-height: 1.1; }
 .kpi .d { font-size: 12.5px; color: var(--ink-2); }
 .pill { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 99px; width: fit-content; border: 1px solid currentColor; }
+.alert { border: 1px solid currentColor; border-radius: 10px; padding: 12px 16px; display: grid; gap: 2px; background: var(--surface); }
+.alert b { font-family: var(--f-head); font-size: 1.05rem; }
+.alert p { color: var(--ink); }
+.alert.crit { color: var(--crit); } .alert.warn { color: var(--warn); }
 .pill.good { color: var(--good); } .pill.warn { color: var(--warn); } .pill.crit { color: var(--crit); }
 
 .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; gap: 14px; min-width: 0; }
@@ -147,6 +151,8 @@ tr.zero td { color: var(--good); }
     </div>
   </header>
 
+  <div class="alert" id="alert" role="status" hidden></div>
+
   <section class="kpis" aria-label="Kennzahlen">
     <div class="kpi"><h3>Kontokorrent auf null</h3><div class="v num" id="kKK">–</div><div class="d" id="kKKd"></div></div>
     <div class="kpi"><h3>Netto schuldenfrei</h3><div class="v num" id="kNet">–</div><div class="d" id="kNetd"></div></div>
@@ -180,6 +186,8 @@ tr.zero td { color: var(--good); }
         <input type="range" id="kostenSteigerung" min="0" max="0.06" step="0.005"><div class="hint">auf Fixkosten von 185 T€ pro Monat</div></div>
 
       <div class="group">
+        <div class="ctl"><div class="row"><label for="kskLinieNeu">KSK-Linie ab 30.05.2027</label><output id="o-kskLinieNeu"></output></div>
+          <input type="range" id="kskLinieNeu" min="300000" max="1000000" step="50000"><div class="hint">bis dahin 1.000 T€ · Commerzbank sinkt auf 380 T€</div></div>
         <div class="ctl"><div class="row"><label for="lieferantenZiel">Lieferantenverbindl. 31.12.2026</label><output id="o-lieferantenZiel"></output></div>
           <input type="range" id="lieferantenZiel" min="150000" max="560000" step="5000"><div class="hint">heute 553 T€, Vorjahresende 167 T€</div></div>
         <div class="ctl"><div class="row"><label for="lagerAbbauMax">Weiterer Lagerabbau ab 2027</label><output id="o-lagerAbbauMax"></output></div>
@@ -247,7 +255,7 @@ tr.zero td { color: var(--good); }
         <li><b>Q4 2026:</b> Lager sinkt auf den EB-Wert (−141 T€), Forderungen auf den EB-Wert (+132 T€), Lieferantenverbindlichkeiten auf den eingestellten Wert. Ab 2027 bleibt das Working Capital konstant, außer beim eingestellten Lagerabbau.</li>
         <li><b>Verrechnungskonto:</b> 245 T€, Rückführung 8 T€ pro Monat bis Ende 2029.</li>
         <li><b>Steuern:</b> Vorauszahlungen auf Basis des Vorjahres, Abschlusszahlung jeweils im September des Folgejahres. Verlustvorträge sind nicht berücksichtigt.</li>
-        <li><b>Kreditlinien:</b> KSK 1.000 T€. Commerzbank 500 T€ ab 30.09.2026, monatlich −15 T€ bis Mai 2027, danach 380 T€. Was die Commerzbank-Linie übersteigt, wird über die KSK-Linie finanziert.</li>
+        <li><b>Kreditlinien:</b> KSK 1.000 T€, ab 30.05.2027 500 T€ (einstellbar). Commerzbank 500 T€ ab 30.09.2026, monatlich −15 T€ bis Mai 2027, danach 380 T€. Was die Commerzbank-Linie übersteigt, wird über die KSK-Linie finanziert.</li>
         <li><b>aifinyo</b> (Fact Sheet Finetrading): aifinyo bezahlt den Lieferanten, die Rückführung erfolgt in gleichen Monatsraten, und frei werdende Linie wird sofort wieder genutzt. Kosten: Handelsmarge 2,99 % bis 5,99 % je nach Zahlungsziel (180 Tage: 3,99 %), 39 € je Rechnung, Bereitstellung 269 € pro Monat für mindestens 24 Monate, Einrichtung einmalig 1,95 % der Linie. Ein Skonto, das aifinyo beim Lieferanten zieht, wird auf die Marge angerechnet; das ist hier nicht berücksichtigt. Der offene Betrag zählt zum Fremdkapital, nicht zum Kontokorrent-Rahmen.</li>
         <li><b>Leasing</b> (Kärcher, Grenke, BMW, Hyundai) läuft weiter und steckt bereits in den Fixkosten.</li>
         <li><b>Zinssätze Mercedes-Benz Bank (4,9 %) und Mietkauf (5,9 %)</b><span class="tag">geschätzt</span>. Tilgung 1.500 € bzw. 700 € pro Monat, aus der Saldenliste abgeleitet.</li>
@@ -281,7 +289,7 @@ tr.zero td { color: var(--good); }
 
   const FORMAT = {
     umsatz2026: fmtMio, fixSenkung: fmtTE, rohertragPlus: fmtTE, wachstum: (v) => (v >= 0 ? "+" : "") + fmtPct(v), rohertrag: (v) => fmtPct(v),
-    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, lagerAbbauMax: fmtTE,
+    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, kskLinieNeu: fmtTE, lagerAbbauMax: fmtTE,
     q4Anteil: (v) => fmtPct(v, 1), aifinyoRahmen: fmtTE, aifinyoAuslastung: (v) => fmtPct(v, 0), aifinyoLaufzeit: (v) => `${v * 30} Tage · ${fmtPct(AIFINYO.marge[v], 2)}`, aifinyoDauer: (v) => v + " Monate", aifinyoRechnungen: (v) => String(v), investJahr: fmtTE, ausschuettungJahr: fmtTE, steuersatz: (v) => fmtPct(v),
   };
 
@@ -347,6 +355,10 @@ tr.zero td { color: var(--good); }
       d += `L${x(rows.length - 1)},${y(0)}L${x(0)},${y(0)}Z`;
       s += `<path d="${d}" fill="${css("--s6")}" fill-opacity="0.35" stroke="${css("--s6")}" stroke-width="2"/>`;
     }
+    // Summe der Kontokorrentlinien über den beiden KK-Flächen
+    const lin = [BASIS.darlehen[0].linie + BASIS.darlehen[1].linie].concat(r.monate.map((x) => x.linien));
+    s += `<path d="M${lin.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("L")}" fill="none" stroke="${css("--ink")}" stroke-width="1.5" stroke-dasharray="5 3"/>`;
+    s += `<text x="${x(1) + 4}" y="${y(lin[1]) - 6}" style="fill:${css("--ink")}">KK-Linien gesamt</text>`;
     // Meilenstein
     if (r.kkFrei) {
       const i = rows.findIndex((rw) => rw.p === r.kkFrei);
@@ -445,7 +457,7 @@ tr.zero td { color: var(--good); }
 
   function debtTable() {
     const rows = BASIS.darlehen.map((d) => {
-      const tilg = d.art === "kk" ? (d.linienAbbau ? `Linie ${fmtT(d.linie)} → ${fmtTE(d.linie - d.linienAbbau.rate * d.linienAbbau.monate)} (Mai 27)` : `Linie ${fmtTE(d.linie)}`) : d.art === "quartal" ? `${d.rate.toLocaleString("de-DE")} € / Quartal` : `≈ ${d.rate.toLocaleString("de-DE")} € / Monat`;
+      const tilg = d.art === "kk" ? (d.linienAbbau ? `Linie ${fmtT(d.linie)} → ${fmtTE(d.linie - d.linienAbbau.rate * d.linienAbbau.monate)} (Mai 27)` : d.linienStufe ? `Linie ${fmtT(d.linie)} → ${fmtTE(params.kskLinieNeu)} (Mai 27)` : `Linie ${fmtTE(d.linie)}`) : d.art === "quartal" ? `${d.rate.toLocaleString("de-DE")} € / Quartal` : `≈ ${d.rate.toLocaleString("de-DE")} € / Monat`;
       return `<tr><td>${d.name}</td><td>${fmtTE(d.saldo)}</td><td>${fmtPct(d.zins, 2)}</td><td>${tilg}</td></tr>`;
     }).join("");
     const sum = BASIS.darlehen.reduce((a, d) => a + d.saldo, 0);
@@ -456,14 +468,24 @@ tr.zero td { color: var(--good); }
     const set = (id, v, d) => { document.getElementById(id).textContent = v; document.getElementById(id + "d").innerHTML = d; };
     const fk0 = BASIS.darlehen.reduce((a, d) => a + d.saldo, 0);
     const kkPill = r.kkFrei ? (r.kkFrei.jahr <= 2029 ? "good" : r.kkFrei.jahr <= 2032 ? "warn" : "crit") : "crit";
-    set("kKK", md(r.kkFrei), `<span class="pill ${kkPill}">${r.kkFrei ? "in " + ((r.monate.indexOf(r.kkFrei) + 1) / 12).toLocaleString("de-DE", { maximumFractionDigits: 1 }) + " Jahren" : "nicht im Planungszeitraum"}</span> Höchststand ${fmtTE(r.kkSpitze.kk)} (${md(r.kkSpitze)})<br>Kleinster freier Kreditrahmen: <b>${fmtTE(r.freiraumMin.freiraum)}</b> (${md(r.freiraumMin)})`);
+    set("kKK", md(r.kkFrei), `<span class="pill ${kkPill}">${r.kkFrei ? "in " + ((r.monate.indexOf(r.kkFrei) + 1) / 12).toLocaleString("de-DE", { maximumFractionDigits: 1 }) + " Jahren" : "nicht im Planungszeitraum"}</span> Höchststand ${fmtTE(r.kkSpitze.kk)} (${md(r.kkSpitze)})<br>${r.freiraumMin.freiraum >= 0 ? `Kleinster freier Kreditrahmen: <b>${fmtTE(r.freiraumMin.freiraum)}</b> (${md(r.freiraumMin)})` : ""}`);
     set("kNet", md(r.nettoFrei), r.schuldenfrei ? `Letzte Rate (Mietkauf/Fahrzeug): ${md(r.schuldenfrei)}` : "Restschuld Ende 2036: " + fmtTE(r.monate[r.monate.length - 1].fk));
     const e27 = r.monate.find((x) => x.jahr === 2027 && x.m === 12);
     set("kFk27", fmtTE(e27.fk), `${fmtTE(fk0 - e27.fk)} weniger als am 30.09.2026 (${fmtTE(fk0)})`);
     const bis = r.nettoFrei ? r.monate.indexOf(r.nettoFrei) : r.monate.length - 1;
     const z = r.monate.slice(0, bis + 1).reduce((a, x) => a + x.zinsen, 0);
     set("kZins", fmtTE(z), `ab Oktober 2026${r.nettoFrei ? "" : " bis Ende 2036"}${r.aifKosten > 0 ? `, davon aifinyo ${fmtTE(r.aifKosten)}` : ""}`);
-    if (r.linieUeberschritten) document.getElementById("kKKd").innerHTML += `<br><span class="pill crit">Kreditlinien ab ${r.linieUeberschritten} überschritten</span>`;
+    const al = document.getElementById("alert");
+    if (r.unterdeckungMax) {
+      const betroffen = r.monate.filter((x) => x.freiraum < -0.5);
+      al.className = "alert crit";
+      al.innerHTML = `<b>Unterdeckung: Die Kontokorrentlinien reichen ${betroffen.length === 1 ? "im " + md(betroffen[0]) : `von ${md(betroffen[0])} bis ${md(betroffen[betroffen.length - 1])}`} nicht aus.</b><p>Größte Lücke ${fmtTE(-r.unterdeckungMax.freiraum)} im ${md(r.unterdeckungMax)}, betroffen sind ${betroffen.length} Monate. Im Modell läuft der Fehlbetrag über die KSK-Linie hinaus.</p>`;
+      al.hidden = false;
+    } else if (r.freiraumMin.freiraum < 100000) {
+      al.className = "alert warn";
+      al.innerHTML = `<b>Knapp: Im ${md(r.freiraumMin)} bleiben nur ${fmtTE(r.freiraumMin.freiraum)} freier Kontokorrentrahmen.</b><p>Unterjährige Spitzen und der Saisoneinkauf sind im Modell nicht enthalten.</p>`;
+      al.hidden = false;
+    } else al.hidden = true;
   }
 
   function render() {
