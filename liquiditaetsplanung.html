@@ -16,7 +16,7 @@
   --good: #0a7d36;
   --warn: #a86400;
   --crit: #c0352f;
-  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300; --s7: #6250d6;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300; --s7: #6250d6; --s8: #e34948;
   --sc-v: #c0352f; --sc-r: #1f5e8c; --sc-o: #0a7d36;
   --f-head: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
   --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -27,7 +27,7 @@
     --bg: #111418; --surface: #1a1e23; --ink: #eef1f4; --ink-2: #b4bcc6; --ink-3: #87909b;
     --line: #2e343c; --grid: #252a31; --accent: #7fb3de; --accent-soft: #1d2a36;
     --good: #4cc27a; --warn: #e3a33a; --crit: #ec6a63;
-    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #2f9e3a; --s7: #9085e9;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #2f9e3a; --s7: #9085e9; --s8: #e66767;
     --sc-v: #ec6a63; --sc-r: #7fb3de; --sc-o: #4cc27a;
     color-scheme: dark;
   }
@@ -36,7 +36,7 @@
   --bg: #111418; --surface: #1a1e23; --ink: #eef1f4; --ink-2: #b4bcc6; --ink-3: #87909b;
   --line: #2e343c; --grid: #252a31; --accent: #7fb3de; --accent-soft: #1d2a36;
   --good: #4cc27a; --warn: #e3a33a; --crit: #ec6a63;
-  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #2f9e3a; --s7: #9085e9;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #2f9e3a; --s7: #9085e9; --s8: #e66767;
   --sc-v: #ec6a63; --sc-r: #7fb3de; --sc-o: #4cc27a;
   color-scheme: dark;
 }
@@ -65,6 +65,7 @@ header .sub { color: var(--ink-2); margin-top: 6px; max-width: 62ch; }
 .kpi .v { font-family: var(--f-head); font-size: 1.75rem; font-weight: 600; line-height: 1.1; }
 .kpi .d { font-size: 12.5px; color: var(--ink-2); }
 .pill { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 99px; width: fit-content; border: 1px solid currentColor; }
+.alert[hidden] { display: none; }
 .alert { border: 1px solid currentColor; border-radius: 10px; padding: 12px 16px; display: grid; gap: 2px; background: var(--surface); }
 .alert b { font-family: var(--f-head); font-size: 1.05rem; }
 .alert p { color: var(--ink); }
@@ -155,9 +156,9 @@ tr.zero td { color: var(--good); }
 
   <section class="kpis" aria-label="Kennzahlen">
     <div class="kpi"><h3>Kontokorrent auf null</h3><div class="v num" id="kKK">–</div><div class="d" id="kKKd"></div></div>
-    <div class="kpi"><h3>Netto schuldenfrei</h3><div class="v num" id="kNet">–</div><div class="d" id="kNetd"></div></div>
+    <div class="kpi"><h3>Bankschulden auf null</h3><div class="v num" id="kNet">–</div><div class="d" id="kNetd"></div></div>
     <div class="kpi"><h3>Fremdkapital 31.12.2027</h3><div class="v num" id="kFk27">–</div><div class="d" id="kFk27d"></div></div>
-    <div class="kpi"><h3>Zinsen und Gebühren bis schuldenfrei</h3><div class="v num" id="kZins">–</div><div class="d" id="kZinsd"></div></div>
+    <div class="kpi"><h3>Zinsen und Gebühren bis bankenfrei</h3><div class="v num" id="kZins">–</div><div class="d" id="kZinsd"></div></div>
   </section>
 
   <section class="panel" aria-labelledby="h-chart">
@@ -200,12 +201,23 @@ tr.zero td { color: var(--good); }
         <div class="ctl"><div class="row"><label for="investJahr">Investitionen p. a.</label><output id="o-investJahr"></output></div>
           <input type="range" id="investJahr" min="0" max="250000" step="10000"></div>
         <div class="ctl"><div class="row"><label for="einlageJahr">Einlage ab Mai 2029 p. a.</label><output id="o-einlageJahr"></output></div>
-          <input type="range" id="einlageJahr" min="0" max="200000" step="10000"><div class="hint">im Anschluss an die GbR-Rückführung, bis schuldenfrei</div></div>
+          <input type="range" id="einlageJahr" min="0" max="200000" step="10000"><div class="hint">solange Bankschulden bestehen</div></div>
         <div class="ctl"><div class="row"><label for="ausschuettungJahr">Ausschüttungen p. a.</label><output id="o-ausschuettungJahr"></output></div>
           <input type="range" id="ausschuettungJahr" min="0" max="300000" step="10000"></div>
         <div class="ctl"><div class="row"><label for="steuersatz">Ertragsteuersatz</label><output id="o-steuersatz"></output></div>
           <input type="range" id="steuersatz" min="0.15" max="0.33" step="0.005"><div class="hint">KSt, Soli und GewSt</div></div>
         <label class="toggle"><input type="checkbox" id="sondertilgungKfw"><span>Sondertilgung KfW-Darlehen (3 %) aus Überschüssen, sobald beide Kontokorrente auf null sind</span></label>
+      </div>
+
+      <div class="group">
+        <h3>Nachrangdarlehen GbR</h3>
+        <label class="toggle"><input type="checkbox" id="nachrangAktiv"><span>Nachrangdarlehen der GbR einplanen (tilgungsfrei, Rückführung erst nach allen anderen Krediten; die Rückführung des Verrechnungskontos entfällt)</span></label>
+        <div class="ctl"><div class="row"><label for="nachrangBetrag">Betrag</label><output id="o-nachrangBetrag"></output></div>
+          <input type="range" id="nachrangBetrag" min="100000" max="1000000" step="50000"></div>
+        <div class="ctl"><div class="row"><label for="nachrangZins">Zinssatz p. a.</label><output id="o-nachrangZins"></output></div>
+          <input type="range" id="nachrangZins" min="0" max="0.08" step="0.005"></div>
+        <div class="ctl"><div class="row"><label for="nachrangStart">Auszahlung</label>
+          <select id="nachrangStart"><option value="2026-11">November 2026</option><option value="2026-12">Dezember 2026</option><option value="2027-01">Januar 2027</option><option value="2027-04">April 2027</option><option value="2027-05">Mai 2027</option></select></div></div>
       </div>
 
       <div class="group">
@@ -234,7 +246,7 @@ tr.zero td { color: var(--good); }
           <div class="legend" id="legend2"></div>
         </div>
         <div class="chart" id="chart2"></div>
-        <p class="small muted">Netto-Fremdkapital (Fremdkapital minus Guthaben) in T€. Die Szenarien unterscheiden sich in Wachstum ab 2027, Rohertragsquote und Kostensteigerung. Alle anderen Annahmen gelten wie links eingestellt.</p>
+        <p class="small muted">Netto-Bankschulden (Kredite und aifinyo minus Guthaben, ohne Nachrangdarlehen) in T€. Die Szenarien unterscheiden sich in Wachstum ab 2027, Rohertragsquote und Kostensteigerung. Alle anderen Annahmen gelten wie links eingestellt.</p>
       </section>
 
       <section class="panel" aria-labelledby="h-tab">
@@ -255,7 +267,7 @@ tr.zero td { color: var(--good); }
       <ul>
         <li><b>Ertrag:</b> Fixkosten 185 T€ pro Monat (Kosten Jan–Sep ohne Abschreibungen und Warenabgabe), Kosten der Warenabgabe 3,7 % vom Umsatz, sonstige und neutrale Erträge 9,6 T€ pro Monat. Abschreibungen 7 T€ pro Monat, nicht zahlungswirksam.</li>
         <li><b>Q4 2026:</b> Lager sinkt auf den EB-Wert (−141 T€), Forderungen auf den EB-Wert (+132 T€), Lieferantenverbindlichkeiten auf den eingestellten Wert. Ab 2027 bleibt das Working Capital konstant, außer beim eingestellten Lagerabbau.</li>
-        <li><b>Verrechnungskonto GbR:</b> 245 T€, Rückführung 8 T€ pro Monat ab Oktober 2026, letzte Rate 5 T€ im April 2029. Danach bringen die Gesellschafter 50 T€ pro Jahr ein (4,2 T€ pro Monat, einstellbar), bis die GmbH schuldenfrei ist.</li>
+        <li><b>GbR:</b> Nachrangdarlehen 500 T€ zu 5 % ab Januar 2027, Zinsen laufend, tilgungsfrei. Zurückgezahlt wird es erst, wenn alle anderen Kredite und aifinyo auf null sind. Die Rückführung des Verrechnungskontos (245 T€, 8 T€ pro Monat) entfällt dafür; ohne Nachrangdarlehen läuft sie bis April 2029. Ab Mai 2029 bringen die Gesellschafter 50 T€ pro Jahr ein (einstellbar), solange Bankschulden bestehen.</li>
         <li><b>Steuern:</b> Vorauszahlungen auf Basis des Vorjahres, Abschlusszahlung jeweils im September des Folgejahres. Verlustvorträge sind nicht berücksichtigt.</li>
         <li><b>Kreditlinien:</b> KSK 1.000 T€, ab 30.05.2027 500 T€ (einstellbar). Commerzbank 500 T€ ab 30.09.2026, monatlich −15 T€ bis Mai 2027, danach 380 T€. Was die Commerzbank-Linie übersteigt, wird über die KSK-Linie finanziert.</li>
         <li><b>aifinyo</b> (Fact Sheet Finetrading): aifinyo bezahlt den Lieferanten, die Rückführung erfolgt in gleichen Monatsraten, und frei werdende Linie wird sofort wieder genutzt. Kosten: Handelsmarge 2,99 % bis 5,99 % je nach Zahlungsziel (180 Tage: 3,99 %), 39 € je Rechnung, Bereitstellung 269 € pro Monat für mindestens 24 Monate, Einrichtung einmalig 1,95 % der Linie. Ein Skonto, das aifinyo beim Lieferanten zieht, wird auf die Marge angerechnet; das ist hier nicht berücksichtigt. Der offene Betrag zählt zum Fremdkapital, nicht zum Kontokorrent-Rahmen.</li>
@@ -279,6 +291,7 @@ tr.zero td { color: var(--good); }
     { key: "kfw", label: "KfW 2020 (3 %)", color: "--s4" },
     { key: "fz", label: "Mercedes + Mietkauf", color: "--s5" },
     { key: "aif", label: "aifinyo Einkaufsfinanzierung", color: "--s7" },
+    { key: "nr", label: "Nachrangdarlehen GbR", color: "--s8" },
   ];
   const SZ_KEYS = ["wachstum", "rohertrag", "kostenSteigerung"];
   const MONATE = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
@@ -291,7 +304,7 @@ tr.zero td { color: var(--good); }
 
   const FORMAT = {
     umsatz2026: fmtMio, fixSenkung: fmtTE, rohertragPlus: fmtTE, wachstum: (v) => (v >= 0 ? "+" : "") + fmtPct(v), rohertrag: (v) => fmtPct(v),
-    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, kskLinieNeu: fmtTE, lagerAbbauMax: fmtTE,
+    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, kskLinieNeu: fmtTE, nachrangBetrag: fmtTE, nachrangZins: (v) => fmtPct(v), lagerAbbauMax: fmtTE,
     q4Anteil: (v) => fmtPct(v, 1), aifinyoRahmen: fmtTE, aifinyoAuslastung: (v) => fmtPct(v, 0), aifinyoLaufzeit: (v) => `${v * 30} Tage · ${fmtPct(AIFINYO.marge[v], 2)}`, aifinyoDauer: (v) => v + " Monate", aifinyoRechnungen: (v) => String(v), investJahr: fmtTE, einlageJahr: fmtTE, ausschuettungJahr: fmtTE, steuersatz: (v) => fmtPct(v),
   };
 
@@ -308,6 +321,8 @@ tr.zero td { color: var(--good); }
     document.getElementById("sondertilgungKfw").checked = params.sondertilgungKfw;
     document.getElementById("aifinyoAktiv").checked = params.aifinyoAktiv;
     document.getElementById("aifinyoStart").value = params.aifinyoStart;
+    document.getElementById("nachrangAktiv").checked = params.nachrangAktiv;
+    document.getElementById("nachrangStart").value = params.nachrangStart;
     const aifMonat = (params.aifinyoRahmen * params.aifinyoAuslastung) / ((params.aifinyoLaufzeit + 1) / 2);
     document.getElementById("aifHint").textContent = `${fmtTE(params.aifinyoRahmen * params.aifinyoAuslastung)} dauerhaft offen · dafür ${fmtTE(aifMonat)} Einkauf pro Monat über aifinyo · effektiv ≈ ${fmtPct(aifinyoEffektiv(params.aifinyoLaufzeit), 1)} p. a.`;
     for (const b of document.querySelectorAll(".seg button")) b.setAttribute("aria-pressed", b.dataset.sz === szenario);
@@ -326,7 +341,7 @@ tr.zero td { color: var(--good); }
     const W = Math.max(320, el.clientWidth), H = W < 560 ? 280 : 360;
     const m = { l: 52, r: 12, t: 12, b: 28 };
     const pts = [{ jahr: 2026, m: 9, salden: { ...Object.fromEntries(BASIS.darlehen.map((d) => [d.id, d.saldo])), aif: 0 }, guthaben: 0 }].concat(r.monate);
-    const rows = pts.map((p) => ({ p, v: [p.salden.ksk, p.salden.cbkk, p.salden.cb, p.salden.kfw, p.salden.mb + p.salden.ml, p.salden.aif], g: p.guthaben }));
+    const rows = pts.map((p) => ({ p, v: [p.salden.ksk, p.salden.cbkk, p.salden.cb, p.salden.kfw, p.salden.mb + p.salden.ml, p.salden.aif, p.salden.nr], g: p.guthaben }));
     const maxV = Math.max(...rows.map((x) => x.v.reduce((a, b) => a + b, 0)));
     const minV = -Math.min(500000, Math.max(...rows.map((x) => x.g)));
     const step = 250000;
@@ -406,7 +421,7 @@ tr.zero td { color: var(--good); }
       const p = { ...params };
       SZ_KEYS.forEach((kk) => (p[kk] = SZENARIEN[k][kk]));
       const r = simuliere(simParams(p));
-      return { k, c, r, vals: [BASIS.darlehen.reduce((a, d) => a + d.saldo, 0)].concat(r.monate.map((x) => x.netto)) };
+      return { k, c, r, vals: [BASIS.darlehen.reduce((a, d) => a + d.saldo, 0)].concat(r.monate.map((x) => x.bankFk - x.guthaben)) };
     });
     const all = runs.flatMap((x) => x.vals);
     const lo = Math.max(-1500000, Math.min(...all));
@@ -424,22 +439,22 @@ tr.zero td { color: var(--good); }
     runs.forEach((ru) => {
       const w = ru.k === szenario ? 3 : 2;
       s += `<path d="M${ru.vals.map((v, i) => `${x(i).toFixed(1)},${y(Math.max(yMin, v)).toFixed(1)}`).join("L")}" fill="none" stroke="${css(ru.c)}" stroke-width="${w}" stroke-linejoin="round" ${ru.k === szenario ? "" : 'stroke-opacity="0.75"'}/>`;
-      if (ru.r.nettoFrei) {
-        const i = ru.r.monate.indexOf(ru.r.nettoFrei) + 1;
+      if (ru.r.bankFrei) {
+        const i = ru.r.monate.indexOf(ru.r.bankFrei) + 1;
         s += `<circle cx="${x(i)}" cy="${y(0)}" r="5" fill="${css(ru.c)}" stroke="${css("--surface")}" stroke-width="2"/>`;
       }
     });
     s += `</svg>`;
     el.innerHTML = s;
     document.getElementById("legend2").innerHTML = runs.map((ru) =>
-      `<span><i class="ln" style="background:var(${ru.c})"></i>${SZENARIEN[ru.k].label}: ${ru.r.nettoFrei ? "netto frei " + md(ru.r.nettoFrei) : "nicht bis 2036"}</span>`).join("");
+      `<span><i class="ln" style="background:var(${ru.c})"></i>${SZENARIEN[ru.k].label}: ${ru.r.bankFrei ? "bankenfrei " + md(ru.r.bankFrei) : "nicht bis 2036"}</span>`).join("");
   }
 
   function table(r) {
     const jahre = [];
     for (let j = 2026; j <= STANDARD.bisJahr; j++) jahre.push(j);
     const yt = BASIS.ytd;
-    let h = `<thead><tr><th>Jahr</th><th>Umsatz</th><th>Rohertrag</th><th>Ergebnis v. St.</th><th>Zinsen + Gebühren</th><th>Steuern</th><th>Cashflow</th><th>Plantilgung</th><th>KK 31.12.</th><th>aifinyo 31.12.</th><th>Fremdkapital 31.12.</th><th>Guthaben</th></tr></thead><tbody>`;
+    let h = `<thead><tr><th>Jahr</th><th>Umsatz</th><th>Rohertrag</th><th>Ergebnis v. St.</th><th>Zinsen + Gebühren</th><th>Steuern</th><th>Cashflow</th><th>Plantilgung</th><th>KK 31.12.</th><th>aifinyo 31.12.</th><th>Nachrang 31.12.</th><th>Fremdkapital 31.12.</th><th>Guthaben</th></tr></thead><tbody>`;
     for (const j of jahre) {
       const ms = r.monate.filter((x) => x.jahr === j);
       if (!ms.length) continue;
@@ -449,21 +464,21 @@ tr.zero td { color: var(--good); }
       const roh = sum((x) => x.rohertrag) + (ist ? yt.rohertrag : 0);
       const zins = sum((x) => x.zinsen) + (ist ? yt.zinsaufwand : 0);
       const st = sum((x) => x.steuer) + (ist ? yt.steuern : 0);
-      const cf = sum((x) => x.freierCf + x.tilgung - x.aifZugang + x.aifRueck);
+      const cf = sum((x) => x.freierCf + x.tilgung - x.aifZugang + x.aifRueck - x.nrZugang);
       const last = ms[ms.length - 1];
       const ebt = r.ebtJahr[j];
-      h += `<tr class="${last.fk < 1 ? "zero" : ""}"><td>${j}${ist ? "*" : ""}</td><td>${fmtT(umsatz)}</td><td>${fmtT(roh)}</td><td class="${ebt < 0 ? "neg" : ""}">${fmtT(ebt)}</td><td>${fmtT(zins)}</td><td>${fmtT(st)}</td><td class="${cf < 0 ? "neg" : ""}">${fmtT(cf)}</td><td>${fmtT(sum((x) => x.tilgung))}</td><td>${fmtT(last.kk)}</td><td>${fmtT(last.salden.aif)}</td><td>${fmtT(last.fk)}</td><td>${fmtT(last.guthaben)}</td></tr>`;
+      h += `<tr class="${last.bankFk < 1 ? "zero" : ""}"><td>${j}${ist ? "*" : ""}</td><td>${fmtT(umsatz)}</td><td>${fmtT(roh)}</td><td class="${ebt < 0 ? "neg" : ""}">${fmtT(ebt)}</td><td>${fmtT(zins)}</td><td>${fmtT(st)}</td><td class="${cf < 0 ? "neg" : ""}">${fmtT(cf)}</td><td>${fmtT(sum((x) => x.tilgung))}</td><td>${fmtT(last.kk)}</td><td>${fmtT(last.salden.aif)}</td><td>${fmtT(last.salden.nr)}</td><td>${fmtT(last.fk)}</td><td>${fmtT(last.guthaben)}</td></tr>`;
     }
     document.getElementById("tab").innerHTML = h + `</tbody>`;
   }
 
   function debtTable() {
-    const rows = BASIS.darlehen.map((d) => {
+    const rows = BASIS.darlehen.filter((d) => d.art !== "nachrang").map((d) => {
       const tilg = d.art === "kk" ? (d.linienAbbau ? `Linie ${fmtT(d.linie)} → ${fmtTE(d.linie - d.linienAbbau.rate * d.linienAbbau.monate)} (Mai 27)` : d.linienStufe ? `Linie ${fmtT(d.linie)} → ${fmtTE(params.kskLinieNeu)} (Mai 27)` : `Linie ${fmtTE(d.linie)}`) : d.art === "quartal" ? `${d.rate.toLocaleString("de-DE")} € / Quartal` : `≈ ${d.rate.toLocaleString("de-DE")} € / Monat`;
       return `<tr><td>${d.name}</td><td>${fmtTE(d.saldo)}</td><td>${fmtPct(d.zins, 2)}</td><td>${tilg}</td></tr>`;
     }).join("");
     const sum = BASIS.darlehen.reduce((a, d) => a + d.saldo, 0);
-    document.getElementById("debtTab").innerHTML = `<thead><tr><th>Kredit</th><th>Saldo</th><th>Zins</th><th>Tilgung</th></tr></thead><tbody>${rows}<tr><td>aifinyo Einkaufsfinanzierung</td><td>0 T€</td><td>≈ ${fmtPct(aifinyoEffektiv(params.aifinyoLaufzeit), 1)} eff.</td><td>${params.aifinyoAktiv ? `Linie ${fmtTE(params.aifinyoRahmen)}, ${params.aifinyoLaufzeit} Raten` : "nicht genutzt"}</td></tr><tr><td><b>Summe</b></td><td><b>${fmtTE(sum)}</b></td><td></td><td></td></tr></tbody>`;
+    document.getElementById("debtTab").innerHTML = `<thead><tr><th>Kredit</th><th>Saldo</th><th>Zins</th><th>Tilgung</th></tr></thead><tbody>${rows}<tr><td>aifinyo Einkaufsfinanzierung</td><td>0 T€</td><td>≈ ${fmtPct(aifinyoEffektiv(params.aifinyoLaufzeit), 1)} eff.</td><td>${params.aifinyoAktiv ? `Linie ${fmtTE(params.aifinyoRahmen)}, ${params.aifinyoLaufzeit} Raten` : "nicht genutzt"}</td></tr><tr><td>Nachrangdarlehen GbR</td><td>0 T€</td><td>${fmtPct(params.nachrangZins, 2)}</td><td>${params.nachrangAktiv ? `${fmtTE(params.nachrangBetrag)} ab ${params.nachrangStart.split("-").reverse().join("/")}, tilgungsfrei` : "nicht geplant"}</td></tr><tr><td><b>Summe</b></td><td><b>${fmtTE(sum)}</b></td><td></td><td></td></tr></tbody>`;
   }
 
   function kpis(r) {
@@ -471,12 +486,12 @@ tr.zero td { color: var(--good); }
     const fk0 = BASIS.darlehen.reduce((a, d) => a + d.saldo, 0);
     const kkPill = r.kkFrei ? (r.kkFrei.jahr <= 2029 ? "good" : r.kkFrei.jahr <= 2032 ? "warn" : "crit") : "crit";
     set("kKK", md(r.kkFrei), `<span class="pill ${kkPill}">${r.kkFrei ? "in " + ((r.monate.indexOf(r.kkFrei) + 1) / 12).toLocaleString("de-DE", { maximumFractionDigits: 1 }) + " Jahren" : "nicht im Planungszeitraum"}</span> Höchststand ${fmtTE(r.kkSpitze.kk)} (${md(r.kkSpitze)})<br>${r.freiraumMin.freiraum >= 0 ? `Kleinster freier Kreditrahmen: <b>${fmtTE(r.freiraumMin.freiraum)}</b> (${md(r.freiraumMin)})` : ""}`);
-    set("kNet", md(r.nettoFrei), r.schuldenfrei ? `Letzte Rate (Mietkauf/Fahrzeug): ${md(r.schuldenfrei)}` : "Restschuld Ende 2036: " + fmtTE(r.monate[r.monate.length - 1].fk));
+    set("kNet", md(r.bankFrei), params.nachrangAktiv ? `Nachrangdarlehen GbR danach zurückgezahlt: <b>${md(r.nrFrei)}</b>` : r.schuldenfrei ? `Letzte Rate (Mietkauf/Fahrzeug): ${md(r.schuldenfrei)}` : "Restschuld Ende 2036: " + fmtTE(r.monate[r.monate.length - 1].fk));
     const e27 = r.monate.find((x) => x.jahr === 2027 && x.m === 12);
     set("kFk27", fmtTE(e27.fk), `${fmtTE(fk0 - e27.fk)} weniger als am 30.09.2026 (${fmtTE(fk0)})`);
-    const bis = r.nettoFrei ? r.monate.indexOf(r.nettoFrei) : r.monate.length - 1;
+    const bis = r.bankFrei ? r.monate.indexOf(r.bankFrei) : r.monate.length - 1;
     const z = r.monate.slice(0, bis + 1).reduce((a, x) => a + x.zinsen, 0);
-    set("kZins", fmtTE(z), `ab Oktober 2026${r.nettoFrei ? "" : " bis Ende 2036"}${r.aifKosten > 0 ? `, davon aifinyo ${fmtTE(r.aifKosten)}` : ""}`);
+    set("kZins", fmtTE(z), `ab Oktober 2026${r.bankFrei ? "" : " bis Ende 2036"}${params.nachrangAktiv ? `, inkl. Zinsen Nachrangdarlehen` : ""}${r.aifKosten > 0 ? `, davon aifinyo ${fmtTE(r.aifKosten)}` : ""}`);
     const al = document.getElementById("alert");
     if (r.unterdeckungMax) {
       const betroffen = r.monate.filter((x) => x.freiraum < -0.5);
@@ -501,6 +516,8 @@ tr.zero td { color: var(--good); }
   document.getElementById("sondertilgungKfw").addEventListener("change", (e) => { params.sondertilgungKfw = e.target.checked; render(); });
   document.getElementById("aifinyoAktiv").addEventListener("change", (e) => { params.aifinyoAktiv = e.target.checked; render(); });
   document.getElementById("aifinyoStart").addEventListener("change", (e) => { params.aifinyoStart = e.target.value; render(); });
+  document.getElementById("nachrangAktiv").addEventListener("change", (e) => { params.nachrangAktiv = e.target.checked; render(); });
+  document.getElementById("nachrangStart").addEventListener("change", (e) => { params.nachrangStart = e.target.value; render(); });
   for (const b of document.querySelectorAll(".seg button")) b.addEventListener("click", () => {
     szenario = b.dataset.sz;
     SZ_KEYS.forEach((k) => (params[k] = SZENARIEN[szenario][k]));

@@ -31,6 +31,8 @@ const BASIS = {
     { id: "kfw", name: "KfW-Darlehen 2020", saldo: 265625, zins: 0.03, art: "quartal", rate: 15625, sonder: true },
     { id: "mb", name: "Mercedes-Benz Bank", saldo: 66676.4, zins: 0.049, art: "monat", rate: 1500 },
     { id: "ml", name: "Mietkauf Dt. Leasing", saldo: 44841.15, zins: 0.059, art: "monat", rate: 700 },
+    // Nachrangdarlehen der GbR: tilgungsfrei, Rückführung erst nach allen anderen Krediten
+    { id: "nr", name: "Nachrangdarlehen GbR", saldo: 0, zins: 0.05, art: "nachrang" },
   ],
   // Working Capital 30.09.2026 vs. Eröffnungswerte (EB) 01.01.2026
   wc: {
@@ -78,6 +80,10 @@ const STANDARD = {
   // Warenfinanzierung aifinyo (Finetrading, Fact Sheet 04/2024): aifinyo bezahlt den Lieferanten,
   // Rückführung in gleichen Monatsraten über die Laufzeit, frei werdende Linie revolvierend nutzbar
   einlageJahr: 50000, // Mittelzufluss der Gesellschafter nach Ende der GbR-Rückführung, bis die GmbH schuldenfrei ist
+  nachrangAktiv: true,
+  nachrangBetrag: 500000,
+  nachrangZins: 0.05,
+  nachrangStart: "2027-01",
   kskLinieNeu: 500000, // KSK-Linie ab 30.05.2027
   aifinyoAktiv: true,
   aifinyoRahmen: 800000,
@@ -93,6 +99,9 @@ const STANDARD = {
 function simuliere(p) {
   const d = BASIS.darlehen.map((x) => ({ ...x }));
   const by = Object.fromEntries(d.map((x) => [x.id, x]));
+  by.nr.zins = p.nachrangZins;
+  const [nrJ, nrM] = String(p.nachrangStart || "2027-01").split("-").map(Number);
+  const nrIdx = (nrJ - 2026) * 12 + nrM - 10;
   let guthaben = 0;
   let verrechnung = BASIS.verrechnung.saldo;
   const steuerVz2026 = BASIS.ytd.steuern / 9;
@@ -170,12 +179,12 @@ function simuliere(p) {
       wc += x;
     }
 
-    const verrOffenVorher = verrechnung;
-    const rueckVerr = Math.min(BASIS.verrechnung.rate, verrechnung);
+    // Ratierliche Rückführung der GbR (8 T€/Monat) entfällt, wenn die GbR das Nachrangdarlehen gibt
+    const rueckVerr = p.nachrangAktiv ? 0 : Math.min(BASIS.verrechnung.rate, verrechnung);
     verrechnung -= rueckVerr;
-    // Einlage im Anschluss an die Rückführung (ab dem Monat nach der letzten Rate), solange noch Schulden bestehen
-    const schuldenVorher = d.reduce((s, x) => s + x.saldo, 0) + aifSaldo;
-    const einlage = verrOffenVorher < 1 && schuldenVorher > guthaben + 1 ? p.einlageJahr / 12 : 0;
+    // Einlage ab Mai 2029 (ursprünglich im Anschluss an die Rückführung), solange noch Bankschulden bestehen
+    const schuldenVorher = d.reduce((s, x) => s + x.saldo, 0) + aifSaldo - by.nr.saldo;
+    const einlage = idx >= 31 && schuldenVorher > guthaben + 1 ? p.einlageJahr / 12 : 0;
     const invest = p.investJahr / 12;
 
     const ausschuettung = p.ausschuettungJahr / 12;
@@ -191,8 +200,12 @@ function simuliere(p) {
       tilgung += t;
     }
 
+    // Auszahlung Nachrangdarlehen
+    const nrZugang = p.nachrangAktiv && idx === nrIdx ? p.nachrangBetrag : 0;
+    by.nr.saldo += nrZugang;
+
     const cfOperativ = ebt + p.afaMonat - steuer + wc;
-    const freierCf = cfOperativ - invest - ausschuettung + rueckVerr + einlage - tilgung + aifZugang - aifRueck;
+    const freierCf = cfOperativ - invest - ausschuettung + rueckVerr + einlage - tilgung + aifZugang - aifRueck + nrZugang;
 
     // aktuelle Kreditlinien
     const n = (jahr - 2026) * 12 + m - 9;
@@ -210,6 +223,13 @@ function simuliere(p) {
       if (rest > 0 && p.sondertilgungKfw && by.kfw.saldo > 0 && aifSaldo < 1 && !aktivMonat) {
         const t = Math.min(rest, by.kfw.saldo);
         by.kfw.saldo -= t;
+        rest -= t;
+      }
+      // Nachrangdarlehen erst zurückführen, wenn alle anderen Kredite getilgt sind
+      const andere = by.ksk.saldo + by.cbkk.saldo + by.cb.saldo + by.kfw.saldo + by.mb.saldo + by.ml.saldo + aifSaldo;
+      if (rest > 0 && by.nr.saldo > 0 && andere < 1 && !aktivMonat) {
+        const t = Math.min(rest, by.nr.saldo);
+        by.nr.saldo -= t;
         rest -= t;
       }
       guthaben += rest;
@@ -240,7 +260,7 @@ function simuliere(p) {
     monate.push({
       jahr, m, umsatz, rohertrag, ebt, zinsen, aifGebuehr, aifZugang, aifRueck, steuer, wc, tilgung, freierCf, rueckVerr, einlage,
       salden: { ...Object.fromEntries(d.map((x) => [x.id, x.saldo])), aif: aifSaldo },
-      kk, fk, guthaben, netto: fk - guthaben, linien, freiraum,
+      kk, fk, bankFk: fk - by.nr.saldo, guthaben, netto: fk - guthaben, linien, freiraum, nrZugang,
     });
     if (!freiraumMin || freiraum < freiraumMin.freiraum) freiraumMin = monate[monate.length - 1];
     if (freiraum < -0.5 && (!unterdeckungMax || freiraum < unterdeckungMax.freiraum)) unterdeckungMax = monate[monate.length - 1];
@@ -261,6 +281,8 @@ function simuliere(p) {
     kkFrei: find((x) => x.kk < 1),
     schuldenfrei: find((x) => x.fk < 1),
     nettoFrei: find((x) => x.netto < 1),
+    bankFrei: find((x) => x.bankFk - x.guthaben < 1),
+    nrFrei: find((x) => x.salden.nr < 1),
     linieUeberschritten,
     unterdeckungMax,
     unterdeckungMonate: monate.filter((x) => x.freiraum < -0.5).length,
