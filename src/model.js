@@ -77,6 +77,7 @@ const STANDARD = {
   sondertilgungKfw: true,
   // Warenfinanzierung aifinyo (Finetrading, Fact Sheet 04/2024): aifinyo bezahlt den Lieferanten,
   // Rückführung in gleichen Monatsraten über die Laufzeit, frei werdende Linie revolvierend nutzbar
+  einlageJahr: 50000, // Mittelzufluss der Gesellschafter nach Ende der GbR-Rückführung, bis die GmbH schuldenfrei ist
   kskLinieNeu: 500000, // KSK-Linie ab 30.05.2027
   aifinyoAktiv: true,
   aifinyoRahmen: 800000,
@@ -169,8 +170,12 @@ function simuliere(p) {
       wc += x;
     }
 
+    const verrOffenVorher = verrechnung;
     const rueckVerr = Math.min(BASIS.verrechnung.rate, verrechnung);
     verrechnung -= rueckVerr;
+    // Einlage im Anschluss an die Rückführung (ab dem Monat nach der letzten Rate), solange noch Schulden bestehen
+    const schuldenVorher = d.reduce((s, x) => s + x.saldo, 0) + aifSaldo;
+    const einlage = verrOffenVorher < 1 && schuldenVorher > guthaben + 1 ? p.einlageJahr / 12 : 0;
     const invest = p.investJahr / 12;
 
     const ausschuettung = p.ausschuettungJahr / 12;
@@ -187,7 +192,7 @@ function simuliere(p) {
     }
 
     const cfOperativ = ebt + p.afaMonat - steuer + wc;
-    const freierCf = cfOperativ - invest - ausschuettung + rueckVerr - tilgung + aifZugang - aifRueck;
+    const freierCf = cfOperativ - invest - ausschuettung + rueckVerr + einlage - tilgung + aifZugang - aifRueck;
 
     // aktuelle Kreditlinien
     const n = (jahr - 2026) * 12 + m - 9;
@@ -233,7 +238,7 @@ function simuliere(p) {
     const kk = by.ksk.saldo + by.cbkk.saldo;
     const fk = d.reduce((s, x) => s + x.saldo, 0) + aifSaldo;
     monate.push({
-      jahr, m, umsatz, rohertrag, ebt, zinsen, aifGebuehr, aifZugang, aifRueck, steuer, wc, tilgung, freierCf, rueckVerr,
+      jahr, m, umsatz, rohertrag, ebt, zinsen, aifGebuehr, aifZugang, aifRueck, steuer, wc, tilgung, freierCf, rueckVerr, einlage,
       salden: { ...Object.fromEntries(d.map((x) => [x.id, x.saldo])), aif: aifSaldo },
       kk, fk, guthaben, netto: fk - guthaben, linien, freiraum,
     });

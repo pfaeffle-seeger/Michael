@@ -199,6 +199,8 @@ tr.zero td { color: var(--good); }
       <div class="group">
         <div class="ctl"><div class="row"><label for="investJahr">Investitionen p. a.</label><output id="o-investJahr"></output></div>
           <input type="range" id="investJahr" min="0" max="250000" step="10000"></div>
+        <div class="ctl"><div class="row"><label for="einlageJahr">Einlage ab Mai 2029 p. a.</label><output id="o-einlageJahr"></output></div>
+          <input type="range" id="einlageJahr" min="0" max="200000" step="10000"><div class="hint">im Anschluss an die GbR-Rückführung, bis schuldenfrei</div></div>
         <div class="ctl"><div class="row"><label for="ausschuettungJahr">Ausschüttungen p. a.</label><output id="o-ausschuettungJahr"></output></div>
           <input type="range" id="ausschuettungJahr" min="0" max="300000" step="10000"></div>
         <div class="ctl"><div class="row"><label for="steuersatz">Ertragsteuersatz</label><output id="o-steuersatz"></output></div>
@@ -238,7 +240,7 @@ tr.zero td { color: var(--good); }
       <section class="panel" aria-labelledby="h-tab">
         <h2 id="h-tab">Jahresübersicht</h2>
         <div class="tablewrap"><table id="tab"></table></div>
-        <p class="small muted">2026: Umsatz, Rohertrag, Ergebnis, Zinsen und Steuern enthalten Januar–September als Ist (BWA); Cashflow und Plantilgung nur Oktober–Dezember. Cashflow = Ergebnis + Abschreibungen − Steuerzahlungen ± Working Capital − Investitionen − Ausschüttungen + Rückführung Verrechnungskonto. Werte in T€.</p>
+        <p class="small muted">2026: Umsatz, Rohertrag, Ergebnis, Zinsen und Steuern enthalten Januar–September als Ist (BWA); Cashflow und Plantilgung nur Oktober–Dezember. Cashflow = Ergebnis + Abschreibungen − Steuerzahlungen ± Working Capital − Investitionen − Ausschüttungen + Rückführung Verrechnungskonto + Einlagen. Werte in T€.</p>
       </section>
     </div>
   </div>
@@ -253,7 +255,7 @@ tr.zero td { color: var(--good); }
       <ul>
         <li><b>Ertrag:</b> Fixkosten 185 T€ pro Monat (Kosten Jan–Sep ohne Abschreibungen und Warenabgabe), Kosten der Warenabgabe 3,7 % vom Umsatz, sonstige und neutrale Erträge 9,6 T€ pro Monat. Abschreibungen 7 T€ pro Monat, nicht zahlungswirksam.</li>
         <li><b>Q4 2026:</b> Lager sinkt auf den EB-Wert (−141 T€), Forderungen auf den EB-Wert (+132 T€), Lieferantenverbindlichkeiten auf den eingestellten Wert. Ab 2027 bleibt das Working Capital konstant, außer beim eingestellten Lagerabbau.</li>
-        <li><b>Verrechnungskonto GbR:</b> 245 T€, Rückführung 8 T€ pro Monat ab Oktober 2026, letzte Rate 5 T€ im April 2029.</li>
+        <li><b>Verrechnungskonto GbR:</b> 245 T€, Rückführung 8 T€ pro Monat ab Oktober 2026, letzte Rate 5 T€ im April 2029. Danach bringen die Gesellschafter 50 T€ pro Jahr ein (4,2 T€ pro Monat, einstellbar), bis die GmbH schuldenfrei ist.</li>
         <li><b>Steuern:</b> Vorauszahlungen auf Basis des Vorjahres, Abschlusszahlung jeweils im September des Folgejahres. Verlustvorträge sind nicht berücksichtigt.</li>
         <li><b>Kreditlinien:</b> KSK 1.000 T€, ab 30.05.2027 500 T€ (einstellbar). Commerzbank 500 T€ ab 30.09.2026, monatlich −15 T€ bis Mai 2027, danach 380 T€. Was die Commerzbank-Linie übersteigt, wird über die KSK-Linie finanziert.</li>
         <li><b>aifinyo</b> (Fact Sheet Finetrading): aifinyo bezahlt den Lieferanten, die Rückführung erfolgt in gleichen Monatsraten, und frei werdende Linie wird sofort wieder genutzt. Kosten: Handelsmarge 2,99 % bis 5,99 % je nach Zahlungsziel (180 Tage: 3,99 %), 39 € je Rechnung, Bereitstellung 269 € pro Monat für mindestens 24 Monate, Einrichtung einmalig 1,95 % der Linie. Ein Skonto, das aifinyo beim Lieferanten zieht, wird auf die Marge angerechnet; das ist hier nicht berücksichtigt. Der offene Betrag zählt zum Fremdkapital, nicht zum Kontokorrent-Rahmen.</li>
@@ -290,7 +292,7 @@ tr.zero td { color: var(--good); }
   const FORMAT = {
     umsatz2026: fmtMio, fixSenkung: fmtTE, rohertragPlus: fmtTE, wachstum: (v) => (v >= 0 ? "+" : "") + fmtPct(v), rohertrag: (v) => fmtPct(v),
     kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, kskLinieNeu: fmtTE, lagerAbbauMax: fmtTE,
-    q4Anteil: (v) => fmtPct(v, 1), aifinyoRahmen: fmtTE, aifinyoAuslastung: (v) => fmtPct(v, 0), aifinyoLaufzeit: (v) => `${v * 30} Tage · ${fmtPct(AIFINYO.marge[v], 2)}`, aifinyoDauer: (v) => v + " Monate", aifinyoRechnungen: (v) => String(v), investJahr: fmtTE, ausschuettungJahr: fmtTE, steuersatz: (v) => fmtPct(v),
+    q4Anteil: (v) => fmtPct(v, 1), aifinyoRahmen: fmtTE, aifinyoAuslastung: (v) => fmtPct(v, 0), aifinyoLaufzeit: (v) => `${v * 30} Tage · ${fmtPct(AIFINYO.marge[v], 2)}`, aifinyoDauer: (v) => v + " Monate", aifinyoRechnungen: (v) => String(v), investJahr: fmtTE, einlageJahr: fmtTE, ausschuettungJahr: fmtTE, steuersatz: (v) => fmtPct(v),
   };
 
   let szenario = "realistisch";
