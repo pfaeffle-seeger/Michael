@@ -48,6 +48,7 @@ const SZENARIEN = {
 const STANDARD = {
   umsatz2026: 7300000, // Erwartung Geschäftsführung (Jan–Sep Ist: 5,60 Mio. €)
   fixSenkung: 85000, // geplanter Rückgang der Fixkosten ab 2027 (p. a.)
+  rohertragPlus: 50000, // geplante Rohertragssteigerung ab 2027 (p. a., zusätzlich zur Quote)
   fixkostenMonat: (BASIS.ytd.kostenOhneAfa - BASIS.ytd.kostenWarenabgabe) / 9,
   varKostenQuote: BASIS.ytd.kostenWarenabgabe / BASIS.ytd.umsatz,
   sonstErtragMonat: (BASIS.ytd.soErloese + BASIS.ytd.neutralErtrag - BASIS.ytd.neutralAufwandSonst) / 9,
@@ -91,7 +92,7 @@ function simuliere(p) {
       jahr === 2026 ? q4_2026 / 3 : m >= 10 ? (umsatzJahr[jahr] * p.q4Anteil) / 3 : (umsatzJahr[jahr] * (1 - p.q4Anteil)) / 9;
 
     // Ergebnis
-    const rohertrag = umsatz * p.rohertrag;
+    const rohertrag = umsatz * p.rohertrag + (jahr >= 2027 ? p.rohertragPlus / 12 : 0);
     const fix = (p.fixkostenMonat - (jahr >= 2027 ? p.fixSenkung / 12 : 0)) * Math.pow(1 + p.kostenSteigerung, jIdx);
     const varK = umsatz * p.varKostenQuote;
     let zinsen = 0;

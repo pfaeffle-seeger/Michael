@@ -171,6 +171,8 @@ tr.zero td { color: var(--good); }
         <input type="range" id="wachstum" min="-0.05" max="0.10" step="0.005"><div class="hint">pro Jahr</div></div>
       <div class="ctl"><div class="row"><label for="rohertrag">Rohertragsquote</label><output id="o-rohertrag"></output></div>
         <input type="range" id="rohertrag" min="0.34" max="0.42" step="0.001"><div class="hint">Jan–Sep 2026: 37,8 % · 1 Prozentpunkt ≈ 78 T€ Ergebnis p. a.</div></div>
+      <div class="ctl"><div class="row"><label for="rohertragPlus">Rohertragssteigerung ab 2027</label><output id="o-rohertragPlus"></output></div>
+        <input type="range" id="rohertragPlus" min="0" max="250000" step="5000"><div class="hint">pro Jahr, zusätzlich zur Quote · Ihre Planung: 50 T€</div></div>
       <div class="ctl"><div class="row"><label for="fixSenkung">Fixkostensenkung ab 2027</label><output id="o-fixSenkung"></output></div>
         <input type="range" id="fixSenkung" min="0" max="250000" step="5000"><div class="hint">pro Jahr, dauerhaft · Ihre Planung: 85 T€</div></div>
       <div class="ctl"><div class="row"><label for="kostenSteigerung">Kostensteigerung p. a.</label><output id="o-kostenSteigerung"></output></div>
@@ -230,7 +232,7 @@ tr.zero td { color: var(--good); }
         <li><b>Kreditlinien:</b> KSK 1.000 T€. Commerzbank 500 T€ ab 30.09.2026, monatlich −15 T€ bis Mai 2027, danach 380 T€. Was die Commerzbank-Linie übersteigt, wird über die KSK-Linie finanziert.</li>
         <li><b>Leasing</b> (Kärcher, Grenke, BMW, Hyundai) läuft weiter und steckt bereits in den Fixkosten.</li>
         <li><b>Zinssätze Mercedes-Benz Bank (4,9 %) und Mietkauf (5,9 %)</b><span class="tag">geschätzt</span>. Tilgung 1.500 € bzw. 700 € pro Monat, aus der Saldenliste abgeleitet.</li>
-        <li><b>Umsatz 2026:</b> 7,30 Mio. € laut Ihrer Erwartung, damit 1,70 Mio. € in Oktober–Dezember. Ab 2027 wächst der Umsatz mit der Szenariorate. <b>Fixkosten</b> sinken ab 2027 dauerhaft um 85 T€ pro Jahr, danach gilt die Kostensteigerung.</li>
+        <li><b>Umsatz 2026:</b> 7,30 Mio. € laut Ihrer Erwartung, damit 1,70 Mio. € in Oktober–Dezember. Ab 2027 wächst der Umsatz mit der Szenariorate. <b>Fixkosten</b> sinken ab 2027 dauerhaft um 85 T€ pro Jahr, danach gilt die Kostensteigerung. Der <b>Rohertrag</b> steigt ab 2027 zusätzlich um 50 T€ pro Jahr.</li>
         <li><b>Saison:</b> Die Saisonschwankung innerhalb Januar–September ist nicht abgebildet. Die Kontokorrente können unterjährig höher liegen als hier gezeigt.</li>
         <li><b>Nicht enthalten:</b> Lieferantenverbindlichkeiten, Steuern und andere nicht verzinsliche Verbindlichkeiten zählen nicht als Fremdkapital im Sinne dieses Plans.</li>
       </ul>
@@ -258,7 +260,7 @@ tr.zero td { color: var(--good); }
   const css = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 
   const FORMAT = {
-    umsatz2026: fmtMio, fixSenkung: fmtTE, wachstum: (v) => (v >= 0 ? "+" : "") + fmtPct(v), rohertrag: (v) => fmtPct(v),
+    umsatz2026: fmtMio, fixSenkung: fmtTE, rohertragPlus: fmtTE, wachstum: (v) => (v >= 0 ? "+" : "") + fmtPct(v), rohertrag: (v) => fmtPct(v),
     kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, lagerAbbauMax: fmtTE,
     q4Anteil: (v) => fmtPct(v, 1), investJahr: fmtTE, ausschuettungJahr: fmtTE, steuersatz: (v) => fmtPct(v),
   };
