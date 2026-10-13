@@ -165,12 +165,14 @@ tr.zero td { color: var(--good); }
   <div class="main">
     <aside class="panel controls" aria-labelledby="h-ann">
       <h2 id="h-ann">Annahmen</h2>
-      <div class="ctl"><div class="row"><label for="plus2026">Umsatzplus 2026</label><output id="o-plus2026"></output></div>
-        <input type="range" id="plus2026" min="0.10" max="0.25" step="0.005"><div class="hint">Ihre Erwartung: 15–20 % (Jan–Sep: +20,4 %)</div></div>
+      <div class="ctl"><div class="row"><label for="umsatz2026">Umsatz 2026 gesamt</label><output id="o-umsatz2026"></output></div>
+        <input type="range" id="umsatz2026" min="6800000" max="8000000" step="50000"><div class="hint">Ihre Erwartung: 7,30 Mio. € · Jan–Sep Ist: 5,60 Mio. € · Rest für Q4</div></div>
       <div class="ctl"><div class="row"><label for="wachstum">Umsatzwachstum ab 2027</label><output id="o-wachstum"></output></div>
         <input type="range" id="wachstum" min="-0.05" max="0.10" step="0.005"><div class="hint">pro Jahr</div></div>
       <div class="ctl"><div class="row"><label for="rohertrag">Rohertragsquote</label><output id="o-rohertrag"></output></div>
         <input type="range" id="rohertrag" min="0.34" max="0.42" step="0.001"><div class="hint">Jan–Sep 2026: 37,8 % · 1 Prozentpunkt ≈ 78 T€ Ergebnis p. a.</div></div>
+      <div class="ctl"><div class="row"><label for="fixSenkung">Fixkostensenkung ab 2027</label><output id="o-fixSenkung"></output></div>
+        <input type="range" id="fixSenkung" min="0" max="250000" step="5000"><div class="hint">pro Jahr, dauerhaft · Ihre Planung: 85 T€</div></div>
       <div class="ctl"><div class="row"><label for="kostenSteigerung">Kostensteigerung p. a.</label><output id="o-kostenSteigerung"></output></div>
         <input type="range" id="kostenSteigerung" min="0" max="0.06" step="0.005"><div class="hint">auf Fixkosten von 185 T€ pro Monat</div></div>
 
@@ -179,8 +181,6 @@ tr.zero td { color: var(--good); }
           <input type="range" id="lieferantenZiel" min="150000" max="560000" step="5000"><div class="hint">heute 553 T€, Vorjahresende 167 T€</div></div>
         <div class="ctl"><div class="row"><label for="lagerAbbauMax">Weiterer Lagerabbau ab 2027</label><output id="o-lagerAbbauMax"></output></div>
           <input type="range" id="lagerAbbauMax" min="0" max="800000" step="25000"><div class="hint">verteilt auf 24 Monate · Lager nach Abbau auf EB: 2,21 Mio. € ≈ 6 Monate Wareneinsatz</div></div>
-        <div class="ctl"><div class="row"><label for="umsatz2025">Umsatz 2025 gesamt</label><output id="o-umsatz2025"></output></div>
-          <input type="range" id="umsatz2025" min="5800000" max="7200000" step="20000"><div class="hint">geschätzt, Jahreswert 2025 bitte nachliefern</div></div>
         <div class="ctl"><div class="row"><label for="q4Anteil">Anteil Q4 am Jahresumsatz</label><output id="o-q4Anteil"></output></div>
           <input type="range" id="q4Anteil" min="0.22" max="0.36" step="0.005"><div class="hint">steuert die Saisonverteilung ab 2027</div></div>
       </div>
@@ -204,7 +204,7 @@ tr.zero td { color: var(--good); }
           <div class="legend" id="legend2"></div>
         </div>
         <div class="chart" id="chart2"></div>
-        <p class="small muted">Netto-Fremdkapital (Fremdkapital minus Guthaben) in T€. Die Szenarien unterscheiden sich in Umsatzplus 2026, Wachstum, Rohertragsquote und Kostensteigerung. Alle anderen Annahmen gelten wie links eingestellt.</p>
+        <p class="small muted">Netto-Fremdkapital (Fremdkapital minus Guthaben) in T€. Die Szenarien unterscheiden sich in Wachstum ab 2027, Rohertragsquote und Kostensteigerung. Alle anderen Annahmen gelten wie links eingestellt.</p>
       </section>
 
       <section class="panel" aria-labelledby="h-tab">
@@ -229,7 +229,8 @@ tr.zero td { color: var(--good); }
         <li><b>Steuern:</b> Vorauszahlungen auf Basis des Vorjahres, Abschlusszahlung jeweils im September des Folgejahres. Verlustvorträge sind nicht berücksichtigt.</li>
         <li><b>Leasing</b> (Kärcher, Grenke, BMW, Hyundai) läuft weiter und steckt bereits in den Fixkosten.</li>
         <li><b>Zinssätze Mercedes-Benz Bank (4,9 %) und Mietkauf (5,9 %)</b><span class="tag">geschätzt</span>. Tilgung 1.500 € bzw. 700 € pro Monat, aus der Saldenliste abgeleitet.</li>
-        <li><b>Umsatz 2025</b><span class="tag">geschätzt</span>: 6,46 Mio. €, also 72 % in Januar–September. Die Saisonschwankung innerhalb Januar–September ist nicht abgebildet. Die Kontokorrente können unterjährig höher liegen als hier gezeigt.</li>
+        <li><b>Umsatz 2026:</b> 7,30 Mio. € laut Ihrer Erwartung, damit 1,70 Mio. € in Oktober–Dezember. Ab 2027 wächst der Umsatz mit der Szenariorate. <b>Fixkosten</b> sinken ab 2027 dauerhaft um 85 T€ pro Jahr, danach gilt die Kostensteigerung.</li>
+        <li><b>Saison:</b> Die Saisonschwankung innerhalb Januar–September ist nicht abgebildet. Die Kontokorrente können unterjährig höher liegen als hier gezeigt.</li>
         <li><b>Nicht enthalten:</b> Lieferantenverbindlichkeiten, Steuern und andere nicht verzinsliche Verbindlichkeiten zählen nicht als Fremdkapital im Sinne dieses Plans.</li>
       </ul>
     </div>
@@ -246,7 +247,7 @@ tr.zero td { color: var(--good); }
     { key: "kfw", label: "KfW 2020 (3 %)", color: "--s4" },
     { key: "fz", label: "Mercedes + Mietkauf", color: "--s5" },
   ];
-  const SZ_KEYS = ["plus2026", "wachstum", "rohertrag", "kostenSteigerung"];
+  const SZ_KEYS = ["wachstum", "rohertrag", "kostenSteigerung"];
   const MONATE = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
   const fmtPct = (v, d = 1) => (v * 100).toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d }) + " %";
   const fmtT = (v) => Math.round(v / 1000).toLocaleString("de-DE");
@@ -256,8 +257,8 @@ tr.zero td { color: var(--good); }
   const css = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 
   const FORMAT = {
-    plus2026: (v) => "+" + fmtPct(v), wachstum: (v) => (v >= 0 ? "+" : "") + fmtPct(v), rohertrag: (v) => fmtPct(v),
-    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, lagerAbbauMax: fmtTE, umsatz2025: fmtMio,
+    umsatz2026: fmtMio, fixSenkung: fmtTE, wachstum: (v) => (v >= 0 ? "+" : "") + fmtPct(v), rohertrag: (v) => fmtPct(v),
+    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, lagerAbbauMax: fmtTE,
     q4Anteil: (v) => fmtPct(v, 1), investJahr: fmtTE, ausschuettungJahr: fmtTE, steuersatz: (v) => fmtPct(v),
   };
 

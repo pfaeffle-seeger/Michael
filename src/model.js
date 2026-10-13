@@ -38,13 +38,14 @@ const BASIS = {
 };
 
 const SZENARIEN = {
-  vorsichtig: { label: "Vorsichtig", plus2026: 0.15, wachstum: 0.01, rohertrag: 0.373, kostenSteigerung: 0.025 },
-  realistisch: { label: "Realistisch", plus2026: 0.175, wachstum: 0.02, rohertrag: 0.378, kostenSteigerung: 0.025 },
-  optimistisch: { label: "Optimistisch", plus2026: 0.2, wachstum: 0.03, rohertrag: 0.383, kostenSteigerung: 0.02 },
+  vorsichtig: { label: "Vorsichtig", wachstum: 0.01, rohertrag: 0.373, kostenSteigerung: 0.025 },
+  realistisch: { label: "Realistisch", wachstum: 0.02, rohertrag: 0.378, kostenSteigerung: 0.025 },
+  optimistisch: { label: "Optimistisch", wachstum: 0.03, rohertrag: 0.383, kostenSteigerung: 0.02 },
 };
 
 const STANDARD = {
-  umsatz2025: 6460000, // Annahme: Jan–Sep 2025 = 72 % des Jahres
+  umsatz2026: 7300000, // Erwartung Geschäftsführung (Jan–Sep Ist: 5,60 Mio. €)
+  fixSenkung: 85000, // geplanter Rückgang der Fixkosten ab 2027 (p. a.)
   fixkostenMonat: (BASIS.ytd.kostenOhneAfa - BASIS.ytd.kostenWarenabgabe) / 9,
   varKostenQuote: BASIS.ytd.kostenWarenabgabe / BASIS.ytd.umsatz,
   sonstErtragMonat: (BASIS.ytd.soErloese + BASIS.ytd.neutralErtrag - BASIS.ytd.neutralAufwandSonst) / 9,
@@ -75,7 +76,7 @@ function simuliere(p) {
   let linieUeberschritten = null;
 
   // Umsatz 2026 Q4 aus Jahresziel
-  const umsatz2026 = p.umsatz2025 * (1 + p.plus2026);
+  const umsatz2026 = p.umsatz2026;
   const q4_2026 = Math.max(0, umsatz2026 - BASIS.ytd.umsatz);
   const umsatzJahr = { 2026: umsatz2026 };
 
@@ -88,7 +89,7 @@ function simuliere(p) {
 
     // Ergebnis
     const rohertrag = umsatz * p.rohertrag;
-    const fix = p.fixkostenMonat * Math.pow(1 + p.kostenSteigerung, jIdx);
+    const fix = (p.fixkostenMonat - (jahr >= 2027 ? p.fixSenkung / 12 : 0)) * Math.pow(1 + p.kostenSteigerung, jIdx);
     const varK = umsatz * p.varKostenQuote;
     let zinsen = 0;
     for (const x of d) zinsen += (x.saldo * x.zins) / 12;
