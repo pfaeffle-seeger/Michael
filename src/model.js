@@ -62,6 +62,14 @@ const STANDARD = {
   forderungenZiel: BASIS.wc.forderungen.eb,
   vorraeteZiel: BASIS.wc.vorraete.eb,
   sondertilgungKfw: true,
+  // Einkaufsfinanzierung aifinyo: Lieferantenrechnungen werden finanziert und nach der Laufzeit zurückgezahlt
+  aifinyoAktiv: true,
+  aifinyoRahmen: 800000,
+  aifinyoLaufzeit: 6, // Monate (180 Tage)
+  aifinyoGebuehr: 0.01, // pro 30 Tage auf den offenen Betrag – Annahme, Angebot abwarten
+  aifinyoAuslastung: 1.0, // Anteil des Rahmens, der revolvierend genutzt wird
+  aifinyoStart: "2026-11",
+  aifinyoBis: 2028, // letztes Jahr mit neuen Finanzierungen
   q4Anteil: 0.28,
   bisJahr: 2036,
 };
@@ -85,6 +93,10 @@ function simuliere(p) {
   const umsatzJahr = { 2026: umsatz2026 };
 
   let lagerAbgebaut = 0;
+  const [aifStartJ, aifStartM] = String(p.aifinyoStart || "2026-11").split("-").map(Number);
+  const aifNeu = []; // neu finanzierte Beträge je Monat
+  let aifSaldo = 0;
+  let aifKosten = 0;
   for (let jahr = 2026, m = 10; jahr <= p.bisJahr; m === 12 ? (jahr++, (m = 1)) : m++) {
     if (!umsatzJahr[jahr]) umsatzJahr[jahr] = umsatzJahr[jahr - 1] * (1 + p.wachstum);
     const jIdx = jahr - 2026;
@@ -97,6 +109,9 @@ function simuliere(p) {
     const varK = umsatz * p.varKostenQuote;
     let zinsen = 0;
     for (const x of d) zinsen += (x.saldo * x.zins) / 12;
+    const aifGebuehr = aifSaldo * (p.aifinyoGebuehr || 0);
+    aifKosten += aifGebuehr;
+    zinsen += aifGebuehr;
     const ebt = rohertrag + p.sonstErtragMonat - fix - varK - p.afaMonat - zinsen;
     ebtJahr[jahr] = (ebtJahr[jahr] || 0) + ebt;
 
@@ -121,6 +136,14 @@ function simuliere(p) {
     const rueckVerr = Math.min(BASIS.verrechnung.rate, verrechnung);
     verrechnung -= rueckVerr;
     const invest = p.investJahr / 12;
+
+    // aifinyo: neue Finanzierung entlastet das Konto, Rückzahlung nach Ablauf der Laufzeit
+    const idx = aifNeu.length;
+    const aktivMonat = p.aifinyoAktiv && (jahr > aifStartJ || (jahr === aifStartJ && m >= aifStartM)) && jahr <= p.aifinyoBis;
+    const aifRueck = idx >= p.aifinyoLaufzeit ? aifNeu[idx - p.aifinyoLaufzeit] : 0;
+    const aifZugang = aktivMonat ? Math.max(0, Math.min((p.aifinyoRahmen * p.aifinyoAuslastung) / p.aifinyoLaufzeit, p.aifinyoRahmen - (aifSaldo - aifRueck))) : 0;
+    aifNeu.push(aifZugang);
+    aifSaldo += aifZugang - aifRueck;
     const ausschuettung = p.ausschuettungJahr / 12;
 
     // Planmäßige Tilgungen
@@ -135,7 +158,7 @@ function simuliere(p) {
     }
 
     const cfOperativ = ebt + p.afaMonat - steuer + wc;
-    const freierCf = cfOperativ - invest - ausschuettung + rueckVerr - tilgung;
+    const freierCf = cfOperativ - invest - ausschuettung + rueckVerr - tilgung + aifZugang - aifRueck;
 
     // aktuelle Kreditlinien
     const n = (jahr - 2026) * 12 + m - 9;
@@ -150,7 +173,7 @@ function simuliere(p) {
         by[id].saldo -= t;
         rest -= t;
       }
-      if (rest > 0 && p.sondertilgungKfw && by.kfw.saldo > 0) {
+      if (rest > 0 && p.sondertilgungKfw && by.kfw.saldo > 0 && aifSaldo < 1 && !aktivMonat) {
         const t = Math.min(rest, by.kfw.saldo);
         by.kfw.saldo -= t;
         rest -= t;
@@ -179,10 +202,10 @@ function simuliere(p) {
     const freiraum = linien - by.ksk.saldo - by.cbkk.saldo;
 
     const kk = by.ksk.saldo + by.cbkk.saldo;
-    const fk = d.reduce((s, x) => s + x.saldo, 0);
+    const fk = d.reduce((s, x) => s + x.saldo, 0) + aifSaldo;
     monate.push({
-      jahr, m, umsatz, rohertrag, ebt, zinsen, steuer, wc, tilgung, freierCf, rueckVerr,
-      salden: Object.fromEntries(d.map((x) => [x.id, x.saldo])),
+      jahr, m, umsatz, rohertrag, ebt, zinsen, aifGebuehr, aifZugang, aifRueck, steuer, wc, tilgung, freierCf, rueckVerr,
+      salden: { ...Object.fromEntries(d.map((x) => [x.id, x.saldo])), aif: aifSaldo },
       kk, fk, guthaben, netto: fk - guthaben, linien, freiraum,
     });
     if (!freiraumMin || freiraum < freiraumMin.freiraum) freiraumMin = monate[monate.length - 1];
@@ -190,7 +213,12 @@ function simuliere(p) {
     if (m === 12 && jahr > 2026) steuerSoll[jahr] = Math.max(0, ebtJahr[jahr]) * p.steuersatz;
   }
 
-  const find = (f) => monate.find(f) || null;
+  // Meilenstein = erster Monat, ab dem die Bedingung dauerhaft erfüllt ist
+  const find = (f) => {
+    let i = monate.length;
+    while (i > 0 && f(monate[i - 1])) i--;
+    return i < monate.length ? monate[i] : null;
+  };
   return {
     monate,
     umsatzJahr,
@@ -200,6 +228,8 @@ function simuliere(p) {
     nettoFrei: find((x) => x.netto < 1),
     linieUeberschritten,
     freiraumMin,
+    aifKosten,
+    aifSpitze: monate.reduce((a, x) => Math.max(a, x.salden.aif), 0),
     kkSpitze: monate.reduce((a, x) => (x.kk > a.kk ? x : a), monate[0]),
   };
 }
