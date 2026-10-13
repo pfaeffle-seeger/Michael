@@ -211,13 +211,16 @@ tr.zero td { color: var(--good); }
 
       <div class="group">
         <h3>Nachrangdarlehen GbR</h3>
-        <label class="toggle"><input type="checkbox" id="nachrangAktiv"><span>Nachrangdarlehen der GbR einplanen (tilgungsfrei, Rückführung erst nach allen anderen Krediten; die Rückführung des Verrechnungskontos entfällt)</span></label>
+        <label class="toggle"><input type="checkbox" id="nachrangAktiv"><span>Nachrangdarlehen der GbR einplanen (tilgungsfrei; die Rückführung des Verrechnungskontos entfällt dafür)</span></label>
         <div class="ctl"><div class="row"><label for="nachrangBetrag">Betrag</label><output id="o-nachrangBetrag"></output></div>
           <input type="range" id="nachrangBetrag" min="100000" max="1000000" step="50000"></div>
         <div class="ctl"><div class="row"><label for="nachrangZins">Zinssatz p. a.</label><output id="o-nachrangZins"></output></div>
           <input type="range" id="nachrangZins" min="0" max="0.08" step="0.005"></div>
         <div class="ctl"><div class="row"><label for="nachrangStart">Auszahlung</label>
           <select id="nachrangStart"><option value="2026-11">November 2026</option><option value="2026-12">Dezember 2026</option><option value="2027-01">Januar 2027</option><option value="2027-04">April 2027</option><option value="2027-05">Mai 2027</option></select></div></div>
+        <div class="ctl"><div class="row"><label for="nachrangRueckfuehrung">Rückführung</label>
+          <select id="nachrangRueckfuehrung"><option value="sofort">aus jedem Überschuss</option><option value="zuletzt">nach allen anderen Krediten</option></select></div>
+          <div class="hint">„aus jedem Überschuss“: sobald nach den planmäßigen Raten, aifinyo und den Kontokorrenten Cashflow übrig bleibt</div></div>
       </div>
 
       <div class="group">
@@ -267,7 +270,7 @@ tr.zero td { color: var(--good); }
       <ul>
         <li><b>Ertrag:</b> Fixkosten 185 T€ pro Monat (Kosten Jan–Sep ohne Abschreibungen und Warenabgabe), Kosten der Warenabgabe 3,7 % vom Umsatz, sonstige und neutrale Erträge 9,6 T€ pro Monat. Abschreibungen 7 T€ pro Monat, nicht zahlungswirksam.</li>
         <li><b>Q4 2026:</b> Lager sinkt auf den EB-Wert (−141 T€), Forderungen auf den EB-Wert (+132 T€), Lieferantenverbindlichkeiten auf den eingestellten Wert. Ab 2027 bleibt das Working Capital konstant, außer beim eingestellten Lagerabbau.</li>
-        <li><b>GbR:</b> Nachrangdarlehen 500 T€ zu 5 % ab Januar 2027, Zinsen laufend, tilgungsfrei. Zurückgezahlt wird es erst, wenn alle anderen Kredite und aifinyo auf null sind. Die Rückführung des Verrechnungskontos (245 T€, 8 T€ pro Monat) entfällt dafür; ohne Nachrangdarlehen läuft sie bis April 2029. Ab Mai 2029 bringen die Gesellschafter 50 T€ pro Jahr ein (einstellbar), solange Bankschulden bestehen.</li>
+        <li><b>GbR:</b> Nachrangdarlehen 500 T€ zu 5 % ab Januar 2027, Zinsen laufend, tilgungsfrei. Zurückgezahlt wird es aus dem Cashflow, der nach den planmäßigen Raten, aifinyo und der Rückführung der Kontokorrente übrig bleibt (wahlweise erst nach allen anderen Krediten). Muss die GmbH danach wieder Kontokorrent ziehen, wird das Nachrangdarlehen nicht erneut ausgezahlt. Die Rückführung des Verrechnungskontos (245 T€, 8 T€ pro Monat) entfällt dafür; ohne Nachrangdarlehen läuft sie bis April 2029. Ab Mai 2029 bringen die Gesellschafter 50 T€ pro Jahr ein (einstellbar), solange Bankschulden bestehen.</li>
         <li><b>Steuern:</b> Vorauszahlungen auf Basis des Vorjahres, Abschlusszahlung jeweils im September des Folgejahres. Verlustvorträge sind nicht berücksichtigt.</li>
         <li><b>Kreditlinien:</b> KSK 1.000 T€, ab 30.05.2027 500 T€ (einstellbar). Commerzbank 500 T€ ab 30.09.2026, monatlich −15 T€ bis Mai 2027, danach 380 T€. Was die Commerzbank-Linie übersteigt, wird über die KSK-Linie finanziert.</li>
         <li><b>aifinyo</b> (Fact Sheet Finetrading): aifinyo bezahlt den Lieferanten, die Rückführung erfolgt in gleichen Monatsraten, und frei werdende Linie wird sofort wieder genutzt. Kosten: Handelsmarge 2,99 % bis 5,99 % je nach Zahlungsziel (180 Tage: 3,99 %), 39 € je Rechnung, Bereitstellung 269 € pro Monat für mindestens 24 Monate, Einrichtung einmalig 1,95 % der Linie. Ein Skonto, das aifinyo beim Lieferanten zieht, wird auf die Marge angerechnet; das ist hier nicht berücksichtigt. Der offene Betrag zählt zum Fremdkapital, nicht zum Kontokorrent-Rahmen.</li>
@@ -323,6 +326,7 @@ tr.zero td { color: var(--good); }
     document.getElementById("aifinyoStart").value = params.aifinyoStart;
     document.getElementById("nachrangAktiv").checked = params.nachrangAktiv;
     document.getElementById("nachrangStart").value = params.nachrangStart;
+    document.getElementById("nachrangRueckfuehrung").value = params.nachrangRueckfuehrung;
     const aifMonat = (params.aifinyoRahmen * params.aifinyoAuslastung) / ((params.aifinyoLaufzeit + 1) / 2);
     document.getElementById("aifHint").textContent = `${fmtTE(params.aifinyoRahmen * params.aifinyoAuslastung)} dauerhaft offen · dafür ${fmtTE(aifMonat)} Einkauf pro Monat über aifinyo · effektiv ≈ ${fmtPct(aifinyoEffektiv(params.aifinyoLaufzeit), 1)} p. a.`;
     for (const b of document.querySelectorAll(".seg button")) b.setAttribute("aria-pressed", b.dataset.sz === szenario);
@@ -486,7 +490,7 @@ tr.zero td { color: var(--good); }
     const fk0 = BASIS.darlehen.reduce((a, d) => a + d.saldo, 0);
     const kkPill = r.kkFrei ? (r.kkFrei.jahr <= 2029 ? "good" : r.kkFrei.jahr <= 2032 ? "warn" : "crit") : "crit";
     set("kKK", md(r.kkFrei), `<span class="pill ${kkPill}">${r.kkFrei ? "in " + ((r.monate.indexOf(r.kkFrei) + 1) / 12).toLocaleString("de-DE", { maximumFractionDigits: 1 }) + " Jahren" : "nicht im Planungszeitraum"}</span> Höchststand ${fmtTE(r.kkSpitze.kk)} (${md(r.kkSpitze)})<br>${r.freiraumMin.freiraum >= 0 ? `Kleinster freier Kreditrahmen: <b>${fmtTE(r.freiraumMin.freiraum)}</b> (${md(r.freiraumMin)})` : ""}`);
-    set("kNet", md(r.bankFrei), params.nachrangAktiv ? `Nachrangdarlehen GbR danach zurückgezahlt: <b>${md(r.nrFrei)}</b>` : r.schuldenfrei ? `Letzte Rate (Mietkauf/Fahrzeug): ${md(r.schuldenfrei)}` : "Restschuld Ende 2036: " + fmtTE(r.monate[r.monate.length - 1].fk));
+    set("kNet", md(r.bankFrei), params.nachrangAktiv ? `Nachrangdarlehen GbR zurückgezahlt: <b>${md(r.nrFrei)}</b>` : r.schuldenfrei ? `Letzte Rate (Mietkauf/Fahrzeug): ${md(r.schuldenfrei)}` : "Restschuld Ende 2036: " + fmtTE(r.monate[r.monate.length - 1].fk));
     const e27 = r.monate.find((x) => x.jahr === 2027 && x.m === 12);
     set("kFk27", fmtTE(e27.fk), `${fmtTE(fk0 - e27.fk)} weniger als am 30.09.2026 (${fmtTE(fk0)})`);
     const bis = r.bankFrei ? r.monate.indexOf(r.bankFrei) : r.monate.length - 1;
@@ -518,6 +522,7 @@ tr.zero td { color: var(--good); }
   document.getElementById("aifinyoStart").addEventListener("change", (e) => { params.aifinyoStart = e.target.value; render(); });
   document.getElementById("nachrangAktiv").addEventListener("change", (e) => { params.nachrangAktiv = e.target.checked; render(); });
   document.getElementById("nachrangStart").addEventListener("change", (e) => { params.nachrangStart = e.target.value; render(); });
+  document.getElementById("nachrangRueckfuehrung").addEventListener("change", (e) => { params.nachrangRueckfuehrung = e.target.value; render(); });
   for (const b of document.querySelectorAll(".seg button")) b.addEventListener("click", () => {
     szenario = b.dataset.sz;
     SZ_KEYS.forEach((k) => (params[k] = SZENARIEN[szenario][k]));

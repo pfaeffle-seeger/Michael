@@ -84,6 +84,7 @@ const STANDARD = {
   nachrangBetrag: 500000,
   nachrangZins: 0.05,
   nachrangStart: "2027-01",
+  nachrangRueckfuehrung: "sofort", // "sofort": aus jedem Überschuss nach Bedienung des Fremdkapitals, "zuletzt": erst nach allen anderen Krediten
   kskLinieNeu: 500000, // KSK-Linie ab 30.05.2027
   aifinyoAktiv: true,
   aifinyoRahmen: 800000,
@@ -220,16 +221,18 @@ function simuliere(p) {
         by[id].saldo -= t;
         rest -= t;
       }
+      // Nachrangdarlehen aus dem Cashflow zurückführen, der nach Bedienung allen Fremdkapitals
+      // (planmäßige Raten, aifinyo, Kontokorrente auf null) übrig bleibt
+      const andere = by.cb.saldo + by.kfw.saldo + by.mb.saldo + by.ml.saldo + aifSaldo;
+      const nrFrei = p.nachrangRueckfuehrung !== "zuletzt" || (andere < 1 && !aktivMonat);
+      if (rest > 0 && by.nr.saldo > 0 && nrFrei) {
+        const t = Math.min(rest, by.nr.saldo);
+        by.nr.saldo -= t;
+        rest -= t;
+      }
       if (rest > 0 && p.sondertilgungKfw && by.kfw.saldo > 0 && aifSaldo < 1 && !aktivMonat) {
         const t = Math.min(rest, by.kfw.saldo);
         by.kfw.saldo -= t;
-        rest -= t;
-      }
-      // Nachrangdarlehen erst zurückführen, wenn alle anderen Kredite getilgt sind
-      const andere = by.ksk.saldo + by.cbkk.saldo + by.cb.saldo + by.kfw.saldo + by.mb.saldo + by.ml.saldo + aifSaldo;
-      if (rest > 0 && by.nr.saldo > 0 && andere < 1 && !aktivMonat) {
-        const t = Math.min(rest, by.nr.saldo);
-        by.nr.saldo -= t;
         rest -= t;
       }
       guthaben += rest;
