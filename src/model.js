@@ -22,7 +22,9 @@ const BASIS = {
   // Verschuldung 30.09.2026
   darlehen: [
     { id: "ksk", name: "KSK Kontokorrent", saldo: 697380.91, zins: 0.089, art: "kk", linie: 1000000 },
-    { id: "cbkk", name: "Commerzbank Kontokorrent", saldo: 437805.03, zins: 0.0829, art: "kk", linie: 750000 },
+    { id: "cbkk", name: "Commerzbank Kontokorrent", saldo: 437805.03, zins: 0.0829, art: "kk", linie: 500000,
+      // Linie zum 30.09.2026 auf 500 T€ gesenkt, danach monatlich −15 T€ bis Mai 2027 (380 T€)
+      linienAbbau: { rate: 15000, monate: 8 } },
     { id: "cb", name: "Commerzbank-Darlehen", saldo: 218750, zins: 0.0552, art: "quartal", rate: 31250 },
     { id: "kfw", name: "KfW-Darlehen 2020", saldo: 265625, zins: 0.03, art: "quartal", rate: 15625, sonder: true },
     { id: "mb", name: "Mercedes-Benz Bank", saldo: 66676.4, zins: 0.049, art: "monat", rate: 1500 },
@@ -74,6 +76,7 @@ function simuliere(p) {
   const steuerSoll = {};
   const monate = [];
   let linieUeberschritten = null;
+  let freiraumMin = null;
 
   // Umsatz 2026 Q4 aus Jahresziel
   const umsatz2026 = p.umsatz2026;
@@ -133,6 +136,11 @@ function simuliere(p) {
     const cfOperativ = ebt + p.afaMonat - steuer + wc;
     const freierCf = cfOperativ - invest - ausschuettung + rueckVerr - tilgung;
 
+    // aktuelle Kreditlinien
+    const n = (jahr - 2026) * 12 + m - 9;
+    for (const x of d) if (x.linienAbbau) x.linieAktuell = x.linie - x.linienAbbau.rate * Math.min(n, x.linienAbbau.monate);
+    by.ksk.linieAktuell = by.ksk.linie;
+
     // Überschuss/Fehlbetrag über Kontokorrent ausgleichen (teuerste Linie zuerst zurückführen)
     let rest = freierCf;
     if (rest >= 0) {
@@ -154,21 +162,29 @@ function simuliere(p) {
       bedarf -= g;
       // günstigere Linie (Commerzbank) zuerst ziehen
       for (const id of ["cbkk", "ksk"]) {
-        const frei = Math.max(0, by[id].linie - by[id].saldo);
+        const frei = Math.max(0, by[id].linieAktuell - by[id].saldo);
         const t = id === "ksk" ? bedarf : Math.min(bedarf, frei);
         by[id].saldo += t;
         bedarf -= t;
       }
-      if (by.ksk.saldo > by.ksk.linie && !linieUeberschritten) linieUeberschritten = `${String(m).padStart(2, "0")}/${jahr}`;
     }
+    // Absenkung der Commerzbank-Linie: Überhang muss über die KSK-Linie finanziert werden
+    if (by.cbkk.saldo > by.cbkk.linieAktuell) {
+      by.ksk.saldo += by.cbkk.saldo - by.cbkk.linieAktuell;
+      by.cbkk.saldo = by.cbkk.linieAktuell;
+    }
+    if (by.ksk.saldo > by.ksk.linie + 0.5 && !linieUeberschritten) linieUeberschritten = `${String(m).padStart(2, "0")}/${jahr}`;
+    const linien = by.ksk.linieAktuell + by.cbkk.linieAktuell;
+    const freiraum = linien - by.ksk.saldo - by.cbkk.saldo;
 
     const kk = by.ksk.saldo + by.cbkk.saldo;
     const fk = d.reduce((s, x) => s + x.saldo, 0);
     monate.push({
       jahr, m, umsatz, rohertrag, ebt, zinsen, steuer, wc, tilgung, freierCf, rueckVerr,
       salden: Object.fromEntries(d.map((x) => [x.id, x.saldo])),
-      kk, fk, guthaben, netto: fk - guthaben,
+      kk, fk, guthaben, netto: fk - guthaben, linien, freiraum,
     });
+    if (!freiraumMin || freiraum < freiraumMin.freiraum) freiraumMin = monate[monate.length - 1];
     if (jahr === 2026 && m === 12) steuerSoll[2026] = Math.max(0, ebtJahr[2026]) * p.steuersatz;
     if (m === 12 && jahr > 2026) steuerSoll[jahr] = Math.max(0, ebtJahr[jahr]) * p.steuersatz;
   }
@@ -182,6 +198,7 @@ function simuliere(p) {
     schuldenfrei: find((x) => x.fk < 1),
     nettoFrei: find((x) => x.netto < 1),
     linieUeberschritten,
+    freiraumMin,
     kkSpitze: monate.reduce((a, x) => (x.kk > a.kk ? x : a), monate[0]),
   };
 }

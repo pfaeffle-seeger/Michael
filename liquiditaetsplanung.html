@@ -227,6 +227,7 @@ tr.zero td { color: var(--good); }
         <li><b>Q4 2026:</b> Lager sinkt auf den EB-Wert (−141 T€), Forderungen auf den EB-Wert (+132 T€), Lieferantenverbindlichkeiten auf den eingestellten Wert. Ab 2027 bleibt das Working Capital konstant, außer beim eingestellten Lagerabbau.</li>
         <li><b>Verrechnungskonto:</b> 245 T€, Rückführung 8 T€ pro Monat bis Ende 2029.</li>
         <li><b>Steuern:</b> Vorauszahlungen auf Basis des Vorjahres, Abschlusszahlung jeweils im September des Folgejahres. Verlustvorträge sind nicht berücksichtigt.</li>
+        <li><b>Kreditlinien:</b> KSK 1.000 T€. Commerzbank 500 T€ ab 30.09.2026, monatlich −15 T€ bis Mai 2027, danach 380 T€. Was die Commerzbank-Linie übersteigt, wird über die KSK-Linie finanziert.</li>
         <li><b>Leasing</b> (Kärcher, Grenke, BMW, Hyundai) läuft weiter und steckt bereits in den Fixkosten.</li>
         <li><b>Zinssätze Mercedes-Benz Bank (4,9 %) und Mietkauf (5,9 %)</b><span class="tag">geschätzt</span>. Tilgung 1.500 € bzw. 700 € pro Monat, aus der Saldenliste abgeleitet.</li>
         <li><b>Umsatz 2026:</b> 7,30 Mio. € laut Ihrer Erwartung, damit 1,70 Mio. € in Oktober–Dezember. Ab 2027 wächst der Umsatz mit der Szenariorate. <b>Fixkosten</b> sinken ab 2027 dauerhaft um 85 T€ pro Jahr, danach gilt die Kostensteigerung.</li>
@@ -342,7 +343,8 @@ tr.zero td { color: var(--good); }
       tip.innerHTML = `<div class="t">${MONATE[rw.p.m - 1]} ${rw.p.jahr}${i === 0 ? " (Ist)" : ""}</div>` +
         SERIES.map((se, k) => rw.v[k] > 0.5 ? `<div class="r"><span class="k"><i style="background:var(${se.color})"></i>${se.label.replace(/ \(.*\)/, "")}</span><b>${fmtTE(rw.v[k])}</b></div>` : "").join("") +
         `<div class="r sum"><span>Fremdkapital</span><b>${fmtTE(sum)}</b></div>` +
-        (rw.g > 0.5 ? `<div class="r"><span class="k"><i style="background:var(--s6)"></i>Guthaben</span><b>${fmtTE(rw.g)}</b></div>` : "");
+        (rw.g > 0.5 ? `<div class="r"><span class="k"><i style="background:var(--s6)"></i>Guthaben</span><b>${fmtTE(rw.g)}</b></div>` : "") +
+        (rw.p.linien !== undefined ? `<div class="r"><span class="k">Freier KK-Rahmen (von ${fmtTE(rw.p.linien)})</span><b>${fmtTE(rw.p.freiraum)}</b></div>` : "");
       tip.hidden = false;
       const left = (x(i) / W) * b.width;
       tip.style.left = Math.min(Math.max(0, left + 14), b.width - tip.offsetWidth) + "px";
@@ -417,7 +419,7 @@ tr.zero td { color: var(--good); }
 
   function debtTable() {
     const rows = BASIS.darlehen.map((d) => {
-      const tilg = d.art === "kk" ? `Linie ${fmtTE(d.linie)}` : d.art === "quartal" ? `${d.rate.toLocaleString("de-DE")} € / Quartal` : `≈ ${d.rate.toLocaleString("de-DE")} € / Monat`;
+      const tilg = d.art === "kk" ? (d.linienAbbau ? `Linie ${fmtTE(d.linie)}, −15 T€/Monat bis Mai 2027 auf ${fmtTE(d.linie - d.linienAbbau.rate * d.linienAbbau.monate)}` : `Linie ${fmtTE(d.linie)}`) : d.art === "quartal" ? `${d.rate.toLocaleString("de-DE")} € / Quartal` : `≈ ${d.rate.toLocaleString("de-DE")} € / Monat`;
       return `<tr><td>${d.name}</td><td>${fmtTE(d.saldo)}</td><td>${fmtPct(d.zins, 2)}</td><td>${tilg}</td></tr>`;
     }).join("");
     const sum = BASIS.darlehen.reduce((a, d) => a + d.saldo, 0);
@@ -428,7 +430,7 @@ tr.zero td { color: var(--good); }
     const set = (id, v, d) => { document.getElementById(id).textContent = v; document.getElementById(id + "d").innerHTML = d; };
     const fk0 = BASIS.darlehen.reduce((a, d) => a + d.saldo, 0);
     const kkPill = r.kkFrei ? (r.kkFrei.jahr <= 2029 ? "good" : r.kkFrei.jahr <= 2032 ? "warn" : "crit") : "crit";
-    set("kKK", md(r.kkFrei), `<span class="pill ${kkPill}">${r.kkFrei ? "in " + ((r.monate.indexOf(r.kkFrei) + 1) / 12).toLocaleString("de-DE", { maximumFractionDigits: 1 }) + " Jahren" : "nicht im Planungszeitraum"}</span> Höchststand ${fmtTE(r.kkSpitze.kk)} (${md(r.kkSpitze)})`);
+    set("kKK", md(r.kkFrei), `<span class="pill ${kkPill}">${r.kkFrei ? "in " + ((r.monate.indexOf(r.kkFrei) + 1) / 12).toLocaleString("de-DE", { maximumFractionDigits: 1 }) + " Jahren" : "nicht im Planungszeitraum"}</span> Höchststand ${fmtTE(r.kkSpitze.kk)} (${md(r.kkSpitze)})<br>Kleinster freier Kreditrahmen: <b>${fmtTE(r.freiraumMin.freiraum)}</b> (${md(r.freiraumMin)})`);
     set("kNet", md(r.nettoFrei), r.schuldenfrei ? `Letzte Rate (Mietkauf/Fahrzeug): ${md(r.schuldenfrei)}` : "Restschuld Ende 2036: " + fmtTE(r.monate[r.monate.length - 1].fk));
     const e27 = r.monate.find((x) => x.jahr === 2027 && x.m === 12);
     set("kFk27", fmtTE(e27.fk), `${fmtTE(fk0 - e27.fk)} weniger als am 30.09.2026 (${fmtTE(fk0)})`);
