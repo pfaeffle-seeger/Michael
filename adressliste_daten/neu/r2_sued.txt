@@ -1,0 +1,79 @@
+Veranstaltungstechnik Rosenheim;Klepperstraße 19;83026;Rosenheim;Bayern;Veranstaltungstechnik;;Veranstaltungsservice und Eventtechnik in Rosenheim;Quelle: cylex/dasoertliche
+Fab-Event Veranstaltungstechnik;Isarstr. 7;83026;Rosenheim;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik-Dienstleister Rosenheim;Quelle: 11880/dasoertliche
+ANTON Event Solutions (Alexander Anton);Industriestr. 18;82110;Germering;Bayern;Veranstaltungstechnik;;Eventtechnik-Dienstleister im Münchner Westen;Quelle: 11880 – Öffnungsstatus in Einträgen widersprüchlich
+Küstler Schowbühne Veranstaltungsagentur;Imhofstr. 12;86159;Augsburg;Bayern;Eventagentur;;Eventagentur mit Licht- DJ- und Technikverleih;Quelle: 11880/dasoertliche – Schreibweise Schowbühne im Verzeichnis
+Schaller - Licht und Tontechnik;Adelmannstraße 52;86199;Augsburg;Bayern;Veranstaltungstechnik;;Licht- und Tontechnik für Veranstaltungen;Quelle: cylex
+Kaiser-Showtechnik GmbH;Steinerne Furt 88;86167;Augsburg;Bayern;Veranstaltungstechnik;;Show- und Veranstaltungstechnik Augsburg;Quelle: northdata – Verzeichnisse nennen alte Adresse Eppaner Str. 7
+Stephan Dallabetta Veranstaltungs-Technik;Kaufbeurer Str. 8;87437;Kempten (Allgäu);Bayern;Veranstaltungstechnik;eventsound.org;Verleih Ton- Licht- und Bühnentechnik;Quelle: dasoertliche – 11880 nennt alternativ Schumacherring 41
+Manfred Pelzl Veranstaltungsservice u. Zeltverleih;Bach 7;83093;Bad Endorf;Bayern;Zeltverleih;;Zeltverleih und Veranstaltungsservice;Quelle: 11880
+Hans Hintermaier Zeltverleih;Thenn 8;85456;Wartenberg;Bayern;Zeltverleih;;Zeltverleih für Feste;Quelle: 11880
+Zeltverleih Fahn;Neuburger Str. 2;85084;Reichertshofen;Bayern;Zeltverleih;;Zeltverleih für Feste;Quelle: 11880
+Festzeltbetrieb Schweiger;Webling 1a;85221;Dachau;Bayern;Festzeltbetrieb;;Festzeltbetrieb mit Außenbewirtung;Quelle: cylex
+Bavaria-Zelte GmbH;Römerstr. 12a;85661;Forstinning;Bayern;Zeltverleih;;Zeltvermietung im Münchner Umland;Quelle: cylex – prüfen ob auch Zeltverkauf
+Gerhard Widmann GmbH;Altenhauser Str. 23;85356;Freising;Bayern;Zeltverleih;;Zeltvermietung im Münchner Umland;Quelle: cylex
+Fischer Party & Festzelte GmbH;Dieselweg 6;82538;Geretsried;Bayern;Zeltverleih;;Party- und Festzeltverleih;Quelle: cylex
+PA - light & sound GmbH;Feldkirchener Str. 12 A;85551;Kirchheim bei München;Bayern;Veranstaltungstechnik;;PA- Licht- und Tontechnik für Events;Quelle: dasoertliche – 11880 nennt Hausnr. 12
+tst München Gesellschaft für Audio Visuelle Systeme;Freisinger Str. 32;85737;Ismaning;Bayern;Veranstaltungstechnik;;Audiovisuelle Veranstaltungstechnik;Quelle: gelbeseiten
+Licht Ton und Eventservice (DJ-Strandfuchs);Hochwaldstr. 28;81377;München;Bayern;DJ-/Eventtechnik;;DJ- Licht- und Tonservice für Events;Quelle: gelbeseiten
+Just4Fun Veranstaltungstechnik (Leo Koller);Oberländerstraße 2b;81371;München;Bayern;Veranstaltungstechnik;;Licht- und Soundanlagenverleih;Quelle: cylex
+Herrmann Thorsten Licht- u. Tonvermietung;Maikammerer Str. 24;81539;München;Bayern;Veranstaltungstechnik;;Licht- und Tonvermietung für Veranstaltungen;Quelle: dasoertliche
+LIMELIGHT Veranstaltungstechnik GmbH;Von-Kahr-Str. 57;80999;München;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik-Dienstleister München;Quelle: dasoertliche
+AUDIO concept Veranstaltungstechnik;Bayerwaldstr. 31;81737;München;Bayern;Veranstaltungstechnik;;Ton- und Veranstaltungstechnik München;Quelle: gelbeseiten
+LiveCo Veranstaltungstechnik;Auf den Schrederwiesen 23;80995;München;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik-Dienstleister München;Quelle: gelbeseiten
+Leuchtkraft Veranstaltungstechnik;Sophie-Ressl-Weg 3;84034;Landshut;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Niederbayern;Quelle: gelbeseiten
+AML Akustik Multimedia Lichtdesign;Daimlerstr. 6;84030;Landshut;Bayern;Veranstaltungstechnik;;Akustik- und Lichttechnik für Events;Quelle: gelbeseiten
+StereoMike Veranstaltungstechnik;Elbinger Str. 2;94315;Straubing;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Niederbayern;Quelle: 11880
+Leibl Michael Veranstaltungstechnik;Sebastian-Gratzl-Str. 1;94315;Straubing;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Niederbayern;Quelle: golocal
+Grammophon Veranstaltungstechnik;Walchstr. 92a;94469;Deggendorf;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Niederbayern;Quelle: 11880
+Leistro Lichtdesign;Östlicher Stadtgraben 22;94469;Deggendorf;Bayern;Veranstaltungstechnik;;Licht- und Veranstaltungstechnik;Quelle: 11880 – prüfen ob auch Leuchtenhandel
+Böhnlein Lukas Tontechnik;Bruderwöhrdstr. 4;93055;Regensburg;Bayern;Veranstaltungstechnik;;Tontechnik für Veranstaltungen;Quelle: gelbeseiten
+Dams.Fahrner Veranstaltungstechnik GmbH;Donaustaufer Str. 93;93059;Regensburg;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Oberpfalz;Quelle: gelbeseiten – älterer Eintrag
+GEKELER AUDIOTECHNIK Veranstaltungstechnik;Hermann-Köhl-Str. 3;93049;Regensburg;Bayern;Veranstaltungstechnik;;Audio- und Veranstaltungstechnik;Quelle: 11880
+Pointinger Musik- Licht- und Eventtechnik (Erwin u. Susanne Pointinger);Zieblandstr. 12 A;93049;Regensburg;Bayern;Veranstaltungstechnik;;Musik- Licht- und Eventtechnik;Quelle: gelbeseiten – Kandidat aus Liste Bayern NO
+Karl Veranstaltungstechnik;Schabnerstr. 36;92637;Weiden in der Oberpfalz;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Oberpfalz;Quelle: gelbeseiten
+EVENT-RULEZ Veranstaltungstechnik;Hammerweg 8;92637;Weiden in der Oberpfalz;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Oberpfalz;Quelle: gelbeseiten
+Zeus Showservice;Rembrandtstraße 2;92224;Amberg;Bayern;Eventagentur;;Showservice und Veranstaltungen;Quelle: 11880
+Thomas Beer Meister für Veranstaltungstechnik;Katzheimerstraße 2;96050;Bamberg;Bayern;Veranstaltungstechnik;;Meisterbetrieb Veranstaltungstechnik;Quelle: cylex – älterer Eintrag nennt Am Hochgericht 3 a
+BETONT Ton - Licht - Media GmbH;Pödeldorfer Str. 227a;96050;Bamberg;Bayern;Veranstaltungstechnik;;Ton- Licht- und Medientechnik;Quelle: gelbeseiten
+Volk Peter Veranstaltungstechnik;Holzfeldweg 23;96052;Bamberg;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Oberfranken;Quelle: gelbeseiten
+Sound-Service Veranstaltungstechnik;Münchner Ring 5;96050;Bamberg;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Oberfranken;Quelle: gelbeseiten
+Studio Pro;Markgrafenallee 3a;95448;Bayreuth;Bayern;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Quelle: gelbeseiten – Tätigkeit prüfen
+Thomas Neumann Licht und Tontechnik;Carl-Maria-von-Weber-Str. 26;95448;Bayreuth;Bayern;Veranstaltungstechnik;;Licht- und Tontechnik Oberfranken;Quelle: gelbeseiten
+P & P Veranstaltungstechnik;Lämlinstr. 36;74080;Heilbronn;Baden-Württemberg;Veranstaltungstechnik;;Veranstaltungstechnik in Heilbronn-Böckingen;Quelle: 11880 – Kandidat aus Vorrunde
+Live art Licht- und Tonsysteme Gert Schweizer e.K.;Einsiedelweg 18;74821;Mosbach;Baden-Württemberg;Veranstaltungstechnik;liveart.de;Licht- und Tonsysteme für Veranstaltungen;Quelle: northdata/dasoertliche – Lager Zwingenburgstr. 24 Neckarelz
+Crazy Light&Sound (Matthias Kratzmüller);Schubertstraße 1;97941;Tauberbischofsheim;Baden-Württemberg;Veranstaltungstechnik;crazy-light-and-sound.de;Licht- und Tontechnik für Events;Quelle: cylex
+Diener Veranstaltungstechnik (Patrick Diener);Rotkehlchenweg 9/1;70794;Filderstadt;Baden-Württemberg;Veranstaltungstechnik;dienervt.de;FoH Video Schaummaschinen für Events;Quelle: cylex/dasoertliche
+visutec - Denkfabrik für Medientechnik;Wilhelm-Binder-Str. 19;78048;Villingen-Schwenningen;Baden-Württemberg;Veranstaltungstechnik;visutec.eu;Medien- und Veranstaltungstechnik mit Verleih;Quelle: 11880/dasoertliche – Visutec GmbH Beilstein ist Technische Doku (ausgeschlossen)
+Wilhelmer Festbetriebe GmbH (Wilhelmers SchwabenWelt);Buschlestraße 2a;70178;Stuttgart;Baden-Württemberg;Festzeltbetrieb;;Festzelt SchwabenWelt auf dem Cannstatter Wasen;Quelle: cannstatter-volksfest.de
+Incentive Konzept (Food Truck Stuttgart);Waldecker Straße 45-47;75387;Neubulach;Baden-Württemberg;Event-Catering/Foodtruck;;Mobiles Streetfood und Eventcatering;Quelle: cylex
+ML-SYSTEMS Gartenbedarf + Zeltverleih (Martin Löffelad);Kirchbühl 2;74523;Schwäbisch Hall;Baden-Württemberg;Zeltverleih;www.ml-systems.de;Zeltverleih seit 2005;Quelle: dasoertliche/cylex – auch Gartenbedarf
+Ludwigsburg Zeltverleih;Grundweinberge 28;71642;Ludwigsburg;Baden-Württemberg;Zeltverleih;;Zeltvermietung für Feste;Quelle: 11880
+Querner & Berger Zeltvermietung;Bergstaffelstr. 4;70329;Stuttgart;Baden-Württemberg;Zeltverleih;;Zeltverleih und -vermietung;Quelle: dasoertliche
+Abele Zeltvermietung GmbH;Daimlerstr. 23;70825;Korntal-Münchingen;Baden-Württemberg;Zeltverleih;;Zeltvermietung für Veranstaltungen;Quelle: 11880 – PLZ aus Ortszuordnung
+Event Pro's GmbH Eventagentur;Büttelbronner Str. 6;74613;Öhringen;Baden-Württemberg;Eventagentur;eventpros.de;Eventagentur Hohenlohe;Quelle: gelbeseiten/dasoertliche
+Hagen Merz event design;Spitalstr. 29;74172;Neckarsulm;Baden-Württemberg;Eventagentur;;Eventdesign und Veranstaltungsservice;Quelle: dasoertliche
+Shaddows Entertainment;Leipziger Str. 20;74172;Neckarsulm;Baden-Württemberg;DJ-/Eventtechnik;;Entertainment und Veranstaltungsservice;Quelle: dasoertliche – Tätigkeit prüfen
+Gesines FOODTRUCK;Jahnstr. 15;70597;Stuttgart;Baden-Württemberg;Event-Catering/Foodtruck;;Foodtruck für Catering und Events;Quelle: golocal
+GastroTrucks GmbH;Keltergasse 4;74078;Heilbronn;Baden-Württemberg;Event-Catering/Foodtruck;;Catering und Essen auf Rädern;Quelle: 11880 – andere Liste nennt Wilhelmstr. 40 74074
+Parra Event Catering UG;Rheinlandstr. 10;71636;Ludwigsburg;Baden-Württemberg;Event-Catering/Foodtruck;;Eventcatering;Quelle: 11880
+Snacks n' Drinks;Voithstr. 8/1;71640;Ludwigsburg;Baden-Württemberg;Event-Catering/Foodtruck;;Catering Partyservice und Firmenevents;Quelle: 11880
+Veranstaltungstechnik Memmingen;An der Kaserne 27;87700;Memmingen;Bayern;Veranstaltungstechnik;;Licht- Veranstaltungs- und Bühnentechnik;Quelle: dasoertliche
+Spectralight Veranstaltungstechnik;Schießstattweg 3;87700;Memmingen;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Schwaben;Quelle: dasoertliche
+Kutnar Veranstaltungs- und Werbetechnik;Alpenstr. 20;87700;Memmingen;Bayern;Veranstaltungstechnik;;Veranstaltungs- und Werbetechnik;Quelle: dasoertliche
+Event Systeme Veranstaltungstechnik;Märzisried 17;87600;Kaufbeuren;Bayern;Veranstaltungstechnik;;Licht- Ton- und Showtechnik;Quelle: gelbeseiten – zweiter Eintrag Südlachenbühl 20
+City-Musik Veranstaltungstechnik;Albrecht-Berblinger-Str. 11;89231;Neu-Ulm;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Schwaben;Quelle: gelbeseiten
+ZEN Lichttechnik GmbH;Schlößleweg 10/1;89231;Neu-Ulm;Bayern;Veranstaltungstechnik;;Lichttechnik für Veranstaltungen;Quelle: gelbeseiten
+MATT Veranstaltungstechnik;Am Bahndamm 14;89233;Neu-Ulm;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Schwaben;Quelle: gelbeseiten
+AO Eventdienstleistungen;Mörikestr. 25;89312;Günzburg;Bayern;Veranstaltungstechnik;;Eventdienstleistungen und Technik;Quelle: 11880
+HMS Licht & Ton GbR;Lochfelbenstr. 31/4;89312;Günzburg;Bayern;Veranstaltungstechnik;;Licht- und Tontechnik für Veranstaltungen;Quelle: 11880
+ASC Media Veranstaltungstechnik;Cartesiusstr. 1;85049;Ingolstadt;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Ingolstadt;Quelle: gelbeseiten
+Korbinian Buckl Veranstaltungstechnik;Tuchingerstr. 17a;85356;Freising;Bayern;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Quelle: gelbeseiten
+Eventunion UG (haftungsbeschränkt);Sackgasse 1;85354;Freising;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Freising;Quelle: dasoertliche
+AV-Suite Veranstaltungsdienstleistungen;Erdinger Str. 84;85356;Freising;Bayern;Veranstaltungstechnik;;AV- und Veranstaltungstechnik;Quelle: gelbeseiten – älterer Eintrag
+Movem Veranstaltungstechnik;Pullinger Hauptstr. 36;85354;Freising;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Freising;Quelle: gelbeseiten
+Creativworks Veranstaltungstechnik;Wendelsteinstr. 25;85435;Erding;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Erding;Quelle: gelbeseiten
+PA-Team Veranstaltungs Technik;Landgerichtsstr. 18;85435;Erding;Bayern;Veranstaltungstechnik;;PA- und Veranstaltungstechnik;Quelle: gelbeseiten
+Spang Lichttechnik GmbH;Marie-Curie-Str. 1;85435;Erding;Bayern;Veranstaltungstechnik;;Lichttechnik unter Veranstaltungstechnik gelistet;Quelle: gelbeseiten – prüfen ob Handel
+Berndsen Harald Veranstaltungstechnik;Gutenbergstr. 5;85276;Pfaffenhofen an der Ilm;Bayern;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Quelle: gelbeseiten
+Veranstaltungstechnik Zeitler;Kappelenweg 12;85276;Pfaffenhofen an der Ilm;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Oberbayern;Quelle: gelbeseiten
+Simple Events;Schönblick 24;85276;Pfaffenhofen an der Ilm;Bayern;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Quelle: gelbeseiten

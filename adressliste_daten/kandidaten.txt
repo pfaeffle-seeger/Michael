@@ -1,0 +1,39 @@
+# Ungeprüfte Kandidaten aus Runde 1 (nur aus Verzeichnissen) – in der nächsten Runde per Impressum verifizieren
+NRW Rheinland: Madhouse Equipment GmbH (Köln), Professional Media Veranstaltungstechnik-Vermietungs GmbH (Köln), Offstage GmbH (Köln), elfplus+ Veranstaltungstechnik GmbH (Köln), Cologne Promotion GmbH & Co. KG, macevent GmbH, TAKE A LOOK Events & Incentives GmbH, Kausemann Zeltvermietung, circusproductions K13 GmbH, SIGMA System Audio-Visuell (Düsseldorf), MP-Music Veranstaltungstechnik (Brühl), IVT Ilbertz Veranstaltungstechnik (Krefeld), RMD Veranstaltungstechnik (Krefeld), Veranstaltungstechnik Ballweber (Viersen), V & M GmbH & Co. KG (Remscheid), 5-Events (Wuppertal), Koch's Event Equipment (Bergisch Gladbach), PA+ Veranstaltungstechnik (Nideggen/Mechernich), X Dream Veranstaltungstechnik (Zülpich), Christopher Baur Veranstaltungstechnik (Nideggen), Pro-Stage Veranstaltungstechnik (Monschau)
+Bayern Süd: Veranstaltungstechnik Rosenheim, ANTON Event Solutions (Germering), Nightlife Event Solutions (Feldkirchen), Küstler Showbühne (Augsburg), Schaller Licht und Tontechnik (Augsburg-Inningen), Stephan Dallabetta Veranstaltungs-Technik (Kempten), Boom-Box Veranstaltungsservice (Altusried), CITY COMPANION (Putzbrunn), DAPP EVENTS (Kirchheim b. München)
+Ost: Naturton audiodienste, Ultraschall PA, RCL (Leipzig), Neumann & Müller NL Seehausen, LTS Jens Schulze, Dittrich Tontechnik, Geie & Liebschner (Dresden), Pradler, Lichtecht (Magdeburg), Hei-light Events, Thüringensound, concert media (Erfurt), Vertechnik (Chemnitz), Groschopp (Grimma), eventTIME (Oederan), Weißbach Veranstaltungsservice, SonneMondSterne (Saalburg)
+RLP: Show.Factory (Bitburg), Eifel Ton & Licht (Wolsfeld), PMS Sound & Light (Bitburg), Heinz Licht und Tontechnik (Ehlenz), L&R Veranstaltungstechnik (Welschneudorf), Kirschbaum Veranstaltungstechnik (Isenburg), Light Solutions, Action-Light, Pietsch Bühnentechnik (Koblenz), Koblenz-Rent.de, Leunert Eventtechnik (Mehlingen), Kubon-Sound (Kaiserslautern), JK Audio Engineering (Landau), Sonic Audio, WS-Audio (Herxheim), Partysmile (Speyer)
+BW: Festzelte Sonja Merz, Fürstenberg, SchwabenWelt, Almhütte Royal (Wasen), Küchenkutsche, Street Quizine (Foodtrucks Stuttgart); aus Runde davor: P&P Veranstaltungstechnik (HN-Böckingen), Live art Licht- u. Tonsysteme (Mosbach), Crazy Light & Sound (Tauberbischofsheim), Diener Veranstaltungstechnik (Filderstadt), Visutec (Beilstein)
+
+# Aus Runde 1 zurückgestellt (Adresse unvollständig oder nur aus Verzeichnis):
+Strong P.A. e.K. (Norbert Stark);Römershofer Weg 9;97486;Königsberg in Bayern;Bayern;Veranstaltungstechnik;;PA- Licht- und Bühnentechnik mit Verleih und ca. 800 Events jährlich;Adresse NUR aus Verzeichnissen (cylex/11880) – eigene Website nicht bestätigt
+MAS Medien Aktiv Service GmbH;Illesheimer Straße 9;90431;Nürnberg;Bayern;Veranstaltungstechnik;;Medien- Ton- und Lichttechnik für Events Kongresse und Messen;Adresse NUR aus Verzeichnis (messen.de) – eigene Website nicht bestätigt
+OPUS Showtechnik GmbH;Speckenbeker Weg 154;;Kiel;Schleswig-Holstein;Veranstaltungstechnik;https://www.opus-kiel.de;Ton Licht Video Streaming seit über 35 Jahren in Kiel;Straße laut eigener Website - PLZ nicht verifiziert (Suchbudget erschöpft)
+ConTZept Veranstaltungstechnik (Hauke Göllner);Am Ihlberg 5;24109;Melsdorf;Schleswig-Holstein;Veranstaltungstechnik;https://www.contzept.de;Bühne Ton Licht Video für Events und Messen im Raum Kiel;Adresse nur aus Verzeichnis (messen.de) - Impressum nicht geprüft
+Konferenztechnik Kiel;Wittland 2-4;;Kiel;Schleswig-Holstein;Veranstaltungstechnik/Messebau;https://www.konferenztechnik-kiel.de;Vermietung Konferenz- Ton- Videotechnik und Messebau;Straße laut Impressum-Snippet - PLZ und Rechtsform nicht verifiziert
+Musikanlagen-Kiel.de;Von-der-Goltz-Allee;;Kiel;Schleswig-Holstein;Veranstaltungstechnik (PA-Verleih);https://www.musikanlagen-kiel.de;Vermietung PA Licht Mikrofonanlagen Beamer in Kiel;Nur Straßenname laut Impressum-Snippet - Hausnr. PLZ Inhaber fehlen
+Becker Veranstaltungstechnik GmbH;Schillerstraße 89;41515;Grevenbroich;Nordrhein-Westfalen;Veranstaltungstechnik;https://www.bevt.de;Full-Service Licht Ton Bühne Medientechnik mit Mietservice, Niederlassung Düsseldorf;Hauptsitz Grevenbroich per eigenem Impressum bestätigt, Straße nur aus Verzeichnis
+visolite Veranstaltungstechnik GmbH;Apelsteinallee 18;04416;Markkleeberg;Sachsen;Veranstaltungstechnik;https://visolite.de;Event- und Messetechnik inkl. mobiler LED-Wände bundesweit;Adresse nur aus Verzeichnis - Website nennt Zentrale Leipzig und Tel. 034297 989910 - Impressum nicht gelesen
+# NRW Ruhrgebiet/Westfalen: KEINE verifizierten Zeilen. Das Suchbudget (200 WebSearch pro Turn, geteilt) war nach 14 Suchen dieses Agenten erschöpft, WebFetch und curl sind blockiert (DNS/403).
+# Unverifizierte KANDIDATEN (nur Hinweise aus Verzeichnissen/Stellenanzeigen, Adresse fehlt, Website noch unbekannt). Vor Aufnahme per Impressum prüfen:
+# AE Rental Veranstaltungstechnik | Münster | Ton/Licht/Bühne/Video, Standort an der Halle Münsterland (Domain vermutl. ae-rental.de)
+# Popmodern Juicy Beats GmbH (Juicy Beats Festival) | Dortmund | Festival im Westfalenpark, seit 2026 DEAG-Mehrheit
+# Mike Tec Eventtechnik GmbH | Raum Oberhausen | Veranstaltungstechnik (Stellenanzeige)
+# Die Eventhelden | Bergkamen | Veranstaltungstechnik
+# ARDisco Veranstaltungsservice | Essen | Eventmanagement/Bühnentechnik
+# Robert Walch Veranstaltungen | Oberhausen | Veranstaltungen (Leistung unklar)
+# Konzept Eins Veranstaltungsservice | Borgholzhausen (Kreis Gütersloh) | Ton/Licht/Bühne, Raum GT/BI/OS/MS
+# fast4ward GmbH | Bielefeld | Full-Service-Eventfirma (Technik, Catering, Deko)
+# Eventtechnik Ludwig | Gütersloh | Eventtechnik (Angaben dünn)
+# Jens Bramkamp Zeltverleih | Porta Westfalica | Zeltverleih
+# tco-event GmbH | Siegen | Veranstaltungstechnik (Stellenanzeige)
+# Audiomaxx | Bestwig (Sauerland) | Veranstaltungs-/Lichttechnik
+# Soundvision Showtechnik | Arnsberg | Veranstaltungstechnik
+# Pro Media Veranstaltungstechnik | Olsberg | Licht-/Bühnentechnik
+# Bochumer Veranstaltungs-GmbH | Bochum | städt. Veranstalter (Jahrhunderthalle, RuhrCongress) – schwacher Fit
+# Partyroom Dortmund | Dortmund-Eving | Technikverleih/Eventlocation – schwacher Fit
+# NICHT aufnehmen: satis&fy Werne (gehört zu satis&fy AG, bereits in bestehend.txt)
+Nord: Event Service Nord (Kiel), Sound-Vision-Kiel (Altenholz), North Light & Sound (Fockbek), Sound Village (Ahrenviöl), Ferdinand Freitag Zeltverleih (Stockelsdorf), Schwabe Zelte (Sarzbüttel), Alster Zelte (Hamburg), Convent Veranstaltungstechnik (Hamburg), HEP Hanseatische Event Partner (Hamburg), b-ceed events (Hamburg), adebar GmbH, Sound Projekt Veranstaltungstechnik (Stralsund), AEN GmbH (Greifswald), Gollan (Lübeck)
+Hessen/Saar: Hico Veranstaltungstechnik (Wetzlar), Haus & Gross event GmbH (Saarbrücken), Ton Direkt GmbH (Kassel), Soundflex (Kirkel), VA-TEC Jochum (Tholey), EVENTED GmbH (Ensdorf), Audio Check GmbH (Merzig), hb Veranstaltungstechnik (Neunkirchen)
+Bayern NO: Mollton Veranstaltungstechnik (Hof), SES Special Event Service (Fürth), Alfred Hofmaier jun. (Burglengenfeld), Pointinger Musik-, Licht- und Eventtechnik (Regensburg)
+NDS: Brilliant sound&light (Langenhagen), SWIFT Eventtechnik (Gehrden), TENO (Oldenburg), Massmann Events, Weser-Ems Media, Wessmann Eventtechnik, RGB Events (Braunschweig), m-mevent (Osnabrück), Musikus Veranstaltungsdienst, Goldrush Festival GmbH (Emsland Open Air), Rodenwaldt & Partner (Wienhausen)

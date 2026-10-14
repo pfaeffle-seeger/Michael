@@ -1,0 +1,19 @@
+# NRW Ruhrgebiet/Westfalen: KEINE verifizierten Zeilen. Das Suchbudget (200 WebSearch pro Turn, geteilt) war nach 14 Suchen dieses Agenten erschöpft, WebFetch und curl sind blockiert (DNS/403).
+# Unverifizierte KANDIDATEN (nur Hinweise aus Verzeichnissen/Stellenanzeigen, Adresse fehlt, Website noch unbekannt). Vor Aufnahme per Impressum prüfen:
+# AE Rental Veranstaltungstechnik | Münster | Ton/Licht/Bühne/Video, Standort an der Halle Münsterland (Domain vermutl. ae-rental.de)
+# Popmodern Juicy Beats GmbH (Juicy Beats Festival) | Dortmund | Festival im Westfalenpark, seit 2026 DEAG-Mehrheit
+# Mike Tec Eventtechnik GmbH | Raum Oberhausen | Veranstaltungstechnik (Stellenanzeige)
+# Die Eventhelden | Bergkamen | Veranstaltungstechnik
+# ARDisco Veranstaltungsservice | Essen | Eventmanagement/Bühnentechnik
+# Robert Walch Veranstaltungen | Oberhausen | Veranstaltungen (Leistung unklar)
+# Konzept Eins Veranstaltungsservice | Borgholzhausen (Kreis Gütersloh) | Ton/Licht/Bühne, Raum GT/BI/OS/MS
+# fast4ward GmbH | Bielefeld | Full-Service-Eventfirma (Technik, Catering, Deko)
+# Eventtechnik Ludwig | Gütersloh | Eventtechnik (Angaben dünn)
+# Jens Bramkamp Zeltverleih | Porta Westfalica | Zeltverleih
+# tco-event GmbH | Siegen | Veranstaltungstechnik (Stellenanzeige)
+# Audiomaxx | Bestwig (Sauerland) | Veranstaltungs-/Lichttechnik
+# Soundvision Showtechnik | Arnsberg | Veranstaltungstechnik
+# Pro Media Veranstaltungstechnik | Olsberg | Licht-/Bühnentechnik
+# Bochumer Veranstaltungs-GmbH | Bochum | städt. Veranstalter (Jahrhunderthalle, RuhrCongress) – schwacher Fit
+# Partyroom Dortmund | Dortmund-Eving | Technikverleih/Eventlocation – schwacher Fit
+# NICHT aufnehmen: satis&fy Werne (gehört zu satis&fy AG, bereits in bestehend.txt)

@@ -1,0 +1,24 @@
+Frontsound Veranstaltungstechnik GmbH;Stöhrerstraße 3e;04347;Leipzig;Sachsen;Veranstaltungstechnik;https://www.frontsound.de;Ton-, Licht- und Videotechnik bei Events braucht leisen mobilen Strom
+Messeprojekt GmbH;Bergweg 7;04356;Leipzig;Sachsen;Messebau;https://messeprojekt.de;Messestände und Events brauchen emissionsfreien Strom in Hallen
+dd show & eventgroup;Wirtschaftsweg 2a;04420;Markranstädt;Sachsen;Bühnenbau/Eventvermietung;https://www.eventmodul-vermietung.de;Mobile Bühnen und Showküchen im Freien brauchen netzunabhängigen Strom
+Nachtdigital GmbH;Friedensstr. 20;04774;Dahlen;Sachsen;Festival-Veranstalter;https://nachtdigital.de;Open-Air-Festival im Grünen mit Bedarf an leisen Stromquellen
+HMG Events GmbH & Co. KG;An der Prießnitzaue 32;01328;Dresden;Sachsen;Bühnenbau/Eventausstattung;https://www.hmg-rentals.de;Bühnen- und Infrastrukturverleih für Open Airs ohne Netzanschluss
+PAW pa-world GmbH (Turbo Events);Behringstr. 34;01159;Dresden;Sachsen;Veranstaltungstechnik;https://turbo-events.de;Fullservice-Eventtechnik braucht Strom an Orten ohne Netzanschluss
+nuck GmbH;Nikolaus-Otto-Str. 11;02625;Bautzen;Sachsen;Zeltverleih;https://www.nuck.de;Festzelte und Bühnen brauchen Beleuchtungs- und Cateringstrom
+Der Event Service;Bahnhofstraße 4;09228;Chemnitz;Sachsen;Veranstaltungstechnik;https://www.der-event-service.de;Ton, Licht und Bühne mit Mietpark für Außenveranstaltungen
+tec4you GbR;Schönherrstraße 8;09113;Chemnitz;Sachsen;Veranstaltungstechnik/Mobilbühnen;https://tec4you.eu;Mobilbühnen bundesweit im Einsatz brauchen leise Stromversorgung
+blue media event GmbH;Wichertstraße 47;10439;Berlin;Berlin;Veranstaltungstechnik;https://blue-media.de;Berliner Eventtechnikverleih – Innenstadtevents ohne Dieselgenerator
+VEITLIGHT Martin Veit;Möllendorffstr. 52;10367;Berlin;Berlin;Licht- und Tontechnikverleih;https://licht-und-tontechnikverleih.de;Licht und Ton für Partys im Freien in Berlin-Brandenburg
+Rorbach Event + Sound;Havelländer Ring 38;12629;Berlin;Berlin;Veranstaltungstechnik;https://rorbach-events.com;Konferenz- und Eventtechnik braucht leise Pufferstromlösung
+GATE Eventmanagement & Veranstaltungstechnik GmbH;Salzufer 13-14a;10587;Berlin;Berlin;Eventagentur/Veranstaltungstechnik;https://gate-av.de;Eventmanagement mit Technik für Locations mit schwachem Netzanschluss
+Zeltverleih Heinz Pautz;Alt-Lübars 38a;13469;Berlin;Berlin;Zeltverleih;https://www.zeltverleih-pautz.de;Fest- und Partyzelte brauchen Strom für Licht und Catering
+Berliner Partyservice Grunke;Müllerstr. 185;13353;Berlin;Berlin;Catering/Imbisswagenverleih;https://eventcatering-grunke.de;Verleiht Imbiss- und Kühlwagen, die netzunabhängigen Strom brauchen
+DTB Veranstaltungstechnik GmbH;Ricarda-Huch-Straße 2;14480;Potsdam;Brandenburg;Veranstaltungstechnik;https://www.dtb.berlin;Fullservice inklusive Stromversorgung für Events in Brandenburg
+Ferropolis Stiftung Industriekultur gGmbH;Ferropolisstrasse 1;06773;Gräfenhainichen;Sachsen-Anhalt;Festivalgelände/Veranstalter;https://www.ferropolis.de;Großes Festivalgelände mit hohem temporärem Strombedarf
+Expovent;Leipziger Chaussee 193;06112;Halle (Saale);Sachsen-Anhalt;Eventausstattung/Veranstaltungstechnik;https://expovent.de;Verleiht Bühnen, Zelte und Technik, die Strom brauchen
+ESS Emmes Sound Service;Holleber Weg 14;06128;Halle (Saale);Sachsen-Anhalt;Veranstaltungstechnik;https://www.ess-veranstaltungstechnik.de;Bühnen-, Licht- und Tontechnik für Events in Halle
+Showsystem Fabian Stankewitz;Satteldorfer Straße 13;39397;Gröningen;Sachsen-Anhalt;Veranstaltungstechnik/Zeltverleih;https://www.showsystem.de;Kombiniert Zelte und Eventtechnik – Strombedarf im Freien
+Franze Event & Rental;Schwarzer Stamm 1;06842;Dessau-Roßlau;Sachsen-Anhalt;Eventverleih;https://www.event-miet.de;Verleiht Partyzelte, Bühnen und PA – Strom für draußen
+Party San GmbH;Schwanseestraße 20;99423;Weimar;Thüringen;Festival-Veranstalter;https://www.party-san.de;Metal-Open-Air auf Flugplatzgelände braucht großen mobilen Strombedarf
+Omega Veranstaltungstechnik Jürgen Schneider;Döbereinerstraße 26;99427;Weimar;Thüringen;Veranstaltungstechnik;https://omega-weimar.de;Technik für Stadtfeste und Sportevents braucht leisen Strom
+TAXIS Steffen Köhler;Dorfstraße 23;07768;Reinstädt;Thüringen;Zeltverleih/Eventausstattung;https://www.taxis-thueringen.de;Festzelte und Eventausstattung brauchen Strom ohne Dieselgenerator

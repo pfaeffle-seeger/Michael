@@ -1,0 +1,20 @@
+WOA Festival GmbH (Wacken Open Air);Schenefelder Str. 17;25596;Wacken;Schleswig-Holstein;Festival-Veranstalter;https://www.wacken.com;Riesiges Festivalgelände mit vielen Bühnen und Camping, hoher Bedarf an Dieselersatz
+FKP Scorpio Konzertproduktionen GmbH;Große Elbstraße 277a;22767;Hamburg;Hamburg;Festival-Veranstalter;https://fkpscorpio.com;Veranstaltet Hurricane und weitere Open-Airs, hat eine Nachhaltigkeitsstrategie
+LCe Event & Technik GmbH;Ottensener Straße 8;22525;Hamburg;Hamburg;Veranstaltungstechnik;https://lce-hamburg.de;Ton-, Licht- und Messetechnik, mobiler Strom für Außeneinsätze
+Karsten Jahnke Konzertdirektion GmbH;Lerchenstraße 12;22767;Hamburg;Hamburg;Konzert- und Festivalveranstalter;https://kj.de;Open-Air-Konzerte brauchen leise Stromversorgung für Bühne und Backstage
+Kopf & Steine GmbH (MS Dockville);Eduardstraße 46;20257;Hamburg;Hamburg;Festival-Veranstalter;https://msdockville.de;Festival auf Industriebrache, Nachbarn verlangen leise und emissionsfreie Stromquellen
+ESK Events & Promotion GmbH (Deichbrand);Otto-Lilienthal-Straße 1;27639;Wurster Nordseeküste;Niedersachsen;Festival-Veranstalter;https://deichbrand.de;Großes Festival auf einem Flugplatz ohne festes Stromnetz
+Kulturkosmos Müritz e.V. (Fusion Festival);Am Flugplatz 1;17248;Lärz;Mecklenburg-Vorpommern;Festival-Veranstalter;https://fusion-festival.de;Festival mit Öko-Anspruch und vielen dezentralen Bühnen ohne Netzanschluss
+Airbeat One GmbH Zweigniederlassung;Paulstraße 2a;19249;Lübtheen;Mecklenburg-Vorpommern;Festival-Veranstalter;https://airbeat-one.de;Großes Elektrofestival mit Campingflächen, Strom für Infrastruktur nötig
+Hannover Concerts GmbH & Co. KG Betriebsgesellschaft;Ferdinand-Wilhelm-Fricke-Weg 8;30169;Hannover;Niedersachsen;Konzertveranstalter;https://www.hannover-concerts.de;Betreibt Open-Air-Bühnen und -Konzerte, Strom für Nebenflächen
+Rent.Group Hamburg/Bremen GmbH (Party.Rent Hamburg);Senefelder-Ring 80;21465;Reinbek;Schleswig-Holstein;Eventmobiliar-Verleih;https://www.partyrent.com/de/eventverleih-hamburg;Verleiht Eventausstattung, Powerstations wären eine sinnvolle Ergänzung im Mietsortiment
+Störtebeker Festspiele GmbH & Co. KG;Am Bodden 100;18528;Ralswiek;Mecklenburg-Vorpommern;Open-Air-Veranstalter;https://www.stoertebeker.de;Naturbühne im Landschaftsschutzgebiet, dort zählen leise und emissionsfreie Stromquellen
+Reload Event GmbH;Rudolf-Diesel-Straße 5;27232;Sulingen;Niedersachsen;Festival-Veranstalter;https://reload-festival.de;Metal-Festival auf freiem Gelände, braucht Strom für Camping und Stände
+Baltic Eventmanagement GmbH (Baltic Open Air);Schmiederedder 8;24357;Fleckeby;Schleswig-Holstein;Festival-Veranstalter;https://www.baltic-open-air.de;Open-Air auf freier Fläche, braucht mobile Stromversorgung
+HAMKE Event & Messe (Jan-Mirko Hamke);Dorfstraße 150;25336;Klein Nordende;Schleswig-Holstein;Veranstaltungs- und Messetechnik;https://hamke.biz;Event- und Messetechnik, mobile Akkus für Außeneinsätze
+Otter Veranstaltungstechnik GbR;Haart 224;24539;Neumünster;Schleswig-Holstein;Veranstaltungstechnik und Bühnenbau;https://www.otter-veranstaltungstechnik.de;Vermietet Licht, Ton und Bühnen, Strom als Zusatzmietartikel
+Großmarkt Rostock GmbH;Hanseatenstraße 5;18146;Rostock;Mecklenburg-Vorpommern;Markt- und Großveranstalter;https://www.grossmarkt-rostock.de;Veranstaltet Weihnachts- und Spezialmärkte, Marktstände brauchen mobilen Strom
+MEISSNER EXPO GmbH;Industriestraße 11;25469;Halstenbek;Schleswig-Holstein;Messebau;https://meissner-expo.de;Nachhaltiger Messebauer, Strom für Outdoor-Stände und Aufbauphasen
+ZELTCITY GmbH & Co. KG;Jägerstieg 5;21465;Wentorf bei Hamburg;Schleswig-Holstein;Zeltverleih;https://www.zeltcity.de;Zeltveranstaltungen auf Freiflächen brauchen Strom für Licht und Catering
+Bührmann Gruppe GmbH;Hamfhofsweg 133;28357;Bremen;Bremen;Event und Gastronomie;https://buehrmann-gruppe.de;Eventlocation Lankenauer Höft und Catering, Strom für Außen- und Strandevents
+CK Catering Kontor Hamburg GmbH;Ausschläger Weg 36-38;20537;Hamburg;Hamburg;Event-Catering;https://cateringkontor.de;Catering bis 4000 Gäste, mobiler Strom für Außenküchen
