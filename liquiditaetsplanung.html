@@ -228,6 +228,9 @@ tr.zero td { color: var(--good); }
         <label class="toggle"><input type="checkbox" id="aifinyoAktiv"><span>Wareneinkauf über aifinyo finanzieren</span></label>
         <div class="ctl"><div class="row"><label for="aifinyoRahmen">Einkaufslinie</label><output id="o-aifinyoRahmen"></output></div>
           <input type="range" id="aifinyoRahmen" min="100000" max="1200000" step="50000"></div>
+        <div class="ctl"><div class="row"><label for="aifinyoModus">Nutzung</label>
+          <select id="aifinyoModus"><option value="fest">fester Anteil der Linie</option><option value="bedarf">nach Bedarf (KK bleibt auf null)</option></select></div>
+          <div class="hint">„nach Bedarf“: nur so viel Wareneinkauf wird finanziert, dass die Kontokorrente auf null bleiben, höchstens der Wareneinkauf des Monats</div></div>
         <div class="ctl"><div class="row"><label for="aifinyoAuslastung">Genutzter Anteil der Linie</label><output id="o-aifinyoAuslastung"></output></div>
           <input type="range" id="aifinyoAuslastung" min="0.1" max="1" step="0.05"><div class="hint" id="aifHint"></div></div>
         <div class="ctl"><div class="row"><label for="aifinyoLaufzeit">Zahlungsziel</label><output id="o-aifinyoLaufzeit"></output></div>
@@ -235,7 +238,7 @@ tr.zero td { color: var(--good); }
         <div class="ctl"><div class="row"><label for="aifinyoStart">Erste Finanzierung</label>
           <select id="aifinyoStart"><option value="2026-11">November 2026</option><option value="2026-12">Dezember 2026</option><option value="2027-01">Januar 2027</option><option value="2027-04">April 2027</option></select></div></div>
         <div class="ctl"><div class="row"><label for="aifinyoDauer">Nutzungsdauer</label><output id="o-aifinyoDauer"></output></div>
-          <input type="range" id="aifinyoDauer" min="6" max="60" step="6"><div class="hint">Vertragslaufzeit 24 Monate · danach laufen die Raten aus und werden über das Konto bezahlt</div></div>
+          <input type="range" id="aifinyoDauer" min="6" max="84" step="6"><div class="hint">Vertragslaufzeit 24 Monate · danach laufen die Raten aus und werden über das Konto bezahlt</div></div>
         <div class="ctl"><div class="row"><label for="aifinyoRechnungen">Finanzierte Rechnungen pro Monat</label><output id="o-aifinyoRechnungen"></output></div>
           <input type="range" id="aifinyoRechnungen" min="5" max="80" step="5"><div class="hint">39 € Transaktionsgebühr je Rechnung</div></div>
         <button type="button" class="reset" id="reset">Szenario-Werte wiederherstellen</button>
@@ -273,7 +276,7 @@ tr.zero td { color: var(--good); }
         <li><b>GbR:</b> Nachrangdarlehen 500 T€ zu 5 % ab Januar 2027, Zinsen laufend, tilgungsfrei. Zurückgezahlt wird es, sobald beide Kontokorrente dauerhaft auf null zurückgeführt sind: ab dann fließt jeder Überschuss nach den planmäßigen Raten und aifinyo in das Nachrangdarlehen, vor einer KfW-Sondertilgung (wahlweise aus jedem Überschuss oder erst nach allen anderen Krediten). Die Rückführung des Verrechnungskontos (245 T€, 8 T€ pro Monat) entfällt dafür; ohne Nachrangdarlehen läuft sie bis April 2029. Ab Mai 2029 bringen die Gesellschafter 50 T€ pro Jahr ein (einstellbar), solange Bankschulden bestehen.</li>
         <li><b>Steuern:</b> Vorauszahlungen auf Basis des Vorjahres, Abschlusszahlung jeweils im September des Folgejahres. Verlustvorträge sind nicht berücksichtigt.</li>
         <li><b>Kreditlinien:</b> KSK 1.000 T€, ab 30.05.2027 500 T€ (einstellbar). Commerzbank 500 T€ ab 30.09.2026, monatlich −15 T€ bis Mai 2027, danach 380 T€. Was die Commerzbank-Linie übersteigt, wird über die KSK-Linie finanziert.</li>
-        <li><b>aifinyo</b> (Fact Sheet Finetrading): aifinyo bezahlt den Lieferanten, die Rückführung erfolgt in gleichen Monatsraten, und frei werdende Linie wird sofort wieder genutzt. Kosten: Handelsmarge 2,99 % bis 5,99 % je nach Zahlungsziel (180 Tage: 3,99 %), 39 € je Rechnung, Bereitstellung 269 € pro Monat für mindestens 24 Monate, Einrichtung einmalig 1,95 % der Linie. Ein Skonto, das aifinyo beim Lieferanten zieht, wird auf die Marge angerechnet; das ist hier nicht berücksichtigt. Der offene Betrag zählt zum Fremdkapital, nicht zum Kontokorrent-Rahmen.</li>
+        <li><b>aifinyo</b> (Fact Sheet Finetrading): aifinyo bezahlt den Lieferanten, die Rückführung erfolgt in gleichen Monatsraten, und frei werdende Linie wird sofort wieder genutzt. Finanziert wird höchstens der Wareneinkauf des Monats, entweder gleichmäßig nach genutztem Anteil der Linie oder nach Bedarf, damit die Kontokorrente auf null bleiben. Kosten: Handelsmarge 2,99 % bis 5,99 % je nach Zahlungsziel (180 Tage: 3,99 %), 39 € je Rechnung, Bereitstellung 269 € pro Monat für mindestens 24 Monate, Einrichtung einmalig 1,95 % der Linie. Ein Skonto, das aifinyo beim Lieferanten zieht, wird auf die Marge angerechnet; das ist hier nicht berücksichtigt. Der offene Betrag zählt zum Fremdkapital, nicht zum Kontokorrent-Rahmen.</li>
         <li><b>Leasing</b> (Kärcher, Grenke, BMW, Hyundai) läuft weiter und steckt bereits in den Fixkosten.</li>
         <li><b>Zinssätze Mercedes-Benz Bank (4,9 %) und Mietkauf (5,9 %)</b><span class="tag">geschätzt</span>. Tilgung 1.500 € bzw. 700 € pro Monat, aus der Saldenliste abgeleitet.</li>
         <li><b>Umsatz 2026:</b> 7,30 Mio. € laut Ihrer Erwartung, damit 1,70 Mio. € in Oktober–Dezember. Ab 2027 wächst der Umsatz mit der Szenariorate. <b>Fixkosten</b> sinken ab 2027 dauerhaft um 85 T€ pro Jahr, danach gilt die Kostensteigerung. Der <b>Rohertrag</b> steigt ab 2027 zusätzlich um 50 T€ pro Jahr.</li>
@@ -325,6 +328,8 @@ tr.zero td { color: var(--good); }
     document.getElementById("aifinyoAktiv").checked = params.aifinyoAktiv;
     document.getElementById("aifinyoStart").value = params.aifinyoStart;
     document.getElementById("nachrangAktiv").checked = params.nachrangAktiv;
+    document.getElementById("aifinyoModus").value = params.aifinyoModus;
+    document.getElementById("aifinyoAuslastung").disabled = params.aifinyoModus === "bedarf";
     document.getElementById("nachrangStart").value = params.nachrangStart;
     document.getElementById("nachrangRueckfuehrung").value = params.nachrangRueckfuehrung;
     const aifMonat = (params.aifinyoRahmen * params.aifinyoAuslastung) / ((params.aifinyoLaufzeit + 1) / 2);
@@ -521,6 +526,7 @@ tr.zero td { color: var(--good); }
   document.getElementById("aifinyoAktiv").addEventListener("change", (e) => { params.aifinyoAktiv = e.target.checked; render(); });
   document.getElementById("aifinyoStart").addEventListener("change", (e) => { params.aifinyoStart = e.target.value; render(); });
   document.getElementById("nachrangAktiv").addEventListener("change", (e) => { params.nachrangAktiv = e.target.checked; render(); });
+  document.getElementById("aifinyoModus").addEventListener("change", (e) => { params.aifinyoModus = e.target.value; render(); });
   document.getElementById("nachrangStart").addEventListener("change", (e) => { params.nachrangStart = e.target.value; render(); });
   document.getElementById("nachrangRueckfuehrung").addEventListener("change", (e) => { params.nachrangRueckfuehrung = e.target.value; render(); });
   for (const b of document.querySelectorAll(".seg button")) b.addEventListener("click", () => {

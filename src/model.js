@@ -91,7 +91,8 @@ const STANDARD = {
   aifinyoAktiv: true,
   aifinyoRahmen: 800000,
   aifinyoLaufzeit: 6, // Monate bzw. Monatsraten (180 Tage)
-  aifinyoAuslastung: 1.0, // Anteil der Einkaufslinie, der laufend genutzt wird
+  aifinyoModus: "fest", // "fest": gleichmäßig genutzter Anteil der Linie, "bedarf": nur so viel, dass die Kontokorrente auf null bleiben
+  aifinyoAuslastung: 1.0, // Anteil der Einkaufslinie, der laufend genutzt wird (Modus "fest")
   aifinyoStart: "2026-11",
   aifinyoDauer: 24, // Monate mit neuen Finanzierungen (Vertragslaufzeit 24 Monate)
   aifinyoRechnungen: 20, // finanzierte Lieferantenrechnungen pro Monat
@@ -108,7 +109,8 @@ function simuliere(p) {
   // Für "nachKK": den Monat suchen, ab dem die Kontokorrente dauerhaft auf null bleiben. Erst ohne Rückführung
   // rechnen; zieht die GmbH danach doch wieder Kontokorrent, den Beginn entsprechend nach hinten schieben.
   if (p.nachrangAktiv && p.nachrangRueckfuehrung === "nachKK" && p._nrRueckAb === undefined) {
-    const kkIdx = (r) => (r.kkFrei ? r.monate.indexOf(r.kkFrei) : Infinity);
+    // Kontokorrent und aifinyo zählen hier gemeinsam als kurzfristige Finanzierung
+    const kkIdx = (r) => (r.kkAifFrei ? r.monate.indexOf(r.kkAifFrei) : Infinity);
     let ab = kkIdx(simuliere({ ...p, nachrangRueckfuehrung: "nie" }));
     let r = simuliere({ ...p, _nrRueckAb: ab });
     for (let i = 0; i < 5 && kkIdx(r) > ab; i++) {
@@ -163,9 +165,11 @@ function simuliere(p) {
       aifGebuehr += (aifNeu[k] * aifMarge) / aifN;
     }
     const aifZiel = (p.aifinyoRahmen * p.aifinyoAuslastung) / ((aifN + 1) / 2);
-    const aifZugang = aktivMonat ? Math.max(0, Math.min(aifZiel, p.aifinyoRahmen - (aifSaldo - aifRueck))) : 0;
-    aifNeu.push(aifZugang);
-    aifSaldo += aifZugang - aifRueck;
+    // höchstens der Wareneinkauf des Monats kann über aifinyo laufen
+    const wareneinkauf = umsatz * (1 - p.rohertrag);
+    aifSaldo -= aifRueck;
+    const bedarfsModus = p.aifinyoModus === "bedarf";
+    let aifZugang = aktivMonat && !bedarfsModus ? Math.max(0, Math.min(aifZiel, wareneinkauf, p.aifinyoRahmen - aifSaldo)) : 0;
     if (p.aifinyoAktiv && idx >= aifStartIdx) {
       if (idx === aifStartIdx) aifGebuehr += p.aifinyoRahmen * AIFINYO.einrichtung;
       if (idx < aifStartIdx + Math.max(AIFINYO.vertragMonate, p.aifinyoDauer)) aifGebuehr += AIFINYO.bereitstellung(p.aifinyoRahmen);
@@ -173,7 +177,7 @@ function simuliere(p) {
     }
     aifKosten += aifGebuehr;
     zinsen += aifGebuehr;
-    const ebt = rohertrag + p.sonstErtragMonat - fix - varK - p.afaMonat - zinsen;
+    let ebt = rohertrag + p.sonstErtragMonat - fix - varK - p.afaMonat - zinsen;
     ebtJahr[jahr] = (ebtJahr[jahr] || 0) + ebt;
 
     // Steuern: Vorauszahlungen auf Basis Vorjahr, Abschlusszahlung im September des Folgejahres
@@ -220,7 +224,19 @@ function simuliere(p) {
     by.nr.saldo += nrZugang;
 
     const cfOperativ = ebt + p.afaMonat - steuer + wc;
-    const freierCf = cfOperativ - invest - ausschuettung + rueckVerr + einlage - tilgung + aifZugang - aifRueck + nrZugang;
+    let freierCf = cfOperativ - invest - ausschuettung + rueckVerr + einlage - tilgung - aifRueck + nrZugang;
+    // Modus "bedarf": nur so viel Wareneinkauf über aifinyo finanzieren, dass die Kontokorrente auf null bleiben
+    if (aktivMonat && bedarfsModus) {
+      const bedarf = by.ksk.saldo + by.cbkk.saldo - guthaben - freierCf + AIFINYO.transaktion * p.aifinyoRechnungen;
+      aifZugang = Math.max(0, Math.min(bedarf, wareneinkauf, p.aifinyoRahmen - aifSaldo));
+      if (aifZugang > 0) {
+        const tx = AIFINYO.transaktion * p.aifinyoRechnungen;
+        aifGebuehr += tx; aifKosten += tx; zinsen += tx; ebt -= tx; ebtJahr[jahr] -= tx; freierCf -= tx;
+      }
+    }
+    aifNeu.push(aifZugang);
+    aifSaldo += aifZugang;
+    freierCf += aifZugang;
 
     // aktuelle Kreditlinien
     const n = (jahr - 2026) * 12 + m - 9;
@@ -305,6 +321,7 @@ function simuliere(p) {
     umsatzJahr,
     ebtJahr,
     kkFrei: find((x) => x.kk < 1),
+    kkAifFrei: find((x) => x.kk + x.salden.aif < 1),
     schuldenfrei: find((x) => x.fk < 1),
     nettoFrei: find((x) => x.netto < 1),
     bankFrei: find((x) => x.bankFk - x.guthaben < 1),
