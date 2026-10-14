@@ -1,0 +1,124 @@
+LTB Eventtechnik Licht & Tontechnik Torsten Bornschein;Am Kesselhaus 1 a;66115;Saarbrücken;Saarland;Veranstaltungstechnik;;Licht- und Tontechnik für Veranstaltungen;Quelle: 11880
+Stagelight Showservice GmbH;Eschberger Weg 65;66121;Saarbrücken;Saarland;Veranstaltungstechnik/Bühnenbau;;Ton Licht Video Bühnenbau und Verleih;Quelle: cylex/11880 - Lager in Bexbach
+Veranstaltungstechnik Sound & Light (Sven Hendle);Margaretenstr. 45;66740;Saarlouis;Saarland;Veranstaltungstechnik;;Veranstaltungstechnik Ton und Licht;Quelle: 11880/Das Örtliche
+MCM Veranstaltungstechnik (M. Morgen);Im Kribet 1;66740;Saarlouis;Saarland;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: 11880/Das Örtliche
+TON-TEC Medientechnik GmbH;Hauptstr. 187;66740;Saarlouis;Saarland;Veranstaltungstechnik;;Medien- und Veranstaltungstechnik;Quelle: 11880/Das Örtliche
+Mansion Bühnentechnik Veranstaltungstechnik;Siedlerstr. 23;66740;Saarlouis;Saarland;Veranstaltungstechnik/Bühnentechnik;;Bühnen- Tagungstechnik Beleuchtung für Events;Quelle: gelbeseiten
+Hirtz und Theobald Veranstaltungsproduktion;Mühlenhang 22;66740;Saarlouis;Saarland;Veranstaltungsproduktion;;Veranstaltungsproduktion mit eigener Technik;Quelle: Das Örtliche
+Friends Gesellschaft für Events Marketing und Kommunikation mbH;Wiesenstraße 3a;66663;Merzig;Saarland;Eventagentur mit Technik;;Eventagentur mit Licht- und Beschallungstechnik;Quelle: Verzeichnis (11880/Das Örtliche)
+HB Veranstaltungstechnik;Im Altseiterstal 7;66538;Neunkirchen;Saarland;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: 11880/Das Örtliche - Kandidat aus kandidaten.txt
+knecht veranstaltungstechnik e.K.;Weimarer Str. 11;66606;St. Wendel;Saarland;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten - OT Oberlinxweiler
+HP Veranstaltungstechnik;Zum Augenborn 24;66606;St. Wendel;Saarland;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: 11880 - OT Bliesen
+Holger Stengel Veranstaltungstechnik;Theodor-Storm-Weg 43;55127;Mainz;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten/Das Örtliche
+Bernhard Schwarz Veranstaltungstechnik;Oberer Laubenheimer Weg 32;55131;Mainz;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten/Das Örtliche
+Eventcloud Veranstaltungstechnik;Philipp-Reis-Str. 1b;55129;Mainz;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten/Das Örtliche
+Neumann & Müller (Standort Mainz);Hauptstr. 17-19;55120;Mainz;Rheinland-Pfalz;Veranstaltungstechnik;;Großer Full-Service-Veranstaltungstechnikdienstleister;Quelle: Das Örtliche - Niederlassung eines Konzerns
+Soundline;Am Hemel 9;55124;Mainz;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten/Das Örtliche
+B&B Technik + Events GmbH;Am Hemel 15;55124;Mainz;Rheinland-Pfalz;Veranstaltungstechnik;;Technik und Events Full-Service;Quelle: 11880 - auch Frankfurter Adresse Schumannstr. 27 gelistet
+audiluma Veranstaltungstechnik GmbH;Sophie-Christ-Str. 6;55127;Mainz;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: Das Örtliche - gelbeseiten nennt Peter-Sander-Str. 28 55252 Mainz-Kastel
+Mecovent GmbH;Mombacher Str. 52;55122;Mainz;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: Verzeichnis (gelbeseiten/Das Örtliche)
+mtb Medientechnik Böhmer;Zur Laubenheimer Höhe 20;55129;Mainz;Rheinland-Pfalz;Veranstaltungstechnik;;Medien- und Veranstaltungstechnik;Quelle: Verzeichnis (gelbeseiten/Das Örtliche)
+Meyer Events GmbH;Wilhelm-Theodor-Römheld-Str. 14;55130;Mainz;Rheinland-Pfalz;Eventagentur/Veranstaltungstechnik;;Events mit Veranstaltungstechnik;Quelle: Verzeichnis (gelbeseiten/Das Örtliche)
+Dayan's Foodtruck;Am Schleifweg 17;55128;Mainz;Rheinland-Pfalz;Foodtruck;;Foodtruck-Catering bei Events;Quelle: Verzeichnis (11880/cylex)
+Klangglück.de;Emanuel-Geibel-Str. 2;65185;Wiesbaden;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik mit 24-Stunden-Service;Quelle: gelbeseiten/Das Örtliche
+Acetec GmbH Veranstaltungstechnik;Rostocker Str. 17;65191;Wiesbaden;Hessen;Veranstaltungstechnik;;Beschallung Beleuchtung Konferenztechnik;Quelle: gelbeseiten/Das Örtliche
+Roadshow GmbH;Hagenauer Str. 21;65203;Wiesbaden;Hessen;Veranstaltungstechnik/Roadshows;;Unter Veranstaltungstechnik gelistet;Quelle: gelbeseiten - Leistung nicht näher beschrieben
+LichtundTon24 Sascha Stamm;Rieslingstr. 17;65207;Wiesbaden;Hessen;Veranstaltungstechnik;;Licht- und Tonverleih;Quelle: Das Örtliche
+Kyritz Sound & Light;Max-Planck-Ring 45;65205;Wiesbaden;Hessen;Veranstaltungstechnik;;Sound- und Lichttechnik;Quelle: Das Örtliche
+Soundwave Veranstaltungstechnik GmbH;Ringofenstr. 10;65201;Wiesbaden;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: 11880
+Production Resource Group AG (PRG);Hanauer Landstr. 289;60314;Frankfurt am Main;Hessen;Veranstaltungstechnik;;Großer Veranstaltungstechnikdienstleister;Quelle: gelbeseiten - Konzernstandort
+anlo Veranstaltungstechnik u. Service GmbH;Morsestr. 30;60486;Frankfurt am Main;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik und Service;Quelle: Das Örtliche
+Tobitec Veranstaltungstechnik;Hermannstr. 17;60318;Frankfurt am Main;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: Das Örtliche
+MedienReich Gesellschaft für professionelle Eventtechnik mbH;Orber Str. 4 A;60386;Frankfurt am Main;Hessen;Veranstaltungstechnik;;Professionelle Eventtechnik;Quelle: gelbeseiten
+QDREI oHG;Ferdinand-Porsche-Str. 7;60386;Frankfurt am Main;Hessen;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Quelle: gelbeseiten
+Stage-Pro Veranstaltungstechnik GbR;Hanauer Landstr. 30;60314;Frankfurt am Main;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten
+Gahrens + Battermann GmbH & Co. KG;Osloer Str. 5;60327;Frankfurt am Main;Hessen;Veranstaltungstechnik;;Medien- und Veranstaltungstechnik;Quelle: Verzeichnis (gelbeseiten/Das Örtliche)
+Akzent Entertainment GbR;Jordanstr. 33;60486;Frankfurt am Main;Hessen;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Quelle: Verzeichnis (gelbeseiten/Das Örtliche)
+Powerlights Veranstaltungstechnik;Ginnheimer Landstr. 132;60431;Frankfurt am Main;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: Verzeichnis (gelbeseiten/Das Örtliche)
+OSF-acoustics Veranstaltungstechnik;Fuchstanzstr. 47;60489;Frankfurt am Main;Hessen;Veranstaltungstechnik;;Beschallung und Veranstaltungstechnik;Quelle: Verzeichnis (gelbeseiten/Das Örtliche)
+Contec Congress & Veranstaltungstechnik oHG;Silostr. 33 C;65929;Frankfurt am Main;Hessen;Veranstaltungstechnik;;Kongress- und Veranstaltungstechnik;Quelle: Das Örtliche - OT Unterliederbach
+Farbton Media & Events UG;Starkenburger Str. 61;60386;Frankfurt am Main;Hessen;Veranstaltungstechnik;;Media und Events;Quelle: Das Örtliche
+Freudenpracht Catering Event;Max-von-Laue-Str. 4;60438;Frankfurt am Main;Hessen;Event-Catering/Foodtruck;;Foodtruck-Catering für Events;Quelle: Verzeichnis (11880/Das Örtliche)
+FINE Foodtruck Frankfurt und Hessen;Im Wörth 6;60433;Frankfurt am Main;Hessen;Foodtruck;;Foodtruck für Events in Hessen;Quelle: Verzeichnis (11880/Das Örtliche)
+Reiner-Waahnsinn Foodtruck;Lyoner Str. 32;60528;Frankfurt am Main;Hessen;Foodtruck;;Catering für private und Firmenevents;Quelle: cylex
+MAINCATERING GmbH (ADOBO Food Truck);Gwinnerstraße 34-36;60388;Frankfurt am Main;Hessen;Event-Catering/Foodtruck;;Full-Service-Caterer Rhein-Main mit Foodtruck;Quelle: 11880/cylex
+GOOSE Gourmet GmbH;Kleyerstr. 15;60326;Frankfurt am Main;Hessen;Event-Catering/Foodtruck;;Foodtruck-Catering;Quelle: cylex - Foodtruck auch Mainzer Landstr. 181
+Mainhattan Burgers;Elsterstr. 92;65933;Frankfurt am Main;Hessen;Foodtruck;;Burger-Foodtruck;Quelle: 11880
+Kesme's Burger Foodtruck;Ludwig-Scriba-Str. 2;65929;Frankfurt am Main;Hessen;Foodtruck;;Burger-Foodtruck;Quelle: 11880
+Foodtruck-Pizzawagen Sole Doro;Eberstädter Str. 43;64319;Pfungstadt;Hessen;Foodtruck;;Pizza-Foodtruck mit Catering und Partyservice;Quelle: Verzeichnis (11880/cylex)
+Gerbig Philipp Media Solutions;Fischerhüttenweg 8;63450;Hanau;Hessen;Veranstaltungstechnik;;Medien- und Veranstaltungstechnik;Quelle: gelbeseiten
+DB showtec;Kleibömerstr. 8a;63452;Hanau;Hessen;Veranstaltungstechnik;;Showtechnik-Betrieb;Quelle: gelbeseiten
+High Sound Veranstaltungstechnik;Karolinenstr. 7;63452;Hanau;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten
+Freaksound GmbH;Frankfurter Landstr. 52;63452;Hanau;Hessen;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Quelle: gelbeseiten
+E:FACT Gesellschaft für Medien und Veranstaltungstechnik;Josef-Bautz-Str. 6;63457;Hanau;Hessen;Veranstaltungstechnik;;Medien- und Veranstaltungstechnik;Quelle: gelbeseiten
+JF Events;Krumme Gewann 11;63457;Hanau;Hessen;Veranstaltungstechnik;;Licht- und Veranstaltungstechnik;Quelle: gelbeseiten
+two sense GmbH;Schachenwaldstr. 30;63456;Hanau;Hessen;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Quelle: gelbeseiten
+Stage-Light e.K.;Hanauer Str. 80;63165;Mühlheim am Main;Hessen;Veranstaltungstechnik;;Bühnen- und Lichttechnik;Quelle: gelbeseiten
+Sound and Light professional e.K.;Gustav-Adolf-Str. 14;63069;Offenbach am Main;Hessen;Veranstaltungstechnik;;Ton- und Lichttechnik;Quelle: gelbeseiten
+Pro Audio Engineering Veranstaltungstechnik;Gerhart-Hauptmann-Str. 40;63071;Offenbach am Main;Hessen;Veranstaltungstechnik;;Audio- und Veranstaltungstechnik;Quelle: Das Örtliche
+Dequis Lasertechnik;Landgrafenstr. 17;63071;Offenbach am Main;Hessen;Veranstaltungstechnik (Laser);;Lasershows für Veranstaltungen;Quelle: golocal
+formwandler events Mietshop;Ludwigstr. 180D;63067;Offenbach am Main;Hessen;Eventausstattung/Verleih;;Eventausstattung zur Miete;Quelle: Das Örtliche - Verleih von Eventmobiliar prüfen
+the event media company e.K.;Trappbörnchen 17;63073;Offenbach am Main;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik und EDV-Dienste;Quelle: cylex
+Flashlight Veranstaltungstechnik GmbH;Georg-Elser-Str. 16;35037;Marburg;Hessen;Veranstaltungstechnik/Bühnenbau;;Meisterbetrieb Beschallung Beleuchtung Bühnenbau;Quelle: cylex
+pro.live GbR;Vinzentinerinnenweg 5;35043;Marburg;Hessen;Veranstaltungstechnik;;Licht- Veranstaltungstechnik und DJ;Quelle: gelbeseiten - OT Schröck
+Soundconnect;Marktweg 17;35274;Kirchhain;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten
+Hico Veranstaltungstechnik GmbH;Dillfeld 3;35576;Wetzlar;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik und Verleih;Quelle: gelbeseiten/11880 - Kandidat aus kandidaten.txt
+lichtundtonfabrik Veranstaltungstechnik;Franzenburg 4D;35578;Wetzlar;Hessen;Veranstaltungstechnik;;Licht- und Tontechnik;Quelle: gelbeseiten
+MediaEvent Services GmbH & Co.;Charlotte-Bamberg-Str. 6;35578;Wetzlar;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik-Verleih und Videoproduktion;Quelle: 11880
+dot. Veranstaltungstechnik;Berliner Str. 6;35415;Pohlheim;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik in Mittelhessen;Quelle: cylex
+HFAudio Veranstaltungstechnik;Fauerbacher Str. 47;61169;Friedberg;Hessen;Veranstaltungstechnik;;Audio- und Veranstaltungstechnik;Quelle: gelbeseiten
+ES & EM Eventservice & Entertainment Mertins;Daimlerstr. 12;61352;Bad Homburg v. d. Höhe;Hessen;Eventservice/Veranstaltungstechnik;;Eventmanagement mit Bühnen- und Lichttechnik;Quelle: 11880
+Event im Focus GmbH & Co. KG;Seifgrundstr. 2;61348;Bad Homburg v. d. Höhe;Hessen;Eventagentur;;Veranstaltungsservice;Quelle: gelbeseiten - eigene Technik nicht belegt
+KTL Event Schmiede;Schleyerstraße 2;36041;Fulda;Hessen;Veranstaltungstechnik;;Event- und Veranstaltungstechnik;Quelle: 11880
+ffortissimo Veranstaltungstechnik;Flemingstraße 3;36041;Fulda;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: 11880 - cylex nennt Black-Horse-Straße 1 36047 Fulda
+Polarlicht Ton- & Lichttechnik;Polarsternstraße 23;36041;Fulda;Hessen;Veranstaltungstechnik;;Ton- und Lichttechnik für Events;Quelle: gelbeseiten
+Extra Hell-Veranstaltungstechnik (Christian Köhler);Marienstraße 4;36093;Künzell;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten
+Charles Baker Licht- und Tontechnik;Schulstraße 31;36093;Künzell;Hessen;Veranstaltungstechnik;;Licht- und Tontechnik;Quelle: gelbeseiten
+361Sound Veranstaltungstechnik;Am Riedrain 3;36124;Eichenzell;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten
+Eventtec Pro;Im Oberfeld 10;36124;Eichenzell;Hessen;Veranstaltungstechnik;;Eventtechnik-Betrieb;Quelle: gelbeseiten
+Lighthouse e.K.;Billerer Straße 3a;36100;Petersberg;Hessen;Veranstaltungstechnik;;Licht- und Tontechnik Elektroakustik;Quelle: gelbeseiten
+Rüdiger Luft Zeltverleih;Taunusstr. 4;63633;Birstein;Hessen;Zeltverleih;;Zeltverleih;Quelle: Das Örtliche/11880
+Zeltverleih Wagner;Burggasse 7;63607;Wächtersbach;Hessen;Zeltverleih;;Zeltverleih;Quelle: Das Örtliche/11880
+LZ Zeltebau und Montageservice;Neue Hanauer Str. 9;63683;Ortenberg;Hessen;Zeltverleih/Zeltbau;;Zeltbau und Montage für Veranstaltungen;Quelle: Das Örtliche/11880
+Arnt Müller Festzeltverleih;Eichelstr. 38;63667;Nidda;Hessen;Festzeltverleih;;Festzeltverleih;Quelle: Das Örtliche/11880
+Rainer und Bettina Kaufmann Partyzeltverleih;Am Lindenberg 22;63699;Kefenrod;Hessen;Zeltverleih;;Partyzeltverleih;Quelle: Das Örtliche/11880
+TM Eventservice;Am Grüneberg 108;54292;Trier;Rheinland-Pfalz;Veranstaltungstechnik;;Eventservice Großregion Trier/Luxemburg 600 qm Gelände;Quelle: cylex/11880
+Elmar Hubert Veranstaltungstechnik;Zeughausstr. 34;54292;Trier;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: Das Örtliche
+PRO MUSIK Veranstaltungstechnik GmbH;Ottostr. 14;54294;Trier;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: 11880
+Klangfabrik Veranstaltungstechnik & DJ;Ahornweg 33;54296;Trier;Rheinland-Pfalz;Veranstaltungstechnik/DJ;;Veranstaltungstechnik und DJ;Quelle: 11880
+Sound & Light Lothar Schmitt Veranstaltungstechnik;Gallstr. 19;54290;Trier;Rheinland-Pfalz;Veranstaltungstechnik;;Ton- und Lichttechnik;Quelle: 11880
+Hubert Einhorn Medientechnik;Matthiasstr. 2;54290;Trier;Rheinland-Pfalz;Veranstaltungstechnik;;Medientechnik mit Veranstaltungstechnik-Verleih;Quelle: Das Örtliche
+And more Veranstaltungstechnik GmbH;Am Güterbahnhof 15;56564;Neuwied;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten/11880/Das Örtliche
+Pyromagic Veranstaltungstechnik;Robert-Krups-Str. 12;56564;Neuwied;Rheinland-Pfalz;Veranstaltungstechnik/Pyrotechnik;;Pyro- und Veranstaltungstechnik;Quelle: gelbeseiten
+Eventtechnik Winckler;Nodhausener Str. 123 A;56567;Neuwied;Rheinland-Pfalz;Veranstaltungstechnik;;Eventtechnik-Betrieb;Quelle: gelbeseiten
+UD-Sound Uwe Dümmler;Rebenweg 6;56566;Neuwied;Rheinland-Pfalz;Veranstaltungstechnik;;PA- und Tontechnik;Quelle: gelbeseiten
+Sinusklang Veranstaltungstechnik;Hans-Böckler-Str. 17;56070;Koblenz;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: 11880
+Starline Showservice GmbH;Ernst-Sachs-Str. 17;56070;Koblenz;Rheinland-Pfalz;Veranstaltungstechnik;;Showservice und Veranstaltungstechnik;Quelle: 11880
+Action-Light Veranstaltungstechnik GmbH;Kesselheimer Weg 50;56070;Koblenz;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: 11880 - auch Rudolf-Diesel-Str. 22-24 56220 Urmitz gelistet - Kandidat aus kandidaten.txt
+Soundrange Engineering;Schützenstr. 18;56068;Koblenz;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: 11880
+Alfter Veranstaltungstechnik;Oberdorfstr. 5;56072;Koblenz;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: 11880
+Light Solutions Veranstaltungstechnik;Metternicher Weg 13;56072;Koblenz;Rheinland-Pfalz;Veranstaltungstechnik;;Licht- und Veranstaltungstechnik;Quelle: 11880 - Kandidat aus kandidaten.txt
+Event- und Veranstaltungstechnik Enchelmaier;An der Gießerei 5;56170;Bendorf;Rheinland-Pfalz;Veranstaltungstechnik;;Event- und Veranstaltungstechnik;Quelle: 11880
+DTX-Events;Willy-Brandt-Allee 1;56626;Andernach;Rheinland-Pfalz;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Quelle: 11880
+Event Deluxe;Am Eisengraben 4;56179;Vallendar;Rheinland-Pfalz;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Quelle: 11880
+VS Medientechnik GmbH;Pirmasenser Str. 98;67655;Kaiserslautern;Rheinland-Pfalz;Veranstaltungstechnik;;Medien- und Veranstaltungstechnik;Quelle: 11880
+HW-Audiotechnik;Schreberstr. 32;67657;Kaiserslautern;Rheinland-Pfalz;Veranstaltungstechnik;;Audio- und Veranstaltungstechnik;Quelle: Das Örtliche - Name teils als WH-Audiotechnik gelistet
+Kubon-Sound;Wasserlochstücke 16;67661;Kaiserslautern;Rheinland-Pfalz;Veranstaltungstechnik;;PA- und Tontechnik;Quelle: Das Örtliche - OT Dansenberg - Kandidat aus kandidaten.txt
+Heller und Lauter (Inh. Jochen Rhau);Am Tränkwald 18 A;67688;Rodenbach;Rheinland-Pfalz;Veranstaltungstechnik;;Licht- und Tontechnik;Quelle: 11880
+Kessler Eventservice;Westring 9;66954;Pirmasens;Rheinland-Pfalz;Veranstaltungstechnik;;Eventservice und Veranstaltungstechnik;Quelle: 11880
+PRO TECH Konferenz- u. Veranstaltungstechnik;Bruno-Körner-Str. 8;67059;Ludwigshafen am Rhein;Rheinland-Pfalz;Veranstaltungstechnik;;Konferenz- und Veranstaltungstechnik;Quelle: 11880
+Tamaris-PA;Berliner Str. 19;67059;Ludwigshafen am Rhein;Rheinland-Pfalz;Veranstaltungstechnik;;PA-Verleih;Quelle: gelbeseiten
+3B Veranstaltungstechnik (Jester-Zürker und Stadelbauer GbR);Otto-Stabel-Str. 17;67059;Ludwigshafen am Rhein;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten
+Powerrent HU Petri Ton- u. Lichtanlagen;Lagerplatzweg 12;67059;Ludwigshafen am Rhein;Rheinland-Pfalz;Veranstaltungstechnik;;Ton- und Lichtanlagenverleih;Quelle: gelbeseiten
+Engelhardt-Konzepte.de Veranstaltungstechnik;Am Bubenpfad 2;67065;Ludwigshafen am Rhein;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: Das Örtliche - anderes Verzeichnis ordnet Elektrotechnik zu
+MPS Veranstaltungstechnik;Rathausstr. 26;67550;Worms;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten - OT Abenheim
+LLT Licht & Ton;Osthofener Str. 3;67550;Worms;Rheinland-Pfalz;Veranstaltungstechnik;;Licht- und Tontechnik;Quelle: gelbeseiten - OT Rheindürkheim
+SoundPark Worms;Bacchusstr. 2;67550;Worms;Rheinland-Pfalz;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Quelle: gelbeseiten - OT Herrnsheim
+Blacklight Showequipment GbR;Fronstr. 30;67550;Worms;Rheinland-Pfalz;Veranstaltungstechnik;;Show-Equipment für Veranstaltungen;Quelle: gelbeseiten - OT Abenheim
+2 Jablan GmbH;Branchweilerhof 4;67433;Neustadt an der Weinstraße;Rheinland-Pfalz;Eventagentur/Veranstaltungstechnik;;Eventmanagement Veranstaltungstechnik Firmenevents;Quelle: 11880
+STL-Veranstaltungstechnik GmbH & Co. KG;Max-von-Laue-Str. 10-12;76829;Landau in der Pfalz;Rheinland-Pfalz;Veranstaltungstechnik;;Veranstaltungstechnik-Betrieb;Quelle: gelbeseiten/11880/Das Örtliche
+Hammerschmidt Eventbedarf;Fabrikstr. 8;66484;Riedelberg;Rheinland-Pfalz;Zeltverleih/Eventausstattung;;Pagoden- und Partyzelte Tische Geschirr;Quelle: Verzeichnis (11880/cylex)
+Seibert Party-Zelt-Verleih GmbH;Werkstraße 9;67346;Speyer;Rheinland-Pfalz;Zeltverleih;;Partyzeltverleih;Quelle: Verzeichnis (11880/cylex)
+Stephan Wagner Zeltverleih u. Bühnenbau;Herbert-Kühn-Str. 2;55481;Kirchberg (Hunsrück);Rheinland-Pfalz;Zeltverleih/Bühnenbau;;Zeltverleih und Bühnenbau;Quelle: Das Örtliche
+Altenweg GmbH & Co KG;Weiherstr. 2;56291;Bickenbach;Rheinland-Pfalz;Zeltverleih;;Zeltvermietung und Zeltverleih;Quelle: 11880
+Ferdinand Schäfer Partyzeltservice;Kirchstr. 8;54340;Naurath (Eifel);Rheinland-Pfalz;Zeltverleih;;Partyzeltservice;Quelle: 11880

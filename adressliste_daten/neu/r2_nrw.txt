@@ -93,7 +93,7 @@ Eventall GmbH;Timmerhellstr. 27;45478;Mülheim an der Ruhr;Nordrhein-Westfalen;V
 B & P Veranstaltungstechnik GmbH;Küllenhahner Str. 56;42349;Wuppertal;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Wuppertal-Cronenberg;Quelle: 11880
 AXUMIA Ton & Lichtservice Hageman & Köster GbR;Am Brögel 19;42285;Wuppertal;Nordrhein-Westfalen;Veranstaltungstechnik;;Ton- und Lichtservice Wuppertal;Quelle: Gelbe Seiten
 Kollegen & Wulfhorst Entertainment UG;Friedrich-Engels-Allee 185;42285;Wuppertal;Nordrhein-Westfalen;Veranstaltungstechnik/Entertainment;;unter Veranstaltungstechnik gelistet;Quelle: Gelbe Seiten
-Platzhirsch event & stage;Rosenthalstr. 26;42369;Wuppertal;Nordrhein-Westfalen;Veranstaltungstechnik/Bühne;;Event- und Bühnentechnik Wuppertal;Quelle: golocal
+Platzhirsch event.bühne.technik;Rosenthalstr. 26;42369;Wuppertal;Nordrhein-Westfalen;Mobile Bühnen/Veranstaltungstechnik;https://www.platzhirsch-event.de;Vermietung mobiler Veranstaltungsbühnen und Technik;Quelle: golocal - cylex (Stand 2017) nennt Kimmenauer Weg 13 42897 Remscheid
 Quality Sound Systems;Siegesstr. 144;42287;Wuppertal;Nordrhein-Westfalen;Veranstaltungstechnik;;Beschallungstechnik Wuppertal;Quelle: golocal
 JEDOBA Jens Bange Beschallungs- und Veranstaltungstechnik;Normannenstr. 18;42653;Solingen;Nordrhein-Westfalen;Veranstaltungstechnik;;Beschallungs- und Veranstaltungstechnik Solingen;Quelle: 11880
 Noise Toys Veranstaltungstechnik;Gerdastr. 43;42897;Remscheid;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Remscheid-Lennep;Quelle: Das Örtliche/11880 - Gelbe Seiten nennt Alte Kölner Str. 12
@@ -107,3 +107,18 @@ Arcus Licht- und Präsentationstechnik GmbH;Obermeiers Feld 2-4;33104;Paderborn;
 Cedric Piontek Veranstaltungstechnik;Brückenstr. 21;32760;Detmold;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Kleinbetrieb Detmold;Quelle: Gelbe Seiten
 technikreativ;Margaretenweg 3;32758;Detmold;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Detmold;Quelle: Gelbe Seiten
 AVL Timmermeister;Salzufler Str. 135;32052;Herford;Nordrhein-Westfalen;Veranstaltungstechnik;;unter Veranstaltungstechnik Herford gelistet;Quelle: Gelbe Seiten - Firmenname unvollständig
+LTS EventTechnik GmbH & Co. KG;Zum Gewerbepark 11;44532;Lünen;Nordrhein-Westfalen;Veranstaltungstechnik;;Eventtechnik Lünen-Gahmen;Quelle: 11880
+Soundjunky Veranstaltungstechnik Unna;Lünerner Schulstr. 41;59427;Unna;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Unna;Quelle: 11880
+Unlimited EventTechnik UG;Auf dem Daberg 2A;59067;Hamm;Nordrhein-Westfalen;Veranstaltungstechnik;;Eventtechnik Hamm-Wiescherhöfen;Quelle: Gelbe Seiten
+Matzka GmbH Veranstaltungstechnikverleih;Schieferstr. 12;59067;Hamm;Nordrhein-Westfalen;Veranstaltungstechnik (Verleih);;Verleih Veranstaltungstechnik Hamm;Quelle: Gelbe Seiten
+BÜHNEMOBIL GmbH;Zum Scheider Feld 43;51467;Bergisch Gladbach;Nordrhein-Westfalen;Mobile Bühnen;https://www.buehnemobil.de;Vermietung mobiler Veranstaltungsbühnen;Quelle: cylex/Das Örtliche - laut cylex auch Handel mit Bühnen
+Mobilbühne NRW UG (haftungsbeschränkt);Ober Carthausen 24;58553;Halver;Nordrhein-Westfalen;Mobile Bühnen;https://www.mobilbuehne-nrw.de;Vermietung mobiler Bühnen;Quelle: 11880/meinestadt
+Timmerberg Zeltverleih (Wilhelm und Ramona Timmerberg);Trakehnerstr. 34;33104;Paderborn;Nordrhein-Westfalen;Zeltverleih;;Zeltverleih Paderborn-Schloß Neuhaus;Quelle: Das Örtliche/Gelbe Seiten - Eintrag älter
+MyPaderEvents;Senefelderstr. 7;33100;Paderborn;Nordrhein-Westfalen;Zeltverleih;;Zeltvermietung Paderborn;Quelle: 11880
+Zeltverleih-OWL;Meller Str. 46;33613;Bielefeld;Nordrhein-Westfalen;Zeltverleih;;Zeltverleih Ostwestfalen;Quelle: 11880 - cylex nennt Bolbrinkersweg 28 33617 Bielefeld
+Zeltverleih Benedikt Heers;Gustav-Winkler-Str. 22;33699;Bielefeld;Nordrhein-Westfalen;Zeltverleih;;Zeltverleih Bielefeld;Quelle: 11880
+Heinz Klink Partyzeltverleih;Euskirchener Str. 10;53121;Bonn;Nordrhein-Westfalen;Zeltverleih;;Partyzeltverleih Bonn-Endenich;Quelle: Gelbe Seiten - Eintrag ca. 2,5 Jahre alt
+HBS GmbH Zeltsysteme;Immenburgstr. 20;53121;Bonn;Nordrhein-Westfalen;Zeltverleih;;Zeltsysteme Bonn;Quelle: Verzeichnis (cylex) - prüfen ob Verleih oder Verkauf
+Zelte- und Gastronomiebetriebe Wolter Bonn UG;Kannheideweg 47;53123;Bonn;Nordrhein-Westfalen;Festzeltbetrieb;;Zelte und Festgastronomie;Quelle: Verzeichnis (cylex/11880)
+Partyzelte Vianden;Ettighofferstr. 12;53123;Bonn;Nordrhein-Westfalen;Zeltverleih;;Partyzeltverleih Bonn-Duisdorf;Quelle: 11880
+Zeltkontor Köln;Leyendeckerstr. 4;50825;Köln;Nordrhein-Westfalen;Zeltverleih;;Zeltverleih Köln-Ehrenfeld;Quelle: Gelbe Seiten/Das Örtliche
