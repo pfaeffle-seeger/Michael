@@ -84,7 +84,9 @@ const STANDARD = {
   nachrangBetrag: 500000,
   nachrangZins: 0.05,
   nachrangStart: "2027-01",
-  nachrangRueckfuehrung: "sofort", // "sofort": aus jedem Überschuss nach Bedienung des Fremdkapitals, "zuletzt": erst nach allen anderen Krediten
+  // Rückführung Nachrangdarlehen: "nachKK" ab dem Monat, ab dem beide Kontokorrente dauerhaft auf null sind,
+  // "sofort" aus jedem Überschuss, sobald die Kontokorrente auf null sind, "zuletzt" erst nach allen anderen Krediten
+  nachrangRueckfuehrung: "nachKK",
   kskLinieNeu: 500000, // KSK-Linie ab 30.05.2027
   aifinyoAktiv: true,
   aifinyoRahmen: 800000,
@@ -103,6 +105,18 @@ function simuliere(p) {
   by.nr.zins = p.nachrangZins;
   const [nrJ, nrM] = String(p.nachrangStart || "2027-01").split("-").map(Number);
   const nrIdx = (nrJ - 2026) * 12 + nrM - 10;
+  // Für "nachKK": den Monat suchen, ab dem die Kontokorrente dauerhaft auf null bleiben. Erst ohne Rückführung
+  // rechnen; zieht die GmbH danach doch wieder Kontokorrent, den Beginn entsprechend nach hinten schieben.
+  if (p.nachrangAktiv && p.nachrangRueckfuehrung === "nachKK" && p._nrRueckAb === undefined) {
+    const kkIdx = (r) => (r.kkFrei ? r.monate.indexOf(r.kkFrei) : Infinity);
+    let ab = kkIdx(simuliere({ ...p, nachrangRueckfuehrung: "nie" }));
+    let r = simuliere({ ...p, _nrRueckAb: ab });
+    for (let i = 0; i < 5 && kkIdx(r) > ab; i++) {
+      ab = kkIdx(r);
+      r = simuliere({ ...p, _nrRueckAb: ab });
+    }
+    return r;
+  }
   let guthaben = 0;
   let verrechnung = BASIS.verrechnung.saldo;
   const steuerVz2026 = BASIS.ytd.steuern / 9;
@@ -224,11 +238,20 @@ function simuliere(p) {
       // Nachrangdarlehen aus dem Cashflow zurückführen, der nach Bedienung allen Fremdkapitals
       // (planmäßige Raten, aifinyo, Kontokorrente auf null) übrig bleibt
       const andere = by.cb.saldo + by.kfw.saldo + by.mb.saldo + by.ml.saldo + aifSaldo;
-      const nrFrei = p.nachrangRueckfuehrung !== "zuletzt" || (andere < 1 && !aktivMonat);
+      const nrFrei =
+        p.nachrangRueckfuehrung === "zuletzt" ? andere < 1 && !aktivMonat :
+        p.nachrangRueckfuehrung === "nachKK" ? idx >= p._nrRueckAb :
+        p.nachrangRueckfuehrung !== "nie";
       if (rest > 0 && by.nr.saldo > 0 && nrFrei) {
         const t = Math.min(rest, by.nr.saldo);
         by.nr.saldo -= t;
         rest -= t;
+      }
+      // bei "nachKK" auch ein bis dahin angespartes Guthaben in das Nachrangdarlehen geben
+      if (p.nachrangRueckfuehrung === "nachKK" && nrFrei && guthaben > 0 && by.nr.saldo > 0) {
+        const t = Math.min(guthaben, by.nr.saldo);
+        by.nr.saldo -= t;
+        guthaben -= t;
       }
       if (rest > 0 && p.sondertilgungKfw && by.kfw.saldo > 0 && aifSaldo < 1 && !aktivMonat) {
         const t = Math.min(rest, by.kfw.saldo);
