@@ -122,3 +122,41 @@ HBS GmbH Zeltsysteme;Immenburgstr. 20;53121;Bonn;Nordrhein-Westfalen;Zeltverleih
 Zelte- und Gastronomiebetriebe Wolter Bonn UG;Kannheideweg 47;53123;Bonn;Nordrhein-Westfalen;Festzeltbetrieb;;Zelte und Festgastronomie;Quelle: Verzeichnis (cylex/11880)
 Partyzelte Vianden;Ettighofferstr. 12;53123;Bonn;Nordrhein-Westfalen;Zeltverleih;;Partyzeltverleih Bonn-Duisdorf;Quelle: 11880
 Zeltkontor Köln;Leyendeckerstr. 4;50825;Köln;Nordrhein-Westfalen;Zeltverleih;;Zeltverleih Köln-Ehrenfeld;Quelle: Gelbe Seiten/Das Örtliche
+GO4IT! GmbH Veranstaltungstechnik;Enneper Str. 95A;58135;Hagen;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Hagen-Haspe;Quelle: 11880 - Eintrag ca. 4,5 Jahre alt
+Acoustic Network GmbH Veranstaltungsservice;Mozartstr. 25;58119;Hagen;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungsservice Hagen-Hohenlimburg;Quelle: 11880
+Veranstaltungstechnik Nowak;Am Berge 105;58119;Hagen;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Hagen-Hohenlimburg;Quelle: 11880
+M-Zink Veranstaltungstechnik;Untergrüner Str. 179;58644;Iserlohn;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Iserlohn;Quelle: 11880
+mk event UG;Grüner Talstr. 6;58644;Iserlohn;Nordrhein-Westfalen;Veranstaltungstechnik/Events;;unter Veranstaltungstechnik gelistet;Quelle: Gelbe Seiten
+Malkus Veranstaltungstechnik GmbH;Rombrocker Str. 24;58640;Iserlohn;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Märkischer Kreis;Quelle: Gelbe Seiten
+Schmalenbach Veranstaltungstechnik;Wibschla 24;58513;Lüdenscheid;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Lüdenscheid;Quelle: 11880/Gelbe Seiten
+ms.veranstaltungstechnik;Grebbecker Weg 45;58509;Lüdenscheid;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Lüdenscheid;Quelle: Gelbe Seiten
+Tommy Entertainment;Werdohler Landstr. 217;58513;Lüdenscheid;Nordrhein-Westfalen;DJ-/Eventtechnik;;DJ- und Entertainmentservice;Quelle: Verzeichnis - Leistungsprofil prüfen
+Sound Magic Veranstaltungstechnik;Luisenstr. 70;41061;Mönchengladbach;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Mönchengladbach;Quelle: Gelbe Seiten
+CBB Veranstaltungstechnik (Walter Stahl);Reitbahnstr. 55;41236;Mönchengladbach;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Mönchengladbach-Rheydt;Quelle: Gelbe Seiten
+Pieper Medien- und Veranstaltungstechnik UG (haftungsbeschränkt);Erprather Str. 42;41466;Neuss;Nordrhein-Westfalen;Veranstaltungstechnik;;Medien- und Veranstaltungstechnik Neuss;Quelle: Gelbe Seiten
+Buchholz Veranstaltungstechnik;Bergheimer Str. 56;41464;Neuss;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Neuss;Quelle: Gelbe Seiten
+Eventwerk Meisterbetrieb für Veranstaltungstechnik;Düsseldorfer Str. 332;47809;Krefeld;Nordrhein-Westfalen;Veranstaltungstechnik;;Meisterbetrieb Veranstaltungstechnik Krefeld;Quelle: Das Örtliche
+Thorsten Petzel Eventtechnik;Am Steinacker 20;47809;Krefeld;Nordrhein-Westfalen;Veranstaltungstechnik;;Eventtechnik Krefeld-Linn;Quelle: golocal
+Tümp Veranstaltungstechnik;Fürstenbergstr. 10;47804;Krefeld;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Krefeld;Quelle: Gelbe Seiten - Eintrag ca. 5 Jahre alt
+SEL-Veranstaltungstechnik (M. Müller);An de Greith 18;47839;Krefeld;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Krefeld-Hüls;Quelle: Das Örtliche
+Team Technik e.K.;Blitzkuhlenstr. 83;45659;Recklinghausen;Nordrhein-Westfalen;Veranstaltungstechnik;;unter Veranstaltungstechnik gelistet;Quelle: Gelbe Seiten - Leistungsprofil prüfen
+SMD Entertainment Veranstaltungstechnik;Alte Grenzstr. 129B;45663;Recklinghausen;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik und Entertainment;Quelle: 11880 - zweiter Eintrag Werkstättenstr. 21 45659
+JMT-Veranstaltungstechnik;Vienkenstr. 22;46240;Bottrop;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Bottrop-Eigen;Quelle: Gelbe Seiten
+Veranstaltungstechnik Sogemeier;Hiesfelder Str. 2;46244;Bottrop;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Bottrop-Kirchhellen;Quelle: 11880
+CN Event Veranstaltungstechnik;Am Schoolkamp 24;46238;Bottrop;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Bottrop;Quelle: Gelbe Seiten
+LLT EDV und Veranstaltungstechnik;Markusstr. 21;45968;Gladbeck;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Gladbeck-Brauck;Quelle: Gelbe Seiten
+RM Veranstaltungstechnik;Mühlenstr. 16;48431;Rheine;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Rheine;Quelle: Gelbe Seiten
+Husmann Veranstaltungstechnik;Pater-Schunath-Str. 12;48432;Rheine;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Rheine-Hauenhorst;Quelle: 11880
+Matthias Welter Veranstaltungstechnik;Zusestr. 13;48653;Coesfeld;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Coesfeld;Quelle: meinestadt
+LN Veranstaltungstechnik (Mobile Diskothek);Goxel 25 A;48653;Coesfeld;Nordrhein-Westfalen;DJ-/Eventtechnik;;Mobile Diskothek und Veranstaltungstechnik;Quelle: 11880
+Call-US Entertainment GmbH;Sertürnerstr. 15;46397;Bocholt;Nordrhein-Westfalen;Veranstaltungstechnik/Entertainment;;unter Veranstaltungstechnik Bocholt gelistet;Quelle: Das Örtliche - Leistungsprofil prüfen
+HOLE Veranstaltungstechnik;Blumenstr. 32;46399;Bocholt;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Bocholt;Quelle: Gelbe Seiten
+Event Rent GmbH;Robert-Bosch-Str. 24;46397;Bocholt;Nordrhein-Westfalen;Veranstaltungstechnik (Verleih);;Eventverleih Bocholt;Quelle: cylex - Hausnr. 24 oder 32 widersprüchlich
+EVENT CATERING Düsseldorf;Rolandstraße 44;40476;Düsseldorf;Nordrhein-Westfalen;Event-Catering;;Event-Catering Düsseldorf;Quelle: Gelbe Seiten/Das Örtliche
+Bordsteinschwalbe Foodtruck;Suitbertusstraße 149;40223;Düsseldorf;Nordrhein-Westfalen;Foodtruck;;Foodtruck für Events;Quelle: 11880
+Staude Foodtrucks - Streetfood & Catering;Franklinstraße 41-43;40479;Düsseldorf;Nordrhein-Westfalen;Foodtruck;;Foodtrucks und Streetfood-Catering;Quelle: 11880
+RheinCurry Foodtrailer & Eventcatering;Hansaallee 321;40549;Düsseldorf;Nordrhein-Westfalen;Foodtruck/Event-Catering;;Foodtrailer und Eventcatering;Quelle: 11880
+Christian-Georg Seebauer Foodtruck;Donarstr. 26a;51107;Köln;Nordrhein-Westfalen;Foodtruck;;Foodtruck und Eventcatering Köln;Quelle: meinestadt
+Burgerkitchen Foodtruck Köln;Berliner Str. 368;51061;Köln;Nordrhein-Westfalen;Foodtruck;;Foodtruck mit Event-Service und Catering;Quelle: Verzeichnis (11880/cylex)
+Tafelfreuden Event-Catering;Oskar-Jäger-Str. 125;50825;Köln;Nordrhein-Westfalen;Event-Catering;;Event-Catering Köln-Ehrenfeld;Quelle: Gelbe Seiten - Eintrag ca. 2,5 Jahre alt
+dinner&co GmbH;Giselherstr. 4;44319;Dortmund;Nordrhein-Westfalen;Event-Catering;;Catering für Veranstaltungen Dortmund;Quelle: 11880
