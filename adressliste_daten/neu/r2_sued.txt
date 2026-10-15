@@ -9,7 +9,7 @@ Manfred Pelzl Veranstaltungsservice u. Zeltverleih;Bach 7;83093;Bad Endorf;Bayer
 Hans Hintermaier Zeltverleih;Thenn 8;85456;Wartenberg;Bayern;Zeltverleih;;Zeltverleih für Feste;Quelle: 11880
 Zeltverleih Fahn;Neuburger Str. 2;85084;Reichertshofen;Bayern;Zeltverleih;;Zeltverleih für Feste;Quelle: 11880
 Festzeltbetrieb Schweiger;Webling 1a;85221;Dachau;Bayern;Festzeltbetrieb;;Festzeltbetrieb mit Außenbewirtung;Quelle: cylex
-Bavaria-Zelte GmbH;Römerstr. 12a;85661;Forstinning;Bayern;Zeltverleih;;Zeltvermietung im Münchner Umland;Quelle: cylex – prüfen ob auch Zeltverkauf
+Bavaria-Zelte GmbH;Römerstr. 12a;85661;Forstinning;Bayern;Zeltverleih;;Zeltvermietung im Münchner Umland;Quelle: cylex/Messe München – Zeltvermietung, Servicepartner Messe München (geprüft, bleibt drin)
 Gerhard Widmann GmbH;Altenhauser Str. 23;85356;Freising;Bayern;Zeltverleih;;Zeltvermietung im Münchner Umland;Quelle: cylex
 Fischer Party & Festzelte GmbH;Dieselweg 6;82538;Geretsried;Bayern;Zeltverleih;;Party- und Festzeltverleih;Quelle: cylex
 PA - light & sound GmbH;Feldkirchener Str. 12 A;85551;Kirchheim bei München;Bayern;Veranstaltungstechnik;;PA- Licht- und Tontechnik für Events;Quelle: dasoertliche – 11880 nennt Hausnr. 12
@@ -25,7 +25,6 @@ AML Akustik Multimedia Lichtdesign;Daimlerstr. 6;84030;Landshut;Bayern;Veranstal
 StereoMike Veranstaltungstechnik;Elbinger Str. 2;94315;Straubing;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Niederbayern;Quelle: 11880
 Leibl Michael Veranstaltungstechnik;Sebastian-Gratzl-Str. 1;94315;Straubing;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Niederbayern;Quelle: golocal
 Grammophon Veranstaltungstechnik;Walchstr. 92a;94469;Deggendorf;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Niederbayern;Quelle: 11880
-Leistro Lichtdesign;Östlicher Stadtgraben 22;94469;Deggendorf;Bayern;Veranstaltungstechnik;;Licht- und Veranstaltungstechnik;Quelle: 11880 – prüfen ob auch Leuchtenhandel
 Böhnlein Lukas Tontechnik;Bruderwöhrdstr. 4;93055;Regensburg;Bayern;Veranstaltungstechnik;;Tontechnik für Veranstaltungen;Quelle: gelbeseiten
 Dams.Fahrner Veranstaltungstechnik GmbH;Donaustaufer Str. 93;93059;Regensburg;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Oberpfalz;Quelle: gelbeseiten – älterer Eintrag
 GEKELER AUDIOTECHNIK Veranstaltungstechnik;Hermann-Köhl-Str. 3;93049;Regensburg;Bayern;Veranstaltungstechnik;;Audio- und Veranstaltungstechnik;Quelle: 11880

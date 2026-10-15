@@ -75,7 +75,6 @@ eventac Veranstaltungstechnik GmbH;Grüner Weg 33;52070;Aachen;Nordrhein-Westfal
 Pro-Ton Veranstaltungstechnik;Grüner Weg 9;52070;Aachen;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Aachen;Quelle: Das Örtliche
 PIELENtech - Veranstaltungstechnik;Bergdriesch 42;52062;Aachen;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Aachen;Quelle: 11880
 JOY event & media GmbH & Co. KG;Eilendorfer Str. 215;52078;Aachen;Nordrhein-Westfalen;Veranstaltungstechnik/Eventagentur;;Event- und Medientechnik Aachen;Quelle: Gelbe Seiten
-JOURNEY Veranstaltungstechnik;Schroufstr. 57a;52078;Aachen;Nordrhein-Westfalen;Veranstaltungstechnik (Verleih);;Licht- und Tontechnik Verleih Aachen-Brand;Quelle: Das Örtliche - laut Eintrag auch Verkauf
 DKR Eventtechnik;Brückenstr. 40;52351;Düren;Nordrhein-Westfalen;Veranstaltungstechnik;;Eventtechnik Düren;Quelle: 11880
 Beschallungstechnik Hans Hennig;Dampfmühlenstr. 46;52355;Düren;Nordrhein-Westfalen;Veranstaltungstechnik;;Beschallungstechnik Düren;Quelle: Gelbe Seiten
 Stage FX Veranstaltungstechnik;Gewerbering 3;52399;Merzenich;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Kreis Düren;Quelle: Gelbe Seiten
@@ -111,14 +110,13 @@ LTS EventTechnik GmbH & Co. KG;Zum Gewerbepark 11;44532;Lünen;Nordrhein-Westfal
 Soundjunky Veranstaltungstechnik Unna;Lünerner Schulstr. 41;59427;Unna;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Unna;Quelle: 11880
 Unlimited EventTechnik UG;Auf dem Daberg 2A;59067;Hamm;Nordrhein-Westfalen;Veranstaltungstechnik;;Eventtechnik Hamm-Wiescherhöfen;Quelle: Gelbe Seiten
 Matzka GmbH Veranstaltungstechnikverleih;Schieferstr. 12;59067;Hamm;Nordrhein-Westfalen;Veranstaltungstechnik (Verleih);;Verleih Veranstaltungstechnik Hamm;Quelle: Gelbe Seiten
-BÜHNEMOBIL GmbH;Zum Scheider Feld 43;51467;Bergisch Gladbach;Nordrhein-Westfalen;Mobile Bühnen;https://www.buehnemobil.de;Vermietung mobiler Veranstaltungsbühnen;Quelle: cylex/Das Örtliche - laut cylex auch Handel mit Bühnen
+BÜHNEMOBIL GmbH;Zum Scheider Feld 43;51467;Bergisch Gladbach;Nordrhein-Westfalen;Mobile Bühnen;https://www.buehnemobil.de;Vermietung mobiler Veranstaltungsbühnen;Quelle: cylex/Das Örtliche/koeln.de – Verleih mobiler Bühnen (geprüft, bleibt drin)
 Mobilbühne NRW UG (haftungsbeschränkt);Ober Carthausen 24;58553;Halver;Nordrhein-Westfalen;Mobile Bühnen;https://www.mobilbuehne-nrw.de;Vermietung mobiler Bühnen;Quelle: 11880/meinestadt
 Timmerberg Zeltverleih (Wilhelm und Ramona Timmerberg);Trakehnerstr. 34;33104;Paderborn;Nordrhein-Westfalen;Zeltverleih;;Zeltverleih Paderborn-Schloß Neuhaus;Quelle: Das Örtliche/Gelbe Seiten - Eintrag älter
 MyPaderEvents;Senefelderstr. 7;33100;Paderborn;Nordrhein-Westfalen;Zeltverleih;;Zeltvermietung Paderborn;Quelle: 11880
 Zeltverleih-OWL;Meller Str. 46;33613;Bielefeld;Nordrhein-Westfalen;Zeltverleih;;Zeltverleih Ostwestfalen;Quelle: 11880 - cylex nennt Bolbrinkersweg 28 33617 Bielefeld
 Zeltverleih Benedikt Heers;Gustav-Winkler-Str. 22;33699;Bielefeld;Nordrhein-Westfalen;Zeltverleih;;Zeltverleih Bielefeld;Quelle: 11880
 Heinz Klink Partyzeltverleih;Euskirchener Str. 10;53121;Bonn;Nordrhein-Westfalen;Zeltverleih;;Partyzeltverleih Bonn-Endenich;Quelle: Gelbe Seiten - Eintrag ca. 2,5 Jahre alt
-HBS GmbH Zeltsysteme;Immenburgstr. 20;53121;Bonn;Nordrhein-Westfalen;Zeltverleih;;Zeltsysteme Bonn;Quelle: Verzeichnis (cylex) - prüfen ob Verleih oder Verkauf
 Zelte- und Gastronomiebetriebe Wolter Bonn UG;Kannheideweg 47;53123;Bonn;Nordrhein-Westfalen;Festzeltbetrieb;;Zelte und Festgastronomie;Quelle: Verzeichnis (cylex/11880)
 Partyzelte Vianden;Ettighofferstr. 12;53123;Bonn;Nordrhein-Westfalen;Zeltverleih;;Partyzeltverleih Bonn-Duisdorf;Quelle: 11880
 Zeltkontor Köln;Leyendeckerstr. 4;50825;Köln;Nordrhein-Westfalen;Zeltverleih;;Zeltverleih Köln-Ehrenfeld;Quelle: Gelbe Seiten/Das Örtliche

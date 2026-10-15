@@ -60,13 +60,12 @@ SOUND&VISION Eventtec GmbH;Langenbeckstr. 21;29221;Celle;Niedersachsen;Veranstal
 LF-Veranstaltungstechnik;Lachtehäuser Str. 26;29223;Celle;Niedersachsen;Veranstaltungstechnik;;Veranstaltungstechnik-Kleinbetrieb in Celle;Quelle: 11880
 Gärtner Lichttechnik;Waldweg 4;38542;Leiferde;Niedersachsen;Veranstaltungstechnik (Licht);;Lichttechnik für Veranstaltungen;Quelle: 11880
 TMP Veranstaltungstechnik;Münchener Str. 30;29392;Wesendorf;Niedersachsen;Veranstaltungstechnik;;Veranstaltungstechnik Raum Gifhorn;Quelle: 11880
-Tweer-TV Bild Ton und Veranstaltungstechnik;Am Gutshof 3;37154;Northeim;Niedersachsen;Veranstaltungstechnik;;Bild- Ton- und Veranstaltungstechnik;Quelle: dasoertliche - evtl. auch TV-Fachhandel
+Tweer-TV Bild Ton und Veranstaltungstechnik;Am Gutshof 3;37154;Northeim;Niedersachsen;Veranstaltungstechnik;;Bild- Ton- und Veranstaltungstechnik;Quelle: Gelbe Seiten/11880 – Mischbetrieb TV-Fachhandel + Veranstaltungstechnik/DJ-Service (geprüft, bleibt drin)
 Kühnhold Dieter Memphis Veranstaltungstechnik & Bühnenaufbau;Tschaikowskistr. 9;37154;Northeim;Niedersachsen;Veranstaltungstechnik/Bühnenbau;;Veranstaltungstechnik und Bühnenaufbau;Quelle: dasoertliche
 K&B Showtechnik;Northeimer Str. 4;37154;Northeim;Niedersachsen;Veranstaltungstechnik;;Showtechnik im Raum Northeim;Quelle: 11880
 light-house Göttingen GmbH Veranstaltungstechnik;Rudolf-Wissell-Str. 26;37079;Göttingen;Niedersachsen;Veranstaltungstechnik;;Veranstaltungstechnik in Göttingen;Quelle: dasoertliche - Dark Light Showeffects an gleicher Adresse
 Golombek Veranstaltungstechnik;Karl-Grüneklee-Str. 23-25;37077;Göttingen;Niedersachsen;Veranstaltungstechnik;;Veranstaltungstechnik in Göttingen;Quelle: 11880/dasoertliche
 Repp Veranstaltungstechnik;Mühlenweg 84;37120;Bovenden;Niedersachsen;Veranstaltungstechnik;;Veranstaltungstechnik bei Göttingen;Quelle: 11880/dasoertliche
-Music-Stage Veranstaltungstechnik;Soltauer Chaussee 2;21614;Buxtehude;Niedersachsen;Veranstaltungstechnik (Verleih);;Vermietung von Veranstaltungstechnik;Quelle: 11880/cylex - betreibt auch Verkauf - Eintrag ca. 4.5 Jahre alt
 Lüpcke Veranstaltungstechnik;Moorstr. 20;21614;Buxtehude;Niedersachsen;Veranstaltungstechnik;;Veranstaltungstechnik in Buxtehude;Quelle: dasoertliche
 JD-Technik (Inh. J. Dembski);Karkweg 67;27478;Cuxhaven;Niedersachsen;Veranstaltungstechnik;;Veranstaltungstechnik in Cuxhaven;Quelle: gelbeseiten/dasoertliche
 Ortmann Sven Veranstaltungstechnik;Nicolaiweg 17;27478;Cuxhaven;Niedersachsen;Veranstaltungstechnik;;Veranstaltungstechnik in Cuxhaven-Altenbruch;Quelle: gelbeseiten - Eintrag ca. 6 Jahre alt
