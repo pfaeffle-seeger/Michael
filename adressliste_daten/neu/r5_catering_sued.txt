@@ -1,0 +1,44 @@
+FOOD TRUCK STREETFOOD CATERING;Neckargartacher Str. 120;74080;Heilbronn;Baden-Württemberg;Foodtruck;;Foodtruck mit Streetfood-Catering für Events;werkenntdenbesten.de (Böckingen)
+Food Truck Streetfood-Catering Neckarsulm;Nordstr. 21;74172;Neckarsulm;Baden-Württemberg;Foodtruck;;Foodtruck-Catering im Raum Heilbronn;Verzeichnis (11880/cylex) - evtl. identisch mit Heilbronner Eintrag Neckargartacher Str.
+Ottoman Foodtruck;Im Riedgrund 5;74078;Heilbronn;Baden-Württemberg;Foodtruck;;Foodtruck in Heilbronn;Verzeichnis (11880/cylex) - Status zum Abfragezeitpunkt geschlossen
+Roadbar GmbH (Die mobile Cocktailbar);Keltergasse 4;74078;Heilbronn;Baden-Württemberg;Mobile Bar/Kaffeemobil;;Mobile Cocktailbar für Events;cylex.de - gleiche Adresse wie GastroTrucks GmbH (bestehend) - Firmenverbund prüfen
+Beck Spanferkelspezialitäten;Flurweg 21;74635;Kupferzell;Baden-Württemberg;Event-Catering;;Spanferkel-Partyservice mit Grill vor Ort;cylex.de
+Rebel Racoon Foodtruck;Philipp-Reis-Str. 3;70736;Fellbach;Baden-Württemberg;Foodtruck;;Foodtruck für Events im Raum Stuttgart;11880.com (Stand 07/2026) - als Foodtruck-Vermietung gelistet - prüfen ob Betreiber
+Oxxford Diner - Burger-Foodtruck;Ruppmannstraße 25;70565;Stuttgart;Baden-Württemberg;Foodtruck;;Burger-Foodtruck in Stuttgart-Vaihingen;speisekarte.de
+The Curry Leaves Food Truck;Bebelstr. 22;70193;Stuttgart;Baden-Württemberg;Foodtruck;;Indischer Foodtruck;11880.com (Stuttgart-West)
+Lucky-Food;Daimlerstr. 123;70372;Stuttgart;Baden-Württemberg;Event-Catering;;Mediterranes Catering und Fingerfood;Verzeichnis (11880) - Outdoor-Einsatz prüfen
+Best Barbecue Burger;Mauserstraße 23;70469;Stuttgart;Baden-Württemberg;Foodtruck;;Burger-Imbiss mit Foodtruck;speisekarte.de - auch fester Imbiss
+Coffee-Bike Stuttgart - Mobile Coffee Bar GbR;Edelweißweg 27;70374;Stuttgart;Baden-Württemberg;Mobile Bar/Kaffeemobil;;Mobile Kaffeebar für Events;golocal.de - Eintrag ca. 10 Jahre alt
+Bratenflotte - Foodtruck Catering;Bahnstr. 2;68723;Plankstadt;Baden-Württemberg;Foodtruck;;Foodtruck-Catering Region Heidelberg/Mannheim;golocal/cylex - PLZ aus Ortszuordnung (Plankstadt einzige PLZ)
+Cafe- und Espressomobil 9.5BAR;Klammsbosch 10;77880;Sasbach;Baden-Württemberg;Mobile Bar/Kaffeemobil;;Espressomobil für Events;cylex.de - laut anderem Verzeichnis evtl. geschlossen
+Mahlzeit Events;Reuttierstraße 141/2;89231;Neu-Ulm;Bayern;Foodtruck-/Streetfood-Veranstalter;;Veranstaltet Street-Food-Märkte Neu-Ulm/Erbach;veranstaltungen.ulm.de / schwaebische.de
+Vogl Wild GmbH & Co. KG;Enhuberstr. 8;80333;München;Bayern;Foodtruck;;Als Food Truck gelistet;orte.muenchen.de (Stadtbranchenbuch)
+ISARDOGS Food Truck GbR;Dohlenweg 7;80937;München;Bayern;Foodtruck;;Hotdog-Foodtruck im umgebauten Lieferwagen;orte.muenchen.de / golocal.de
+Foodtruck Pizzatruck München;Dachauer Str. 163;80636;München;Bayern;Foodtruck;;Pizza-Foodtruck für Events;speisekarte.de / muenchen.de Branchenbuch
+Ringlers Mobiler Foodtruck & Catering;Sendlinger Str. 45;80331;München;Bayern;Foodtruck;;Foodtrucks und Grillfahrrad für Firmenevents;dasoertliche.de / speisekarte.de
+Grillviertel;Speicherstraße 10;81671;München;Bayern;Foodtruck;;Grillschule mit Catering und Foodtruck;speisekarte.de
+Unikorn Catering & Events UG (haftungsbeschränkt);Menzinger Str. 17;80638;München;Bayern;Event-Catering;;Foodtruck- und Eventcatering 50-1000 Gäste;gelbeseiten.de / dasoertliche.de
+Coffee-Bike mobile Espressobar München;Bernhard-Wicki-Straße 8;80636;München;Bayern;Mobile Bar/Kaffeemobil;;Coffee Truck und mobile Kaffeebar für Events;Verzeichnis (cylex)
+Barista Express Kaffeecatering München;Ponkratzstr. 1;80995;München;Bayern;Mobile Bar/Kaffeemobil;barista-express.de;Kaffeecatering auf Messen und Events;dasoertliche.de / cylex.de
+Napo Amo;Bulachstr. 51;85232;Bergkirchen;Bayern;Foodtruck;;Als Food Truck gelistet (Raum Dachau);muenchen.de Branchenbuch
+Crazycoffeemobil;Miesbacherstr. 1;83703;Gmund am Tegernsee;Bayern;Mobile Bar/Kaffeemobil;;Mobile Kaffeebar für Messen und Events;messen.de
+Genuss Spezl Foodtruck Ingolstadt;Feldkirchener Str. 69;85055;Ingolstadt;Bayern;Foodtruck;;Foodtruck in Ingolstadt;cylex.de
+Juicys Foodtruck Catering Augsburg;Wertachtalstr. 50;86517;Wehringen;Bayern;Foodtruck;foodtruck-catering-augsburg.de;Burger-Foodtruck-Catering für Events;11880.com / cylex.de (auch als Juicy Burger)
+Tasty Wheels Augsburg - The Food Truck;Edisonstr. 6;86199;Augsburg;Bayern;Foodtruck;;Foodtruck mit Catering und Partyservice;Verzeichnis (11880/werkenntdenbesten) - abweichende Adresse in anderem Verzeichnis
+Schumachercatering;Gögginger Str. 101;86199;Augsburg;Bayern;Event-Catering;;Catering in Augsburg-Göggingen;11880.com - Outdoor-Einsatz prüfen
+Jillbaag Food Truck;Bad Brückenauer Str. 45;90427;Nürnberg;Bayern;Foodtruck;jillbaag.de;Foodtruck in Nürnberg-Großgründlach;cylex.de
+Tom Berry Foodtrucks;Industriestr. 21;90441;Nürnberg;Bayern;Foodtruck;;Foodtruck-Betreiber für Events;11880.com - zweite Adresse Scheurlstr. 20 90478 genannt
+KoBo - Korean Bowls Foodtruck;Bucher Str. 108;90419;Nürnberg;Bayern;Foodtruck;;Koreanischer Foodtruck;Verzeichnis (11880/cylex) - weiterer Standort Kressengartenstr. 2
+an di Gastronomie;Bibertstr. 145;90449;Nürnberg;Bayern;Foodtruck;;Catering Foodtruck und Partyservice;Verzeichnis (11880/gelbeseiten)
+EM&C GmbH;Neumeyerstr. 48;90411;Nürnberg;Bayern;Event-Catering;;Küchentruck für Streetfood-Events und Firmenfeiern;cylex.de
+Mario Bambini - L.A. Catering GmbH & Co. KG;Nordostpark 16;90411;Nürnberg;Bayern;Event-Catering;mario-bambini.de;Event-Catering in Nürnberg;cylex.de
+Food-Trückli;Rothenburger Str. 453;90431;Nürnberg;Bayern;Foodtruck;;Foodtruck in Nürnberg;11880.com
+Catering TOLERANZ GmbH;Fürther Str. 212;90429;Nürnberg;Bayern;Event-Catering;;Catering-Betrieb in Nürnberg-Muggenhof;gelbeseiten.de - Outdoor-Einsatz prüfen
+Küchenstrolche;Löffelholzstr. 20;90441;Nürnberg;Bayern;Event-Catering;;Catering in Nürnberg;Verzeichnis (11880/gelbeseiten) - Outdoor-Einsatz prüfen
+Burgertruck Foodtruck Würzburg;Denkmalstr. 9;97267;Himmelstadt;Bayern;Foodtruck;;Burger-Foodtruck für Catering und Events;11880.com
+thefoodtruckgang;Friedrich-Bergius-Ring 11;97076;Würzburg;Bayern;Foodtruck;;Foodtruck-Betreiber in Würzburg;Verzeichnis (11880/cylex)
+Strandhaus Bello Cane (Foodtruck Europa);Bahnhofpl. 1;97070;Würzburg;Bayern;Foodtruck;;Catering mit Pizza-/Pasta-Foodtruck;Verzeichnis (11880/cylex) - auch Gastronomie
+Culinarria Foodtruck;Landshuter Str. 125;93053;Regensburg;Bayern;Foodtruck;culinarria.de;Foodtruck in Regensburg;cylex.de - anderes Verzeichnis nennt Donaustaufer Str. 128 93059
+Bayern-Schmankerl Catering Ochsenbraterei;Metzgerweg 42;93055;Regensburg;Bayern;Event-Catering;bayernschmankerl-schlegl.de;Ochsenbraterei-Catering vor Ort;dasoertliche.de
+Cook 4 You;Reichsstr. 31;93055;Regensburg;Bayern;Event-Catering;;Catering in Regensburg;dasoertliche.de - Outdoor-Einsatz prüfen
+Anton Völkl Partyservice;Stahlzwingerweg 29;93047;Regensburg;Bayern;Event-Catering;;Partyservice und Catering;dasoertliche.de - Outdoor-Einsatz prüfen
