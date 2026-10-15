@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>EcoFlow PowerRock – Flyer Eventbranche</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root{
+    --ink:#14211d; --muted:#4b5b55; --green:#0f5c4a; --green-2:#13785f;
+    --lime:#c6f04a; --paper:#ffffff; --tint:#eef5f1; --line:#d5e3dc;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#888;}
+  body{font-family:"Inter","Helvetica Neue",Arial,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .page{width:210mm;height:297mm;background:var(--paper);margin:0 auto 8mm;position:relative;overflow:hidden;page-break-after:always;}
+  .page:last-child{page-break-after:auto;margin-bottom:0}
+  h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.01em}
+  p{margin:0}
+  .pad{padding:0 14mm}
+
+  /* --- Seite 1 --- */
+  .hero{background:var(--green);color:#fff;padding:10mm 14mm 8mm;position:relative}
+  .hero:after{content:"";position:absolute;right:-30mm;top:-30mm;width:110mm;height:110mm;border-radius:50%;background:var(--green-2);opacity:.55}
+  .kicker{font-size:9.5pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);position:relative;z-index:1}
+  .hero h1{font-size:30pt;font-weight:800;margin-top:3mm;position:relative;z-index:1;max-width:150mm}
+  .hero .sub{font-size:11.5pt;margin-top:3mm;max-width:150mm;line-height:1.4;position:relative;z-index:1;color:#e3f1ea}
+  .badge{display:inline-block;margin-top:4mm;background:var(--lime);color:var(--green);font-weight:800;font-size:11pt;padding:2.2mm 4mm;border-radius:2mm;position:relative;z-index:1}
+
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--line)}
+  .kpi{padding:4mm 3mm 3.5mm;text-align:center;border-right:1px solid var(--line)}
+  .kpi:last-child{border-right:0}
+  .kpi b{display:block;font-size:20pt;font-weight:800;color:var(--green)}
+  .kpi span{font-size:8.6pt;color:var(--muted);line-height:1.3;display:block;margin-top:1mm}
+
+  .section-title{font-size:14pt;font-weight:800;margin:5mm 0 3mm;color:var(--green)}
+  .groups{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}
+  .card{background:var(--tint);border-radius:3mm;padding:3.2mm 3.6mm 3.2mm}
+  .card .ic{width:7.5mm;height:7.5mm;border-radius:1.6mm;background:var(--green);display:flex;align-items:center;justify-content:center;margin-bottom:1.8mm}
+  .card .ic svg{width:4.8mm;height:4.8mm;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:10pt;font-weight:800;margin-bottom:1mm}
+  .card p{font-size:8.2pt;line-height:1.36;color:var(--muted)}
+
+  .why{display:grid;grid-template-columns:1fr 1fr;gap:1.4mm 7mm;margin-top:1mm}
+  .why div{display:flex;gap:2.4mm;font-size:8.7pt;line-height:1.34}
+  .why div:before{content:"";flex:0 0 3.2mm;height:3.2mm;margin-top:1mm;border-radius:50%;background:var(--lime);box-shadow:inset 0 0 0 .9mm var(--green)}
+  .why b{color:var(--ink)}
+
+  .ex{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm}
+  .ex div{border:1.5px solid var(--line);border-radius:3mm;padding:2.4mm;text-align:center}
+  .ex b{display:block;font-size:16pt;font-weight:800;color:var(--green)}
+  .ex span{display:block;font-size:8pt;color:var(--muted);line-height:1.3;margin-top:1mm}
+  .exnote{font-size:7.4pt;color:#7b8a84;margin-top:2mm;line-height:1.35}
+  .foot1{position:absolute;left:0;right:0;bottom:0;background:var(--tint);padding:4mm 14mm;display:flex;justify-content:space-between;align-items:center;font-size:8pt;color:var(--muted)}
+  .foot1 .cta{font-size:11pt;font-weight:800;color:var(--green)}
+
+  /* --- Seite 2 --- */
+  .band{background:var(--ink);color:#fff;padding:9mm 14mm 7mm}
+  .band .kicker{color:var(--lime)}
+  .band h2{font-size:23pt;font-weight:800;margin-top:3mm}
+  .band p{font-size:10.5pt;line-height:1.42;margin-top:2.5mm;color:#cfdad5;max-width:165mm}
+  .dpu{display:grid;grid-template-columns:1.2fr 1fr;gap:7mm;margin-top:5mm}
+  .speclist{border-top:2px solid var(--green)}
+  .speclist div{display:flex;justify-content:space-between;gap:3mm;padding:2.1mm 0;border-bottom:1px solid var(--line);font-size:8.8pt}
+  .speclist div span:first-child{color:var(--muted);white-space:nowrap}
+  .speclist div span:last-child{font-weight:700;text-align:right}
+  .uses h3{font-size:11pt;font-weight:800;color:var(--green);margin-bottom:2.5mm}
+  .uses ul{margin:0;padding-left:4.5mm;font-size:8.6pt;line-height:1.42;color:var(--ink)}
+  .uses li{margin-bottom:1.4mm}
+
+  table.cmp{width:100%;border-collapse:collapse;font-size:9pt;margin-top:1mm}
+  table.cmp th{background:var(--green);color:#fff;text-align:left;padding:1.8mm 3mm;font-weight:700}
+  table.cmp th:first-child{background:#fff;color:var(--muted);font-weight:600}
+  table.cmp td{padding:2.3mm 3mm;border-bottom:1px solid var(--line);vertical-align:top}
+  table.cmp td:first-child{color:var(--muted);width:22%}
+  table.cmp tr:nth-child(even) td{background:#f7faf8}
+
+  .contact{position:relative;margin:11mm 14mm 0;border:2px solid var(--green);border-radius:3mm;padding:4mm 6mm;display:flex;justify-content:space-between;align-items:center;gap:8mm}
+  .contact h3{font-size:14pt;font-weight:800;color:var(--green)}
+  .contact p{font-size:9.2pt;line-height:1.45;color:var(--muted);margin-top:1.5mm;max-width:95mm}
+  .contact .fill{font-size:9pt;line-height:1.6;min-width:62mm}
+  .contact .fill div{border-bottom:1px dotted #9db3a9;color:#7b8f87}
+  .legal{position:absolute;left:14mm;right:14mm;bottom:5mm;font-size:6.8pt;color:#7b8a84;line-height:1.35}
+</style>
+</head>
+<body>
+
+<!-- ============ SEITE 1: POWERROCK ============ -->
+<section class="page">
+  <div class="hero">
+    <div class="kicker">EcoFlow PowerRock 4000 · Mobile Akku-Stromversorgung</div>
+    <h1>Strom für Ihr Event.<br>Ohne Lärm. Ohne Abgas.</h1>
+    <p class="sub">Die robuste Akku-Powerstation ersetzt das Aggregat überall dort, wo Diesel stört: neben der Bühne, im Zelt, am Foodtruck, mitten in der Innenstadt.</p>
+    <span class="badge">4 kW Dauerleistung · 3 kWh Akku · IP65</span>
+  </div>
+
+  <div class="kpis pad" style="padding:0 6mm">
+    <div class="kpi"><b>4 kW</b><span>Dauerleistung 230 V<br>Spitze 7,2 kW (bis 100 s)</span></div>
+    <div class="kpi"><b>3 kWh</b><span>Akkukapazität<br>(3.072 Wh)</span></div>
+    <div class="kpi"><b>60 min</b><span>voll geladen am Netz<br>80 % in 48 min</span></div>
+    <div class="kpi"><b>IP65</b><span>staub- und strahlwasser&shy;geschützt – für draußen gebaut</span></div>
+  </div>
+
+  <div class="pad">
+    <h2 class="section-title">Gemacht für Ihren Einsatz</h2>
+    <div class="groups">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h3>Veranstaltungstechnik</h3>
+        <p>Saubere 230-V-Versorgung für FOH, Funkstrecken, Monitoring, LED-Licht und Nebenbühnen – ohne Brummen, ohne Abgas im Publikum.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V10l7-6 7 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Stadtfeste &amp; Märkte</h3>
+        <p>Strom für Marktstände, Info-Points, Beleuchtung und Ausschank – auch in Altstadt, Park und Fußgängerzone, wo Aggregate unerwünscht sind.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M1 13h15V6H1z"/><path d="M16 9h4l3 4v3h-7"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="18.5" cy="17.5" r="2"/></svg></div>
+        <h3>Foodtrucks &amp; Catering</h3>
+        <p>Kühlung, Kaffeemaschine, Kasse und Licht am Stand – leise genug für den Gast direkt am Tresen, ohne Benzingeruch am Essen.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M2 20L12 4l10 16z"/><path d="M12 4v16"/></svg></div>
+        <h3>Zelt- &amp; Bühnenverleih</h3>
+        <p>Beleuchtung, Heizungs­steuerung und Technik in Party- und Festzelten – als Mietartikel mit echtem Mehrwert für Ihre Kunden.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div>
+        <h3>Festivals &amp; Open Airs</h3>
+        <p>Backstage, Kassen, Einlass, Sanitäts- und Info-Points – dezentral versorgt, ohne Kabelwege quer übers Gelände.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div>
+        <h3>Eventagenturen</h3>
+        <p>Nachhaltigkeit, die Ihre Kunden sehen: emissionsfreie Stromversorgung für Firmenevents, Roadshows und Outdoor-Locations.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Warum Akku statt Aggregat?</h2>
+    <div class="why">
+      <div><span><b>Leise:</b> keine Motorgeräusche – max. 65 dB direkt am Gerät bei voller Last (1 m Abstand).</span></div>
+      <div><span><b>Emissionsfrei vor Ort:</b> kein Abgas, kein Kraftstoffgeruch, auch in Zelten und Innenstädten einsetzbar.</span></div>
+      <div><span><b>Kein Kraftstoff-Handling:</b> keine Kanister, kein Tanken, kein Betankungs­risiko auf dem Gelände.</span></div>
+      <div><span><b>Sicher:</b> integrierter Fehlerstromschutz (RCD, 30 mA, Abschaltung &lt; 300 ms).</span></div>
+      <div><span><b>Schnell wieder einsatzbereit:</b> in 60 Minuten voll – oder während der Fahrt per Generator-/Lichtmaschinen-Anschluss nachladen.</span></div>
+      <div><span><b>Robust &amp; mobil:</b> IP65, 38 kg, 26 × 52 × 46 cm – passt in jeden Transporter. 3 Jahre Herstellergarantie.</span></div>
+    </div>
+
+    <h2 class="section-title">Wie lange reichen 3 kWh?</h2>
+    <div class="ex">
+      <div><b>≈ 8 h</b><span>LED-Lichtset<br>300 W</span></div>
+      <div><b>≈ 5 h</b><span>Kühltheke / Kühlschrank<br>500 W</span></div>
+      <div><b>≈ 2,5 h</b><span>PA-Anlage, kleines Set<br>1.000 W</span></div>
+      <div><b>≈ 1 h</b><span>Siebträger-Kaffeemaschine<br>2.500 W Dauerlast</span></div>
+    </div>
+    <p class="exnote">Rechnerische Richtwerte bei konstanter Last, abzgl. ca. 15 % Wandlungsverluste – wir rechnen Ihren Einsatz gern konkret durch.</p>
+  </div>
+
+  <div class="foot1">
+    <span>Sie planen schon die Saison 2027? Jetzt testen, mieten oder kaufen.</span>
+    <span class="cta">Mehr zur Delta Pro Ultra auf der Rückseite →</span>
+  </div>
+</section>
+
+<!-- ============ SEITE 2: DELTA PRO ULTRA ============ -->
+<section class="page">
+  <div class="band">
+    <div class="kicker">Mehr Leistung, mehr Reserve</div>
+    <h2>EcoFlow DELTA Pro Ultra</h2>
+    <p>Wenn ein Stand oder eine Bühne den ganzen Tag laufen muss: Wechselrichter mit 6.900 W Dauerleistung und modularem 6-kWh-Akku – erweiterbar auf bis zu 30 kWh, mit Solar nachladbar.</p>
+  </div>
+
+  <div class="pad">
+    <div class="dpu">
+      <div class="speclist">
+        <div><span>Dauerleistung</span><span>6.900 W · Spitze 10,3 kW (10 s)</span></div>
+        <div><span>Akku je Modul</span><span>6 kWh (6.144 Wh), LFP</span></div>
+        <div><span>Erweiterbar je Wechselrichter</span><span>bis 30 kWh (5 Module)</span></div>
+        <div><span>Solareingang</span><span>bis 5,6 kW (High- + Low-PV)</span></div>
+        <div><span>Laden Netz / Generator</span><span>bis 2,8 kW</span></div>
+        <div><span>Laden kombiniert Solar + Netz</span><span>bis 8,8 kW</span></div>
+        <div><span>USV-Umschaltung</span><span>≤ 20 ms</span></div>
+        <div><span>Temperatur Akku</span><span>−20 bis 45 °C, Selbstheizung</span></div>
+        <div><span>Schutzart Akku</span><span>IP54</span></div>
+        <div><span>Gewicht</span><span>Wechselrichter 32,1 kg · Akku 50,7 kg</span></div>
+      </div>
+      <div class="uses">
+        <h3>Typische Einsätze</h3>
+        <ul>
+          <li><b>Ganztägige Versorgung</b> von Bühnentechnik, Licht und Ton auf Stadtfesten und Märkten.</li>
+          <li><b>Foodtruck mit großer Kühlung</b> oder Küchentechnik über einen langen Markttag.</li>
+          <li><b>Stationär im Lager oder Vereinsheim</b> mit Solar als Puffer – und bei Bedarf mit zum Event.</li>
+          <li><b>Notstrom / USV</b> für Kassen, Funk und Steuerungstechnik: Umschaltung in ≤ 20 ms.</li>
+        </ul>
+        <h3 style="margin-top:5mm">Faustformel Laufzeit</h3>
+        <ul style="list-style:none;padding-left:0">
+          <li>Kapazität (kWh) ÷ Last (kW) ≈ Stunden, abzüglich ca. 10–15 % Wandlungsverluste.<br>
+          <span style="color:var(--muted)">Beispiel: 6 kWh bei 1 kW Dauerlast ≈ 5 Stunden.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section-title">Welche Lösung passt zu Ihnen?</h2>
+    <table class="cmp">
+      <tr><th></th><th>PowerRock 4000</th><th>DELTA Pro Ultra (6 kWh)</th></tr>
+      <tr><td>Stärke</td><td>Robust, schnell geladen, für den mobilen Tageseinsatz</td><td>Große Reserve, modular erweiterbar, solarfähig</td></tr>
+      <tr><td>Dauerleistung</td><td>4 kW (Spitze 7,2 kW)</td><td>6,9 kW (Spitze 10,3 kW)</td></tr>
+      <tr><td>Kapazität</td><td>3 kWh</td><td>6 kWh, erweiterbar bis 30 kWh</td></tr>
+      <tr><td>Laden</td><td>Netz: 100 % in 60 min</td><td>Netz bis 2,8 kW · Solar bis 5,6 kW</td></tr>
+      <tr><td>Schutzart</td><td>IP65</td><td>IP54 (Akku)</td></tr>
+      <tr><td>Gewicht</td><td>38 kg, ein Gerät</td><td>32,1 kg + 50,7 kg je Akku</td></tr>
+      <tr><td>Ideal für</td><td>Technikverleih, Foodtruck, Zelte, Nebenbühnen</td><td>Ganztags-Stände, Bühnen, Lager mit Solar</td></tr>
+    </table>
+  </div>
+
+  <div class="contact">
+    <div>
+      <h3>Jetzt beraten lassen</h3>
+      <p>Wir rechnen Ihren Strombedarf gemeinsam durch und stellen Ihnen die passende Lösung zusammen – zum Kaufen oder Testen vor der Saison.</p>
+    </div>
+    <div class="fill">
+      <div>[Firmenname / Logo]</div>
+      <div>[Ansprechpartner]</div>
+      <div>[Telefon · E-Mail]</div>
+      <div>[Website]</div>
+    </div>
+  </div>
+
+  <p class="legal">Technische Daten: Herstellerangaben EcoFlow (PowerRock 4000: ecoflow.com, Stand 10/2026) bzw. Händlerangaben zur DELTA Pro Ultra (balkonkraftwerk-fachhandel.de). Laufzeiten sind rechnerische Richtwerte und hängen von Last, Temperatur und Wirkungsgrad ab. Änderungen und Irrtümer vorbehalten. EcoFlow, PowerRock und DELTA Pro Ultra sind Marken bzw. Produktnamen der EcoFlow Inc.</p>
+</section>
+
+</body>
+</html>
