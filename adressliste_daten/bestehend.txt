@@ -1,6 +1,7 @@
 Stadtmarketing Mannheim GmbH;Mannheim;https://www.stadtmarketing-mannheim.de
 Lite-Tech Veranstaltungstechnik GmbH;Mannheim;https://lite-tech.de
 wivent (Andrea Wilhelm);Schwetzingen;https://wivent.de
+Heidelberg Event GmbH;Heidelberg;https://www.heidelberg-event.com
 Heidelberg Marketing GmbH;Heidelberg;https://www.heidelberg-marketing.de
 Symetry Veranstaltungstechnik e.K.;Heidelberg;https://symetry.de
 AC-Eventtechnik Horsch-Stuntz GbR;Eppelheim;https://ac-eventtechnik.de
@@ -23,6 +24,7 @@ MEEVI-rent GmbH;Filderstadt;https://www.meevi-rent.de
 Diener Veranstaltungstechnik (Patrick Diener);Filderstadt;dienervt.de
 Meier Eventservice;Kornwestheim;https://www.meier-eventservice.de
 Abele Zeltvermietung GmbH;Korntal-Münchingen;
+K2 Konzept- & Eventmanufaktur UG (haftungsbeschränkt);Böblingen;
 City-Marketing Sindelfingen e.V.;Sindelfingen;https://sindelfingen.org
 RPV Veranstaltungstechnik GmbH;Herrenberg-Gültstein;https://www.rpv-tech.com
 Light&Audio-Service Schlotter-Seibold GbR;Herrenberg-Gültstein;https://www.lightaudio-service.de
@@ -31,19 +33,26 @@ EventPARK Schlegel Veranstaltungstechnik GbR;Ehningen;https://www.eventpark-schl
 Stefan Turata TTS GmbH (TTS event);Steinenbronn;https://www.tts-event.de
 music & light design GmbH (mld);Leonberg;https://www.mld.de
 Gierss. Veranstaltungstechnik GmbH;Waiblingen;https://gierss.de
+Stadt Waiblingen - Fachbereich Bürgerdienste (Festverwaltung Altstadtfest);Waiblingen;https://www.altstadtfest-waiblingen.de
+Stadt Backnang - Kultur- und Sportamt (Festivalbüro Straßenfest);Backnang;https://www.backnanger-strassenfest.de
 Mediapool Stuttgart GmbH;Althütte;https://www.mediapool-stuttgart.de
+Ludwigsburger Innenstadt (LUIS) e.V.;Ludwigsburg;https://luis-ludwigsburg.de
 Müller Live-Kommunikation GmbH (MIETMÜLLER);Ludwigsburg;https://www.mietmueller.de
 Parra Event Catering UG;Ludwigsburg;
 Tourismus & Events Ludwigsburg (Stadt Ludwigsburg);Ludwigsburg;https://visit.ludwigsburg.de
 Snacks n' Drinks;Ludwigsburg;
 Ludwigsburg Zeltverleih;Ludwigsburg;
 Soundlight Company GmbH;Vaihingen an der Enz;https://www.soundlight.tv
+Tübingen Erleben GmbH;Tübingen;https://www.chocolart.de
 Tourismus und Stadtmarketing Tübingen GmbH;Tübingen;https://www.tuebingen-info.de
 EMSL Eberhardt Media Sound & Light;Rottenburg am Neckar;https://www.emsl.de
 AlbLive Veranstaltungstechnik UG;Mössingen;https://www.alblive.de
 Prolite Event GmbH;Haigerloch-Owingen;https://www.prolite.de
 Stadtmarketing und Tourismus Reutlingen GmbH (StaRT);Reutlingen;https://www.tourismus-reutlingen.de
+Arbeitsgemeinschaft Reutlinger Herbst (Wein-Agentur Vohrer);Reutlingen;https://www.reutlinger-weindorf.de
 DSR Veranstaltungstechnik GmbH;Reutlingen;https://dsr-net.de
+Stadt Göppingen - Maientagsbüro;Göppingen;https://www.goeppingen.de
+Interessengemeinschaft Göppinger Stadtfest e.V.;Göppingen;https://www.goeppinger-stadtfest.de
 ATLANTIS Ton- und Lichtsysteme e.K.;Göppingen-Faurndau;https://atlantis-technik.de
 TUSMON Eventmanagement GbR;Eislingen/Fils;https://www.tusmon.de
 AG Veranstaltungstechnik;Aichelberg;https://www.ag-vt.com
@@ -52,6 +61,7 @@ Kuehner Events GbR;Holzmaden;https://www.kuehner-events.de
 Stadt Aalen - Stabsstelle Citymanagement;Aalen;https://www.aalen.de
 UBS Quality Sound (Alexander Fischer);Aalen-Fachsenfeld;https://www.ubs-quality-sound.de
 Touristik und Marketing GmbH Schwäbisch Gmünd;Schwäbisch Gmünd;https://www.schwaebisch-gmuend.de
+Vereinsgemeinschaft Schorndorfer Vereine e.V.;Schorndorf;https://schowo.de
 Esslinger Stadtmarketing & Tourismus GmbH;Esslingen am Neckar;https://www.esslingen-marketing.de
 PROJEKT X Event GmbH;Heilbronn;https://px-event.de
 Heilbronn Marketing GmbH;Heilbronn;https://www.heilbronn.de
@@ -75,38 +85,50 @@ EVENTtech UG (haftungsbeschränkt);Schwäbisch Hall;https://www.eventtech.de
 ML-SYSTEMS Gartenbedarf + Zeltverleih (Martin Löffelad);Schwäbisch Hall;www.ml-systems.de
 Stadt Schwäbisch Hall - Fachbereich Wirtschaft Touristik & Liegenschaften;Schwäbisch Hall;https://www.schwaebischhall.de
 Music-Light Veranstaltungstechnik;Wolpertshausen;https://music-light.de
+Stadt Crailsheim;Crailsheim;https://www.volksfest-crailsheim.de
 media:system;Öhringen;https://mediasystem.de
 Event Pro's GmbH Eventagentur;Öhringen;eventpros.de
 Öhringen Lieblingsstadt e.V.;Öhringen;https://oehringen-lieblingsstadt.de
 Live art Licht- und Tonsysteme Gert Schweizer e.K.;Mosbach;liveart.de
+Stadt Mosbach - Kulturabteilung;Mosbach;https://www.mosbach.de
 FE-Events;Sinsheim;https://www.feevents.de
 EuroTronic Veranstaltungstechnik UG;Sinsheim;https://www.eurotronic-veranstaltungstechnik.de
 Losberger GmbH;Bad Rappenau;https://www.losbergerdeboer.com
+WSP Wirtschaft und Stadtmarketing Pforzheim GmbH;Pforzheim;https://www.ws-pforzheim.de
 HZ Eventtechnik;Pforzheim;https://www.hz-eventtechnik.de
 LTM Licht Ton Medientechnik GmbH;Remchingen;https://online-ltm.de
 SOUNDWAVE Veranstaltungstechnik (Max Atzig);Ispringen;https://soundwave-pa.de
 Incentive Konzept (Food Truck Stuttgart);Neubulach;
 KME Karlsruhe Marketing und Event GmbH;Karlsruhe;https://www.karlsruhe-event.de
+Stadt Karlsruhe - Marktamt;Karlsruhe;https://www.karlsruhe.de
 Viewpoint Event & Veranstaltungstechnik;Rastatt;https://www.viewpoint-technik.de
 Event-Xpress.com GmbH;Gaggenau;https://www.event-xpress.com
 BW Sound & Light (Benjamin Weschenfelder);Karlsdorf-Neuthard;https://www.bw-sound.de
 Rent a PA (Benjamin Merk);Ubstadt-Weiher;https://www.rentapa.de
+Stadt Offenburg - Stadtmarketing;Offenburg;https://www.offenburg.de
 Meyer Eventtechnik (Sebastian Meyer);Achern;https://meyer-eventtechnik.de
 visutec - Denkfabrik für Medientechnik;Villingen-Schwenningen;visutec.eu
 smidtaudio Veranstaltungstechnik e.K.;Villingen-Schwenningen;https://smidtaudio.de
 Hübsch Licht Ton Events (Peter Hübsch);Hüfingen;https://huebsch24.de
+Marketing und Tourismus Konstanz GmbH;Konstanz;https://www.konstanz-info.com
 Max Eventtechnik;Konstanz;https://max-eventtechnik.de
+Weihnachtsmarkt am See GbR;Konstanz;https://weihnachtsmarkt-am-see.de
 Tecstage GmbH & Co. KG;Freiburg im Breisgau;https://www.tecstage.de
 Freiburg Wirtschaft Touristik und Messe GmbH & Co. KG (FWTM);Freiburg im Breisgau;https://fwtm.freiburg.de
 Soundstation Freiburg;Pfaffenweiler;https://www.soundstation-freiburg.de
 BMS Veranstaltungstechnik GmbH;Teningen;https://www.bms-sound.de
 I/O Event GbR;Lörrach;https://www.io-event.com
 HVT Hochrhein Veranstaltungstechnik (Jörg Winkler);Waldshut-Tiengen;https://www.h-v-t.de
+Stadt Ravensburg - Amt für Tourismus und Stadtmarketing;Ravensburg;https://www.ravensburg.de
 AudioLights Veranstaltungstechnik (Oliver Buck);Ravensburg;https://www.audiolights.de
+Ulm-Messe GmbH;Ulm;https://www.ulmer-weihnachtsmarkt.de
+Ulmer City Marketing e.V.;Ulm;https://www.ulmercity.de
 AE Audio-Express Veranstaltungstechnik GmbH & Co. KG;Oberdischingen;https://www.audio-express.de
 Crazy Light&Sound (Matthias Kratzmüller);Tauberbischofsheim;crazy-light-and-sound.de
 Maximilian Egner Veranstaltungstechnik;Bad Mergentheim;https://egner-veranstaltungstechnik.de
 Chris Only Entertainment / TONLYGHTS Event Technik;Bad Mergentheim;https://chris-only.de
+Stadt Bad Mergentheim;Bad Mergentheim;https://www.bad-mergentheim.de
+Kurverwaltung Bad Mergentheim GmbH;Bad Mergentheim;https://visit.bad-mergentheim.de
 Förderverein Stadtmarketing Aschaffenburg e.V.;Aschaffenburg;https://info-aschaffenburg.de
 inventhaus Veranstaltungstechnik (Michael Fäth);Aschaffenburg;http://www.inventhaus.de
 benninger.eberle Agentur für Eventmarketing GmbH;München;https://www.benninger-eberle.de
@@ -121,13 +143,15 @@ Herrmann Thorsten Licht- u. Tonvermietung;München;
 AUDIO concept Veranstaltungstechnik;München;
 ANTON Event Solutions (Alexander Anton);Germering;
 Fischer Party & Festzelte GmbH;Geretsried;
-City-Management Rosenheim e.V.;Rosenheim;
+Wirtschaftlicher Verband der Stadt und des Landkreises Rosenheim e.V.;Rosenheim;
 Veranstaltungstechnik Rosenheim;Rosenheim;
 Fab-Event Veranstaltungstechnik;Rosenheim;
 Manfred Pelzl Veranstaltungsservice u. Zeltverleih;Bad Endorf;
 AML Akustik Multimedia Lichtdesign;Landshut;
 Leuchtkraft Veranstaltungstechnik;Landshut;
+Stadt Landshut - Ordnungsamt Sachgebiet Marktwesen;Landshut;https://landshut.de
 ASC Media Veranstaltungstechnik;Ingolstadt;
+Stadt Ingolstadt - Kulturamt;Ingolstadt;https://www.kulturamt-ingolstadt.de
 Zeltverleih Fahn;Reichertshofen;
 Festzeltbetrieb Schweiger;Dachau;
 Berndsen Harald Veranstaltungstechnik;Pfaffenhofen an der Ilm;
@@ -148,14 +172,15 @@ MotorCore GmbH (Foodtruckfabrik);Putzbrunn;https://www.foodtruckfabrik.de
 Bavaria-Zelte GmbH;Forstinning;
 SSM Veranstaltungstechnik GmbH;Unterschleißheim;https://www.ssm.de
 tst München Gesellschaft für Audio Visuelle Systeme;Ismaning;
+Schwäbischer Schaustellerverband e.V. (SSV Schausteller GmbH);Augsburg;https://augsburger-plaerrer.de
 Küstler Schowbühne Veranstaltungsagentur;Augsburg;
 gruppe20 Veranstaltungstechnik GmbH & Co. KG;Augsburg;https://www.gruppe-20.de
 Kaiser-Showtechnik GmbH;Augsburg;
 Schaller - Licht und Tontechnik;Augsburg;
 City-Initiative-Donauwörth e.V.;Donauwörth;
 Stadtmarketing Kempten GmbH;Kempten (Allgäu);https://www.kempten-tourismus.de
-City-Management Kempten e.V.;Kempten (Allgäu);
 Stephan Dallabetta Veranstaltungs-Technik;Kempten (Allgäu);eventsound.org
+Kempten Messe- und Veranstaltungs-Betrieb;Kempten (Allgäu);https://www.festwoche.com
 Event Systeme Veranstaltungstechnik;Kaufbeuren;
 Stadt Kaufbeuren - Kommunikation Tourismus Stadtmarketing;Kaufbeuren;https://www.kaufbeuren.de
 Veranstaltungstechnik Memmingen;Memmingen;
@@ -172,36 +197,47 @@ EM&C GmbH (Eventtechnik Nürnberg);Nürnberg;https://www.eventtechnik-nuernberg.
 MAS Medien Aktiv Service GmbH;Nürnberg;
 SCORE EVENT PRODUCTION (Nico Arnold);Nürnberg;https://www.score-event-production.de
 DELTA Veranstaltungstechnik;Cadolzburg;https://www.delta-veranstaltungstechnik.de
+Werbeteam Fürther Kirchweih;Fürth;https://michaelis-kirchweih.de
+Altstadtverein Fürth;Fürth;
 franconia lite (Ferdinand Daum Veranstaltungstechnik);Fürth;https://www.franconia-lite.de
+Stadt Erlangen - Liegenschaftsamt Abteilung Märkte und Kirchweihen;Erlangen;https://erlangen.de
 CRS-Lightning Veranstaltungstechnik;Erlangen;https://www.crs-lightning.de
 Veranstaltungstechnik Klepsch (Klepsch Media Armin Klepsch);Rednitzhembach;https://veranstaltungstechnik-klepsch.de
+Stadt Ansbach - Ansbach Tourist Information;Ansbach;https://www.tourismus-ansbach.de
 KARO Konzert-Agentur Rothenburg GmbH;Rothenburg ob der Tauber;https://taubertal-festival.de
 ICEVT Event & Veranstaltungstechnik;Weißenburg in Bayern;https://www.icevt.de
 Zeus Showservice;Amberg;
 Karl Veranstaltungstechnik;Weiden in der Oberpfalz;
 EVENT-RULEZ Veranstaltungstechnik;Weiden in der Oberpfalz;
+Stadt Regensburg - Kulturamt;Regensburg;https://www.buergerfest-regensburg.de
 GEKELER AUDIOTECHNIK Veranstaltungstechnik;Regensburg;
 Pointinger Musik- Licht- und Eventtechnik (Erwin u. Susanne Pointinger);Regensburg;
+Veranstaltungsservice Peter Kittel GmbH;Regensburg;https://www.wm-tut.de
 Böhnlein Lukas Tontechnik;Regensburg;
 Dams.Fahrner Veranstaltungstechnik GmbH;Regensburg;
+Passau Event Gesellschaft mbH;Passau;
 StereoMike Veranstaltungstechnik;Straubing;
 Leibl Michael Veranstaltungstechnik;Straubing;
+Straubinger Ausstellungs- und Veranstaltungs GmbH;Straubing;https://www.ausstellungs-gmbh.de
 Grammophon Veranstaltungstechnik;Deggendorf;
+Stadt Bayreuth - Amt für öffentliche Ordnung;Bayreuth;https://www.bayreuth.de
 Studio Pro;Bayreuth;
 Thomas Neumann Licht und Tontechnik;Bayreuth;
+Bamberger Sandkerwa Veranstaltungs GmbH;Bamberg;https://www.sandkerwa.de
 Thomas Beer Meister für Veranstaltungstechnik;Bamberg;
 BETONT Ton - Licht - Media GmbH;Bamberg;
 Sound-Service Veranstaltungstechnik;Bamberg;
 Volk Peter Veranstaltungstechnik;Bamberg;
 Stadtmarketing Bamberg e.V.;Bamberg;https://www.mybamberg.de
 Würzburg macht Spaß e.V. (WüMS);Würzburg;https://www.wuems.de
+Verein Würzburger Festwirte e.V.;Würzburg;https://www.weindorf-wuerzburg.de
 ZEPRA Event GmbH;Würzburg;https://www.zepra-event.de
 ARGO Konzerte GmbH;Würzburg;https://www.argo-konzerte.de
 A.M.R Eventtechnik GbR;Erlabrunn;https://amr-eventtechnik.de
 rv-tec Veranstaltungstechnik;Waldbüttelbrunn;http://www.rv-tec.de
 Stadtmarketing-Verein Kitzingen e.V.;Kitzingen;
-Stadt Schweinfurt - Wirtschaftsförderung und Stadtmarketing;Schweinfurt;https://www.schweinfurt.de
 Strong P.A. e.K. (Norbert Stark);Königsberg in Bayern;
+2 CONTACT - Joachim Volz;Grettstadt;https://www.stadtfest-schweinfurt.de
 H-Light Veranstaltungstechnik (Oliver Hub);Sennfeld;https://www.h-light.de
 JSE Show- und Eventtechnik GmbH;Marktheidenfeld;https://jse-eventtechnik.de
 Kassel Marketing GmbH;Kassel;https://www.kassel-marketing.de
@@ -254,7 +290,7 @@ satis&fy AG;Karben;https://satis-fy.com
 Event im Focus GmbH & Co. KG;Bad Homburg v. d. Höhe;
 Kur- und Kongreß-GmbH Bad Homburg;Bad Homburg v. d. Höhe;https://www.bad-homburg.de
 ES & EM Eventservice & Entertainment Mertins;Bad Homburg v. d. Höhe;
-Offenbacher Stadtmarketinggesellschaft mbH;Offenbach am Main;https://www.offenbach.de/unternehmen/stadtmarketing
+Stadt Offenbach am Main;Offenbach am Main;https://www.offenbach.de
 formwandler events Mietshop;Offenbach am Main;
 Sound and Light professional e.K.;Offenbach am Main;
 Pro Audio Engineering Veranstaltungstechnik;Offenbach am Main;
@@ -468,13 +504,13 @@ MAC - Märkte und Aktionskreis City e.V.;Aachen;
 eventac Veranstaltungstechnik GmbH;Aachen;
 Pro-Ton Veranstaltungstechnik;Aachen;
 JOY event & media GmbH & Co. KG;Aachen;
-Rureifel-Tourismus GmbH;Monschau;
+Stadt Monschau;Monschau;https://www.monschau.de
 Kupfer Events GmbH;Stolberg (Rheinland);
 Stadt Düren - Amt für Stadtentwicklung Märkte und Messen;Düren;
 DKR Eventtechnik;Düren;
 Beschallungstechnik Hans Hennig;Düren;
 Stage FX Veranstaltungstechnik;Merzenich;
-Schaustellerverband Bonn e.V.;Bonn;
+Bundesstadt Bonn - Bürgerdienste Leistungszentrum Märkte;Bonn;https://www.bonn.de
 Kampa VT Dienstleistungen für Veranstaltungstechnik;Bonn;
 Chosson Event- u. Veranstaltungstechnik;Bonn;
 Eventtechnik-Bonn;Bonn;
@@ -604,7 +640,7 @@ LTB Eventtechnik Licht & Tontechnik Torsten Bornschein;Saarbrücken;
 Stagelight Showservice GmbH;Saarbrücken;
 Mertel Veranstaltungstechnik GmbH;St. Ingbert;https://www.mertel.de
 Stadt St. Ingbert;St. Ingbert;https://www.st-ingbert.de
-Homburger Kultur gGmbH;Homburg;https://www.homburg.de
+Homburger Kulturgesellschaft gGmbH;Homburg;https://www.homburg.de
 Saar-Lor-Lux-Zelte GmbH & Co. KG;Kirkel;https://saar-lor-lux-zelte.eu
 HIGH VOLTAGE (Nicolay-Schmidt GbR);Neunkirchen;https://www.hvoltage.de
 HB Veranstaltungstechnik;Neunkirchen;
@@ -627,6 +663,7 @@ EFVeranstaltungstechnik;Bremerhaven;
 Symphonic Stage GmbH;Bremerhaven;
 WESER STAGE Veranstaltungstechnik;Bremerhaven;
 RR-Event (Robin Röse);Bremen;https://rr-event.de
+M3B GmbH (MESSE BREMEN & ÖVB-Arena);Bremen;https://www.messe-bremen.de
 Kaj Völz Veranstaltungstechnik;Bremen;https://kajvoelz.de
 active blue GmbH & Co. KG;Bremen;https://active-blue.com
 Alpha Event (Jörg Schneider);Bremen;https://www.alpha-event.de
@@ -655,23 +692,37 @@ FKP Scorpio Konzertproduktionen GmbH;Hamburg;https://fkpscorpio.com
 Karsten Jahnke Konzertdirektion GmbH;Hamburg;https://kj.de
 TLN Veranstaltungstechnik GmbH;Neubrandenburg;
 HIGH GAIN Veranstaltungstechnik;Neubrandenburg;https://high-gain.de
+K-Sports & Events (Steffen Kerfers);Waren (Müritz);
+Volksfestverein Malchow e.V.;Malchow;
 Kulturkosmos Müritz e.V. (Fusion Festival);Lärz;https://fusion-festival.de
 AEN Audio Equipment Nord GmbH;Greifswald;https://www.aen-gmbh.de
 Greifswald Marketing GmbH;Greifswald;
 Raum Veranstaltungstechnik;Rostock;
+Tourismuszentrale Rostock & Warnemünde (Hanse Sail Büro);Rostock;https://www.hansesail.com
+Rostocker Oktoberfest GmbH;Rostock;
 Congress Company Jaenisch GmbH;Rostock;
 Großmarkt Rostock GmbH;Rostock;https://www.grossmarkt-rostock.de
 Equipvent;Rostock;
 Ränker Dietmar Licht- Ton- und Veranstaltungstechnik;Rostock;
+Wassersport und Umweltfreunde e.V.;Saal;
 Sound Projekt Veranstaltungstechnik GmbH;Stralsund;
+SWS Stadtwerke Stralsund GmbH;Stralsund;https://www.stralsunder-weihnachtsmarkt.de
 Störtebeker Festspiele GmbH & Co. KG;Ralswiek;https://www.stoertebeker.de
+Stadt Putbus - Eigenbetrieb Kurverwaltung;Putbus;
+Kurverwaltung Sellin;Ostseebad Sellin;
+Kurverwaltung Mönchgut;Ostseebad Mönchgut;
+Stadt Gadebusch;Gadebusch;
 Airbeat One GmbH Zweigniederlassung;Lübtheen;https://airbeat-one.de
 NVT Veranstaltungstechnik;Wotenitz;
 Pro-Dj-Lightning Veranstaltungstechnik;Wismar;
+Hansekontor Wismar GmbH;Wismar;https://www.hansekontor-wismar.de
+Hafentage Wismar GbR;Wismar;
+Lüneburg Marketing GmbH;Lüneburg;https://www.lueneburg.info
 Hayes Media Präsentations & Medientechnik;Lüneburg;
 Protones Veranstaltungstechnik;Lüneburg;
 Amphire GmbH Veranstaltungstechnik;Lüneburg;
 Lüpcke Veranstaltungstechnik;Buxtehude;
+STADE Marketing und Tourismus GmbH;Stade;https://www.stade-tourismus.de
 TENO GmbH & Co. KG;Oldenburg;https://www.teno-vt.de
 Stefan's Partyzeltverleih;Oldenburg;
 party compact event group;Oldenburg;
@@ -684,6 +735,7 @@ ole Veranstaltungsservice UG;Oldenburg;
 Hoffmann Zelt- und Veranstaltungsservice;Oldenburg;https://www.hoffmann-zelte.de
 Wilhelmshaven Touristik & Freizeit GmbH;Wilhelmshaven;
 Tourist-Information Emden (Stadt Emden);Emden;
+Verkehrsverein Ems-Dollart e.V.;Jemgum;
 Unicorn Event GmbH & Co. KG;Papenburg;
 Reload Event GmbH;Sulingen;https://reload-festival.de
 Nordseeheilbad Cuxhaven GmbH;Cuxhaven;https://nordseeheilbad-cuxhaven.de
@@ -705,10 +757,12 @@ mobiltec eventtechnik GmbH;Langenhagen;https://www.mobiltec.de
 CEC Creative-Event-Consulting Helberg Bergmann GbR;Laatzen;https://c-e-consulting.de
 Hildesheim Marketing GmbH;Hildesheim;https://www.hildesheim-marketing.de
 Peine Marketing GmbH;Peine;
+Werbegemeinschaft Nienburg e.V.;Nienburg (Weser);https://www.altstadtfest-nienburg.de
 Hameln Marketing und Tourismus GmbH;Hameln;https://www.hameln.de
 Göttingen Tourismus und Marketing e.V.;Göttingen;
 Golombek Veranstaltungstechnik;Göttingen;
 light-house Göttingen GmbH Veranstaltungstechnik;Göttingen;
+Treffpunkt Stadtmarketing Duderstadt e.V.;Duderstadt;
 Repp Veranstaltungstechnik;Bovenden;
 Tweer-TV Bild Ton und Veranstaltungstechnik;Northeim;
 Kühnhold Dieter Memphis Veranstaltungstechnik & Bühnenaufbau;Northeim;
@@ -718,7 +772,11 @@ Braunschweig Stadtmarketing GmbH;Braunschweig;https://www.braunschweig.de
 JK Veranstaltungstechnik (Jens Kluck);Wendeburg;https://jkeventtec.de
 RDS Eventtechnik (Silvio Sakowski);Salzgitter;https://rds-eventtechnik.de
 WMG Wolfsburg Wirtschaft und Marketing GmbH;Wolfsburg;https://wmg-wolfsburg.de
+Stadt Gifhorn - Fachbereich Kultur und Soziales;Gifhorn;
 Gärtner Lichttechnik;Leiferde;
+GOSLAR marketing gmbh;Goslar;https://www.meingoslar.de
+Tourist-Information Oberharz (GLC Glücksburg Consulting AG);Clausthal-Zellerfeld;https://www.oberharz.de
+VVV-Stadt- und Citymarketing Nordhorn e.V.;Nordhorn;https://www.vvv-nordhorn.de
 Marketing Osnabrück GmbH;Osnabrück;https://erleben.osnabrueck.de
 köhne veranstaltungen & technik GmbH;Osnabrück;https://veranstaltungen-technik.de
 Otto Kühling GmbH;Vechta;
@@ -753,6 +811,7 @@ Otter Veranstaltungstechnik GbR;Neumünster;https://www.otter-veranstaltungstech
 North Light & Sound;Fockbek;
 THS Showtechnik;Schleswig;
 Tourismus Agentur Flensburger Förde GmbH (TAFF);Flensburg;https://www.flensburger-foerde.de
+Stadtmarketing Elmshorn e.V.;Elmshorn;
 HAMKE Event & Messe (Jan-Mirko Hamke);Klein Nordende;https://hamke.biz
 MEISSNER EXPO GmbH;Halstenbek;https://meissner-expo.de
 WOA Festival GmbH (Wacken Open Air);Wacken;https://www.wacken.com
@@ -776,17 +835,16 @@ Berliner Partyservice Grunke;Berlin;https://eventcatering-grunke.de
 Zeltverleih Heinz Pautz;Berlin;https://www.zeltverleih-pautz.de
 Lichtwerk Veranstaltungstechnik GmbH;Berlin;https://lichtwerk.com
 Partner für Spandau Gesellschaft für Bezirksmarketing mbH;Berlin;
-CMT Cottbus Congress Messe & Touristik GmbH;Cottbus;
 SFmedia (Tim Fischer);Cottbus;
 TEGE Planen & Zelte GmbH;Cottbus;https://tege.de
 Multi Mediale Cooperative (MMC);Cottbus;
 Kuban Events;Cottbus;
+Stadt Cottbus;Cottbus;https://www.cottbus.de
 Flashlight Veranstaltungstechnik und Mobile Diskothek (Rene Reinsberg);Cottbus;
 Eventservice Dominic Bartsch;Cottbus;
 COEX Veranstaltungs GmbH;Cottbus;https://www.coex-gmbh.de
 Waschhaus Potsdam gGmbH;Potsdam;https://www.waschhaus.de
 Trollwerk Produktion GbR;Potsdam;
-Potsdam Marketing und Service GmbH;Potsdam;
 SETTEC events;Potsdam;
 Veranstaltungstechnik Regenbogen PA;Potsdam;
 DTB Veranstaltungstechnik GmbH;Potsdam;https://www.dtb.berlin
@@ -795,7 +853,6 @@ Havel Tec Karl Thiede;Werder (Havel);https://www.havel-tec.de
 Zeltverleih Berlin-Brandenburg Detlef Buhle;Falkensee;https://www.zeltverleih-buhle.de
 Sound-Hz;Brandenburg an der Havel;https://sound-hz.de
 Zelt- & Eventservice Berlin Brandenburg Stephanie Mund;Brandenburg an der Havel;https://www.zelt-berlin.de
-Stadtmarketing- und Tourismusgesellschaft Brandenburg an der Havel mbH;Brandenburg an der Havel;
 Messe und Veranstaltungs GmbH Frankfurt (Oder);Frankfurt (Oder);
 PureSound-Frankfurt Veranstaltungsausstatter;Frankfurt (Oder);
 ZeltwerkEvents Samer Khalil;Rüdersdorf bei Berlin;https://www.zeltwerk-events.de
@@ -805,6 +862,7 @@ TLE Ton-Licht-Event GbR;Eberswalde;
 KING SIZE. Veranstaltungstechnik;Eberswalde;
 Lichtpunkt5 Veranstaltungsservice;Oranienburg;
 Fischer Eventtec;Oranienburg;
+Tourismus und Kultur Oranienburg gGmbH (TKO);Oranienburg;https://www.oranienburg-erleben.de
 Partyservice-Ruppin Zeltverleih;Neuruppin;
 Landeshauptstadt Dresden Amt für Wirtschaftsförderung Abt. Kommunale Märkte;Dresden;https://www.dresden.de/maerkte
 Stemerone Veranstaltungstechnik;Dresden;
@@ -822,8 +880,10 @@ Event Verleih Dresden Eventausstatter;Dresden;
 HMG Events GmbH & Co. KG;Dresden;https://www.hmg-rentals.de
 Geie & Liebschner Veranstaltungstechnik GbR;Radebeul;
 Zelt+Event Schwarz;Ottendorf-Okrilla;
+Gewerbeverein Meißen e.V.;Meißen;
 Kultur- und Tourismusgesellschaft Pirna mbH;Pirna;https://www.pirna.de
 nuck GmbH;Bautzen;https://www.nuck.de
+Tourismusverein Bautzen/Budyšin e.V.;Bautzen;https://www.altstadtfestivalbautzen.de
 Veranstaltungstechnik Weihrauch Light & Producer;Görlitz;
 MP-Audio Veranstaltungstechnik Görlitz;Görlitz;
 Europastadt GörlitzZgorzelec GmbH;Görlitz;https://www.visit-goerlitz.com
@@ -853,13 +913,14 @@ JUGL Veranstaltungstechnik e.K.;Zwickau;
 Münch Medienproduktion Veranstaltungstechnik GbR;Reinsdorf;
 JG Veranstaltungstechnik (Jannis Gruner);Plauen;
 Veranstaltungstechnik H&H GbR;Plauen;
-C³ Chemnitzer Veranstaltungszentren GmbH;Chemnitz;
+Stadt Chemnitz;Chemnitz;https://www.chemnitz.de
 tec4you GbR;Chemnitz;https://tec4you.eu
 Vertechnik (Franz Kositza);Chemnitz;https://vertechnik.de
 Wonneberger Veranstaltungstechnik;Chemnitz;
 PM2 Veranstaltungstechnik (Ralf Endig);Chemnitz;
 Der Event Service;Chemnitz;https://www.der-event-service.de
-Stadtmarketing Halle (Saale) GmbH;Halle (Saale);https://www.stadtmarketing-halle.de
+Universitätsstadt Freiberg;Freiberg;https://www.freiberg.de
+Stadt Halle (Saale);Halle (Saale);https://www.halle.de
 Expovent;Halle (Saale);https://expovent.de
 R & R ProAudio UG;Halle (Saale);
 Zeltvermietung und Veranstaltungsservice Halle;Halle (Saale);
@@ -880,6 +941,7 @@ Eventmakers Wir machen Party Veranstaltungsagentur;Magdeburg;
 Fiedler Veranstaltungstechnik (Richard Fiedler);Magdeburg;https://fiedler-veranstaltungstechnik.de
 Showsystem Fabian Stankewitz;Gröningen;https://www.showsystem.de
 Schulz GbR;Stendal;
+Kulturbetrieb Saalfeld/Meininger Hof (Stadt Saalfeld/Saale);Saalfeld/Saale;https://www.saalfeld.de
 tsp Veranstaltungstechnik Gera;Gera;
 AQ Showtechnik;Gera;
 MGEE Beleuchtung und Beschallung;Gera;
@@ -900,8 +962,9 @@ media event Mitteldeutschland;Erfurt;
 Zeltverleih Erfurt;Erfurt;
 MMS Eventzelte (MMS Grabe GmbH & Co. KG);Erfurt;
 Party San GmbH;Weimar;https://www.party-san.de
-weimar GmbH;Weimar;https://www.weimar.de
+Stadt Weimar;Weimar;https://stadt.weimar.de
 Omega Veranstaltungstechnik Jürgen Schneider;Weimar;https://omega-weimar.de
+Stadt Nordhausen Sachgebiet Stadtmarketing Veranstaltung und Tourismus;Nordhausen;https://www.nordhausen.de
 DJJ EVENTS Event & Medientechnik GbR (Julian Walther);Eisenach;
 EventTeam Gotha (Erik Gottschall);Gotha;
 Partyausstattung Strulla;Gotha;

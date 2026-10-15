@@ -1,0 +1,58 @@
+r2_nord.txt:4:OPUS Showtechnik GmbH;Kiel;Quelle: 11880 - Eintrag ca. 4 Jahre alt - PLZ ergänzt Kandidat aus Runde 1
+r2_nord.txt:13:Zeltverleih und Partyservice Ferdinand Freitag;Stockelsdorf;Quelle: golocal/cylex/meinestadt - teils Hausnr. 3J - E. & F. Freitag OHG Max-Planck-Str. 6 evtl. verbunden
+r2_nord.txt:14:Schwabe Zelte GmbH & Co. KG;Sarzbüttel;Quelle: cylex - Registersitz evtl. 25746 Heide - Website aus E-Mail-Domain abgeleitet
+r2_nord.txt:23:EventTechnik nord ETN GmbH;Hamburg;Quelle: gelbeseiten/dasoertliche/11880 - Rechtsform widersprüchlich (GmbH/e.K.)
+r2_nord.txt:58:SF-Entertainment;Celle;Quelle: gelbeseiten - Eintrag ca. 3 Jahre alt
+r2_nord.txt:71:Ortmann Sven Veranstaltungstechnik;Cuxhaven;Quelle: gelbeseiten - Eintrag ca. 6 Jahre alt
+r2_nord.txt:75:WESER STAGE Veranstaltungstechnik;Bremerhaven;Quelle: 11880 - Eintrag ca. 5 Jahre alt
+r2_nord.txt:79:Zeltverleih Mählmann & Kohl GbR;Vechta;Quelle: gelbeseiten - abweichend auch Alter Flugplatz 26a Vechta
+r2_nord.txt:82:Hoffmann Zelt- und Veranstaltungsservice;Oldenburg;Quelle: cylex/dasoertliche - Website aus E-Mail-Domain abgeleitet
+r2_nrw.txt:6:KÖNIG Audio-Video-Technik GmbH;Köln;Quelle: Gelbe Seiten - evtl. eher Konferenztechnik
+r2_nrw.txt:8:Offstage GmbH;Köln;Quelle: Gelbe Seiten - Eintrag ca. 2,5 Jahre alt
+r2_nrw.txt:10:circusproductions - K13 GmbH;Köln;Quelle: cylex - auch als circusproductions Nowotny & Cohen GbR gelistet - Fit prüfen
+r2_nrw.txt:57:Torero Eventmanagement;Olpe;Quelle: 11880 - Technikanteil prüfen
+r2_nrw.txt:103:enjoy Witt & Roggenkamp GbR;Paderborn;Quelle: Gelbe Seiten - Leistungsprofil prüfen
+r2_nrw.txt:118:Heinz Klink Partyzeltverleih;Bonn;Quelle: Gelbe Seiten - Eintrag ca. 2,5 Jahre alt
+r2_nrw.txt:122:GO4IT! GmbH Veranstaltungstechnik;Hagen;Quelle: 11880 - Eintrag ca. 4,5 Jahre alt
+r2_nrw.txt:130:Tommy Entertainment;Lüdenscheid;Quelle: Verzeichnis - Leistungsprofil prüfen
+r2_nrw.txt:137:Tümp Veranstaltungstechnik;Krefeld;Quelle: Gelbe Seiten - Eintrag ca. 5 Jahre alt
+r2_nrw.txt:139:Team Technik e.K.;Recklinghausen;Quelle: Gelbe Seiten - Leistungsprofil prüfen
+r2_nrw.txt:149:Call-US Entertainment GmbH;Bocholt;Quelle: Das Örtliche - Leistungsprofil prüfen
+r2_nrw.txt:151:Event Rent GmbH;Bocholt;Quelle: cylex - Hausnr. 24 oder 32 widersprüchlich
+r2_nrw.txt:158:Tafelfreuden Event-Catering;Köln;Quelle: Gelbe Seiten - Eintrag ca. 2,5 Jahre alt
+r2_ost.txt:2:Geie & Liebschner Veranstaltungstechnik GbR;Radebeul;Quelle: dasoertliche/11880 - abweichende Dresdner Adressen in gelbeseiten
+r2_ost.txt:3:Lichtecht Technik für Veranstaltungen (Ralf Meißner);Magdeburg;Quelle: dasoertliche/cylex/11880 - ein Eintrag nennt Schönebecker Str. 10
+r2_ost.txt:18:TEGE Planen & Zelte GmbH;Cottbus;Quelle: gelbeseiten/dasoertliche/golocal - fertigt evtl. auch Zelte
+r2_ost.txt:33:Crew Veranstaltungstechnik Wolfgang Hesse;Magdeburg;Quelle: gelbeseiten
+r2_ost.txt:34:Eventmakers Wir machen Party Veranstaltungsagentur;Magdeburg;Quelle: gelbeseiten - eigene Produktion nicht geprüft
+r2_ost.txt:38:Wonneberger Veranstaltungstechnik;Chemnitz;Quelle: 11880 - Eintrag ca. 5 Jahre alt
+r2_ost.txt:47:Veranstaltungstechnik Halle GmbH & Co. KG;Halle (Saale);Quelle: gelbeseiten/11880 - 11880 führt Adresse unter Lars Böttcher
+r2_ost.txt:48:R & R ProAudio UG;Halle (Saale);Quelle: 11880 - Leistungsumfang nicht geprüft
+r2_ost.txt:49:Zeltvermietung und Veranstaltungsservice Halle;Halle (Saale);Quelle: 11880 - Firmenname nur generisch
+r2_ost.txt:62:Veranstaltungsservice-Ludwig;Hoyerswerda;Quelle: 11880 - Eintrag ca. 3-4 Jahre alt
+r2_ost.txt:69:M-Entertainment Tonstudio & Veranstaltungstechnik;Dessau-Roßlau;Quelle: 11880
+r2_ost.txt:70:I:TECS Event Production GmbH & Studios;Dessau-Roßlau;Quelle: 11880
+r2_ost.txt:78:Schulz GbR;Stendal;Quelle: gelbeseiten
+r2_sued.txt:3:ANTON Event Solutions (Alexander Anton);Germering;Quelle: 11880 – Öffnungsstatus in Einträgen widersprüchlich
+r2_sued.txt:39:Studio Pro;Bayreuth;Quelle: gelbeseiten – Tätigkeit prüfen
+r2_sued.txt:54:Shaddows Entertainment;Neckarsulm;Quelle: dasoertliche – Tätigkeit prüfen
+r2_west.txt:60:formwandler events Mietshop;Offenbach am Main;Quelle: Das Örtliche – Kreativ-/Eventagentur (Molchkragen Media GmbH) mit Eventtechnik-Personal, Verleih nicht bestätigt
+runde1_verzeichnis.txt:1:Strong P.A. e.K. (Norbert Stark);Königsberg in Bayern;Adresse NUR aus Verzeichnissen (cylex/11880) – eigene Website nicht bestätigt
+runde1_verzeichnis.txt:2:MAS Medien Aktiv Service GmbH;Nürnberg;Adresse NUR aus Verzeichnis (messen.de) – eigene Website nicht bestätigt
+ost.txt:14:Zeltverleih Heinz Pautz;Berlin
+ost.txt:17:Ferropolis Stiftung Industriekultur gGmbH;Gräfenhainichen
+ost.txt:18:Expovent;Halle (Saale)
+ost.txt:19:ESS Emmes Sound Service;Halle (Saale)
+ost.txt:20:Showsystem Fabian Stankewitz;Gröningen
+ost.txt:21:Franze Event & Rental;Dessau-Roßlau
+bayern_nordost.txt:3:Veranstaltungstechnik Klepsch (Klepsch Media Armin Klepsch);Rednitzhembach;Impressum-Seite laut Suchindex älter – Adresse ggf. nachprüfen
+berlin_bb.txt:3:Mobiles Entertainment Berlin Jens Seidlitz;Berlin;Website teils älter - Aktualität prüfen
+berlin_bb.txt:9:Zeltverleih Berlin;Berlin;Impressum-Inhalt nicht bestätigt - Anfahrtsseite nennt Quedlinburger Straße 11 10589
+berlin_bb.txt:12:Partyzeltverleih-Berlin.de;Berlin;Footer nennt Ulmenstraße 17 12621 Berlin - Impressum Alt-Kaulsdorf 18
+hessen_saar.txt:2:Kunstlicht GmbH;Kassel;Lager abweichend: Christian-Reul-Straße 23, 34121 Kassel
+hessen_saar.txt:6:JD Veranstaltungstechnik (Jan Müller);Marpingen;AGB nennen abweichenden Namen Jan Dörrenbächer
+nds_hb.txt:1:Event Werk GmbH;Hannover;Impressum nennt teils HD-Werk GmbH (Marke Event Werk) mit abweichender HRB-Nr.
+nds_hb.txt:6:mobiltec eventtechnik GmbH;Langenhagen;Adresse aus Website-Footer mit Stand 2018 - Aktualität prüfen
+nrw_westfalen.txt:2:# Unverifizierte KANDIDATEN (nur Hinweise aus Verzeichnissen/Stellenanzeigen, Adresse fehlt, Website noch unbekannt). Vor Aufnahme per Impressum prüfen:
+nrw_westfalen.txt:8:# Robert Walch Veranstaltungen | Oberhausen | Veranstaltungen (Leistung unklar)
+ost.txt:1:Fiedler Veranstaltungstechnik (Richard Fiedler);Magdeburg;

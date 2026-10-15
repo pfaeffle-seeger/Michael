@@ -1,0 +1,19 @@
+r3_ost.txt:14:Europastadt GörlitzZgorzelec GmbH;Görlitz
+r3_sued.txt:24:Stadt Erding - Stadtmarketing;Erding
+r3_west.txt:6:Wissenschaftsstadt Darmstadt Marketing GmbH;Darmstadt
+r3_west.txt:11:Stadtmarketing Lauterbach e.V.;Lauterbach
+r3_west.txt:13:Initiative Stadtmarketing Eschwege e.V.;Eschwege
+r3_west.txt:18:Magistrat der Kreisstadt Limburg - Amt für Stadtmarketing Wirtschaftsförderung und Kommunikation;Limburg an der Lahn
+r3_west.txt:23:Stadt Neuwied - Amt für Stadtmarketing;Neuwied
+r3_west.txt:24:Stadtverwaltung Zweibrücken - Stadtmarketing;Zweibrücken
+r3_west.txt:34:Landeshauptstadt Saarbrücken - Marketing und Kommunikation;Saarbrücken
+r4_nord.txt:6:Treffpunkt Stadtmarketing Duderstadt e.V.;Duderstadt
+r4_nord.txt:7:VVV-Stadt- und Citymarketing Nordhorn e.V.;Nordhorn
+r4_nord.txt:11:Stadtmarketing Elmshorn e.V.;Elmshorn
+r4_ost.txt:1:Tourismusverein Bautzen/Budyšin e.V.;Bautzen
+r4_ost.txt:5:Stadt Chemnitz;Chemnitz
+r4_sued.txt:3:Vereinsgemeinschaft Schorndorfer Vereine e.V.;Schorndorf
+r4_sued.txt:12:Marketing und Tourismus Konstanz GmbH;Konstanz
+r4_sued.txt:17:Stadt Erlangen - Liegenschaftsamt Abteilung Märkte und Kirchweihen;Erlangen
+r4_sued.txt:23:Schwäbischer Schaustellerverband e.V. (SSV Schausteller GmbH);Augsburg
+r4_sued.txt:24:Stadt Mosbach - Kulturabteilung;Mosbach
