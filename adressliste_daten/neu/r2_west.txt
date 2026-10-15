@@ -57,7 +57,7 @@ Stage-Light e.K.;Hanauer Str. 80;63165;Mühlheim am Main;Hessen;Veranstaltungste
 Sound and Light professional e.K.;Gustav-Adolf-Str. 14;63069;Offenbach am Main;Hessen;Veranstaltungstechnik;;Ton- und Lichttechnik;Quelle: gelbeseiten
 Pro Audio Engineering Veranstaltungstechnik;Gerhart-Hauptmann-Str. 40;63071;Offenbach am Main;Hessen;Veranstaltungstechnik;;Audio- und Veranstaltungstechnik;Quelle: Das Örtliche
 Dequis Lasertechnik;Landgrafenstr. 17;63071;Offenbach am Main;Hessen;Veranstaltungstechnik (Laser);;Lasershows für Veranstaltungen;Quelle: golocal
-formwandler events Mietshop;Ludwigstr. 180D;63067;Offenbach am Main;Hessen;Eventausstattung/Verleih;;Eventausstattung zur Miete;Geprüft 10/2026: Molchkragen Media GmbH = Kreativagentur (Web/Video/Eventorganisation), Personalpool AV-Techniker für Events; Verleih weiter nicht bestätigt (Quelle: StepStone-Anzeige, ortsdienst.de)
+formwandler events Mietshop;Ludwigstr. 180D;63067;Offenbach am Main;Hessen;Eventausstattung/Verleih;;Eventausstattung zur Miete;Geprüft 10/2026: Molchkragen Media GmbH = Kreativagentur (Web/Video/Eventorganisation), Personalpool AV-Techniker für Events – Verleih weiter nicht bestätigt (Quelle: StepStone-Anzeige, ortsdienst.de)
 the event media company e.K.;Trappbörnchen 17;63073;Offenbach am Main;Hessen;Veranstaltungstechnik;;Veranstaltungstechnik und EDV-Dienste;Quelle: cylex
 Flashlight Veranstaltungstechnik GmbH;Georg-Elser-Str. 16;35037;Marburg;Hessen;Veranstaltungstechnik/Bühnenbau;;Meisterbetrieb Beschallung Beleuchtung Bühnenbau;Quelle: cylex
 pro.live GbR;Vinzentinerinnenweg 5;35043;Marburg;Hessen;Veranstaltungstechnik;;Licht- Veranstaltungstechnik und DJ;Quelle: gelbeseiten - OT Schröck

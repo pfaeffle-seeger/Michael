@@ -56,7 +56,7 @@ ORDER = {"Süd":0,"West":1,"Nord":2,"Ost":3}
 EXCL = ("lightequip","rentboks","lautmacher","huss-licht","audiopro")
 files = [f"{S}/{f}.txt" for f in ("sued","lokal1","lokal2","west","nord","ost")] + sorted(glob.glob(f"{S}/neu/*.txt"))
 wb = Workbook(); ws = wb.active; ws.title = "Adressliste"
-hdr = ["Nr.","Firma","Straße","PLZ","Ort","Bundesland","Region","Kategorie","Website","Warum Bedarf (PowerRock / Delta Pro Ultra)","Hinweis zur Adresse"]
+hdr = ["Nr.","Firma","Straße","PLZ","Ort","Bundesland","Region","Kategorie","Website","Warum Bedarf (PowerRock / Delta Pro Ultra)","Hinweis zur Adresse","Priorität"]
 ws.append(hdr)
 seen=set(); rows=[]; skipped=[]
 def key(url,name):
@@ -77,23 +77,38 @@ for f in files:
         if k2 in seen: skipped.append((os.path.basename(f),"dup-addr "+p[0])); continue
         seen.add(k); seen.add(k2)
         rows.append(p)
+import re as _re2
+def prio(p):
+    t=" ".join(p[:9]).lower()
+    if _re2.search(r"konferenz|kongress|congress|installation|mietmobiliar|nur bedingt|fit fraglich|technikanteil unklar|verleih .*nicht belegt|nicht bestätigt|weder bestätigt", t): return "C"
+    if _re2.search(r"aggregat|generator|festival|open.air|stadtfest|zelt|bühne|buehne|foodtruck|streetfood|street.food|eventstrom|mobile bar|kaffeemobil|outdoor|volksfest|weinfest|weihnachtsmarkt", t): return "A"
+    return "B"
 rows.sort(key=lambda p:(ORDER[REG[p[4]]],p[4],p[2]))
 n=0
 for p in rows:
     n+=1
-    ws.append([n,p[0],p[1],p[2],p[3],p[4],REG[p[4]],p[5],p[6],p[7],p[8]])
+    ws.append([n,p[0],p[1],p[2],p[3],p[4],REG[p[4]],p[5],p[6],p[7],p[8],prio(p)])
 for c in ws[1]:
     c.font = Font(bold=True, color="FFFFFF"); c.fill = PatternFill("solid", fgColor="1F4E78")
     c.alignment = Alignment(vertical="center", wrap_text=True)
 for row in ws.iter_rows(min_row=2):
     row[3].number_format = "@"
     row[8].hyperlink = row[8].value; row[8].font = Font(color="0563C1", underline="single")
-widths = [5,42,30,7,24,20,7,30,38,60,45]
+widths = [5,42,30,7,24,20,7,30,38,60,45,9]
 for i, w in enumerate(widths): ws.column_dimensions[chr(65+i)].width = w
 ws.freeze_panes = "C2"
-t = Table(displayName="Adressen", ref=f"A1:K{n+1}")
+t = Table(displayName="Adressen", ref=f"A1:L{n+1}")
 t.tableStyleInfo = TableStyleInfo(name="TableStyleLight9", showRowStripes=True)
 ws.add_table(t)
+lg = wb.create_sheet("Legende")
+for row in [["Priorität","Bedeutung"],
+            ["A","Klarer Outdoor-/Netzersatz-Bedarf: Festival-/Open-Air-/Stadtfest-Veranstalter, Zelt- und Bühnenverleih, Foodtrucks, mobile Bars, Firmen mit Aggregaten"],
+            ["B","Passende Zielgruppe ohne konkreten Outdoor-Hinweis: Veranstaltungstechnik, Eventagenturen, Event-Catering"],
+            ["C","Schwächere Passung oder ungeklärt: Konferenz-/Kongresstechnik, Installation, Mietmobiliar, Firmen die sich per Recherche nicht bestätigen ließen"],
+            [],["Hinweis","Quelle der Adresse (eigene Website / Branchenverzeichnis) und Prüfvermerke"]]:
+    lg.append(row)
+lg.column_dimensions["A"].width=12; lg.column_dimensions["B"].width=120
+lg["A1"].font=Font(bold=True); lg["B1"].font=Font(bold=True)
 wb.save(out)
 # CSV for mail merge
 with open(out.replace(".xlsx",".csv"), "w", newline="", encoding="utf-8-sig") as fh:

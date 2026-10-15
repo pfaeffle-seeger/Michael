@@ -98,7 +98,7 @@ V & M GmbH & Co. KG;Walter-Freitag-Str. 36;42899;Remscheid;Nordrhein-Westfalen;V
 Eventware Veranstaltungstechnik Frank;Halberstädter Str. 19 B;33106;Paderborn;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Paderborn;Quelle: 11880/Gelbe Seiten
 Soundwerk Paderborn;Mühlenstr. 37;33098;Paderborn;Nordrhein-Westfalen;Veranstaltungstechnik;;Ton- und Veranstaltungstechnik Paderborn;Quelle: Gelbe Seiten
 active light & sound GbR;Kerssenbrockallee 33;33104;Paderborn;Nordrhein-Westfalen;Veranstaltungstechnik;;Licht- und Tontechnik Paderborn-Schloß Neuhaus;Quelle: Gelbe Seiten
-enjoy Witt & Roggenkamp GbR;Friedrich-List-Str. 49;33100;Paderborn;Nordrhein-Westfalen;Veranstaltungstechnik/Events;;unter Veranstaltungstechnik gelistet;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen; Leistungsprofil weiter offen
+enjoy Witt & Roggenkamp GbR;Friedrich-List-Str. 49;33100;Paderborn;Nordrhein-Westfalen;Veranstaltungstechnik/Events;;unter Veranstaltungstechnik gelistet;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen – Leistungsprofil weiter offen
 Arcus Licht- und Präsentationstechnik GmbH;Obermeiers Feld 2-4;33104;Paderborn;Nordrhein-Westfalen;Veranstaltungstechnik;;Licht- und Präsentationstechnik für Events;Quelle: Das Örtliche
 Cedric Piontek Veranstaltungstechnik;Brückenstr. 21;32760;Detmold;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Kleinbetrieb Detmold;Quelle: Gelbe Seiten
 technikreativ;Margaretenweg 3;32758;Detmold;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Detmold;Quelle: Gelbe Seiten
@@ -125,7 +125,7 @@ mk event UG;Grüner Talstr. 6;58644;Iserlohn;Nordrhein-Westfalen;Veranstaltungst
 Malkus Veranstaltungstechnik GmbH;Rombrocker Str. 24;58640;Iserlohn;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Märkischer Kreis;Quelle: Gelbe Seiten
 Schmalenbach Veranstaltungstechnik;Wibschla 24;58513;Lüdenscheid;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Lüdenscheid;Quelle: 11880/Gelbe Seiten
 ms.veranstaltungstechnik;Grebbecker Weg 45;58509;Lüdenscheid;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Lüdenscheid;Quelle: Gelbe Seiten
-Tommy Entertainment;Werdohler Landstr. 217;58513;Lüdenscheid;Nordrhein-Westfalen;DJ-/Eventtechnik;;DJ- und Entertainmentservice;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen; Leistungsprofil weiter offen
+Tommy Entertainment;Werdohler Landstr. 217;58513;Lüdenscheid;Nordrhein-Westfalen;DJ-/Eventtechnik;;DJ- und Entertainmentservice;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen – Leistungsprofil weiter offen
 Sound Magic Veranstaltungstechnik;Luisenstr. 70;41061;Mönchengladbach;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Mönchengladbach;Quelle: Gelbe Seiten
 CBB Veranstaltungstechnik (Walter Stahl);Reitbahnstr. 55;41236;Mönchengladbach;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Mönchengladbach-Rheydt;Quelle: Gelbe Seiten
 Pieper Medien- und Veranstaltungstechnik UG (haftungsbeschränkt);Erprather Str. 42;41466;Neuss;Nordrhein-Westfalen;Veranstaltungstechnik;;Medien- und Veranstaltungstechnik Neuss;Quelle: Gelbe Seiten
@@ -134,7 +134,7 @@ Eventwerk Meisterbetrieb für Veranstaltungstechnik;Düsseldorfer Str. 332;47809
 Thorsten Petzel Eventtechnik;Am Steinacker 20;47809;Krefeld;Nordrhein-Westfalen;Veranstaltungstechnik;;Eventtechnik Krefeld-Linn;Quelle: golocal
 Tümp Veranstaltungstechnik;Fürstenbergstr. 10;47804;Krefeld;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Krefeld;Quelle: Gelbe Seiten - Eintrag ca. 5 Jahre alt
 SEL-Veranstaltungstechnik (M. Müller);An de Greith 18;47839;Krefeld;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Krefeld-Hüls;Quelle: Das Örtliche
-Team Technik e.K.;Blitzkuhlenstr. 83;45659;Recklinghausen;Nordrhein-Westfalen;Veranstaltungstechnik;;unter Veranstaltungstechnik gelistet;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen; unter Blitzkuhlenstr. 83A nur Autohaus gelistet – Fit fraglich
+Team Technik e.K.;Blitzkuhlenstr. 83;45659;Recklinghausen;Nordrhein-Westfalen;Veranstaltungstechnik;;unter Veranstaltungstechnik gelistet;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen – unter Blitzkuhlenstr. 83A nur Autohaus gelistet – Fit fraglich
 SMD Entertainment Veranstaltungstechnik;Alte Grenzstr. 129B;45663;Recklinghausen;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik und Entertainment;Quelle: 11880 - zweiter Eintrag Werkstättenstr. 21 45659
 JMT-Veranstaltungstechnik;Vienkenstr. 22;46240;Bottrop;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Bottrop-Eigen;Quelle: Gelbe Seiten
 Veranstaltungstechnik Sogemeier;Hiesfelder Str. 2;46244;Bottrop;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Bottrop-Kirchhellen;Quelle: 11880
@@ -146,7 +146,7 @@ Matthias Welter Veranstaltungstechnik;Zusestr. 13;48653;Coesfeld;Nordrhein-Westf
 LN Veranstaltungstechnik (Mobile Diskothek);Goxel 25 A;48653;Coesfeld;Nordrhein-Westfalen;DJ-/Eventtechnik;;Mobile Diskothek und Veranstaltungstechnik;Quelle: 11880
 Call-US Entertainment GmbH;Sertürnerstr. 15;46397;Bocholt;Nordrhein-Westfalen;Veranstaltungstechnik/Entertainment;;unter Veranstaltungstechnik Bocholt gelistet;Geprüft 10/2026: bestätigt als Licht- und Tontechnik, Tel. 02871 220266 (Quelle: dasoertliche)
 HOLE Veranstaltungstechnik;Blumenstr. 32;46399;Bocholt;Nordrhein-Westfalen;Veranstaltungstechnik;;Veranstaltungstechnik Bocholt;Quelle: Gelbe Seiten
-Event Rent GmbH;Robert-Bosch-Str. 32;46397;Bocholt;Nordrhein-Westfalen;Veranstaltungstechnik (Verleih);https://www.eventrent.de;Eventverleih Bocholt;Geprüft 10/2026: Hausnr. 32 bestätigt; Schwerpunkt Mietmobiliar/Non-Food-Catering für Events, Messen, Sport (Quelle: oos.medica.de Servicepartner)
+Event Rent GmbH;Robert-Bosch-Str. 32;46397;Bocholt;Nordrhein-Westfalen;Veranstaltungstechnik (Verleih);https://www.eventrent.de;Eventverleih Bocholt;Geprüft 10/2026: Hausnr. 32 bestätigt – Schwerpunkt Mietmobiliar/Non-Food-Catering für Events, Messen, Sport (Quelle: oos.medica.de Servicepartner)
 EVENT CATERING Düsseldorf;Rolandstraße 44;40476;Düsseldorf;Nordrhein-Westfalen;Event-Catering;;Event-Catering Düsseldorf;Quelle: Gelbe Seiten/Das Örtliche
 Bordsteinschwalbe Foodtruck;Suitbertusstraße 149;40223;Düsseldorf;Nordrhein-Westfalen;Foodtruck;;Foodtruck für Events;Quelle: 11880
 Staude Foodtrucks - Streetfood & Catering;Franklinstraße 41-43;40479;Düsseldorf;Nordrhein-Westfalen;Foodtruck;;Foodtrucks und Streetfood-Catering;Quelle: 11880

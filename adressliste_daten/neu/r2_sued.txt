@@ -1,6 +1,6 @@
 Veranstaltungstechnik Rosenheim;Klepperstraße 19;83026;Rosenheim;Bayern;Veranstaltungstechnik;;Veranstaltungsservice und Eventtechnik in Rosenheim;Quelle: cylex/dasoertliche
 Fab-Event Veranstaltungstechnik;Isarstr. 7;83026;Rosenheim;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik-Dienstleister Rosenheim;Quelle: 11880/dasoertliche
-ANTON Event Solutions (Alexander Anton);Industriestr. 18;82110;Germering;Bayern;Veranstaltungstechnik;;Eventtechnik-Dienstleister im Münchner Westen;Geprüft 10/2026: Adresse Industriestr. 18 bestätigt, Tel. 089 84038280; Öffnungsstatus weiter widersprüchlich (Quelle: 11880)
+ANTON Event Solutions (Alexander Anton);Industriestr. 18;82110;Germering;Bayern;Veranstaltungstechnik;;Eventtechnik-Dienstleister im Münchner Westen;Geprüft 10/2026: Adresse Industriestr. 18 bestätigt, Tel. 089 84038280 – Öffnungsstatus weiter widersprüchlich (Quelle: 11880)
 Küstler Schowbühne Veranstaltungsagentur;Imhofstr. 12;86159;Augsburg;Bayern;Eventagentur;;Eventagentur mit Licht- DJ- und Technikverleih;Quelle: 11880/dasoertliche – Schreibweise Schowbühne im Verzeichnis
 Schaller - Licht und Tontechnik;Adelmannstraße 52;86199;Augsburg;Bayern;Veranstaltungstechnik;;Licht- und Tontechnik für Veranstaltungen;Quelle: cylex
 Kaiser-Showtechnik GmbH;Steinerne Furt 88;86167;Augsburg;Bayern;Veranstaltungstechnik;;Show- und Veranstaltungstechnik Augsburg;Quelle: northdata – Verzeichnisse nennen alte Adresse Eppaner Str. 7
@@ -36,7 +36,7 @@ Thomas Beer Meister für Veranstaltungstechnik;Katzheimerstraße 2;96050;Bamberg
 BETONT Ton - Licht - Media GmbH;Pödeldorfer Str. 227a;96050;Bamberg;Bayern;Veranstaltungstechnik;;Ton- Licht- und Medientechnik;Quelle: gelbeseiten
 Volk Peter Veranstaltungstechnik;Holzfeldweg 23;96052;Bamberg;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Oberfranken;Quelle: gelbeseiten
 Sound-Service Veranstaltungstechnik;Münchner Ring 5;96050;Bamberg;Bayern;Veranstaltungstechnik;;Veranstaltungstechnik Oberfranken;Quelle: gelbeseiten
-Studio Pro;Markgrafenallee 3a;95448;Bayreuth;Bayern;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen; Tätigkeit weiter offen
+Studio Pro;Markgrafenallee 3a;95448;Bayreuth;Bayern;Veranstaltungstechnik;;Unter Veranstaltungstechnik gelistet;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen – Tätigkeit weiter offen
 Thomas Neumann Licht und Tontechnik;Carl-Maria-von-Weber-Str. 26;95448;Bayreuth;Bayern;Veranstaltungstechnik;;Licht- und Tontechnik Oberfranken;Quelle: gelbeseiten
 P & P Veranstaltungstechnik;Lämlinstr. 36;74080;Heilbronn;Baden-Württemberg;Veranstaltungstechnik;;Veranstaltungstechnik in Heilbronn-Böckingen;Quelle: 11880 – Kandidat aus Vorrunde
 Live art Licht- und Tonsysteme Gert Schweizer e.K.;Einsiedelweg 18;74821;Mosbach;Baden-Württemberg;Veranstaltungstechnik;liveart.de;Licht- und Tonsysteme für Veranstaltungen;Quelle: northdata/dasoertliche – Lager Zwingenburgstr. 24 Neckarelz
@@ -51,7 +51,7 @@ Querner & Berger Zeltvermietung;Bergstaffelstr. 4;70329;Stuttgart;Baden-Württem
 Abele Zeltvermietung GmbH;Daimlerstr. 23;70825;Korntal-Münchingen;Baden-Württemberg;Zeltverleih;;Zeltvermietung für Veranstaltungen;Quelle: 11880 – PLZ aus Ortszuordnung
 Event Pro's GmbH Eventagentur;Büttelbronner Str. 6;74613;Öhringen;Baden-Württemberg;Eventagentur;eventpros.de;Eventagentur Hohenlohe;Quelle: gelbeseiten/dasoertliche
 Hagen Merz event design;Spitalstr. 29;74172;Neckarsulm;Baden-Württemberg;Eventagentur;;Eventdesign und Veranstaltungsservice;Quelle: dasoertliche
-Shaddows Entertainment;Leipziger Str. 20;74172;Neckarsulm;Baden-Württemberg;DJ-/Eventtechnik;;Entertainment und Veranstaltungsservice;Geprüft 10/2026: Adresse bestätigt, Kategorie Veranstaltung/Eventmanagement, Tel. 07132 345334; Technikanteil unklar (Quelle: 11880)
+Shaddows Entertainment;Leipziger Str. 20;74172;Neckarsulm;Baden-Württemberg;DJ-/Eventtechnik;;Entertainment und Veranstaltungsservice;Geprüft 10/2026: Adresse bestätigt, Kategorie Veranstaltung/Eventmanagement, Tel. 07132 345334 – Technikanteil unklar (Quelle: 11880)
 Gesines FOODTRUCK;Jahnstr. 15;70597;Stuttgart;Baden-Württemberg;Event-Catering/Foodtruck;;Foodtruck für Catering und Events;Quelle: golocal
 GastroTrucks GmbH;Keltergasse 4;74078;Heilbronn;Baden-Württemberg;Event-Catering/Foodtruck;;Catering und Essen auf Rädern;Quelle: 11880 – andere Liste nennt Wilhelmstr. 40 74074
 Parra Event Catering UG;Rheinlandstr. 10;71636;Ludwigsburg;Baden-Württemberg;Event-Catering/Foodtruck;;Eventcatering;Quelle: 11880
