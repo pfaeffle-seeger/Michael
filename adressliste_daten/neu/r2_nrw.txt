@@ -30,7 +30,6 @@ DLX Showtechnik;Kaupenstraße 22;45128;Essen;Nordrhein-Westfalen;Veranstaltungst
 eventmediagroup GmbH & Co. KG;Konrad-Adenauer-Platz 3;44787;Bochum;Nordrhein-Westfalen;Veranstaltungstechnik/Eventagentur;;Event- und Medientechnik Bochum;Quelle: Gelbe Seiten
 LVB Event;Hermann-Löns-Str. 23;44869;Bochum;Nordrhein-Westfalen;Veranstaltungstechnik (Verleih);;Licht- Ton- Effekttechnik für Events;Quelle: Gelbe Seiten
 Neumann & Müller Veranstaltungstechnik (Standort Bochum);Sinterstr. 9;44795;Bochum;Nordrhein-Westfalen;Veranstaltungstechnik;;großer Full-Service-Eventtechnikdienstleister;Quelle: Das Örtliche - Niederlassung eines bundesweiten Unternehmens
-Tarm Sound Light Laser Technik GmbH;Rombacher Hütte 6-8;44795;Bochum;Nordrhein-Westfalen;Veranstaltungstechnik;;Ton- Licht- Lasertechnik für Veranstaltungen;Quelle: Das Örtliche - prüfen ob auch Handel
 BZ Sound Berger;Daimlerstr. 8C;44805;Bochum;Nordrhein-Westfalen;Veranstaltungstechnik;;Tontechnik Bochum-Gerthe;Quelle: Das Örtliche
 Diedrich Bühnen- und Veranstaltungstechnik;Wanner Str. 82;45888;Gelsenkirchen;Nordrhein-Westfalen;Bühnen-/Veranstaltungstechnik;;Bühnen- Ton- und Lichttechnik;Quelle: Das Örtliche
 Nightfever Showtechnic GmbH;Europastr. 6;45888;Gelsenkirchen;Nordrhein-Westfalen;Veranstaltungstechnik;;Showtechnik Gelsenkirchen;Quelle: Gelbe Seiten
