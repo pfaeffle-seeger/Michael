@@ -1,7 +1,7 @@
 Voss Veranstaltungstechnik;Pottbergkrug 36;24146;Kiel;Schleswig-Holstein;Veranstaltungstechnik;;Veranstaltungstechnik-Dienstleister in Kiel;Quelle: 11880
 LEDWALL 360 GmbH;An der Halle 400 1;24143;Kiel;Schleswig-Holstein;Veranstaltungstechnik (LED-Wände);;Mobile LED-Wände für Events;Quelle: gelbeseiten - Hausnr. laut Verzeichnis 400 1
 FREDLIGHTDESIGN;Saarbrückenstr. 42;24114;Kiel;Schleswig-Holstein;Veranstaltungstechnik (Licht);;Lichtdesign und Lichttechnik für Veranstaltungen;Quelle: gelbeseiten
-OPUS Showtechnik GmbH;Speckenbeker Weg 154;24113;Kiel;Schleswig-Holstein;Veranstaltungstechnik;https://www.opus-kiel.de;Ton Licht Video Streaming seit über 35 Jahren;Quelle: 11880 - Eintrag ca. 4 Jahre alt - PLZ ergänzt Kandidat aus Runde 1
+OPUS Showtechnik GmbH;Speckenbeker Weg 154;24113;Kiel;Schleswig-Holstein;Veranstaltungstechnik;https://www.opus-kiel.de;Ton Licht Video Streaming seit über 35 Jahren;Geprüft 10/2026: Firma aktiv (27 Bewertungen, u.a. Open-Air-Bühne), Adresse nicht separat bestätigt (Quelle: reviewhero.io)
 MUSIKANLAGEN-KIEL.DE (Sven Niemand);Zum Schlüsbeker Moor 50;24145;Kiel;Schleswig-Holstein;Veranstaltungstechnik (PA-Verleih);https://www.musikanlagen-kiel.de;Vermietung PA- Licht- und Mikrofonanlagen;Quelle: 11880 - weicht von Impressum-Snippet Runde 1 ab (Von-der-Goltz-Allee)
 Event Service Nord GmbH;Binzer Weg 14A;24226;Heikendorf;Schleswig-Holstein;Veranstaltungstechnik;;Vermietung Licht- Ton- Bühnentechnik und Eventorganisation;Quelle: golocal/11880/northdata - Registersitz Grasweg 38 24226 Heikendorf
 North Light & Sound;Stadttor 15;24787;Fockbek;Schleswig-Holstein;Veranstaltungstechnik;;Licht- und Tontechnik im Raum Rendsburg;Quelle: 11880
@@ -10,8 +10,8 @@ EVENT TECHNIK NORD;Herzog-Adolf-Str. 43;25813;Husum;Schleswig-Holstein;Veranstal
 SeRo Event Technik;Klußmannstr. 5;25813;Husum;Schleswig-Holstein;Veranstaltungstechnik;;Eventtechnik-Kleinbetrieb in Husum;Quelle: 11880
 Marco Dunker Veranstaltungstechnik;Forchhammer Str. 2;25813;Husum;Schleswig-Holstein;Veranstaltungstechnik;;Veranstaltungstechnik in Nordfriesland;Quelle: branchenbuch.meinestadt
 Autzen-Rahn;Hauptstr. 42;25887;Winnert;Schleswig-Holstein;Veranstaltungstechnik/Catering/Zeltverleih;;Veranstaltungstechnik Catering und Zeltvermietung kombiniert;Quelle: 11880
-Zeltverleih und Partyservice Ferdinand Freitag;Lausitzer Weg 3;23617;Stockelsdorf;Schleswig-Holstein;Zeltverleih/Partyservice;https://www.ferdinand-freitag.de;Zeltverleih und Partyservice bei Lübeck;Quelle: golocal/cylex/meinestadt - teils Hausnr. 3J - E. & F. Freitag OHG Max-Planck-Str. 6 evtl. verbunden
-Schwabe Zelte GmbH & Co. KG;Hauptstraße 5;25785;Sarzbüttel;Schleswig-Holstein;Zeltverleih;https://www.zeltverleih-schwabe.de;Zeltverleih in Dithmarschen;Quelle: cylex - Registersitz evtl. 25746 Heide - Website aus E-Mail-Domain abgeleitet
+Zeltverleih und Partyservice Ferdinand Freitag;Lausitzer Weg 3;23617;Stockelsdorf;Schleswig-Holstein;Zeltverleih/Partyservice;https://www.ferdinand-freitag.de;Zeltverleih und Partyservice bei Lübeck;Geprüft 10/2026: bestätigt Lausitzer Weg 3, Zelte/Eventausstattung/Planung (Quelle: provenexpert, Profil 08/2025); E. & F. Freitag OHG Max-Planck-Str. 6 ältere Verzeichnisadresse
+Michael Schwabe Zeltverleih;Löwenstraße 1;25785;Sarzbüttel;Schleswig-Holstein;Zeltverleih;https://www.zeltverleih-schwabe.de;Zeltverleih in Dithmarschen;Geprüft 10/2026: Adresse korrigiert, gelistet als Michael Schwabe Zeltverleih Tel. 04806 484; GmbH & Co. KG nicht belegt (Quelle: gelbeseiten)
 Alster-Zelte e.K.;Arnoldstr. 1;22765;Hamburg;Hamburg;Zeltverleih;;Party- Festzelte und Pagodenzelte inkl. Zubehör;Quelle: 11880/dasoertliche/golocal
 Convent Veranstaltungstechnik GmbH (haftungsbeschränkt);Daniel-Frese-Str. 4;22119;Hamburg;Hamburg;Veranstaltungstechnik;https://www.convent-veranstaltungstechnik.de;Veranstaltungstechnik-Dienstleister in Hamburg-Billstedt;Quelle: dasoertliche
 Ton / Licht Verleih (Julian Hamborg);Innocentiastr. 74;20144;Hamburg;Hamburg;Veranstaltungstechnik (Verleih);https://www.tonlichtverleih.de;Verleih von Ton- und Lichttechnik;Quelle: dasoertliche
@@ -20,7 +20,7 @@ AVR RENT-HOUSE GmbH & Co Veranstaltungs Service KG;Maimoorweg 60 B;22179;Hamburg
 Höper Eventtechnik GmbH;Hammerbrookstr. 7;20097;Hamburg;Hamburg;Veranstaltungstechnik;;Licht- Bühnentechnik und Technikverleih;Quelle: 11880
 Prophonic e.K.;Bahrenfelder Chaussee 49 D;22589;Hamburg;Hamburg;Veranstaltungstechnik;;Unter Veranstaltungstechnik Hamburg gelistet;Quelle: dasoertliche - Leistungsumfang nicht geprüft
 Arentis Veranstaltungstechnik GmbH;Osterrade 7;21031;Hamburg;Hamburg;Veranstaltungstechnik;;Bühne Ton Licht Medientechnik Vermietung und Full-Service;Quelle: dasoertliche
-EventTechnik nord ETN GmbH;Liebigstraße 94;22113;Hamburg;Hamburg;Veranstaltungstechnik;https://www.etnord.de;Beleuchtung Beschallung AV-Technik und Bühnenpodeste;Quelle: gelbeseiten/dasoertliche/11880 - Rechtsform widersprüchlich (GmbH/e.K.)
+EventTechnik nord ETN GmbH;Liebigstraße 94;22113;Hamburg;Hamburg;Veranstaltungstechnik;https://www.etnord.de;Beleuchtung Beschallung AV-Technik und Bühnenpodeste;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen
 NEXUS Veranstaltungstechnik;Josephinenstr. 40;23554;Lübeck;Schleswig-Holstein;Veranstaltungstechnik;;Licht- Ton- und Eventtechnik;Quelle: dasoertliche/gelbeseiten
 ETM Production Veranstaltungstechnik;Bernsteindreherweg 23;23556;Lübeck;Schleswig-Holstein;Veranstaltungstechnik;;Veranstaltungstechnik in Lübeck;Quelle: gelbeseiten
 Hanseton Veranstaltungstechnik;Schönböckener Str. 15;23556;Lübeck;Schleswig-Holstein;Veranstaltungstechnik;;Veranstaltungstechnik in Lübeck;Quelle: 11880
@@ -76,10 +76,10 @@ WESER STAGE Veranstaltungstechnik;Claus-Groth-Str. 16;27580;Bremerhaven;Bremen;V
 EFVeranstaltungstechnik;Daimlerstr. 24;27574;Bremerhaven;Bremen;Veranstaltungstechnik;;Veranstaltungstechnik in Bremerhaven;Quelle: 11880
 Symphonic Stage GmbH;Feuerdornweg 18;27578;Bremerhaven;Bremen;Veranstaltungstechnik/Bühne;;Bühnen- und Veranstaltungstechnik;Quelle: gelbeseiten/dasoertliche
 Otto Kühling GmbH;Kopernikusstraße 2-4;49377;Vechta;Niedersachsen;Zeltverleih/Festzelte;;Zeltverleih und Festzeltvermietung;Quelle: cylex/golocal
-Zeltverleih Mählmann & Kohl GbR;Dorfstr. 4;49377;Vechta;Niedersachsen;Zeltverleih;;Zeltverleih im Oldenburger Münsterland;Quelle: gelbeseiten - abweichend auch Alter Flugplatz 26a Vechta
+Mählmann & Kohl GmbH & Co. KG;Alter Flugplatz 26a;49377;Vechta;Niedersachsen;Zeltverleih;;Zeltverleih im Oldenburger Münsterland;Geprüft 10/2026: Adresse/Rechtsform korrigiert, Veranstaltungsdienstleister Tel. 04441 8871550 (Quelle: 11880)
 Kemper Zeltbetrieb;Gewerbering 5;49681;Garrel;Niedersachsen;Zeltverleih/Festzelte;;Party- und Festzelte;Quelle: dasoertliche
 Mietservice Cloppenburg;Westallee 143;49661;Cloppenburg;Niedersachsen;Zeltverleih/Partyservice;;Zelt- und Partyausstattungsverleih;Quelle: dasoertliche - Leistungsumfang nicht geprüft
-Hoffmann Zelt- und Veranstaltungsservice;Schlachthofstr. 42;26135;Oldenburg;Niedersachsen;Zeltverleih/Veranstaltungsservice;https://www.hoffmann-zelte.de;Party- und Festzeltverleih mit Veranstaltungsservice;Quelle: cylex/dasoertliche - Website aus E-Mail-Domain abgeleitet
+Hoffmann Zelt- und Veranstaltungsservice;Schlachthofstr. 42;26135;Oldenburg;Niedersachsen;Zeltverleih/Veranstaltungsservice;https://www.hoffmann-zelte.de;Party- und Festzeltverleih mit Veranstaltungsservice;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen
 Gerd Emken GmbH;Cloppenburger Str. 198;26133;Oldenburg;Niedersachsen;Zeltverleih;;Unter Zeltverleih Oldenburg gelistet;Quelle: dasoertliche/cylex - Leistungsumfang nicht geprüft
 Partyzelte Oldenburg (Gerdes Zelt- und Hüpfburgenverleih);Edewechter Landstr. 110 b;26131;Oldenburg;Niedersachsen;Zeltverleih;;Partyzelt- und Hüpfburgenverleih;Quelle: 11880
 Stefan's Partyzeltverleih;Bardieksweg 46;26125;Oldenburg;Niedersachsen;Zeltverleih;;Partyzeltverleih in Oldenburg;Quelle: cylex/dasoertliche

@@ -1,6 +1,6 @@
 RCL Gesellschaft für Veranstaltungstechnik mbH;Gustav-Adolf-Allee 11;04158;Leipzig;Sachsen;Veranstaltungstechnik;https://www.rcl.solutions;Veranstaltungstechnik-Dienstleister Leipzig mit Ton Licht Bühne;Quelle: gelbeseiten/dasoertliche/11880 - Sitz 2016 verlegt
-Geie & Liebschner Veranstaltungstechnik GbR;Gartenstraße 70;01445;Radebeul;Sachsen;Veranstaltungstechnik;;Veranstaltungstechnik-Dienstleister Raum Dresden;Quelle: dasoertliche/11880 - abweichende Dresdner Adressen in gelbeseiten
-Lichtecht Technik für Veranstaltungen (Ralf Meißner);Dorotheenstraße 10;39104;Magdeburg;Sachsen-Anhalt;Veranstaltungstechnik;;Technik für Veranstaltungen Licht und Ton;Quelle: dasoertliche/cylex/11880 - ein Eintrag nennt Schönebecker Str. 10
+Geie & Liebschner Veranstaltungstechnik GbR;Gartenstraße 70;01445;Radebeul;Sachsen;Veranstaltungstechnik;;Veranstaltungstechnik-Dienstleister Raum Dresden;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen
+Lichtecht Technik für Veranstaltungen (Ralf Meißner);Dorotheenstraße 10;39104;Magdeburg;Sachsen-Anhalt;Veranstaltungstechnik;;Technik für Veranstaltungen Licht und Ton;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen
 Vertechnik (Franz Kositza);Zur Alten Gärtnerei 18;09114;Chemnitz;Sachsen;Veranstaltungstechnik;https://vertechnik.de;Veranstaltungstechnik und Veranstaltungsservice Chemnitz;Quelle: dasoertliche/golocal
 Neumann&Müller Veranstaltungstechnik (NL Erfurt);Große Arche 7;99084;Erfurt;Thüringen;Veranstaltungstechnik;https://www.neumannmueller.com;Großer Full-Service-Veranstaltungstechniker Niederlassung Erfurt;Quelle: dasoertliche - Konzern mit mehreren NL - Standort Bochum bereits in r2_nrw
 Volker & Wald GmbH Medientechnik;Otto-Schwade-Straße 6;99085;Erfurt;Thüringen;Veranstaltungstechnik;;Medientechnik unter Veranstaltungstechnik gelistet;Quelle: dasoertliche - Eventbezug nicht geprüft
@@ -15,7 +15,6 @@ EEC Sound & Light e.K.;Drehnitzstraße 31;16225;Eberswalde;Brandenburg;Veranstal
 TLE Ton-Licht-Event GbR;Käthe-Kollwitz-Straße 8;16225;Eberswalde;Brandenburg;Veranstaltungstechnik;;Ton Licht Event-Dienstleister Eberswalde;Quelle: dasoertliche
 KING SIZE. Veranstaltungstechnik;Coppistraße 3;16227;Eberswalde;Brandenburg;Veranstaltungstechnik;;Veranstaltungstechniker in Eberswalde-Finow;Quelle: dasoertliche
 LTE-Lehmann / Kabelbetrieb;Cottbuser Straße 6;15907;Lübben (Spreewald);Brandenburg;Veranstaltungstechnik;https://lte-lehmann.de;Unter Veranstaltungstechnik im Spreewald gelistet;Quelle: 11880 - Leistungsumfang nicht geprüft
-TEGE Planen & Zelte GmbH;Hubertstraße 24;03044;Cottbus;Brandenburg;Zeltverleih;https://tege.de;Zeltverleih und Planen in Cottbus;Quelle: gelbeseiten/dasoertliche/golocal - fertigt evtl. auch Zelte
 Eventservice Dominic Bartsch;Leipziger Straße 34;03048;Cottbus;Brandenburg;Zeltverleih/Eventservice;;Unter Zeltverleih Cottbus gelistet;Quelle: cylex
 Kuban Events;Mauerstraße 7;03046;Cottbus;Brandenburg;Zeltverleih/Eventservice;;Unter Zeltverleih Cottbus gelistet;Quelle: cylex - zweiter Standort Gerhart-Hauptmann-Str. 15
 Ultraschall PA;Lagerhofstraße 2;04103;Leipzig;Sachsen;Veranstaltungstechnik (PA-Verleih);;PA-Anlagen Licht- und Veranstaltungstechnik Leipzig;Quelle: gelbeseiten
@@ -30,8 +29,8 @@ LTS-Veranstaltungstechnik Jens Schulze;Mengsstraße 34;01139;Dresden;Sachsen;Ver
 Medial Rental Stefan Merkel;Erlenstraße 7;01097;Dresden;Sachsen;Veranstaltungstechnik;;Verleih von Veranstaltungstechnik Dresden;Quelle: 11880
 Musikanlagenvermietung PA Equipment Kindt & Poitz;Kauschaer Straße 9;01239;Dresden;Sachsen;Veranstaltungstechnik (PA-Verleih);;PA- und Musikanlagenvermietung Dresden;Quelle: 11880
 Event Verleih Dresden Eventausstatter;Zur Elbinsel 12;01259;Dresden;Sachsen;Eventausstattung/Verleih;;Eventausstatter mit Verleih Dresden;Quelle: golocal
-Crew Veranstaltungstechnik Wolfgang Hesse;Klopstockstraße 10;39108;Magdeburg;Sachsen-Anhalt;Veranstaltungstechnik;;Veranstaltungstechnik Magdeburg-Stadtfeld;Quelle: gelbeseiten
-Eventmakers Wir machen Party Veranstaltungsagentur;Repkowstraße 14;39122;Magdeburg;Sachsen-Anhalt;Eventagentur;;Veranstaltungsagentur und Partyservice Magdeburg;Quelle: gelbeseiten - eigene Produktion nicht geprüft
+Crew Veranstaltungstechnik Wolfgang Hesse;Klopstockstraße 10;39108;Magdeburg;Sachsen-Anhalt;Veranstaltungstechnik;;Veranstaltungstechnik Magdeburg-Stadtfeld;Geprüft 10/2026: Eintrag gelistet (Quelle: oeffnungszeitenbuch.de)
+Eventmakers Wir machen Party Veranstaltungsagentur;Breiter Weg 230;39104;Magdeburg;Sachsen-Anhalt;Eventagentur;;Veranstaltungsagentur und Partyservice Magdeburg;Geprüft 10/2026: Adresse korrigiert; Veranstaltungsagentur, IHK: Eventmaker's GmbH, Organisation von Veranstaltungen (Quelle: dasoertliche/IHK Magdeburg)
 JUGL Veranstaltungstechnik e.K.;Äußere Dresdner Straße 15C;08066;Zwickau;Sachsen;Veranstaltungstechnik;;Veranstaltungstechnik-Dienstleister Zwickau;Quelle: 11880 - gelbeseiten nennt Trabantstr. 6 08058 Zwickau
 Münch Medienproduktion Veranstaltungstechnik GbR;August-Horch-Straße 16 A;08141;Reinsdorf;Sachsen;Veranstaltungstechnik;;Medienproduktion und Veranstaltungstechnik bei Zwickau;Quelle: 11880
 PM2 Veranstaltungstechnik (Ralf Endig);Hermann-Pöge-Straße 7;09120;Chemnitz;Sachsen;Veranstaltungstechnik;;Veranstaltungstechnik Chemnitz;Quelle: 11880 - gelbeseiten nennt Blankenauer Str. 74 09113
@@ -44,9 +43,9 @@ JenProject EventService;Alte Dorfstraße 24;07751;Jena;Thüringen;Eventservice/V
 tsp Veranstaltungstechnik Gera;Franz-Mehring-Straße 88;07545;Gera;Thüringen;Veranstaltungstechnik;;Veranstaltungstechnik Gera;Quelle: gelbeseiten/dasoertliche
 AQ Showtechnik;Reichsstraße 41;07545;Gera;Thüringen;Veranstaltungstechnik;;Showtechnik Gera;Quelle: gelbeseiten/dasoertliche
 MGEE Beleuchtung und Beschallung;Schoßbachstraße 24;07552;Gera;Thüringen;Veranstaltungstechnik;;Beleuchtung und Beschallung Gera;Quelle: dasoertliche
-Veranstaltungstechnik Halle GmbH & Co. KG;Merseburger Straße 425;06132;Halle (Saale);Sachsen-Anhalt;Veranstaltungstechnik;;Veranstaltungstechnik-Dienstleister Halle-Ammendorf;Quelle: gelbeseiten/11880 - 11880 führt Adresse unter Lars Böttcher
-R & R ProAudio UG;Berliner Straße 237;06112;Halle (Saale);Sachsen-Anhalt;Veranstaltungstechnik;;Pro-Audio-Dienstleister unter Veranstaltungstechnik Halle;Quelle: 11880 - Leistungsumfang nicht geprüft
-Zeltvermietung und Veranstaltungsservice Halle;Zörbiger Straße 19;06118;Halle (Saale);Sachsen-Anhalt;Zeltverleih;;Zeltvermietung mit Veranstaltungstechnik;Quelle: 11880 - Firmenname nur generisch
+Veranstaltungstechnik Halle GmbH & Co. KG;Merseburger Straße 425;06132;Halle (Saale);Sachsen-Anhalt;Veranstaltungstechnik;;Veranstaltungstechnik-Dienstleister Halle-Ammendorf;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen
+R & R ProAudio UG;Berliner Straße 237;06112;Halle (Saale);Sachsen-Anhalt;Veranstaltungstechnik;;Pro-Audio-Dienstleister unter Veranstaltungstechnik Halle;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen; Leistungsumfang weiter offen
+Zeltvermietung und Veranstaltungsservice Halle;Zörbiger Straße 19;06118;Halle (Saale);Sachsen-Anhalt;Zeltverleih;;Zeltvermietung mit Veranstaltungstechnik;Geprüft 10/2026: bestätigt Zörbiger Str. 19 (Tornau), Zeltvermietung/Eventmanagement/Eventtechnik, 11 Bewertungen (Quelle: werkenntdenbesten)
 Partyservice & Zeltvermietung Hausmann (Sabine Hausmann);Kiefernweg 32;01109;Dresden;Sachsen;Zeltverleih/Catering;;Partyservice mit Zeltvermietung Dresden;Quelle: cylex
 Der Kaiser Pavillon - Megafestzelt.de;Zwickauer Straße 97;01187;Dresden;Sachsen;Festzeltbetrieb/Zeltverleih;;Festzelte Rundzelte und Zirkuszelte;Quelle: cylex
 Zelt+Event Schwarz;Am Eichelberg 16;01458;Ottendorf-Okrilla;Sachsen;Zeltverleih;;Zelt- und Eventverleih Sachsen und Südbrandenburg;Quelle: cylex
@@ -75,7 +74,7 @@ Arnold Event Service (Swen Arnold);Wiesengrund 38;98528;Suhl;Thüringen;Veransta
 Thüringer Zeltverleih Zentrum TZVZ GmbH;Alte Mittelhäuser Straße 3;99091;Erfurt;Thüringen;Zeltverleih;;Zeltverleih-Zentrum für Thüringen;Quelle: golocal/dasoertliche/cylex
 Zeltverleih Erfurt;Lützewiesenweg 18;99098;Erfurt;Thüringen;Zeltverleih;;Zeltverleih Erfurt mit zwei Lagerstandorten;Quelle: cylex
 MMS Eventzelte (MMS Grabe GmbH & Co. KG);Weimarische Straße 11;99099;Erfurt;Thüringen;Zeltverleih;;Eventzelte-Vermietung Erfurt;Quelle: cylex
-Schulz GbR;Neuendorf am Speck 5;39576;Stendal;Sachsen-Anhalt;Bühnenverleih/Veranstaltungstechnik/Zeltverleih;;Bühnenverleih Ton Licht und Zelte;Quelle: gelbeseiten
+Schulz GbR;Neuendorf am Speck 5;39576;Stendal;Sachsen-Anhalt;Bühnenverleih/Veranstaltungstechnik/Zeltverleih;;Bühnenverleih Ton Licht und Zelte;Geprüft 10/2026: per Websuche nicht bestätigt, keine Gegenbelege – Eintrag unverändert, telefonisch prüfen
 Speisewerk Event Location Catering Foodtruck;Bautzner Straße 71;01099;Dresden;Sachsen;Event-Catering/Foodtruck;;Catering mit Foodtruck und Eventlocation;Quelle: cylex
 Catering - Der Wilde Müller;Deutscher Platz 5;04103;Leipzig;Sachsen;Event-Catering/Foodtruck;;Catering mit mietbarem Foodtruck für Veranstaltungen;Quelle: gelbeseiten/11880/golocal - Eintrag teils älter
 Sound-Hz;Zauchestraße 13;14770;Brandenburg an der Havel;Brandenburg;Veranstaltungstechnik;https://sound-hz.de;Veranstaltungstechnik Brandenburg an der Havel;Quelle: dasoertliche
