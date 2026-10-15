@@ -298,11 +298,12 @@ function simuliere(p) {
     if (freiraum < -0.5 && !linieUeberschritten) linieUeberschritten = `${String(m).padStart(2, "0")}/${jahr}`;
 
     const kk = by.ksk.saldo + by.cbkk.saldo;
-    const fk = d.reduce((s, x) => s + x.saldo, 0) + aifSaldo;
+    // Fremdkapital ohne Nachrangdarlehen; das Nachrangdarlehen wird separat ausgewiesen
+    const fk = d.reduce((s, x) => s + x.saldo, 0) - by.nr.saldo + aifSaldo;
     monate.push({
       jahr, m, umsatz, rohertrag, ebt, zinsen, aifGebuehr, aifZugang, aifRueck, steuer, wc, tilgung, freierCf, rueckVerr, einlage,
       salden: { ...Object.fromEntries(d.map((x) => [x.id, x.saldo])), aif: aifSaldo },
-      kk, fk, bankFk: fk - by.nr.saldo, guthaben, netto: fk - guthaben, linien, freiraum, nrZugang,
+      kk, fk, bankFk: fk, nachrang: by.nr.saldo, guthaben, netto: fk - guthaben, linien, freiraum, nrZugang,
     });
     if (!freiraumMin || freiraum < freiraumMin.freiraum) freiraumMin = monate[monate.length - 1];
     if (freiraum < -0.5 && (!unterdeckungMax || freiraum < unterdeckungMax.freiraum)) unterdeckungMax = monate[monate.length - 1];
@@ -325,6 +326,7 @@ function simuliere(p) {
     schuldenfrei: find((x) => x.fk < 1),
     nettoFrei: find((x) => x.netto < 1),
     bankFrei: find((x) => x.bankFk - x.guthaben < 1),
+    gesamtFrei: find((x) => x.fk + x.nachrang - x.guthaben < 1),
     nrFrei: find((x) => x.salden.nr < 1),
     linieUeberschritten,
     unterdeckungMax,

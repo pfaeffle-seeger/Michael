@@ -281,6 +281,7 @@ tr.zero td { color: var(--good); }
         <li><b>Zinssätze Mercedes-Benz Bank (4,9 %) und Mietkauf (5,9 %)</b><span class="tag">geschätzt</span>. Tilgung 1.500 € bzw. 700 € pro Monat, aus der Saldenliste abgeleitet.</li>
         <li><b>Umsatz 2026:</b> 7,30 Mio. € laut Ihrer Erwartung, damit 1,70 Mio. € in Oktober–Dezember. Ab 2027 wächst der Umsatz mit der Szenariorate. <b>Fixkosten</b> sinken ab 2027 dauerhaft um 85 T€ pro Jahr, danach gilt die Kostensteigerung. Der <b>Rohertrag</b> steigt ab 2027 zusätzlich um 50 T€ pro Jahr.</li>
         <li><b>Saison:</b> Die Saisonschwankung innerhalb Januar–September ist nicht abgebildet. Die Kontokorrente können unterjährig höher liegen als hier gezeigt.</li>
+        <li><b>Nachrangdarlehen GbR</b> wird separat ausgewiesen und zählt nicht zum Fremdkapital (Diagramm: rote Linie, Tabelle: eigene Spalte). Seine Zinsen sind in den Zinsen und Gebühren enthalten.</li>
         <li><b>Nicht enthalten:</b> Lieferantenverbindlichkeiten, Steuern und andere nicht verzinsliche Verbindlichkeiten zählen nicht als Fremdkapital im Sinne dieses Plans.</li>
       </ul>
     </div>
@@ -297,7 +298,6 @@ tr.zero td { color: var(--good); }
     { key: "kfw", label: "KfW 2020 (3 %)", color: "--s4" },
     { key: "fz", label: "Mercedes + Mietkauf", color: "--s5" },
     { key: "aif", label: "aifinyo Einkaufsfinanzierung", color: "--s7" },
-    { key: "nr", label: "Nachrangdarlehen GbR", color: "--s8" },
   ];
   const SZ_KEYS = ["wachstum", "rohertrag", "kostenSteigerung"];
   const MONATE = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
@@ -350,8 +350,8 @@ tr.zero td { color: var(--good); }
     const W = Math.max(320, el.clientWidth), H = W < 560 ? 280 : 360;
     const m = { l: 52, r: 12, t: 12, b: 28 };
     const pts = [{ jahr: 2026, m: 9, salden: { ...Object.fromEntries(BASIS.darlehen.map((d) => [d.id, d.saldo])), aif: 0 }, guthaben: 0 }].concat(r.monate);
-    const rows = pts.map((p) => ({ p, v: [p.salden.ksk, p.salden.cbkk, p.salden.cb, p.salden.kfw, p.salden.mb + p.salden.ml, p.salden.aif, p.salden.nr], g: p.guthaben }));
-    const maxV = Math.max(...rows.map((x) => x.v.reduce((a, b) => a + b, 0)));
+    const rows = pts.map((p) => ({ p, v: [p.salden.ksk, p.salden.cbkk, p.salden.cb, p.salden.kfw, p.salden.mb + p.salden.ml, p.salden.aif], nr: p.salden.nr || 0, g: p.guthaben }));
+    const maxV = Math.max(...rows.map((x) => Math.max(x.nr, x.v.reduce((a, b) => a + b, 0))));
     const minV = -Math.min(500000, Math.max(...rows.map((x) => x.g)));
     const step = 250000;
     const yMax = Math.ceil(maxV / step) * step, yMin = Math.floor(minV / step) * step;
@@ -381,6 +381,12 @@ tr.zero td { color: var(--good); }
       d += `L${x(rows.length - 1)},${y(0)}L${x(0)},${y(0)}Z`;
       s += `<path d="${d}" fill="${css("--s6")}" fill-opacity="0.35" stroke="${css("--s6")}" stroke-width="2"/>`;
     }
+    // Nachrangdarlehen separat als Linie, nicht im Fremdkapital gestapelt
+    if (Math.max(...rows.map((rw) => rw.nr)) > 0) {
+      s += `<path d="M${rows.map((rw, i) => `${x(i).toFixed(1)},${y(rw.nr).toFixed(1)}`).join("L")}" fill="none" stroke="${css("--s8")}" stroke-width="2.5" stroke-linejoin="round"/>`;
+      const iMax = rows.findIndex((rw) => rw.nr === Math.max(...rows.map((q) => q.nr)));
+      s += `<text x="${x(iMax) + 4}" y="${y(rows[iMax].nr) - 6}" style="fill:${css("--ink")}">Nachrangdarlehen GbR</text>`;
+    }
     // Summe der Kontokorrentlinien über den beiden KK-Flächen
     const lin = [BASIS.darlehen[0].linie + BASIS.darlehen[1].linie].concat(r.monate.map((x) => x.linien));
     s += `<path d="M${lin.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("L")}" fill="none" stroke="${css("--ink")}" stroke-width="1.5" stroke-dasharray="5 3"/>`;
@@ -407,6 +413,7 @@ tr.zero td { color: var(--good); }
       tip.innerHTML = `<div class="t">${MONATE[rw.p.m - 1]} ${rw.p.jahr}${i === 0 ? " (Ist)" : ""}</div>` +
         SERIES.map((se, k) => rw.v[k] > 0.5 ? `<div class="r"><span class="k"><i style="background:var(${se.color})"></i>${se.label.replace(/ \(.*\)/, "")}</span><b>${fmtTE(rw.v[k])}</b></div>` : "").join("") +
         `<div class="r sum"><span>Fremdkapital</span><b>${fmtTE(sum)}</b></div>` +
+        (rw.nr > 0.5 ? `<div class="r"><span class="k"><i style="background:var(--s8)"></i>Nachrangdarlehen GbR (separat)</span><b>${fmtTE(rw.nr)}</b></div>` : "") +
         (rw.g > 0.5 ? `<div class="r"><span class="k"><i style="background:var(--s6)"></i>Guthaben</span><b>${fmtTE(rw.g)}</b></div>` : "") +
         (rw.p.linien !== undefined ? `<div class="r"><span class="k">Freier KK-Rahmen (von ${fmtTE(rw.p.linien)})</span><b>${fmtTE(rw.p.freiraum)}</b></div>` : "");
       tip.hidden = false;
@@ -463,7 +470,7 @@ tr.zero td { color: var(--good); }
     const jahre = [];
     for (let j = 2026; j <= STANDARD.bisJahr; j++) jahre.push(j);
     const yt = BASIS.ytd;
-    let h = `<thead><tr><th>Jahr</th><th>Umsatz</th><th>Rohertrag</th><th>Ergebnis v. St.</th><th>Zinsen + Gebühren</th><th>Steuern</th><th>Cashflow</th><th>Plantilgung</th><th>KK 31.12.</th><th>aifinyo 31.12.</th><th>Nachrang 31.12.</th><th>Fremdkapital 31.12.</th><th>Guthaben</th></tr></thead><tbody>`;
+    let h = `<thead><tr><th>Jahr</th><th>Umsatz</th><th>Rohertrag</th><th>Ergebnis v. St.</th><th>Zinsen + Gebühren</th><th>Steuern</th><th>Cashflow</th><th>Plantilgung</th><th>KK 31.12.</th><th>aifinyo 31.12.</th><th>Fremdkapital 31.12.</th><th>Guthaben</th><th>Nachrang GbR (separat)</th></tr></thead><tbody>`;
     for (const j of jahre) {
       const ms = r.monate.filter((x) => x.jahr === j);
       if (!ms.length) continue;
@@ -476,7 +483,7 @@ tr.zero td { color: var(--good); }
       const cf = sum((x) => x.freierCf + x.tilgung - x.aifZugang + x.aifRueck - x.nrZugang);
       const last = ms[ms.length - 1];
       const ebt = r.ebtJahr[j];
-      h += `<tr class="${last.bankFk < 1 ? "zero" : ""}"><td>${j}${ist ? "*" : ""}</td><td>${fmtT(umsatz)}</td><td>${fmtT(roh)}</td><td class="${ebt < 0 ? "neg" : ""}">${fmtT(ebt)}</td><td>${fmtT(zins)}</td><td>${fmtT(st)}</td><td class="${cf < 0 ? "neg" : ""}">${fmtT(cf)}</td><td>${fmtT(sum((x) => x.tilgung))}</td><td>${fmtT(last.kk)}</td><td>${fmtT(last.salden.aif)}</td><td>${fmtT(last.salden.nr)}</td><td>${fmtT(last.fk)}</td><td>${fmtT(last.guthaben)}</td></tr>`;
+      h += `<tr class="${last.bankFk < 1 ? "zero" : ""}"><td>${j}${ist ? "*" : ""}</td><td>${fmtT(umsatz)}</td><td>${fmtT(roh)}</td><td class="${ebt < 0 ? "neg" : ""}">${fmtT(ebt)}</td><td>${fmtT(zins)}</td><td>${fmtT(st)}</td><td class="${cf < 0 ? "neg" : ""}">${fmtT(cf)}</td><td>${fmtT(sum((x) => x.tilgung))}</td><td>${fmtT(last.kk)}</td><td>${fmtT(last.salden.aif)}</td><td>${fmtT(last.fk)}</td><td>${fmtT(last.guthaben)}</td><td>${fmtT(last.nachrang)}</td></tr>`;
     }
     document.getElementById("tab").innerHTML = h + `</tbody>`;
   }
@@ -487,7 +494,7 @@ tr.zero td { color: var(--good); }
       return `<tr><td>${d.name}</td><td>${fmtTE(d.saldo)}</td><td>${fmtPct(d.zins, 2)}</td><td>${tilg}</td></tr>`;
     }).join("");
     const sum = BASIS.darlehen.reduce((a, d) => a + d.saldo, 0);
-    document.getElementById("debtTab").innerHTML = `<thead><tr><th>Kredit</th><th>Saldo</th><th>Zins</th><th>Tilgung</th></tr></thead><tbody>${rows}<tr><td>aifinyo Einkaufsfinanzierung</td><td>0 T€</td><td>≈ ${fmtPct(aifinyoEffektiv(params.aifinyoLaufzeit), 1)} eff.</td><td>${params.aifinyoAktiv ? `Linie ${fmtTE(params.aifinyoRahmen)}, ${params.aifinyoLaufzeit} Raten` : "nicht genutzt"}</td></tr><tr><td>Nachrangdarlehen GbR</td><td>0 T€</td><td>${fmtPct(params.nachrangZins, 2)}</td><td>${params.nachrangAktiv ? `${fmtTE(params.nachrangBetrag)} ab ${params.nachrangStart.split("-").reverse().join("/")}, tilgungsfrei` : "nicht geplant"}</td></tr><tr><td><b>Summe</b></td><td><b>${fmtTE(sum)}</b></td><td></td><td></td></tr></tbody>`;
+    document.getElementById("debtTab").innerHTML = `<thead><tr><th>Kredit</th><th>Saldo</th><th>Zins</th><th>Tilgung</th></tr></thead><tbody>${rows}<tr><td>aifinyo Einkaufsfinanzierung</td><td>0 T€</td><td>≈ ${fmtPct(aifinyoEffektiv(params.aifinyoLaufzeit), 1)} eff.</td><td>${params.aifinyoAktiv ? `Linie ${fmtTE(params.aifinyoRahmen)}, ${params.aifinyoLaufzeit} Raten` : "nicht genutzt"}</td></tr><tr><td><b>Summe Fremdkapital</b></td><td><b>${fmtTE(sum)}</b></td><td></td><td></td></tr><tr><td>separat: Nachrangdarlehen GbR</td><td>0 T€</td><td>${fmtPct(params.nachrangZins, 2)}</td><td>${params.nachrangAktiv ? `${fmtTE(params.nachrangBetrag)} ab ${params.nachrangStart.split("-").reverse().join("/")}, tilgungsfrei` : "nicht geplant"}</td></tr></tbody>`;
   }
 
   function kpis(r) {
@@ -497,7 +504,7 @@ tr.zero td { color: var(--good); }
     set("kKK", md(r.kkFrei), `<span class="pill ${kkPill}">${r.kkFrei ? "in " + ((r.monate.indexOf(r.kkFrei) + 1) / 12).toLocaleString("de-DE", { maximumFractionDigits: 1 }) + " Jahren" : "nicht im Planungszeitraum"}</span> Höchststand ${fmtTE(r.kkSpitze.kk)} (${md(r.kkSpitze)})<br>${r.freiraumMin.freiraum >= 0 ? `Kleinster freier Kreditrahmen: <b>${fmtTE(r.freiraumMin.freiraum)}</b> (${md(r.freiraumMin)})` : ""}`);
     set("kNet", md(r.bankFrei), params.nachrangAktiv ? `Nachrangdarlehen GbR zurückgezahlt: <b>${md(r.nrFrei)}</b>` : r.schuldenfrei ? `Letzte Rate (Mietkauf/Fahrzeug): ${md(r.schuldenfrei)}` : "Restschuld Ende 2036: " + fmtTE(r.monate[r.monate.length - 1].fk));
     const e27 = r.monate.find((x) => x.jahr === 2027 && x.m === 12);
-    set("kFk27", fmtTE(e27.fk), `${fmtTE(fk0 - e27.fk)} weniger als am 30.09.2026 (${fmtTE(fk0)})`);
+    set("kFk27", fmtTE(e27.fk), `${fmtTE(fk0 - e27.fk)} weniger als am 30.09.2026 (${fmtTE(fk0)})${e27.nachrang > 0.5 ? `<br>separat: Nachrangdarlehen GbR ${fmtTE(e27.nachrang)}` : ""}`);
     const bis = r.bankFrei ? r.monate.indexOf(r.bankFrei) : r.monate.length - 1;
     const z = r.monate.slice(0, bis + 1).reduce((a, x) => a + x.zinsen, 0);
     set("kZins", fmtTE(z), `ab Oktober 2026${r.bankFrei ? "" : " bis Ende 2036"}${params.nachrangAktiv ? `, inkl. Zinsen Nachrangdarlehen` : ""}${r.aifKosten > 0 ? `, davon aifinyo ${fmtTE(r.aifKosten)}` : ""}`);
@@ -520,7 +527,7 @@ tr.zero td { color: var(--good); }
     kpis(r); stackChart(r); cmpChart(); table(r); debtTable();
   }
 
-  document.getElementById("legend").innerHTML = SERIES.map((se) => `<span><i style="background:var(${se.color})"></i>${se.label}</span>`).join("") + `<span><i style="background:var(--s6);opacity:.6"></i>Guthaben</span>`;
+  document.getElementById("legend").innerHTML = SERIES.map((se) => `<span><i style="background:var(${se.color})"></i>${se.label}</span>`).join("") + `<span><i style="background:var(--s6);opacity:.6"></i>Guthaben</span><span><i class="ln" style="background:var(--s8)"></i>Nachrangdarlehen GbR (separat, nicht im Fremdkapital)</span>`;
   for (const k of Object.keys(FORMAT)) document.getElementById(k).addEventListener("input", (e) => { params[k] = parseFloat(e.target.value); render(); });
   document.getElementById("sondertilgungKfw").addEventListener("change", (e) => { params.sondertilgungKfw = e.target.checked; render(); });
   document.getElementById("aifinyoAktiv").addEventListener("change", (e) => { params.aifinyoAktiv = e.target.checked; render(); });
