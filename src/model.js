@@ -33,6 +33,8 @@ const BASIS = {
     { id: "ml", name: "Mietkauf Dt. Leasing", saldo: 44841.15, zins: 0.059, art: "monat", rate: 700 },
     // Nachrangdarlehen der GbR: tilgungsfrei, Rückführung erst nach allen anderen Krediten
     { id: "nr", name: "Nachrangdarlehen GbR", saldo: 0, zins: 0.05, art: "nachrang" },
+    // PayPal-Finanzierung zur Refinanzierung der Kontokorrente: Auszahlung, dann gleiche Monatsraten
+    { id: "pp", name: "PayPal-Finanzierung", saldo: 0, zins: 0.12, art: "paypal", rate: 0 },
   ],
   // Working Capital 30.09.2026 vs. Eröffnungswerte (EB) 01.01.2026
   wc: {
@@ -80,6 +82,11 @@ const STANDARD = {
   // Warenfinanzierung aifinyo (Finetrading, Fact Sheet 04/2024): aifinyo bezahlt den Lieferanten,
   // Rückführung in gleichen Monatsraten über die Laufzeit, frei werdende Linie revolvierend nutzbar
   einlageJahr: 50000, // Mittelzufluss der Gesellschafter nach Ende der GbR-Rückführung, bis die GmbH schuldenfrei ist
+  paypalAktiv: true,
+  paypalBetrag: 300000,
+  paypalLaufzeit: 10, // Monate
+  paypalZins: 0.12,
+  paypalStart: "2026-11",
   nachrangAktiv: true,
   nachrangBetrag: 500000,
   nachrangZins: 0.05,
@@ -106,6 +113,9 @@ function simuliere(p) {
   by.nr.zins = p.nachrangZins;
   const [nrJ, nrM] = String(p.nachrangStart || "2027-01").split("-").map(Number);
   const nrIdx = (nrJ - 2026) * 12 + nrM - 10;
+  by.pp.zins = p.paypalZins;
+  const [ppJ, ppM] = String(p.paypalStart || "2026-11").split("-").map(Number);
+  const ppIdx = (ppJ - 2026) * 12 + ppM - 10;
   // Für "nachKK": den Monat suchen, ab dem die Kontokorrente dauerhaft auf null bleiben. Erst ohne Rückführung
   // rechnen; zieht die GmbH danach doch wieder Kontokorrent, den Beginn entsprechend nach hinten schieben.
   if (p.nachrangAktiv && p.nachrangRueckfuehrung === "nachKK" && p._nrRueckAb === undefined) {
@@ -214,7 +224,7 @@ function simuliere(p) {
     for (const x of d) {
       let t = 0;
       if (x.art === "quartal" && quartal) t = Math.min(x.rate, x.saldo);
-      if (x.art === "monat") t = Math.min(x.rate, x.saldo);
+      if (x.art === "monat" || x.art === "paypal") t = Math.min(x.rate, x.saldo);
       x.saldo -= t;
       tilgung += t;
     }
@@ -222,9 +232,15 @@ function simuliere(p) {
     // Auszahlung Nachrangdarlehen
     const nrZugang = p.nachrangAktiv && idx === nrIdx ? p.nachrangBetrag : 0;
     by.nr.saldo += nrZugang;
+    // Auszahlung PayPal-Finanzierung, Tilgung ab dem Folgemonat in gleichen Raten
+    const ppZugang = p.paypalAktiv && idx === ppIdx ? p.paypalBetrag : 0;
+    if (ppZugang) {
+      by.pp.saldo += ppZugang;
+      by.pp.rate = ppZugang / p.paypalLaufzeit;
+    }
 
     const cfOperativ = ebt + p.afaMonat - steuer + wc;
-    let freierCf = cfOperativ - invest - ausschuettung + rueckVerr + einlage - tilgung - aifRueck + nrZugang;
+    let freierCf = cfOperativ - invest - ausschuettung + rueckVerr + einlage - tilgung - aifRueck + nrZugang + ppZugang;
     // Modus "bedarf": nur so viel Wareneinkauf über aifinyo finanzieren, dass die Kontokorrente auf null bleiben
     if (aktivMonat && bedarfsModus) {
       const bedarf = by.ksk.saldo + by.cbkk.saldo - guthaben - freierCf + AIFINYO.transaktion * p.aifinyoRechnungen;
@@ -303,7 +319,7 @@ function simuliere(p) {
     monate.push({
       jahr, m, umsatz, rohertrag, ebt, zinsen, aifGebuehr, aifZugang, aifRueck, steuer, wc, tilgung, freierCf, rueckVerr, einlage,
       salden: { ...Object.fromEntries(d.map((x) => [x.id, x.saldo])), aif: aifSaldo },
-      kk, fk, bankFk: fk, nachrang: by.nr.saldo, guthaben, netto: fk - guthaben, linien, freiraum, nrZugang,
+      kk, fk, bankFk: fk, nachrang: by.nr.saldo, guthaben, netto: fk - guthaben, linien, freiraum, nrZugang, ppZugang,
     });
     if (!freiraumMin || freiraum < freiraumMin.freiraum) freiraumMin = monate[monate.length - 1];
     if (freiraum < -0.5 && (!unterdeckungMax || freiraum < unterdeckungMax.freiraum)) unterdeckungMax = monate[monate.length - 1];

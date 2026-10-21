@@ -210,6 +210,19 @@ tr.zero td { color: var(--good); }
       </div>
 
       <div class="group">
+        <h3>PayPal-Finanzierung</h3>
+        <label class="toggle"><input type="checkbox" id="paypalAktiv"><span>Kontokorrent über eine PayPal-Finanzierung refinanzieren</span></label>
+        <div class="ctl"><div class="row"><label for="paypalBetrag">Betrag</label><output id="o-paypalBetrag"></output></div>
+          <input type="range" id="paypalBetrag" min="50000" max="600000" step="25000"></div>
+        <div class="ctl"><div class="row"><label for="paypalLaufzeit">Rückzahlungsdauer</label><output id="o-paypalLaufzeit"></output></div>
+          <input type="range" id="paypalLaufzeit" min="3" max="24" step="1"><div class="hint">gleiche Monatsraten ab dem Folgemonat</div></div>
+        <div class="ctl"><div class="row"><label for="paypalZins">Zinssatz p. a.</label><output id="o-paypalZins"></output></div>
+          <input type="range" id="paypalZins" min="0.05" max="0.2" step="0.005"></div>
+        <div class="ctl"><div class="row"><label for="paypalStart">Auszahlung</label>
+          <select id="paypalStart"><option value="2026-11">November 2026</option><option value="2026-12">Dezember 2026</option><option value="2027-01">Januar 2027</option><option value="2027-03">März 2027</option><option value="2027-05">Mai 2027</option><option value="2027-07">Juli 2027</option></select></div></div>
+      </div>
+
+      <div class="group">
         <h3>Nachrangdarlehen GbR</h3>
         <label class="toggle"><input type="checkbox" id="nachrangAktiv"><span>Nachrangdarlehen der GbR einplanen (tilgungsfrei; die Rückführung des Verrechnungskontos entfällt dafür)</span></label>
         <div class="ctl"><div class="row"><label for="nachrangBetrag">Betrag</label><output id="o-nachrangBetrag"></output></div>
@@ -281,6 +294,7 @@ tr.zero td { color: var(--good); }
         <li><b>Zinssätze Mercedes-Benz Bank (4,9 %) und Mietkauf (5,9 %)</b><span class="tag">geschätzt</span>. Tilgung 1.500 € bzw. 700 € pro Monat, aus der Saldenliste abgeleitet.</li>
         <li><b>Umsatz 2026:</b> 7,30 Mio. € laut Ihrer Erwartung, damit 1,70 Mio. € in Oktober–Dezember. Ab 2027 wächst der Umsatz mit der Szenariorate. <b>Fixkosten</b> sinken ab 2027 dauerhaft um 85 T€ pro Jahr, danach gilt die Kostensteigerung. Der <b>Rohertrag</b> steigt ab 2027 zusätzlich um 50 T€ pro Jahr.</li>
         <li><b>Saison:</b> Die Saisonschwankung innerhalb Januar–September ist nicht abgebildet. Die Kontokorrente können unterjährig höher liegen als hier gezeigt.</li>
+        <li><b>PayPal-Finanzierung:</b> 300 T€ zu 12 % ab November 2026 (einstellbar). Die Auszahlung führt das Kontokorrent zurück, getilgt wird in 10 gleichen Monatsraten ab dem Folgemonat, Zinsen auf den offenen Betrag. Die PayPal-Finanzierung zählt zum Fremdkapital.</li>
         <li><b>Nachrangdarlehen GbR</b> wird separat ausgewiesen und zählt nicht zum Fremdkapital (Diagramm: rote Linie, Tabelle: eigene Spalte). Seine Zinsen sind in den Zinsen und Gebühren enthalten.</li>
         <li><b>Nicht enthalten:</b> Lieferantenverbindlichkeiten, Steuern und andere nicht verzinsliche Verbindlichkeiten zählen nicht als Fremdkapital im Sinne dieses Plans.</li>
       </ul>
@@ -298,6 +312,7 @@ tr.zero td { color: var(--good); }
     { key: "kfw", label: "KfW 2020 (3 %)", color: "--s4" },
     { key: "fz", label: "Mercedes + Mietkauf", color: "--s5" },
     { key: "aif", label: "aifinyo Einkaufsfinanzierung", color: "--s7" },
+    { key: "pp", label: "PayPal-Finanzierung", color: "--s8" },
   ];
   const SZ_KEYS = ["wachstum", "rohertrag", "kostenSteigerung"];
   const MONATE = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
@@ -310,7 +325,7 @@ tr.zero td { color: var(--good); }
 
   const FORMAT = {
     umsatz2026: fmtMio, fixSenkung: fmtTE, rohertragPlus: fmtTE, wachstum: (v) => (v >= 0 ? "+" : "") + fmtPct(v), rohertrag: (v) => fmtPct(v),
-    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, kskLinieNeu: fmtTE, nachrangBetrag: fmtTE, nachrangZins: (v) => fmtPct(v), lagerAbbauMax: fmtTE,
+    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, kskLinieNeu: fmtTE, nachrangBetrag: fmtTE, paypalBetrag: fmtTE, paypalLaufzeit: (v) => v + " Monate", paypalZins: (v) => fmtPct(v), nachrangZins: (v) => fmtPct(v), lagerAbbauMax: fmtTE,
     q4Anteil: (v) => fmtPct(v, 1), aifinyoRahmen: fmtTE, aifinyoAuslastung: (v) => fmtPct(v, 0), aifinyoLaufzeit: (v) => `${v * 30} Tage · ${fmtPct(AIFINYO.marge[v], 2)}`, aifinyoDauer: (v) => v + " Monate", aifinyoRechnungen: (v) => String(v), investJahr: fmtTE, einlageJahr: fmtTE, ausschuettungJahr: fmtTE, steuersatz: (v) => fmtPct(v),
   };
 
@@ -331,6 +346,8 @@ tr.zero td { color: var(--good); }
     document.getElementById("aifinyoModus").value = params.aifinyoModus;
     document.getElementById("aifinyoAuslastung").disabled = params.aifinyoModus === "bedarf";
     document.getElementById("nachrangStart").value = params.nachrangStart;
+    document.getElementById("paypalAktiv").checked = params.paypalAktiv;
+    document.getElementById("paypalStart").value = params.paypalStart;
     document.getElementById("nachrangRueckfuehrung").value = params.nachrangRueckfuehrung;
     const aifMonat = (params.aifinyoRahmen * params.aifinyoAuslastung) / ((params.aifinyoLaufzeit + 1) / 2);
     document.getElementById("aifHint").textContent = `${fmtTE(params.aifinyoRahmen * params.aifinyoAuslastung)} dauerhaft offen · dafür ${fmtTE(aifMonat)} Einkauf pro Monat über aifinyo · effektiv ≈ ${fmtPct(aifinyoEffektiv(params.aifinyoLaufzeit), 1)} p. a.`;
@@ -350,7 +367,7 @@ tr.zero td { color: var(--good); }
     const W = Math.max(320, el.clientWidth), H = W < 560 ? 280 : 360;
     const m = { l: 52, r: 12, t: 12, b: 28 };
     const pts = [{ jahr: 2026, m: 9, salden: { ...Object.fromEntries(BASIS.darlehen.map((d) => [d.id, d.saldo])), aif: 0 }, guthaben: 0 }].concat(r.monate);
-    const rows = pts.map((p) => ({ p, v: [p.salden.ksk, p.salden.cbkk, p.salden.cb, p.salden.kfw, p.salden.mb + p.salden.ml, p.salden.aif], nr: p.salden.nr || 0, g: p.guthaben }));
+    const rows = pts.map((p) => ({ p, v: [p.salden.ksk, p.salden.cbkk, p.salden.cb, p.salden.kfw, p.salden.mb + p.salden.ml, p.salden.aif, p.salden.pp || 0], nr: p.salden.nr || 0, g: p.guthaben }));
     const maxV = Math.max(...rows.map((x) => Math.max(x.nr, x.v.reduce((a, b) => a + b, 0))));
     const minV = -Math.min(500000, Math.max(...rows.map((x) => x.g)));
     const step = 250000;
@@ -383,7 +400,7 @@ tr.zero td { color: var(--good); }
     }
     // Nachrangdarlehen separat als Linie, nicht im Fremdkapital gestapelt
     if (Math.max(...rows.map((rw) => rw.nr)) > 0) {
-      s += `<path d="M${rows.map((rw, i) => `${x(i).toFixed(1)},${y(rw.nr).toFixed(1)}`).join("L")}" fill="none" stroke="${css("--s8")}" stroke-width="2.5" stroke-linejoin="round"/>`;
+      s += `<path d="M${rows.map((rw, i) => `${x(i).toFixed(1)},${y(rw.nr).toFixed(1)}`).join("L")}" fill="none" stroke="${css("--ink-2")}" stroke-width="2.5" stroke-linejoin="round"/>`;
       const iMax = rows.findIndex((rw) => rw.nr === Math.max(...rows.map((q) => q.nr)));
       s += `<text x="${x(iMax) + 4}" y="${y(rows[iMax].nr) - 6}" style="fill:${css("--ink")}">Nachrangdarlehen GbR</text>`;
     }
@@ -413,7 +430,7 @@ tr.zero td { color: var(--good); }
       tip.innerHTML = `<div class="t">${MONATE[rw.p.m - 1]} ${rw.p.jahr}${i === 0 ? " (Ist)" : ""}</div>` +
         SERIES.map((se, k) => rw.v[k] > 0.5 ? `<div class="r"><span class="k"><i style="background:var(${se.color})"></i>${se.label.replace(/ \(.*\)/, "")}</span><b>${fmtTE(rw.v[k])}</b></div>` : "").join("") +
         `<div class="r sum"><span>Fremdkapital</span><b>${fmtTE(sum)}</b></div>` +
-        (rw.nr > 0.5 ? `<div class="r"><span class="k"><i style="background:var(--s8)"></i>Nachrangdarlehen GbR (separat)</span><b>${fmtTE(rw.nr)}</b></div>` : "") +
+        (rw.nr > 0.5 ? `<div class="r"><span class="k"><i style="background:var(--ink-2)"></i>Nachrangdarlehen GbR (separat)</span><b>${fmtTE(rw.nr)}</b></div>` : "") +
         (rw.g > 0.5 ? `<div class="r"><span class="k"><i style="background:var(--s6)"></i>Guthaben</span><b>${fmtTE(rw.g)}</b></div>` : "") +
         (rw.p.linien !== undefined ? `<div class="r"><span class="k">Freier KK-Rahmen (von ${fmtTE(rw.p.linien)})</span><b>${fmtTE(rw.p.freiraum)}</b></div>` : "");
       tip.hidden = false;
@@ -489,12 +506,12 @@ tr.zero td { color: var(--good); }
   }
 
   function debtTable() {
-    const rows = BASIS.darlehen.filter((d) => d.art !== "nachrang").map((d) => {
+    const rows = BASIS.darlehen.filter((d) => d.art !== "nachrang" && d.art !== "paypal").map((d) => {
       const tilg = d.art === "kk" ? (d.linienAbbau ? `Linie ${fmtT(d.linie)} → ${fmtTE(d.linie - d.linienAbbau.rate * d.linienAbbau.monate)} (Mai 27)` : d.linienStufe ? `Linie ${fmtT(d.linie)} → ${fmtTE(params.kskLinieNeu)} (Mai 27)` : `Linie ${fmtTE(d.linie)}`) : d.art === "quartal" ? `${d.rate.toLocaleString("de-DE")} € / Quartal` : `≈ ${d.rate.toLocaleString("de-DE")} € / Monat`;
       return `<tr><td>${d.name}</td><td>${fmtTE(d.saldo)}</td><td>${fmtPct(d.zins, 2)}</td><td>${tilg}</td></tr>`;
     }).join("");
     const sum = BASIS.darlehen.reduce((a, d) => a + d.saldo, 0);
-    document.getElementById("debtTab").innerHTML = `<thead><tr><th>Kredit</th><th>Saldo</th><th>Zins</th><th>Tilgung</th></tr></thead><tbody>${rows}<tr><td>aifinyo Einkaufsfinanzierung</td><td>0 T€</td><td>≈ ${fmtPct(aifinyoEffektiv(params.aifinyoLaufzeit), 1)} eff.</td><td>${params.aifinyoAktiv ? `Linie ${fmtTE(params.aifinyoRahmen)}, ${params.aifinyoLaufzeit} Raten` : "nicht genutzt"}</td></tr><tr><td><b>Summe Fremdkapital</b></td><td><b>${fmtTE(sum)}</b></td><td></td><td></td></tr><tr><td>separat: Nachrangdarlehen GbR</td><td>0 T€</td><td>${fmtPct(params.nachrangZins, 2)}</td><td>${params.nachrangAktiv ? `${fmtTE(params.nachrangBetrag)} ab ${params.nachrangStart.split("-").reverse().join("/")}, tilgungsfrei` : "nicht geplant"}</td></tr></tbody>`;
+    document.getElementById("debtTab").innerHTML = `<thead><tr><th>Kredit</th><th>Saldo</th><th>Zins</th><th>Tilgung</th></tr></thead><tbody>${rows}<tr><td>aifinyo Einkaufsfinanzierung</td><td>0 T€</td><td>≈ ${fmtPct(aifinyoEffektiv(params.aifinyoLaufzeit), 1)} eff.</td><td>${params.aifinyoAktiv ? `Linie ${fmtTE(params.aifinyoRahmen)}, ${params.aifinyoLaufzeit} Raten` : "nicht genutzt"}</td></tr><tr><td>PayPal-Finanzierung</td><td>0 T€</td><td>${fmtPct(params.paypalZins, 2)}</td><td>${params.paypalAktiv ? `${fmtTE(params.paypalBetrag)} ab ${params.paypalStart.split("-").reverse().join("/")}, ${params.paypalLaufzeit} Monatsraten` : "nicht geplant"}</td></tr><tr><td><b>Summe Fremdkapital</b></td><td><b>${fmtTE(sum)}</b></td><td></td><td></td></tr><tr><td>separat: Nachrangdarlehen GbR</td><td>0 T€</td><td>${fmtPct(params.nachrangZins, 2)}</td><td>${params.nachrangAktiv ? `${fmtTE(params.nachrangBetrag)} ab ${params.nachrangStart.split("-").reverse().join("/")}, tilgungsfrei` : "nicht geplant"}</td></tr></tbody>`;
   }
 
   function kpis(r) {
@@ -527,7 +544,7 @@ tr.zero td { color: var(--good); }
     kpis(r); stackChart(r); cmpChart(); table(r); debtTable();
   }
 
-  document.getElementById("legend").innerHTML = SERIES.map((se) => `<span><i style="background:var(${se.color})"></i>${se.label}</span>`).join("") + `<span><i style="background:var(--s6);opacity:.6"></i>Guthaben</span><span><i class="ln" style="background:var(--s8)"></i>Nachrangdarlehen GbR (separat, nicht im Fremdkapital)</span>`;
+  document.getElementById("legend").innerHTML = SERIES.map((se) => `<span><i style="background:var(${se.color})"></i>${se.label}</span>`).join("") + `<span><i style="background:var(--s6);opacity:.6"></i>Guthaben</span><span><i class="ln" style="background:var(--ink-2)"></i>Nachrangdarlehen GbR (separat, nicht im Fremdkapital)</span>`;
   for (const k of Object.keys(FORMAT)) document.getElementById(k).addEventListener("input", (e) => { params[k] = parseFloat(e.target.value); render(); });
   document.getElementById("sondertilgungKfw").addEventListener("change", (e) => { params.sondertilgungKfw = e.target.checked; render(); });
   document.getElementById("aifinyoAktiv").addEventListener("change", (e) => { params.aifinyoAktiv = e.target.checked; render(); });
@@ -535,6 +552,8 @@ tr.zero td { color: var(--good); }
   document.getElementById("nachrangAktiv").addEventListener("change", (e) => { params.nachrangAktiv = e.target.checked; render(); });
   document.getElementById("aifinyoModus").addEventListener("change", (e) => { params.aifinyoModus = e.target.value; render(); });
   document.getElementById("nachrangStart").addEventListener("change", (e) => { params.nachrangStart = e.target.value; render(); });
+  document.getElementById("paypalAktiv").addEventListener("change", (e) => { params.paypalAktiv = e.target.checked; render(); });
+  document.getElementById("paypalStart").addEventListener("change", (e) => { params.paypalStart = e.target.value; render(); });
   document.getElementById("nachrangRueckfuehrung").addEventListener("change", (e) => { params.nachrangRueckfuehrung = e.target.value; render(); });
   for (const b of document.querySelectorAll(".seg button")) b.addEventListener("click", () => {
     szenario = b.dataset.sz;
