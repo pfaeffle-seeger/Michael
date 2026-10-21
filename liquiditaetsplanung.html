@@ -210,6 +210,15 @@ tr.zero td { color: var(--good); }
       </div>
 
       <div class="group">
+        <h3>Rückführung Verrechnungskonto GbR</h3>
+        <label class="toggle"><input type="checkbox" id="verrAktiv"><span>GbR zahlt das Verrechnungskonto (245 T€) monatlich an die GmbH zurück</span></label>
+        <div class="ctl"><div class="row"><label for="verrRate">Betrag pro Monat</label><output id="o-verrRate"></output></div>
+          <input type="range" id="verrRate" min="1000" max="40000" step="1000"><div class="hint" id="verrHint"></div></div>
+        <div class="ctl"><div class="row"><label for="verrStart">Beginn</label>
+          <select id="verrStart"><option value="2026-10">Oktober 2026</option><option value="2026-11">November 2026</option><option value="2026-12">Dezember 2026</option><option value="2027-01">Januar 2027</option><option value="2027-04">April 2027</option><option value="2027-07">Juli 2027</option><option value="2028-01">Januar 2028</option></select></div></div>
+      </div>
+
+      <div class="group">
         <h3>PayPal-Finanzierung</h3>
         <label class="toggle"><input type="checkbox" id="paypalAktiv"><span>Kontokorrent über eine PayPal-Finanzierung refinanzieren</span></label>
         <div class="ctl"><div class="row"><label for="paypalBetrag">Betrag</label><output id="o-paypalBetrag"></output></div>
@@ -224,7 +233,7 @@ tr.zero td { color: var(--good); }
 
       <div class="group">
         <h3>Nachrangdarlehen GbR</h3>
-        <label class="toggle"><input type="checkbox" id="nachrangAktiv"><span>Nachrangdarlehen der GbR einplanen (tilgungsfrei; die Rückführung des Verrechnungskontos entfällt dafür)</span></label>
+        <label class="toggle"><input type="checkbox" id="nachrangAktiv"><span>Nachrangdarlehen der GbR einplanen (tilgungsfrei)</span></label>
         <div class="ctl"><div class="row"><label for="nachrangBetrag">Betrag</label><output id="o-nachrangBetrag"></output></div>
           <input type="range" id="nachrangBetrag" min="100000" max="1000000" step="50000"></div>
         <div class="ctl"><div class="row"><label for="nachrangZins">Zinssatz p. a.</label><output id="o-nachrangZins"></output></div>
@@ -286,7 +295,7 @@ tr.zero td { color: var(--good); }
       <ul>
         <li><b>Ertrag:</b> Fixkosten 185 T€ pro Monat (Kosten Jan–Sep ohne Abschreibungen und Warenabgabe), Kosten der Warenabgabe 3,7 % vom Umsatz, sonstige und neutrale Erträge 9,6 T€ pro Monat. Abschreibungen 7 T€ pro Monat, nicht zahlungswirksam.</li>
         <li><b>Q4 2026:</b> Lager sinkt auf den EB-Wert (−141 T€), Forderungen auf den EB-Wert (+132 T€), Lieferantenverbindlichkeiten auf den eingestellten Wert. Ab 2027 bleibt das Working Capital konstant, außer beim eingestellten Lagerabbau.</li>
-        <li><b>GbR:</b> Nachrangdarlehen 500 T€ zu 5 % ab Januar 2027, Zinsen laufend, tilgungsfrei. Zurückgezahlt wird es, sobald beide Kontokorrente dauerhaft auf null zurückgeführt sind: ab dann fließt jeder Überschuss nach den planmäßigen Raten und aifinyo in das Nachrangdarlehen, vor einer KfW-Sondertilgung (wahlweise aus jedem Überschuss oder erst nach allen anderen Krediten). Die Rückführung des Verrechnungskontos (245 T€, 8 T€ pro Monat) entfällt dafür; ohne Nachrangdarlehen läuft sie bis April 2029. Ab Mai 2029 bringen die Gesellschafter 50 T€ pro Jahr ein (einstellbar), solange Bankschulden bestehen.</li>
+        <li><b>GbR:</b> Nachrangdarlehen 500 T€ zu 5 % ab Januar 2027, Zinsen laufend, tilgungsfrei. Zurückgezahlt wird es, sobald beide Kontokorrente dauerhaft auf null zurückgeführt sind: ab dann fließt jeder Überschuss nach den planmäßigen Raten und aifinyo in das Nachrangdarlehen, vor einer KfW-Sondertilgung (wahlweise aus jedem Überschuss oder erst nach allen anderen Krediten). Zusätzlich führt die GbR das Verrechnungskonto (245 T€) monatlich zurück, Standard 8 T€ ab November 2026 bis Mai 2029 (Beginn und Betrag einstellbar). Ab Mai 2029 bringen die Gesellschafter 50 T€ pro Jahr ein (einstellbar), solange Bankschulden bestehen.</li>
         <li><b>Steuern:</b> Vorauszahlungen auf Basis des Vorjahres, Abschlusszahlung jeweils im September des Folgejahres. Verlustvorträge sind nicht berücksichtigt.</li>
         <li><b>Kreditlinien:</b> KSK 1.000 T€, ab 30.05.2027 500 T€ (einstellbar). Commerzbank 500 T€ ab 30.09.2026, monatlich −15 T€ bis Mai 2027, danach 380 T€. Was die Commerzbank-Linie übersteigt, wird über die KSK-Linie finanziert.</li>
         <li><b>aifinyo</b> (Fact Sheet Finetrading): aifinyo bezahlt den Lieferanten, die Rückführung erfolgt in gleichen Monatsraten, und frei werdende Linie wird sofort wieder genutzt. Finanziert wird höchstens der Wareneinkauf des Monats, entweder gleichmäßig nach genutztem Anteil der Linie oder nach Bedarf, damit die Kontokorrente auf null bleiben. Kosten: Handelsmarge 2,99 % bis 5,99 % je nach Zahlungsziel (180 Tage: 3,99 %), 39 € je Rechnung, Bereitstellung 269 € pro Monat für mindestens 24 Monate, Einrichtung einmalig 1,95 % der Linie. Ein Skonto, das aifinyo beim Lieferanten zieht, wird auf die Marge angerechnet; das ist hier nicht berücksichtigt. Der offene Betrag zählt zum Fremdkapital, nicht zum Kontokorrent-Rahmen.</li>
@@ -325,7 +334,7 @@ tr.zero td { color: var(--good); }
 
   const FORMAT = {
     umsatz2026: fmtMio, fixSenkung: fmtTE, rohertragPlus: fmtTE, wachstum: (v) => (v >= 0 ? "+" : "") + fmtPct(v), rohertrag: (v) => fmtPct(v),
-    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, kskLinieNeu: fmtTE, nachrangBetrag: fmtTE, paypalBetrag: fmtTE, paypalLaufzeit: (v) => v + " Monate", paypalZins: (v) => fmtPct(v), nachrangZins: (v) => fmtPct(v), lagerAbbauMax: fmtTE,
+    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, kskLinieNeu: fmtTE, nachrangBetrag: fmtTE, paypalBetrag: fmtTE, verrRate: (v) => v.toLocaleString("de-DE") + " €", paypalLaufzeit: (v) => v + " Monate", paypalZins: (v) => fmtPct(v), nachrangZins: (v) => fmtPct(v), lagerAbbauMax: fmtTE,
     q4Anteil: (v) => fmtPct(v, 1), aifinyoRahmen: fmtTE, aifinyoAuslastung: (v) => fmtPct(v, 0), aifinyoLaufzeit: (v) => `${v * 30} Tage · ${fmtPct(AIFINYO.marge[v], 2)}`, aifinyoDauer: (v) => v + " Monate", aifinyoRechnungen: (v) => String(v), investJahr: fmtTE, einlageJahr: fmtTE, ausschuettungJahr: fmtTE, steuersatz: (v) => fmtPct(v),
   };
 
@@ -348,6 +357,14 @@ tr.zero td { color: var(--good); }
     document.getElementById("nachrangStart").value = params.nachrangStart;
     document.getElementById("paypalAktiv").checked = params.paypalAktiv;
     document.getElementById("paypalStart").value = params.paypalStart;
+    document.getElementById("verrAktiv").checked = params.verrAktiv;
+    document.getElementById("verrStart").value = params.verrStart;
+    {
+      const n = Math.ceil(BASIS.verrechnung.saldo / params.verrRate);
+      const [vj, vm] = params.verrStart.split("-").map(Number);
+      const end = (vj * 12 + vm - 1) + n - 1;
+      document.getElementById("verrHint").textContent = `${n} Raten, letzte Rate ${MONATE[end % 12]} ${Math.floor(end / 12)} · ${fmtTE(params.verrRate * 12)} pro Jahr`;
+    }
     document.getElementById("nachrangRueckfuehrung").value = params.nachrangRueckfuehrung;
     const aifMonat = (params.aifinyoRahmen * params.aifinyoAuslastung) / ((params.aifinyoLaufzeit + 1) / 2);
     document.getElementById("aifHint").textContent = `${fmtTE(params.aifinyoRahmen * params.aifinyoAuslastung)} dauerhaft offen · dafür ${fmtTE(aifMonat)} Einkauf pro Monat über aifinyo · effektiv ≈ ${fmtPct(aifinyoEffektiv(params.aifinyoLaufzeit), 1)} p. a.`;
@@ -554,6 +571,8 @@ tr.zero td { color: var(--good); }
   document.getElementById("nachrangStart").addEventListener("change", (e) => { params.nachrangStart = e.target.value; render(); });
   document.getElementById("paypalAktiv").addEventListener("change", (e) => { params.paypalAktiv = e.target.checked; render(); });
   document.getElementById("paypalStart").addEventListener("change", (e) => { params.paypalStart = e.target.value; render(); });
+  document.getElementById("verrAktiv").addEventListener("change", (e) => { params.verrAktiv = e.target.checked; render(); });
+  document.getElementById("verrStart").addEventListener("change", (e) => { params.verrStart = e.target.value; render(); });
   document.getElementById("nachrangRueckfuehrung").addEventListener("change", (e) => { params.nachrangRueckfuehrung = e.target.value; render(); });
   for (const b of document.querySelectorAll(".seg button")) b.addEventListener("click", () => {
     szenario = b.dataset.sz;

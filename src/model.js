@@ -81,6 +81,9 @@ const STANDARD = {
   sondertilgungKfw: true,
   // Warenfinanzierung aifinyo (Finetrading, Fact Sheet 04/2024): aifinyo bezahlt den Lieferanten,
   // Rückführung in gleichen Monatsraten über die Laufzeit, frei werdende Linie revolvierend nutzbar
+  verrAktiv: true, // Rückführung Verrechnungskonto GbR (245 T€)
+  verrRate: 8000, // pro Monat
+  verrStart: "2026-11",
   einlageJahr: 50000, // Mittelzufluss der Gesellschafter nach Ende der GbR-Rückführung, bis die GmbH schuldenfrei ist
   paypalAktiv: true,
   paypalBetrag: 300000,
@@ -114,6 +117,8 @@ function simuliere(p) {
   const [nrJ, nrM] = String(p.nachrangStart || "2027-01").split("-").map(Number);
   const nrIdx = (nrJ - 2026) * 12 + nrM - 10;
   by.pp.zins = p.paypalZins;
+  const [vJ, vM] = String(p.verrStart || "2026-11").split("-").map(Number);
+  const verrStartIdx = (vJ - 2026) * 12 + vM - 10;
   const [ppJ, ppM] = String(p.paypalStart || "2026-11").split("-").map(Number);
   const ppIdx = (ppJ - 2026) * 12 + ppM - 10;
   // Für "nachKK": den Monat suchen, ab dem die Kontokorrente dauerhaft auf null bleiben. Erst ohne Rückführung
@@ -208,8 +213,9 @@ function simuliere(p) {
       wc += x;
     }
 
-    // Ratierliche Rückführung der GbR (8 T€/Monat) entfällt, wenn die GbR das Nachrangdarlehen gibt
-    const rueckVerr = p.nachrangAktiv ? 0 : Math.min(BASIS.verrechnung.rate, verrechnung);
+    // Monatliche Rückführung des Verrechnungskontos durch die GbR (Beginn und Betrag einstellbar)
+    const verrAktivMonat = p.verrAktiv && idx >= verrStartIdx;
+    const rueckVerr = verrAktivMonat ? Math.min(p.verrRate, verrechnung) : 0;
     verrechnung -= rueckVerr;
     // Einlage ab Mai 2029 (ursprünglich im Anschluss an die Rückführung), solange noch Bankschulden bestehen
     const schuldenVorher = d.reduce((s, x) => s + x.saldo, 0) + aifSaldo - by.nr.saldo;
