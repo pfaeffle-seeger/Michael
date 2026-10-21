@@ -187,8 +187,12 @@ tr.zero td { color: var(--good); }
         <input type="range" id="kostenSteigerung" min="0" max="0.06" step="0.005"><div class="hint">auf Fixkosten von 185 T€ pro Monat</div></div>
 
       <div class="group">
-        <div class="ctl"><div class="row"><label for="kskLinieNeu">KSK-Linie ab 30.05.2027</label><output id="o-kskLinieNeu"></output></div>
-          <input type="range" id="kskLinieNeu" min="300000" max="1000000" step="50000"><div class="hint">bis dahin 1.000 T€ · Commerzbank sinkt auf 380 T€</div></div>
+        <div class="ctl"><div class="row"><label for="kskLinieNeu">KSK-Linie Endstand</label><output id="o-kskLinieNeu"></output></div>
+          <input type="range" id="kskLinieNeu" min="300000" max="1000000" step="50000"><div class="hint">heute 1.000 T€ · Commerzbank sinkt bis Mai 2027 auf 380 T€</div></div>
+        <div class="ctl"><div class="row"><label for="kskAbbauRate">KSK-Reduzierung pro Monat</label><output id="o-kskAbbauRate"></output></div>
+          <input type="range" id="kskAbbauRate" min="10000" max="500000" step="10000"><div class="hint" id="kskHint"></div></div>
+        <div class="ctl"><div class="row"><label for="kskAbbauStart">Erste Reduzierung zum Ende</label>
+          <select id="kskAbbauStart"><option value="2026-12">Dezember 2026</option><option value="2027-01">Januar 2027</option><option value="2027-03">März 2027</option><option value="2027-05">Mai 2027</option><option value="2027-07">Juli 2027</option></select></div></div>
         <div class="ctl"><div class="row"><label for="lieferantenZiel">Lieferantenverbindl. 31.12.2026</label><output id="o-lieferantenZiel"></output></div>
           <input type="range" id="lieferantenZiel" min="150000" max="560000" step="5000"><div class="hint">heute 553 T€, Vorjahresende 167 T€</div></div>
         <div class="ctl"><div class="row"><label for="lagerAbbauMax">Weiterer Lagerabbau ab 2027</label><output id="o-lagerAbbauMax"></output></div>
@@ -297,7 +301,7 @@ tr.zero td { color: var(--good); }
         <li><b>Q4 2026:</b> Lager sinkt auf den EB-Wert (−141 T€), Forderungen auf den EB-Wert (+132 T€), Lieferantenverbindlichkeiten auf den eingestellten Wert. Ab 2027 bleibt das Working Capital konstant, außer beim eingestellten Lagerabbau.</li>
         <li><b>GbR:</b> Nachrangdarlehen 500 T€ zu 5 % ab Januar 2027, Zinsen laufend, tilgungsfrei. Zurückgezahlt wird es, sobald beide Kontokorrente dauerhaft auf null zurückgeführt sind: ab dann fließt jeder Überschuss nach den planmäßigen Raten und aifinyo in das Nachrangdarlehen, vor einer KfW-Sondertilgung (wahlweise aus jedem Überschuss oder erst nach allen anderen Krediten). Zusätzlich führt die GbR das Verrechnungskonto (245 T€) monatlich zurück, Standard 8 T€ ab November 2026 bis Mai 2029 (Beginn und Betrag einstellbar). Ab Mai 2029 bringen die Gesellschafter 50 T€ pro Jahr ein (einstellbar), solange Bankschulden bestehen.</li>
         <li><b>Steuern:</b> Vorauszahlungen auf Basis des Vorjahres, Abschlusszahlung jeweils im September des Folgejahres. Verlustvorträge sind nicht berücksichtigt.</li>
-        <li><b>Kreditlinien:</b> KSK 1.000 T€, ab 30.05.2027 500 T€ (einstellbar). Commerzbank 500 T€ ab 30.09.2026, monatlich −15 T€ bis Mai 2027, danach 380 T€. Was die Commerzbank-Linie übersteigt, wird über die KSK-Linie finanziert.</li>
+        <li><b>Kreditlinien:</b> KSK 1.000 T€, ab Ende Januar 2027 monatlich −50 T€ bis auf 500 T€ im Oktober 2027 (einstellbar). Commerzbank 500 T€ ab 30.09.2026, monatlich −15 T€ bis Mai 2027, danach 380 T€. Was die Commerzbank-Linie übersteigt, wird über die KSK-Linie finanziert.</li>
         <li><b>aifinyo</b> (Fact Sheet Finetrading): aifinyo bezahlt den Lieferanten, die Rückführung erfolgt in gleichen Monatsraten, und frei werdende Linie wird sofort wieder genutzt. Finanziert wird höchstens der Wareneinkauf des Monats, entweder gleichmäßig nach genutztem Anteil der Linie oder nach Bedarf, damit die Kontokorrente auf null bleiben. Kosten: Handelsmarge 2,99 % bis 5,99 % je nach Zahlungsziel (180 Tage: 3,99 %), 39 € je Rechnung, Bereitstellung 269 € pro Monat für mindestens 24 Monate, Einrichtung einmalig 1,95 % der Linie. Ein Skonto, das aifinyo beim Lieferanten zieht, wird auf die Marge angerechnet; das ist hier nicht berücksichtigt. Der offene Betrag zählt zum Fremdkapital, nicht zum Kontokorrent-Rahmen.</li>
         <li><b>Leasing</b> (Kärcher, Grenke, BMW, Hyundai) läuft weiter und steckt bereits in den Fixkosten.</li>
         <li><b>Zinssätze Mercedes-Benz Bank (4,9 %) und Mietkauf (5,9 %)</b><span class="tag">geschätzt</span>. Tilgung 1.500 € bzw. 700 € pro Monat, aus der Saldenliste abgeleitet.</li>
@@ -334,7 +338,7 @@ tr.zero td { color: var(--good); }
 
   const FORMAT = {
     umsatz2026: fmtMio, fixSenkung: fmtTE, rohertragPlus: fmtTE, wachstum: (v) => (v >= 0 ? "+" : "") + fmtPct(v), rohertrag: (v) => fmtPct(v),
-    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, kskLinieNeu: fmtTE, nachrangBetrag: fmtTE, paypalBetrag: fmtTE, verrRate: (v) => v.toLocaleString("de-DE") + " €", paypalLaufzeit: (v) => v + " Monate", paypalZins: (v) => fmtPct(v), nachrangZins: (v) => fmtPct(v), lagerAbbauMax: fmtTE,
+    kostenSteigerung: (v) => fmtPct(v), lieferantenZiel: fmtTE, kskLinieNeu: fmtTE, kskAbbauRate: fmtTE, nachrangBetrag: fmtTE, paypalBetrag: fmtTE, verrRate: (v) => v.toLocaleString("de-DE") + " €", paypalLaufzeit: (v) => v + " Monate", paypalZins: (v) => fmtPct(v), nachrangZins: (v) => fmtPct(v), lagerAbbauMax: fmtTE,
     q4Anteil: (v) => fmtPct(v, 1), aifinyoRahmen: fmtTE, aifinyoAuslastung: (v) => fmtPct(v, 0), aifinyoLaufzeit: (v) => `${v * 30} Tage · ${fmtPct(AIFINYO.marge[v], 2)}`, aifinyoDauer: (v) => v + " Monate", aifinyoRechnungen: (v) => String(v), investJahr: fmtTE, einlageJahr: fmtTE, ausschuettungJahr: fmtTE, steuersatz: (v) => fmtPct(v),
   };
 
@@ -358,6 +362,13 @@ tr.zero td { color: var(--good); }
     document.getElementById("paypalAktiv").checked = params.paypalAktiv;
     document.getElementById("paypalStart").value = params.paypalStart;
     document.getElementById("verrAktiv").checked = params.verrAktiv;
+    document.getElementById("kskAbbauStart").value = params.kskAbbauStart;
+    {
+      const n = Math.max(0, Math.ceil((BASIS.darlehen[0].linie - params.kskLinieNeu) / params.kskAbbauRate));
+      const [kj, km] = params.kskAbbauStart.split("-").map(Number);
+      const end = (kj * 12 + km - 1) + n - 1;
+      document.getElementById("kskHint").textContent = n ? `${n} Schritte, Endstand ${fmtTE(params.kskLinieNeu)} ab Ende ${MONATE[end % 12]} ${Math.floor(end / 12)}` : "keine Reduzierung";
+    }
     document.getElementById("verrStart").value = params.verrStart;
     {
       const n = Math.ceil(BASIS.verrechnung.saldo / params.verrRate);
@@ -524,7 +535,7 @@ tr.zero td { color: var(--good); }
 
   function debtTable() {
     const rows = BASIS.darlehen.filter((d) => d.art !== "nachrang" && d.art !== "paypal").map((d) => {
-      const tilg = d.art === "kk" ? (d.linienAbbau ? `Linie ${fmtT(d.linie)} → ${fmtTE(d.linie - d.linienAbbau.rate * d.linienAbbau.monate)} (Mai 27)` : d.linienStufe ? `Linie ${fmtT(d.linie)} → ${fmtTE(params.kskLinieNeu)} (Mai 27)` : `Linie ${fmtTE(d.linie)}`) : d.art === "quartal" ? `${d.rate.toLocaleString("de-DE")} € / Quartal` : `≈ ${d.rate.toLocaleString("de-DE")} € / Monat`;
+      const tilg = d.art === "kk" ? (d.linienAbbau ? `Linie ${fmtT(d.linie)} → ${fmtTE(d.linie - d.linienAbbau.rate * d.linienAbbau.monate)} (Mai 27)` : d.linienStufe ? `Linie ${fmtT(d.linie)} → ${fmtTE(params.kskLinieNeu)}, −${fmtT(params.kskAbbauRate)} T€/Monat` : `Linie ${fmtTE(d.linie)}`) : d.art === "quartal" ? `${d.rate.toLocaleString("de-DE")} € / Quartal` : `≈ ${d.rate.toLocaleString("de-DE")} € / Monat`;
       return `<tr><td>${d.name}</td><td>${fmtTE(d.saldo)}</td><td>${fmtPct(d.zins, 2)}</td><td>${tilg}</td></tr>`;
     }).join("");
     const sum = BASIS.darlehen.reduce((a, d) => a + d.saldo, 0);
@@ -571,6 +582,7 @@ tr.zero td { color: var(--good); }
   document.getElementById("nachrangStart").addEventListener("change", (e) => { params.nachrangStart = e.target.value; render(); });
   document.getElementById("paypalAktiv").addEventListener("change", (e) => { params.paypalAktiv = e.target.checked; render(); });
   document.getElementById("paypalStart").addEventListener("change", (e) => { params.paypalStart = e.target.value; render(); });
+  document.getElementById("kskAbbauStart").addEventListener("change", (e) => { params.kskAbbauStart = e.target.value; render(); });
   document.getElementById("verrAktiv").addEventListener("change", (e) => { params.verrAktiv = e.target.checked; render(); });
   document.getElementById("verrStart").addEventListener("change", (e) => { params.verrStart = e.target.value; render(); });
   document.getElementById("nachrangRueckfuehrung").addEventListener("change", (e) => { params.nachrangRueckfuehrung = e.target.value; render(); });

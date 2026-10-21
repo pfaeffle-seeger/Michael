@@ -23,7 +23,8 @@ const BASIS = {
   darlehen: [
     { id: "ksk", name: "KSK Kontokorrent", saldo: 697380.91, zins: 0.089, art: "kk", linie: 1000000,
       // Linie sinkt zum 30.05.2027 (Monat 8 nach September 2026) auf den eingestellten Wert
-      linienStufe: { abMonat: 8 } },
+      // Linie sinkt ab Ende Januar 2027 monatlich um den eingestellten Betrag bis auf den Endstand
+      linienStufe: true },
     { id: "cbkk", name: "Commerzbank Kontokorrent", saldo: 437805.03, zins: 0.0829, art: "kk", linie: 500000,
       // Linie zum 30.09.2026 auf 500 T€ gesenkt, danach monatlich −15 T€ bis Mai 2027 (380 T€)
       linienAbbau: { rate: 15000, monate: 8 } },
@@ -97,7 +98,9 @@ const STANDARD = {
   // Rückführung Nachrangdarlehen: "nachKK" ab dem Monat, ab dem beide Kontokorrente dauerhaft auf null sind,
   // "sofort" aus jedem Überschuss, sobald die Kontokorrente auf null sind, "zuletzt" erst nach allen anderen Krediten
   nachrangRueckfuehrung: "nachKK",
-  kskLinieNeu: 500000, // KSK-Linie ab 30.05.2027
+  kskLinieNeu: 500000, // Endstand KSK-Linie
+  kskAbbauRate: 50000, // Reduzierung pro Monat
+  kskAbbauStart: "2027-01", // erste Reduzierung zum Monatsende
   aifinyoAktiv: true,
   aifinyoRahmen: 800000,
   aifinyoLaufzeit: 6, // Monate bzw. Monatsraten (180 Tage)
@@ -263,7 +266,9 @@ function simuliere(p) {
     // aktuelle Kreditlinien
     const n = (jahr - 2026) * 12 + m - 9;
     for (const x of d) if (x.linienAbbau) x.linieAktuell = x.linie - x.linienAbbau.rate * Math.min(n, x.linienAbbau.monate);
-    by.ksk.linieAktuell = n >= by.ksk.linienStufe.abMonat ? p.kskLinieNeu : by.ksk.linie;
+    const [kJ, kM] = String(p.kskAbbauStart || "2027-01").split("-").map(Number);
+    const kskSchritte = Math.max(0, n - ((kJ - 2026) * 12 + kM - 9) + 1);
+    by.ksk.linieAktuell = Math.max(p.kskLinieNeu, by.ksk.linie - p.kskAbbauRate * kskSchritte);
 
     // Überschuss/Fehlbetrag über Kontokorrent ausgleichen (teuerste Linie zuerst zurückführen)
     let rest = freierCf;
